@@ -104,8 +104,6 @@ Subscribe Option|2
 can be incorporated into the site in the initial development phase.
 
 #### Functional Requirements ####
-* The user would like to view a portfolio of the artist's work.
-* The user requires contact information to enable them to contact the artist.
 * The User would like to be able to select different maths games to play.
 * The user would like to be able to select different options within each maths game - e.g. 2x, 5x and 10x tables
 within the multiplication game, or addition of numbers up to 20 in the addition game.
@@ -114,7 +112,7 @@ within the multiplication game, or addition of numbers up to 20 in the addition 
 * The user would like to see their current score, and their previous top score. This will mean that the user is more likely to play
 another game or return to the site in the future to better their previous score.
 
-#### Business rules ####
+#### Business Rules ####
 * It is not envisaged that the game will be sold for profit. However, the game should be as much fun as possible to play, in order to 
 maximise the learning opportunities for users, increase the game's following and therefore increase the profile of the developer.
 
