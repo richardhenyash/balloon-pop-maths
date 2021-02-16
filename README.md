@@ -60,13 +60,13 @@ The following opportunities were identified and ranked using a score of 1 - 5 fo
 
 Opportunity | Importance |Viability
 ------------| -----------|---------
-Balloon Pop multiplication game|5|4
-Balloon Pop division game|3|4
-Balloon Pop addition game|3|4
-Balloon Pop subtraction game|3|4
+Balloon Pop Multiplication game|5|4
+Balloon Pop Division game|3|4
+Balloon Pop Addition game|3|4
+Balloon Pop Subtraction game|3|4
 Contact Form to contact developer|3|5
 Link to developer [GitHub] page (https://github.com/richardhenyash)|4|5
-Subscribe Option|2|1
+Subscribe Option|1|2
 
 <img src="/assets/wireframes/initial-strategy.png" style="margin: 15px; width: 400px;">
 
@@ -74,12 +74,12 @@ Subscribe Option|2|1
 The opportunities matrix was used to help decide which items should be included for the initial development phase (phase 1):
 Item|Development Phase
 ----|-----------------
-Balloon Pop multiplication game|1
+Balloon Pop Multiplication game|1
 Contact Form to contact developer|1
 Link to developer [GitHub] page (https://github.com/richardhenyash)|1
-Balloon Pop division game|1
-Balloon Pop addition game|1
-Balloon Pop subtraction game|1
+Balloon Pop Division game|1
+Balloon Pop Addition game|1
+Balloon Pop Subtraction game|1
 Subscribe Option|2
 
 ### Project Scope ###
@@ -120,12 +120,12 @@ maximise the learning opportunities for users, increase the game's following and
 The following key features have been identified and scored from 1 - 5 for importance and difficulty. The proposed development phase has also been indicated:
 Feature|Importance|Difficulty|Development Phase
 -------|----------|----------|-----------------
-Balloon Pop multiplication game| 5 | 3 | 1 |
+Balloon Pop Multiplication game| 5 | 3 | 1 |
 Contact Form to contact developer | 4 | 2 | 1
 Link to developer [GitHub] page (https://github.com/richardhenyash) | 3 | 1 | 1
-Balloon Pop division game| 3 | 3 | 1
-Balloon Pop addition game| 3 | 3 | 1
-Balloon Pop subtraction game| 3 | 3 | 1
+Balloon Pop Division game| 3 | 3 | 1
+Balloon Pop Addition game| 3 | 3 | 1
+Balloon Pop Subtraction game| 3 | 3 | 1
 Subscribe Option| 1 | 3 | 2
 
 ### Site Map ###
