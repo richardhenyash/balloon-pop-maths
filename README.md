@@ -42,7 +42,7 @@ learning new maths skills and reinforcing existing maths knowledge independently
 
 ## Site Owner Goals ##
 Developing the site will serve as a learning experience for the developer. The finished website will act as a showcase for the
-developer's new skills and will also help to raise the developer's profile. The devloper also hopes that hiis 7 year old
+developer's new skills and will also help to raise the developer's profile. The devloper also hopes that his 7 year old
 son will become a keen user of the site!
 
 ## Project Goals ##
