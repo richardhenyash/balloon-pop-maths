@@ -155,9 +155,11 @@ layout is also shown below:
 <img src="/assets/wireframes/rev1/game-multiplication.png" style="margin: 15px; width:400px;"> 
 
 [Responsive design wireframes](/assets/wireframes/rev2) were then produced showing the [Home]("/assets/wireframes/rev1/home-multiplication.png)
-page layout on [Tablet]("/assets/wireframes/rev2/home-multiplication-tablet.png) and
-[Phone]("/assets/wireframes/rev2/home-multiplication-phone.png). These are also shown below:  
+and [Game]("/assets/wireframes/rev1/game-multiplication.png) page layouts on [Tablet]("/assets/wireframes/rev2/home-multiplication-tablet.png) and
+[Phone]("/assets/wireframes/rev2/home-multiplication-phone.png). The [Responsive design wireframes](/assets/wireframes/rev2) are also shown below:  
 
-<img src="/assets/wireframes/rev1/home-multiplication-tablet.png" style="margin: 15px; width:400px;"> 
-<img src="/assets/wireframes/rev1/home-multiplication-phone.png" style="margin: 15px; width:250px;"> 
+<img src="/assets/wireframes/rev2/home-multiplication-tablet.png" style="margin: 15px; width:400px;"> 
+<img src="/assets/wireframes/rev2/home-multiplication-phone.png" style="margin: 15px; width:250px;">  
+<img src="/assets/wireframes/rev2/game-multiplication-tablet.png" style="margin: 15px; width:250px;"> 
+<img src="/assets/wireframes/rev2/game-multiplication-phone.png" style="margin: 15px; width:250px;">
 
