@@ -25,6 +25,8 @@ body {
 .container-button {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
 }
 
 /*--Headings--*/
@@ -64,6 +66,11 @@ body {
     font-size: 4rem;
     border-radius: 2.5rem;
     background-color: #908CD9;
+}
+
+.btn-padding-lr {
+    padding-left: 1.0rem;
+    padding-right: 1.0rem;
 }
 
 /*--Bootstrap Button Class Overrides--*/
