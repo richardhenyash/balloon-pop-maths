@@ -1,0 +1,69 @@
+/*-- HTML--*/
+html {
+    font-size: 62.5%;
+}
+
+/*-- Body--*/
+body {
+    font-family: 'Bubblegum Sans', cursive;
+    font-size: 1.6rem;
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom, #7cc0ff, #77c4fe, #72c7fc, #6fcafa, #6ecdf8, #6fd2f7, #71d7f6, #75dcf5, #7de4f5, #86ecf6, #92f4f5, #9efbf5);
+}
+
+/*--General Styles--*/
+.padding-none {
+    padding: 0 0 0 0;
+}
+
+/*--Containers--*/
+.container-heading-main {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+}
+
+.container-button {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+/*--Headings--*/
+.heading-main {
+    font-size: 6rem;
+    color: #A2529A;
+}
+
+/*--Buttons--*/
+.container span {
+  display: inline-block;
+}
+.btn-label {
+    padding: 0.5rem 1.0rem;
+    display: inline-block;
+    width: 8rem;
+    font-size: 1.5rem;
+    color: #A2529A;
+    text-align: right;
+}
+
+.btn-text {
+    color:#FCFCD4;
+}
+
+.btn-xl {
+    padding: 0.5rem 1.0rem;
+    font-size: 1.2rem;
+    border-radius: 0.5rem;
+    background-color: #908CD9;
+}
+
+.btn-fw {
+    width: 8rem;
+    height: 3.3rem;
+}
+
+
+/*--Bootstrap Button Class Overrides--*/
+.btn-info:hover, .btn-info:focus  {
+    background-color: #A2529A;
+}
