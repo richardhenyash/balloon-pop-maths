@@ -35,14 +35,15 @@
 - [Acknowledgements](#acknowledgements)
 
 ## Background ##
-During the Covid pandemic, may parents have had to educate their children at home. Many parents have found themselves juggling
-full time jobs and home education responsibilities. School work, especially for younger children, often requires a large degree of 
-facilitation and help from parents. Interative web based maths games can give children an engaging way of learning new maths skills
-and reinforcing existing maths knowledge independently.
+During the Covid pandemic, many parents have had to facilitate home education for their children at home. Often, parents have found
+themselves juggling full time jobs and home education responsibilities. School work, especially for younger children, requires a  
+high degree of facilitation and help from busy parents. Interative web based maths games can give children an engaging way of 
+learning new maths skills and reinforcing existing maths knowledge independently.
 
 ## Site Owner Goals ##
 Developing the site will serve as a learning experience for the developer. The finished website will act as a showcase for the
-developer's new skills and will also help to raise the developer's profile.
+developer's new skills and will also help to raise the developer's profile. The devloper also hopes that hiis 7 year old
+son will become a keen user of the site!
 
 ## Project Goals ##
 To provide a simple and engaging maths game that young children are able to play independently to learn new maths skills and to
@@ -159,7 +160,7 @@ and [Game]("/assets/wireframes/rev1/game-multiplication.png) page layouts on [Ta
 [Phone]("/assets/wireframes/rev2/home-multiplication-phone.png). The [Responsive design wireframes](/assets/wireframes/rev2) are also shown below:  
 
 <img src="/assets/wireframes/rev2/home-multiplication-tablet.png" style="margin: 15px; width:400px;"> 
-<img src="/assets/wireframes/rev2/home-multiplication-phone.png" style="margin: 15px; width:250px;">  
+<img src="/assets/wireframes/rev2/home-multiplication-phone.png" style="margin: 15px; width:250px;"> 
 <img src="/assets/wireframes/rev2/game-multiplication-tablet.png" style="margin: 15px; width:250px;"> 
 <img src="/assets/wireframes/rev2/game-multiplication-phone.png" style="margin: 15px; width:250px;">
 
