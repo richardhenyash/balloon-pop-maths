@@ -49,6 +49,7 @@ body {
 
 .btn-text {
     color:#FCFCD4;
+    text-align:center;
 }
 
 .btn-xl {
@@ -64,13 +65,6 @@ body {
     border-radius: 2.5rem;
     background-color: #908CD9;
 }
-
-.btn-fw {
-    min-width: 5rem;
-    width: 30%;
-    height: 3.3rem;
-}
-
 
 /*--Bootstrap Button Class Overrides--*/
 .btn-info:hover, .btn-info:focus  {
