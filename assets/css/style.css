@@ -37,6 +37,7 @@ body {
 .container span {
   display: inline-block;
 }
+
 .btn-label {
     padding: 0.5rem 1.0rem;
     display: inline-block;
@@ -57,8 +58,16 @@ body {
     background-color: #908CD9;
 }
 
+.btn-xxl {
+    padding: 2.5rem 5rem;
+    font-size: 4rem;
+    border-radius: 2.5rem;
+    background-color: #908CD9;
+}
+
 .btn-fw {
-    width: 8rem;
+    min-width: 5rem;
+    width: 30%;
     height: 3.3rem;
 }
 
