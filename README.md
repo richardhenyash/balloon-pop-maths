@@ -35,7 +35,7 @@
 - [Acknowledgements](#acknowledgements)
 
 ## Background ##
-During the Covid pandemic, many parents have had to facilitate home education for their children at home. Often, parents have found
+During the Covid pandemic, many parents have been required to facilitate education for their children at home. Often, parents have found
 themselves juggling full time jobs and home education responsibilities. School work, especially for younger children, requires a  
 high degree of facilitation and help from busy parents. Interative web based maths games can give children an engaging way of 
 learning new maths skills and reinforcing existing maths knowledge independently.
