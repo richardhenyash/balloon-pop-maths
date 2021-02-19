@@ -35,6 +35,16 @@ body {
     color: #A2529A;
 }
 
+/*--Text boxes--*/
+.text-box {
+    padding: 0.8rem 1.0rem;
+    font-size: 1.2rem;
+    border-radius: 0.5rem;
+    background-color: #908CD9;
+    border-color: #17a2b8;
+
+}
+
 /*--Buttons--*/
 .container span {
   display: inline-block;
@@ -43,7 +53,7 @@ body {
 .btn-label {
     padding: 0.5rem 1.0rem;
     display: inline-block;
-    width: 8rem;
+    width: 12rem;
     font-size: 1.5rem;
     color: #A2529A;
     text-align: right;
@@ -58,6 +68,7 @@ body {
     font-size: 1.2rem;
     border-radius: 0.5rem;
     background-color: #908CD9;
+    border-color: #17a2b8;
 }
 
 .btn-xxl {
@@ -65,9 +76,21 @@ body {
     font-size: 4rem;
     border-radius: 0.5rem;
     background-color: #908CD9;
+    border-color: #7CC0FF;
 }
 
 /*--Bootstrap Button Class Overrides--*/
-.btn-info:hover, .btn-info:focus  {
-    background-color: #A2529A;
+
+.btn-info:active {
+    background-color: #A23373;
+}
+
+.btn-info:focus,
+.btn-info:hover
+ {
+    background-color: #908CD9;
+}
+
+.btn-info:not(:disabled):not(.disabled).active, .btn-info:not(:disabled):not(.disabled):active {
+    background-color: #A23373;
 }
