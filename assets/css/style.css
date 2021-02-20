@@ -43,7 +43,7 @@ body {
 .heading-main {
     font-family: "Whale I Tried", sans-serif;
     font-size: 6rem;
-    color: #FCFCD4;
+    color: #F2FAFF;
 }
 
 /*--Buttons--*/
@@ -59,11 +59,11 @@ body {
 }
 
 .btn-text {
-    color:#FCFCD4;
+    color:#F2FAFF;
 }
 
 .btn-text-score {
-    color:#A23373;
+    color:#A2529A;
     text-align: center;
 }
 
@@ -96,7 +96,7 @@ body {
 /*--Bootstrap Button Class Overrides--*/
 
 .btn-info:active {
-    background-color: #A23373;
+    background-color: #A2529A;
 }
 
 .btn-info:focus,
@@ -106,5 +106,5 @@ body {
 }
 
 .btn-info:not(:disabled):not(.disabled).active, .btn-info:not(:disabled):not(.disabled):active {
-    background-color: #A23373;
+    background-color: #A2529A;
 }
