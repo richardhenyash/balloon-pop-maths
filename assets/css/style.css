@@ -100,17 +100,26 @@ body {
     text-align: center;
 }
 
-.footer-link {
+.container-footer a {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
+    text-align: center;
     font-size: 1.8rem;
     font-weight: 700;
     color: #9C70BD;
-    text-align: center;
+}
+
+.container-footer i {
+    color: #9C70BD;
 }
 
 .container-footer a:hover, .container-footer i:hover {
     color: #A2529A;
+    text-decoration: none;
+}
+
+.container-footer a:visited, .container-footer i:visited {
+    color: #A23373;
     text-decoration: none;
 }
 
