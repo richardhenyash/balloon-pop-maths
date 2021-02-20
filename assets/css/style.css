@@ -47,17 +47,6 @@ body {
 }
 
 /*--Buttons--*/
-.btn-label {
-    padding: 0.7rem 0.7rem;
-    display: inline-block;
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: #A2529A;
-    text-align: right;
-    white-space: nowrap;
-    border-style: 1px solid;
-}
-
 .btn-text {
     color:#EEFBFF;
 }
