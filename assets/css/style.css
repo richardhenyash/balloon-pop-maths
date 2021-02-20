@@ -1,8 +1,8 @@
 /*-- Custom Fonts--*/
 @font-face {
     font-family: 'Whale I Tried';
-    src: url('../assets/fonts/whale-i-tried.eot');
-    src: url('../assets/fonts/whale-i-tried.eot?#iefix') format('embedded-opentype'),
+    src: url('../fonts/whale-i-tried.eot');
+    src: url('../fonts/whale-i-tried.eot?#iefix') format('embedded-opentype'),
          url('../fonts/whale-i-tried.woff2') format('woff2'),
          url('../fonts/whale-i-tried.woff') format('woff'),
          url('../fonts/whale-i-tried.ttf')  format('truetype'),
@@ -43,7 +43,10 @@ body {
 .heading-main {
     font-family: "Whale I Tried", sans-serif;
     font-size: 6rem;
+    text-align: center;
     color: #EEFBFF;
+    background-image: url('../images/balloon-purple-3.png');
+    background-repeat: no-repeat;
 }
 
 /*--Buttons--*/
