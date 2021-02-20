@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- X-UA-Compatible meta tag, to render web pages in older versions of Internet Explorer-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Link to Bootstrap 4.6.0 CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <!-- Link to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <!-- Link to Nunito font -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Link to Font Awesome Kit -->
+    <script src="https://kit.fontawesome.com/7863bec69d.js" crossorigin="anonymous"></script>
+    <!-- Link to Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Balloon Pop Maths</title>
+</head>
+<body>
+    <!-- Balloon Pop Maths Home Page, Menu -->
+    <section class="container-sm">
+        <!-- Balloon Pop Maths Heading -->
+        <div class="row">
+            <div class="col container-heading-main">
+                <h1 class="heading-main text-center">Balloon Pop Maths</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="btn-group btn-group-toggle d-flex w-100 container-button-group" data-toggle="buttons">
+                    <span class="btn-label">Game:</span>
+                    <label class="btn btn-xl w-100 btn-info btn-text active">
+                        <input type="radio" name="game-mode" id="multiply" autocomplete="off" checked> X
+                    </label>
+                    <label class="btn btn-xl w-100 btn-info btn-text active">
+                        <input type="radio" name="game-mode" id="divide" autocomplete="off"> /
+                    </label>
+                    <label class="btn btn-xl w-100 btn-info btn-text active">
+                        <input type="radio" name="game-mode" id="add" autocomplete="off"> +
+                    </label>
+                    <label class="btn btn-xl w-100 btn-info btn-text active">
+                        <input type="radio" name="game-mode" id="subtract" autocomplete="off"> -
+                    </label>
+                </div>
+                <div class="btn-group btn-group-toggle d-flex w-100 container-button-group" data-toggle="buttons">
+                    <span class="btn-label">Difficulty:</span>
+                    <label class="btn btn-xl w-100 btn-info btn-text active">
+                        <input type="radio" name="difficulty" id="multiply" autocomplete="off" checked> Easy
+                    </label>
+                    <label class="btn btn-xl w-100 btn-info btn-text active">
+                        <input type="radio" name="difficulty" id="multiply" autocomplete="off"> Hard
+                    </label>
+                </div>
+                <div class="btn-group btn-group-toggle d-flex w-100 container-button-group" data-toggle="buttons">
+                    <span class="btn-label">Questions:</span>
+                    <label class="btn btn-xl w-100 btn-info btn-text active">
+                        <input type="radio" name="questions" id="5" autocomplete="off" checked> 5
+                    </label>
+                    <label class="btn btn-xl w-100 btn-info btn-text active">
+                        <input type="radio" name="questions" id="10" autocomplete="off"> 10
+                    </label>
+                    <label class="btn btn-xl w-100 btn-info btn-text active">
+                        <input type="radio" name="questions" id="15" autocomplete="off"> 15
+                    </label>
+                    <label class="btn btn-xl w-100 btn-info btn-text active">
+                        <input type="radio" name="questions" id="20" autocomplete="off"> 20
+                    </label>
+                </div>
+                <div class="btn-group container-button-group d-flex w-100">
+                    <span class="btn-label">High Score:</span>
+                    <span class="btn-xl-nofill w-100 btn-text-score">0</button> 
+                </div>
+                <div class="container-button-group d-flex w-100">
+                    <button type="button" class="btn btn-xxl w-100 btn-info btn-text">PLAY</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col d-flex w-100 container-button">
+                        <span class="container-button"></span>
+                        <button type="button" data-toggle="button" autocomplete="off" aria-pressed="true" class="btn btn-xl w-100 btn-info btn-text">2x, 5x, 10x</button>
+                        <span class="container-button"></span>
+                        <button type="button" data-toggle="button" autocomplete="off" class="btn btn-xl w-100 btn-info btn-text">Mixed 1 to 12</button>
+                        <span class="container-button"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col d-flex w-100 container-button">
+                        <span class="container-button"></span>
+                        <button type="button" data-toggle="button" autocomplete="off" class="btn btn-xl w-100 btn-info btn-text">1x</button>
+                        <span class="container-button"></span>
+                        <button type="button" data-toggle="button" autocomplete="off" class="btn btn-xl w-100 btn-info btn-text">6x</button>
+                        <span class="container-button"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col d-flex w-100 container-button">
+                        <span class="container-button"></span>
+                        <button type="button" data-toggle="button" autocomplete="off" class="btn btn-xl w-100 btn-info btn-text">2x</button>
+                        <span class="container-button"></span>
+                        <button type="button" data-toggle="button" autocomplete="off" class="btn btn-xl w-100 btn-info btn-text">7x</button>
+                        <span class="container-button"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col d-flex w-100 container-button">
+                        <span class="container-button"></span>
+                        <button type="button" data-toggle="button" autocomplete="off" class="btn btn-xl w-100 btn-info btn-text">3x</button>
+                        <span class="container-button"></span>
+                        <button type="button" data-toggle="button" autocomplete="off" class="btn btn-xl w-100 btn-info btn-text">8x</button>
+                        <span class="container-button"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col d-flex w-100 container-button">
+                        <span class="container-button"></span>
+                        <button type="button" data-toggle="button" autocomplete="off" class="btn btn-xl w-100 btn-info btn-text">4x</button>
+                        <span class="container-button"></span>
+                        <button type="button" data-toggle="button" autocomplete="off" class="btn btn-xl w-100 btn-info btn-text">9x</button>
+                        <span class="container-button"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col d-flex w-100 container-button">
+                        <span class="container-button"></span>
+                        <button type="button" data-toggle="button" autocomplete="off" class="btn btn-xl w-100 btn-info btn-text">5x</button>
+                        <span class="container-button"></span>
+                        <button type="button" data-toggle="button" autocomplete="off" class="btn btn-xl w-100 btn-info btn-text">10x</button>
+                        <span class="container-button"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col d-flex w-100 container-button">
+                        <span class="container-button"></span>
+                        <button type="button" data-toggle="button" autocomplete="off" class="btn btn-xl w-100 btn-info btn-text">6x</button>
+                        <span class="container-button"></span>
+                        <button type="button" data-toggle="button" autocomplete="off" class="btn btn-xl w-100 btn-info btn-text">12x</button>
+                        <span class="container-button"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="container-sm">
+        <div class="container-footer">
+            <a class="footer-link" href="contact.html">Contact Developer</a>
+            <a class="footer-link" href="https://github.com/richardhenyash" target="_blank"><i class="fab fa-github-square fa-lg"></i><a>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+</body>
+</html>
