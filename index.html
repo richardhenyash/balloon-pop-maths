@@ -29,6 +29,7 @@
         <div class="row">
             <div class="col-md-2"></div>
             <div class="col-md-8">
+                <!-- Game Mode Options -->
                 <div class="btn-group btn-group-toggle d-flex w-100 container-button-group" data-toggle="buttons">
                     <span class="btn-label">Game:</span>
                     <label class="btn btn-xl w-100 btn-info btn-text active">
@@ -44,19 +45,23 @@
                         <input type="radio" name="game-mode" id="subtract" autocomplete="off"> -
                     </label>
                 </div>
+                <!-- High Score -->
                 <div class="btn-group container-button-group d-flex w-100">
                     <span class="btn-label">High Score:</span>
                     <span class="btn-xl-nofill w-100 btn-text-score">0</span> 
                 </div>
+                <!-- Play Button -->
                 <div class="container-button-group d-flex w-100">
                     <button type="button" class="btn btn-xxl w-100 btn-info btn-text">PLAY</button>
                 </div>
+                <!-- Options Button -->
                 <div class="container-button-group d-flex w-100">
                     <button type="button" data-toggle="collapse" href="#options" aria-expanded="false" aria-controls="options" class="btn btn-xl w-100 btn-info btn-text">Options</button>
                 </div>
             </div>
         </div>
-        <div class="row" id="options">
+        <!-- Collpasing Options -->
+        <div class="row collapse" id="options">
             <div class="col-md-2"></div>
             <div class="col-md-8">
                 <div class="btn-group btn-group-toggle d-flex w-100 container-button-group" data-toggle="buttons">
