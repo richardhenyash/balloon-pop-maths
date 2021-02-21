@@ -123,14 +123,12 @@ body {
     background-color: #A2529A;
 }
 
-.btn-info:hover {
+.btn-info:hover,
+.btn-info:focus {
     background-color: #9C70BD;
 }
 
-.btn-info:focus {
-    background-color: #908CD9;
-}
-
+/*-- Button Pseudo Class Overrides --*/
 .btn-xl-focus-none:focus,
 .btn-xl-focus-none:visited {
     background-color: #908CD9;
