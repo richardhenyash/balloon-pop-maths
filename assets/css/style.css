@@ -131,6 +131,6 @@ body {
 .btn-xl-focus-none:focus,
 .btn-xl-focus-none:visited {
     background-color: #908CD9;
+    box-shadow: none;
+    border-color: #3E8BC6;
 }
-
-
