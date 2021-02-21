@@ -104,9 +104,9 @@ body {
     color: #9C70BD;
 }
 
-.container-footer a:hover,
-.container-footer i:hover {
-    color: #A2529A;
+.container-footer a:link,
+.container-footer i:link {
+    color: #9C70BD;
     text-decoration: none;
 }
 
@@ -116,6 +116,17 @@ body {
     text-decoration: none;
 }
 
+.container-footer a:hover,
+.container-footer i:hover {
+    color: #A2529A;
+    text-decoration: none;
+}
+
+.container-footer a:active,
+.container-footer i:active {
+    color: #A2529A;
+    text-decoration: none;
+}
 
 /*--Bootstrap Button Pseudo Class Overrides--*/
 .btn-info:active {
@@ -126,9 +137,12 @@ body {
     background-color: #A2529A;
 }
 
-.btn-info:hover,
 .btn-info:focus {
     background-color: #9C70BD;
+}
+
+.btn-info:hover {
+    background-color: #9C70BD; 
 }
 
 /*-- Button Pseudo Class Overrides --*/
