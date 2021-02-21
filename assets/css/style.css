@@ -104,13 +104,17 @@ body {
     color: #9C70BD;
 }
 
-.container-footer a:hover, .container-footer i:hover {
+.container-footer a:hover,
+.container-footer i:hover {
     color: #A2529A;
     text-decoration: none;
 }
 
-.container-footer a:visited, .container-footer i:visited {
-    color: #A23373;
+.container-footer a:focus,
+.container-footer i:focus,
+.container-footer a:visited,
+.container-footer i:visited {
+    color: #9C70BD;
     text-decoration: none;
 }
 
