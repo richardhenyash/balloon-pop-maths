@@ -114,17 +114,23 @@ body {
     text-decoration: none;
 }
 
-/*--Bootstrap Button Class Overrides--*/
+/*--Bootstrap Button Pseudo Class Overrides--*/
 .btn-info:active {
     background-color: #A2529A;
-}
-
-.btn-info:focus,
-.btn-info:hover
- {
-    background-color: #9C70BD;
 }
 
 .btn-info:not(:disabled):not(.disabled).active, .btn-info:not(:disabled):not(.disabled):active {
     background-color: #A2529A;
 }
+
+.btn-info:hover,
+.btn-info:focus {
+    background-color: #9C70BD;
+}
+
+.btn-xl-focus-none:focus,
+.btn-xl-focus-none:visited {
+    background-color: #908CD9;
+}
+
+
