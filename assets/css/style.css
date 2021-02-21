@@ -105,7 +105,9 @@ body {
 }
 
 .container-footer a:hover,
-.container-footer i:hover {
+.container-footer i:hover,
+.container-footer a:visited,
+.container-footer i:visited {
     color: #A2529A;
     text-decoration: none;
 }
