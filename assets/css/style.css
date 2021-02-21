@@ -123,9 +123,12 @@ body {
     background-color: #A2529A;
 }
 
-.btn-info:hover,
-.btn-info:focus {
+.btn-info:hover {
     background-color: #9C70BD;
+}
+
+.btn-info:focus {
+    background-color: #908CD9;
 }
 
 .btn-xl-focus-none:focus,
