@@ -22,9 +22,15 @@
     <section class="container-sm">
         <!-- Balloon Pop Maths Heading -->
         <div class="row">
-            <div class="col container-heading-main">
-                <img src="assets/images/balloon-purple-3.png" height="100" width="100"/>
-                <h1 class="heading-main text-center">Balloon Pop Maths</h1>
+            <!-- Screens smaller than md -->
+            <div class="col-12 d-md-none container-heading-main text-center">
+                <h1 class="heading-main">Balloon Pop</h1>
+                <img src="assets/images/balloon-purple-cropped.png" height="80" width="80"/>
+                <h1 class="heading-main">Maths</h1>
+            </div>
+            <!-- Screens larger than md -->
+            <div class="col-12 d-none d-md-block container-heading-main text-center">
+                <h1 class="heading-main">Balloon Pop <img src="assets/images/balloon-purple-cropped.png" height="80" width="80"> Maths</h1>         
             </div>
         </div>
         <div class="row">
@@ -65,9 +71,9 @@
             <div class="col-md-8">
                 <div class="btn-group btn-group-toggle d-flex w-100 container-button-group" data-toggle="buttons">
                     <label class="btn btn-xl w-100 btn-info btn-text active">
-                        <input type="radio" name="questions" id="10 questions" autocomplete="off"> 10 Questions
+                        <input type="radio" name="questions" id="10 questions" autocomplete="off" checked> 10 Questions
                     </label>
-                    <label class="btn btn-xl w-100 btn-info btn-text active">
+                    <label class="btn btn-xl w-100 btn-info btn-text">
                         <input type="radio" name="questions" id="20 questions" autocomplete="off"> 20 Questions
                     </label>
                 </div>
@@ -86,7 +92,7 @@
                     <div class="col d-flex w-100 container-button">
                         <span class="container-button"></span>
                         <button type="button" data-toggle="button" autocomplete="off" aria-pressed="true"
-                            class="btn btn-xl w-100 btn-info btn-text">2x, 5x, 10x</button>
+                            class="btn btn-xl w-100 btn-info btn-text active">2x, 5x, 10x</button>
                         <span class="container-button"></span>
                         <button type="button" data-toggle="button" autocomplete="off"
                             class="btn btn-xl w-100 btn-info btn-text">Mixed 1 to 12</button>
@@ -100,7 +106,7 @@
                             class="btn btn-xl w-100 btn-info btn-text">1x</button>
                         <span class="container-button"></span>
                         <button type="button" data-toggle="button" autocomplete="off"
-                            class="btn btn-xl w-100 btn-info btn-text">6x</button>
+                            class="btn btn-xl w-100 btn-info btn-text">7x</button>
                         <span class="container-button"></span>
                     </div>
                 </div>
@@ -111,7 +117,7 @@
                             class="btn btn-xl w-100 btn-info btn-text">2x</button>
                         <span class="container-button"></span>
                         <button type="button" data-toggle="button" autocomplete="off"
-                            class="btn btn-xl w-100 btn-info btn-text">7x</button>
+                            class="btn btn-xl w-100 btn-info btn-text">8x</button>
                         <span class="container-button"></span>
                     </div>
                 </div>
@@ -122,7 +128,7 @@
                             class="btn btn-xl w-100 btn-info btn-text">3x</button>
                         <span class="container-button"></span>
                         <button type="button" data-toggle="button" autocomplete="off"
-                            class="btn btn-xl w-100 btn-info btn-text">8x</button>
+                            class="btn btn-xl w-100 btn-info btn-text">9x</button>
                         <span class="container-button"></span>
                     </div>
                 </div>
@@ -133,7 +139,7 @@
                             class="btn btn-xl w-100 btn-info btn-text">4x</button>
                         <span class="container-button"></span>
                         <button type="button" data-toggle="button" autocomplete="off"
-                            class="btn btn-xl w-100 btn-info btn-text">9x</button>
+                            class="btn btn-xl w-100 btn-info btn-text">10x</button>
                         <span class="container-button"></span>
                     </div>
                 </div>
@@ -144,7 +150,7 @@
                             class="btn btn-xl w-100 btn-info btn-text">5x</button>
                         <span class="container-button"></span>
                         <button type="button" data-toggle="button" autocomplete="off"
-                            class="btn btn-xl w-100 btn-info btn-text">10x</button>
+                            class="btn btn-xl w-100 btn-info btn-text">11x</button>
                         <span class="container-button"></span>
                     </div>
                 </div>

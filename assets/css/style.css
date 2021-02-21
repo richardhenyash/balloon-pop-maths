@@ -24,7 +24,8 @@ body {
 
 /*--Containers--*/
 .container-heading-main {
-    padding-top: 1.0rem;
+    padding-top: 1.5rem;
+    padding-bottom: 0.5rem;
 }
 
 .container-button {
