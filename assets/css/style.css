@@ -110,14 +110,6 @@ body {
     text-decoration: none;
 }
 
-.container-footer a:focus,
-.container-footer i:focus,
-.container-footer a:visited,
-.container-footer i:visited {
-    color: #9C70BD;
-    text-decoration: none;
-}
-
 /*--Bootstrap Button Pseudo Class Overrides--*/
 .btn-info:active {
     background-color: #A2529A;
