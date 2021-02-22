@@ -110,7 +110,7 @@ function makeNotActive(btnIdList) {
 /** Function to activate #btn-all-1 if all other buttons are inactive . **/
 function checkButtons() {
     let btnIdList = ["#btn-all-1", "#btn-all-2", "#btn-all-3", "#btn-all-4", "#btn-md-5", "#btn-md-6", "#btn-md-7", "#btn-md-8", "#btn-md-9", "#btn-md-10", "#btn-md-11", "#btn-md-12", "#btn-md-13", "#btn-md-14"]
-    if ((returnActiveButtons(btnIdList).length) === 0) {
+    if ((returnActiveButtons().length) === 0) {
         $("#btn-all-1").addClass("active").addClass("focus").attr("aria-pressed", "true");        
     }
 }
@@ -154,10 +154,12 @@ function returnQuestions() {
     return(qno);
 }
 
-/** Function to return an array of active buttons. **/
-function returnActiveButtons(btnIdList) {
+/** Function to return an array of active buttons with a defined id attribute. **/
+function returnActiveButtons() {
+    let btnIdList = btnArray();
     let btnActiveArray = [];
     for (let btnId of btnIdList) {
+        btnId = "#" + btnId
         if ($(btnId).hasClass("active")) {
             btnActiveArray.push(btnId)
         }
@@ -165,13 +167,26 @@ function returnActiveButtons(btnIdList) {
     return(btnActiveArray);
 }
 
+/** Function to return an array of all buttons with a defined id attribute. **/
+function btnArray() {
+    let btnArray = [];
+    $(':button.btn-xl').each(function() {
+        let btnId = (this.id);
+        if (btnId != "") {
+            btnArray.push(btnId)
+        }
+    });
+    return btnArray;
+}
+
+/** Function to launch game. **/
 function playGame() {
     checkButtons();
     let gameMode = returnGameMode();
     let btnIdList = ["#btn-all-1", "#btn-all-2", "#btn-all-3", "#btn-all-4", "#btn-md-5", "#btn-md-6", "#btn-md-7", "#btn-md-8", "#btn-md-9", "#btn-md-10", "#btn-md-11", "#btn-md-12", "#btn-md-13", "#btn-md-14"]
     let qno = returnQuestions();
     let difficulty = returnDifficulty();
-    let activeButtons = returnActiveButtons(btnIdList);
+    let activeButtons = returnActiveButtons();
     console.log(gameMode);
     console.log(qno);
     console.log(difficulty);
