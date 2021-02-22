@@ -94,7 +94,14 @@ $("#btn4").click(function() {
     }
 })
 
-// Function to return active game mode
+function checkButtons() {
+    let btnIdList = ["#btn1", "#btn2", "#btn3", "#btn4", "#btn5", "#btn6", "#btn7", "#btn8", "#btn9", "#btn10", "#btn11", "#btn12", "#btn13", "#btn14"]
+    if ((returnActiveButtons(btnIdList).length) === 0) {
+        $("#btn1").addClass("active").addClass("focus").attr("aria-pressed", "true");        
+    }
+}
+
+// Function to return selected game mode
 function returnGameMode() {
     let gameMode = "";
     if ($("#multiply").hasClass("active")) {
@@ -107,4 +114,39 @@ function returnGameMode() {
         gameMode = "subtract";
     }
     return(gameMode);
+}
+
+// Function to return selected difficulty level;
+function returnDifficulty() {
+    let difficulty = "";
+    if ($("#easy").hasClass("active")) {
+        difficulty = "easy";
+    } else if ($("#medium").hasClass("active")) {
+        difficulty = "medium";
+    } else if ($("#hard").hasClass("active")) {
+        difficulty = "hard";
+    } 
+    return(difficulty);
+}
+
+// Function to return number of questions;
+function returnQuestions() {
+    let qno = "";
+    if ($("#easy").hasClass("active")) {
+        qno = "10";
+    } else if ($("#medium").hasClass("active")) {
+        qno = "20";
+    }
+    return(qno);
+}
+
+// Function to return an array of active buttons
+function returnActiveButtons(btnIdList) {
+    let btnActiveArray = [];
+    for (let btnId of btnIdList) {
+        if ($(btnId).hasClass("active")) {
+            btnActiveArray.push(btnId)
+        }
+    }
+    return(btnActiveArray);
 }
