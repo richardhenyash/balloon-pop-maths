@@ -5,7 +5,7 @@ $("#add").click(function() {
     $("#btn2").html("Mixed to 20").removeClass("active");
     $("#btn3").html("Mixed to 50").removeClass("active");
     $("#btn4").html("Mixed to 100").removeClass("active");
-});
+})
 
 // Hide additional multiplication and division option buttons and update option buttons for subtraction game
 $("#subtract").click(function() {
@@ -14,7 +14,7 @@ $("#subtract").click(function() {
     $("#btn2").html("Mixed to 20").removeClass("active");
     $("#btn3").html("Mixed to 50").removeClass("active");
     $("#btn4").html("Mixed to 100").removeClass("active");
-});
+})
 
 // Show additional multiplication and division option buttons and update option buttons for multiplication game
 $("#multiply").click(function() {
@@ -33,7 +33,7 @@ $("#multiply").click(function() {
     $("#btn12").html("x11").removeClass("active");
     $("#btn13").html("x6").removeClass("active");
     $("#btn14").html("x12").removeClass("active");
-});
+})
 
 // Show additional multiplication and division option buttons and update option buttons for division game
 $("#divide").click(function() {
@@ -52,4 +52,72 @@ $("#divide").click(function() {
     $("#btn12").html("&divide11").removeClass("active");
     $("#btn13").html("&divide6").removeClass("active");
     $("#btn14").html("&divide12").removeClass("active");
-});
+})
+
+// Remove active class to give toggle behaviour to option buttons in addition and subtraction mode
+$("#btn1").click(function() {
+    let gameMode = returnGameMode();
+    if (gameMode === "add" || gameMode === "subtract") {
+        $("#btn2").removeClass("active").removeClass("focus").attr("aria-pressed", "false");
+        $("#btn3").removeClass("active").removeClass("focus").attr("aria-pressed", "false");
+        $("#btn4").removeClass("active").removeClass("focus").attr("aria-pressed", "false");
+    }
+})
+
+// Remove active class to give toggle behaviour to option buttons in addition and subtraction mode
+$("#btn2").click(function() {
+    let gameMode = returnGameMode();
+    if (gameMode === "add" || gameMode === "subtract") {
+        $("#btn1").removeClass("active").removeClass("focus").attr("aria-pressed", "false");
+        $("#btn3").removeClass("active").removeClass("focus").attr("aria-pressed", "false");
+        $("#btn4").removeClass("active").removeClass("focus").attr("aria-pressed", "false");
+    }
+})
+
+// Remove active class to give toggle behaviour to option buttons in addition and subtraction mode
+$("#btn3").click(function() {
+    let gameMode = returnGameMode();
+    if (gameMode === "add" || gameMode === "subtract") {
+        $("#btn1").removeClass("active").removeClass("focus").attr("aria-pressed", "false");
+        $("#btn2").removeClass("active").removeClass("focus").attr("aria-pressed", "false");
+        $("#btn4").removeClass("active").removeClass("focus").attr("aria-pressed", "false");
+    }
+})
+
+// Remove active class to give toggle behaviour to option buttons in addition and subtraction mode
+$("#btn4").click(function() {
+    let gameMode = returnGameMode();
+    if (gameMode === "add" || gameMode === "subtract") {
+        $("#btn1").removeClass("active").removeClass("focus").attr("aria-pressed", "false");
+        $("#btn2").removeClass("active").removeClass("focus").attr("aria-pressed", "false");
+        $("#btn3").removeClass("active").removeClass("focus").attr("aria-pressed", "false");
+    }
+})
+
+// Function to return active game mode
+function returnGameMode() {
+    let gameMode = "";
+    let clst = $("#multiply").attr("class");
+    if (clst.includes("active")) {
+        gameMode = "multiply";
+    }
+    if (gameMode === "") {
+        let clst = $("#divide").attr("class");
+        if (clst.includes("active")) {
+            gameMode = "divide";
+        }
+    }
+    if (gameMode === "") {
+        let clst = $("#add").attr("class");
+        if (clst.includes("active")) {
+            gameMode = "add";
+        }
+    }
+    if (gameMode === "") {
+        let clst = $("#subtract").attr("class");
+        if (clst.includes("active")) {
+            gameMode = "subtract";
+        }
+    }
+    return(gameMode);
+}
