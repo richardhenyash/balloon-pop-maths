@@ -39,10 +39,10 @@
                 <!-- Game Mode Options -->
                 <div class="btn-group btn-group-toggle d-flex w-100 container-button-group" data-toggle="buttons">
                     <label class="btn btn-xl w-100 btn-info btn-text active">
-                        <input type="radio" name="game-mode" id="multiply" autocomplete="off" checked> X
+                        <input type="radio" name="game-mode" id="multiply" autocomplete="off" checked> x
                     </label>
                     <label class="btn btn-xl w-100 btn-info btn-text active">
-                        <input type="radio" name="game-mode" id="divide" autocomplete="off"> /
+                        <input type="radio" name="game-mode" id="divide" autocomplete="off"> &divide
                     </label>
                     <label class="btn btn-xl w-100 btn-info btn-text active">
                         <input type="radio" name="game-mode" id="add" autocomplete="off"> +
@@ -65,7 +65,7 @@
                 </div>
             </div>
         </div>
-        <!-- Collpasing Options -->
+        <!-- Collapsing Options -->
         <div class="row collapse" id="options">
             <div class="col-md-2"></div>
             <div class="col-md-8">
@@ -91,10 +91,10 @@
                 <div class="row">
                     <div class="col d-flex w-100 container-button">
                         <span class="container-button"></span>
-                        <button type="button" data-toggle="button" autocomplete="off" aria-pressed="true"
+                        <button id="btn1" type="button" data-toggle="button" autocomplete="off" aria-pressed="true"
                             class="btn btn-xl w-100 btn-info btn-text btn-xl-focus-none active">2x, 5x, 10x</button>
                         <span class="container-button"></span>
-                        <button type="button" data-toggle="button" autocomplete="off"
+                        <button id="btn2" type="button" data-toggle="button" autocomplete="off"
                             class="btn btn-xl w-100 btn-info btn-text btn-xl-focus-none">Mixed 1 to 12</button>
                         <span class="container-button"></span>
                     </div>
@@ -102,67 +102,70 @@
                 <div class="row">
                     <div class="col d-flex w-100 container-button">
                         <span class="container-button"></span>
-                        <button type="button" data-toggle="button" autocomplete="off"
+                        <button id="btn3" type="button" data-toggle="button" autocomplete="off"
                             class="btn btn-xl w-100 btn-info btn-text btn-xl-focus-none">1x</button>
                         <span class="container-button"></span>
-                        <button type="button" data-toggle="button" autocomplete="off"
+                        <button id="btn4" type="button" data-toggle="button" autocomplete="off"
                             class="btn btn-xl w-100 btn-info btn-text btn-xl-focus-none">7x</button>
                         <span class="container-button"></span>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col d-flex w-100 container-button">
-                        <span class="container-button"></span>
-                        <button type="button" data-toggle="button" autocomplete="off"
-                            class="btn btn-xl w-100 btn-info btn-text btn-xl-focus-none">2x</button>
-                        <span class="container-button"></span>
-                        <button type="button" data-toggle="button" autocomplete="off"
-                            class="btn btn-xl w-100 btn-info btn-text btn-xl-focus-none">8x</button>
-                        <span class="container-button"></span>
+                <!-- Collpasing Multiplication and Division Options -->
+                <div id="options-multiply-divide">
+                    <div class="row">
+                        <div class="col d-flex w-100 container-button">
+                            <span class="container-button"></span>
+                            <button id="btn5" type="button" data-toggle="button" autocomplete="off"
+                                class="btn btn-xl w-100 btn-info btn-text btn-xl-focus-none">2x</button>
+                            <span class="container-button"></span>
+                            <button id="btn6" type="button" data-toggle="button" autocomplete="off"
+                                class="btn btn-xl w-100 btn-info btn-text btn-xl-focus-none">8x</button>
+                            <span class="container-button"></span>
+                        </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col d-flex w-100 container-button">
-                        <span class="container-button"></span>
-                        <button type="button" data-toggle="button" autocomplete="off"
-                            class="btn btn-xl w-100 btn-info btn-text btn-xl-focus-none">3x</button>
-                        <span class="container-button"></span>
-                        <button type="button" data-toggle="button" autocomplete="off"
-                            class="btn btn-xl w-100 btn-info btn-text btn-xl-focus-none">9x</button>
-                        <span class="container-button"></span>
+                    <div class="row">
+                        <div class="col d-flex w-100 container-button">
+                            <span class="container-button"></span>
+                            <button id="btn7" type="button" data-toggle="button" autocomplete="off"
+                                class="btn btn-xl w-100 btn-info btn-text btn-xl-focus-none">3x</button>
+                            <span class="container-button"></span>
+                            <button id="btn8" type="button" data-toggle="button" autocomplete="off"
+                                class="btn btn-xl w-100 btn-info btn-text btn-xl-focus-none">9x</button>
+                            <span class="container-button"></span>
+                        </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col d-flex w-100 container-button">
-                        <span class="container-button"></span>
-                        <button type="button" data-toggle="button" autocomplete="off"
-                            class="btn btn-xl w-100 btn-info btn-text btn-xl-focus-none">4x</button>
-                        <span class="container-button"></span>
-                        <button type="button" data-toggle="button" autocomplete="off"
-                            class="btn btn-xl w-100 btn-info btn-text btn-xl-focus-none">10x</button>
-                        <span class="container-button"></span>
+                    <div class="row">
+                        <div class="col d-flex w-100 container-button">
+                            <span class="container-button"></span>
+                            <button id="btn9" type="button" data-toggle="button" autocomplete="off"
+                                class="btn btn-xl w-100 btn-info btn-text btn-xl-focus-none">4x</button>
+                            <span class="container-button"></span>
+                            <button id="btn10" type="button" data-toggle="button" autocomplete="off"
+                                class="btn btn-xl w-100 btn-info btn-text btn-xl-focus-none">10x</button>
+                            <span class="container-button"></span>
+                        </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col d-flex w-100 container-button">
-                        <span class="container-button"></span>
-                        <button type="button" data-toggle="button" autocomplete="off"
-                            class="btn btn-xl w-100 btn-info btn-text btn-xl-focus-none">5x</button>
-                        <span class="container-button"></span>
-                        <button type="button" data-toggle="button" autocomplete="off"
-                            class="btn btn-xl w-100 btn-info btn-text btn-xl-focus-none">11x</button>
-                        <span class="container-button"></span>
+                    <div class="row">
+                        <div class="col d-flex w-100 container-button">
+                            <span class="container-button"></span>
+                            <button id="btn11" type="button" data-toggle="button" autocomplete="off"
+                                class="btn btn-xl w-100 btn-info btn-text btn-xl-focus-none">5x</button>
+                            <span class="container-button"></span>
+                            <button id="btn12" type="button" data-toggle="button" autocomplete="off"
+                                class="btn btn-xl w-100 btn-info btn-text btn-xl-focus-none">11x</button>
+                            <span class="container-button"></span>
+                        </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col d-flex w-100 container-button">
-                        <span class="container-button"></span>
-                        <button type="button" data-toggle="button" autocomplete="off"
-                            class="btn btn-xl w-100 btn-info btn-text btn-xl-focus-none">6x</button>
-                        <span class="container-button"></span>
-                        <button type="button" data-toggle="button" autocomplete="off"
-                            class="btn btn-xl w-100 btn-info btn-text btn-xl-focus-none">12x</button>
-                        <span class="container-button"></span>
+                    <div class="row">
+                        <div class="col d-flex w-100 container-button">
+                            <span class="container-button"></span>
+                            <button id="btn13" type="button" data-toggle="button" autocomplete="off"
+                                class="btn btn-xl w-100 btn-info btn-text btn-xl-focus-none">6x</button>
+                            <span class="container-button"></span>
+                            <button id="btn14" type="button" data-toggle="button" autocomplete="off"
+                                class="btn btn-xl w-100 btn-info btn-text btn-xl-focus-none">12x</button>
+                            <span class="container-button"></span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -178,5 +181,6 @@
     </footer>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>
