@@ -5,6 +5,16 @@ $("#add").click(function() {
     $("#btn2").html("Mixed to 20").removeClass("active").attr("aria-pressed", "false");
     $("#btn3").html("Mixed to 50").removeClass("active").attr("aria-pressed", "false");
     $("#btn4").html("Mixed to 100").removeClass("active").attr("aria-pressed", "false");
+    $("#btn5").removeClass("active").attr("aria-pressed", "false");
+    $("#btn6").removeClass("active").attr("aria-pressed", "false");
+    $("#btn7").removeClass("active").attr("aria-pressed", "false");
+    $("#btn8").removeClass("active").attr("aria-pressed", "false");
+    $("#btn9").removeClass("active").attr("aria-pressed", "false");
+    $("#btn10").removeClass("active").attr("aria-pressed", "false");
+    $("#btn11").removeClass("active").attr("aria-pressed", "false");
+    $("#btn12").removeClass("active").attr("aria-pressed", "false");
+    $("#btn13").removeClass("active").attr("aria-pressed", "false");
+    $("#btn14").removeClass("active").attr("aria-pressed", "false");
 })
 
 // Hide additional multiplication and division option buttons and update option buttons for subtraction game
@@ -14,6 +24,16 @@ $("#subtract").click(function() {
     $("#btn2").html("Mixed to 20").removeClass("active").attr("aria-pressed", "false");
     $("#btn3").html("Mixed to 50").removeClass("active").attr("aria-pressed", "false");
     $("#btn4").html("Mixed to 100").removeClass("active").attr("aria-pressed", "false");
+    $("#btn5").removeClass("active").attr("aria-pressed", "false");
+    $("#btn6").removeClass("active").attr("aria-pressed", "false");
+    $("#btn7").removeClass("active").attr("aria-pressed", "false");
+    $("#btn8").removeClass("active").attr("aria-pressed", "false");
+    $("#btn9").removeClass("active").attr("aria-pressed", "false");
+    $("#btn10").removeClass("active").attr("aria-pressed", "false");
+    $("#btn11").removeClass("active").attr("aria-pressed", "false");
+    $("#btn12").removeClass("active").attr("aria-pressed", "false");
+    $("#btn13").removeClass("active").attr("aria-pressed", "false");
+    $("#btn14").removeClass("active").attr("aria-pressed", "false");
 })
 
 // Show additional multiplication and division option buttons and update option buttons for multiplication game
