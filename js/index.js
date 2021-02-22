@@ -1,4 +1,4 @@
-// Hide additional buttons and update option buttons for addition game
+// Hide additional multiplication and division option buttons and update option buttons for addition game
 $("#add").click(function() {
     $("#options-multiply-divide").hide("slow");
     $("#btn1").html("Mixed to 10");
@@ -7,7 +7,7 @@ $("#add").click(function() {
     $("#btn4").html("Mixed to 100");
 });
 
-// Hide additional buttons and update option buttons for subtraction game
+// Hide additional multiplication and division option buttons and update option buttons for subtraction game
 $("#subtract").click(function() {
     $("#options-multiply-divide").hide("slow");
     $("#btn1").html("Mixed to 10");
@@ -16,7 +16,7 @@ $("#subtract").click(function() {
     $("#btn4").html("Mixed to 100");
 });
 
-// Show additional buttons and update option buttons for multiplication game
+// Show additional multiplication and division option buttons and update option buttons for multiplication game
 $("#multiply").click(function() {
     $("#options-multiply-divide").show("slow");
     $("#btn1").html("x2, x5, x10");
@@ -35,7 +35,7 @@ $("#multiply").click(function() {
     $("#btn14").html("x12");
 });
 
-// Show additional buttons and update option buttons for division game
+// Show additional multiplication and division option buttons and update option buttons for division game
 $("#divide").click(function() {
     $("#options-multiply-divide").show("slow");
     $("#btn1").html("&divide2, &divide5, &divide10");
