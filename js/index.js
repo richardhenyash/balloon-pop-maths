@@ -1,127 +1,121 @@
-// Hide additional multiplication and division option buttons and update option buttons for addition game
-$("#add").click(function() {
-    $("#options-multiply-divide").hide("slow");
-    $("#btn1").html("Mixed to 10").addClass("active").attr("aria-pressed", "true");
-    $("#btn2").html("Mixed to 20").removeClass("active").attr("aria-pressed", "false");
-    $("#btn3").html("Mixed to 50").removeClass("active").attr("aria-pressed", "false");
-    $("#btn4").html("Mixed to 100").removeClass("active").attr("aria-pressed", "false");
-    $("#btn5").removeClass("active").attr("aria-pressed", "false");
-    $("#btn6").removeClass("active").attr("aria-pressed", "false");
-    $("#btn7").removeClass("active").attr("aria-pressed", "false");
-    $("#btn8").removeClass("active").attr("aria-pressed", "false");
-    $("#btn9").removeClass("active").attr("aria-pressed", "false");
-    $("#btn10").removeClass("active").attr("aria-pressed", "false");
-    $("#btn11").removeClass("active").attr("aria-pressed", "false");
-    $("#btn12").removeClass("active").attr("aria-pressed", "false");
-    $("#btn13").removeClass("active").attr("aria-pressed", "false");
-    $("#btn14").removeClass("active").attr("aria-pressed", "false");
-})
+// On click event added to add and subtract buttons to switch to addition and subtraction options
+$("#add").on("click", modeAddSubtract);
+$("#subtract").on("click", modeAddSubtract);
 
-// Hide additional multiplication and division option buttons and update option buttons for subtraction game
-$("#subtract").click(function() {
-    $("#options-multiply-divide").hide("slow");
-    $("#btn1").html("Mixed to 10").addClass("active").attr("aria-pressed", "true");
-    $("#btn2").html("Mixed to 20").removeClass("active").attr("aria-pressed", "false");
-    $("#btn3").html("Mixed to 50").removeClass("active").attr("aria-pressed", "false");
-    $("#btn4").html("Mixed to 100").removeClass("active").attr("aria-pressed", "false");
-    $("#btn5").removeClass("active").attr("aria-pressed", "false");
-    $("#btn6").removeClass("active").attr("aria-pressed", "false");
-    $("#btn7").removeClass("active").attr("aria-pressed", "false");
-    $("#btn8").removeClass("active").attr("aria-pressed", "false");
-    $("#btn9").removeClass("active").attr("aria-pressed", "false");
-    $("#btn10").removeClass("active").attr("aria-pressed", "false");
-    $("#btn11").removeClass("active").attr("aria-pressed", "false");
-    $("#btn12").removeClass("active").attr("aria-pressed", "false");
-    $("#btn13").removeClass("active").attr("aria-pressed", "false");
-    $("#btn14").removeClass("active").attr("aria-pressed", "false");
-})
+// On click event added to play game when play button clicked
+$("#play").on("click", playGame);
 
 // Show additional multiplication and division option buttons and update option buttons for multiplication game
 $("#multiply").click(function() {
     $("#options-multiply-divide").show("slow");
-    $("#btn1").html("x2, x5, x10").addClass("active").attr("aria-pressed", "true");
-    $("#btn2").html("Mixed 1 to 12").removeClass("active").attr("aria-pressed", "false");
-    $("#btn3").html("x1").removeClass("active").attr("aria-pressed", "false");
-    $("#btn4").html("x7").removeClass("active").attr("aria-pressed", "false");
-    $("#btn5").html("x2").removeClass("active").attr("aria-pressed", "false");
-    $("#btn6").html("x8").removeClass("active").attr("aria-pressed", "false");
-    $("#btn7").html("x3").removeClass("active").attr("aria-pressed", "false");
-    $("#btn8").html("x9").removeClass("active").attr("aria-pressed", "false");
-    $("#btn9").html("x4").removeClass("active").attr("aria-pressed", "false");
-    $("#btn10").html("x10").removeClass("active").attr("aria-pressed", "false");
-    $("#btn11").html("x5").removeClass("active").attr("aria-pressed", "false");
-    $("#btn12").html("x11").removeClass("active").attr("aria-pressed", "false");
-    $("#btn13").html("x6").removeClass("active").attr("aria-pressed", "false");
-    $("#btn14").html("x12").removeClass("active").attr("aria-pressed", "false");
+    makeActive("#btn-all-1");
+    $("#btn-all-1").html("2x, 5x, 10x")
+    $("#btn-all-2").html("Mixed 1 to 12");
+    $("#btn-all-3").html("1x");
+    $("#btn-all-4").html("7x");
+    $("#btn-md-5").html("2x");
+    $("#btn-md-6").html("8x");
+    $("#btn-md-7").html("3x");
+    $("#btn-md-8").html("9x");
+    $("#btn-md-9").html("4x");
+    $("#btn-md-10").html("10x");
+    $("#btn-md-11").html("5x");
+    $("#btn-md-12").html("11x");
+    $("#btn-md-13").html("6x");
+    $("#btn-md-14").html("12x");
 })
 
 // Show additional multiplication and division option buttons and update option buttons for division game
 $("#divide").click(function() {
     $("#options-multiply-divide").show("slow");
-    $("#btn1").html("&divide2, &divide5, &divide10").addClass("active").attr("aria-pressed", "true");
-    $("#btn2").html("Mixed 1 to 12").removeClass("active").attr("aria-pressed", "false");
-    $("#btn3").html("&divide1").removeClass("active").attr("aria-pressed", "false");
-    $("#btn4").html("&divide7").removeClass("active").attr("aria-pressed", "false");
-    $("#btn5").html("&divide2").removeClass("active").attr("aria-pressed", "false");
-    $("#btn6").html("&divide8").removeClass("active").attr("aria-pressed", "false");
-    $("#btn7").html("&divide3").removeClass("active").attr("aria-pressed", "false");
-    $("#btn8").html("&divide9").removeClass("active").attr("aria-pressed", "false");
-    $("#btn9").html("&divide4").removeClass("active").attr("aria-pressed", "false");
-    $("#btn10").html("&divide10").removeClass("active").attr("aria-pressed", "false");
-    $("#btn11").html("&divide5").removeClass("active").attr("aria-pressed", "false");
-    $("#btn12").html("&divide11").removeClass("active").attr("aria-pressed", "false");
-    $("#btn13").html("&divide6").removeClass("active").attr("aria-pressed", "false");
-    $("#btn14").html("&divide12").removeClass("active").attr("aria-pressed", "false");
+    makeActive("#btn-all-1");
+    $("#btn-all-1").html("&divide2, &divide5, &divide10");
+    $("#btn-all-2").html("Mixed 1 to 12");
+    $("#btn-all-3").html("&divide1");
+    $("#btn-all-4").html("&divide7");
+    $("#btn-md-5").html("&divide2");
+    $("#btn-md-6").html("&divide8");
+    $("#btn-md-7").html("&divide3");
+    $("#btn-md-8").html("&divide9");
+    $("#btn-md-9").html("&divide4");
+    $("#btn-md-10").html("&divide10");
+    $("#btn-md-11").html("&divide5");
+    $("#btn-md-12").html("&divide11");
+    $("#btn-md-13").html("&divide6");
+    $("#btn-md-14").html("&divide12");
 })
 
 // Remove active class to give toggle behaviour to option buttons in addition and subtraction mode
-$("#btn1").click(function() {
+$("#btn-all-1").click(function() {
     let gameMode = returnGameMode();
     if (gameMode === "add" || gameMode === "subtract") {
-        $("#btn2").removeClass("active").removeClass("focus").attr("aria-pressed", "false");
-        $("#btn3").removeClass("active").removeClass("focus").attr("aria-pressed", "false");
-        $("#btn4").removeClass("active").removeClass("focus").attr("aria-pressed", "false");
+        let btnIdList = ["#btn-all-2", "#btn-all-3", "#btn-all-4"]
+        makeNotActive(btnIdList);
     }
 })
 
 // Remove active class to give toggle behaviour to option buttons in addition and subtraction mode
-$("#btn2").click(function() {
+$("#btn-all-2").click(function() {
     let gameMode = returnGameMode();
     if (gameMode === "add" || gameMode === "subtract") {
-        $("#btn1").removeClass("active").removeClass("focus").attr("aria-pressed", "false");
-        $("#btn3").removeClass("active").removeClass("focus").attr("aria-pressed", "false");
-        $("#btn4").removeClass("active").removeClass("focus").attr("aria-pressed", "false");
+        let btnIdList = ["#btn-all-1", "#btn-all-3", "#btn-all-4"]
+        makeNotActive(btnIdList);
     }
 })
 
-// Remove active class to give toggle behaviour to option buttons in addition and subtraction mode
-$("#btn3").click(function() {
+// Remove active class to give toggle behaviour to option buttons in addition and subtraction mode //
+$("#btn-all-3").click(function() {
     let gameMode = returnGameMode();
     if (gameMode === "add" || gameMode === "subtract") {
-        $("#btn1").removeClass("active").removeClass("focus").attr("aria-pressed", "false");
-        $("#btn2").removeClass("active").removeClass("focus").attr("aria-pressed", "false");
-        $("#btn4").removeClass("active").removeClass("focus").attr("aria-pressed", "false");
+        let btnIdList = ["#btn-all-1", "#btn-all-2", "#btn-all-4"]
+        makeNotActive(btnIdList);
     }
 })
 
-// Remove active class to give toggle behaviour to option buttons in addition and subtraction mode
-$("#btn4").click(function() {
+// Remove active class to give toggle behaviour to option buttons in addition and subtraction mode //
+$("#btn-all-4").click(function() {
     let gameMode = returnGameMode();
     if (gameMode === "add" || gameMode === "subtract") {
-        $("#btn1").removeClass("active").removeClass("focus").attr("aria-pressed", "false");
-        $("#btn2").removeClass("active").removeClass("focus").attr("aria-pressed", "false");
-        $("#btn3").removeClass("active").removeClass("focus").attr("aria-pressed", "false");
+        let btnIdList = ["#btn-all-1", "#btn-all-2", "#btn-all-3"]
+        makeNotActive(btnIdList);
     }
 })
 
+/** Function to hide additional multiplication and division option buttons and update option buttons for subtraction game **/
+function modeAddSubtract() {
+   $("#options-multiply-divide").hide("slow");
+    makeActive("#btn-all-1");
+    $("#btn-all-1").html("Mixed to 10");
+    $("#btn-all-2").html("Mixed to 20");
+    $("#btn-all-3").html("Mixed to 50");
+    $("#btn-all-4").html("Mixed to 100");
+}
+
+/** Function to make the passed button active, and all other buttons not active. **/
+function makeActive(btnId) {
+    let btnIdList = ["#btn-all-1", "#btn-all-2", "#btn-all-3", "#btn-all-4", "#btn-md-5", "#btn-md-6", "#btn-md-7", "#btn-md-8", "#btn-md-9", "#btn-md-10", "#btn-md-11", "#btn-md-12", "#btn-md-13", "#btn-md-14"]
+    makeNotActive(btnIdList);
+    $(btnId).addClass("active").attr("aria-pressed", "true");
+    return(btnId);
+}
+
+/** Function to make the passed list of buttons not active**/
+function makeNotActive(btnIdList) {
+    for (let btnId of btnIdList) {
+        $(btnId).removeClass("active").removeClass("focus").attr("aria-pressed", "false");
+    }
+    return(btnIdList);
+}
+
+/** Function to activate #btn-all-1 if all other buttons are inactive . **/
 function checkButtons() {
-    let btnIdList = ["#btn1", "#btn2", "#btn3", "#btn4", "#btn5", "#btn6", "#btn7", "#btn8", "#btn9", "#btn10", "#btn11", "#btn12", "#btn13", "#btn14"]
+    let btnIdList = ["#btn-all-1", "#btn-all-2", "#btn-all-3", "#btn-all-4", "#btn-md-5", "#btn-md-6", "#btn-md-7", "#btn-md-8", "#btn-md-9", "#btn-md-10", "#btn-md-11", "#btn-md-12", "#btn-md-13", "#btn-md-14"]
     if ((returnActiveButtons(btnIdList).length) === 0) {
-        $("#btn1").addClass("active").addClass("focus").attr("aria-pressed", "true");        
+        $("#btn-all-1").addClass("active").addClass("focus").attr("aria-pressed", "true");        
     }
 }
 
-// Function to return selected game mode
+/** Function to return selected game mode. **/
 function returnGameMode() {
     let gameMode = "";
     if ($("#multiply").hasClass("active")) {
@@ -136,7 +130,7 @@ function returnGameMode() {
     return(gameMode);
 }
 
-// Function to return selected difficulty level;
+/** Function to return selected difficulty level. **/
 function returnDifficulty() {
     let difficulty = "";
     if ($("#easy").hasClass("active")) {
@@ -149,18 +143,18 @@ function returnDifficulty() {
     return(difficulty);
 }
 
-// Function to return number of questions;
+/** Function to return number of questions. **/
 function returnQuestions() {
     let qno = "";
-    if ($("#easy").hasClass("active")) {
+    if ($("#10q").hasClass("active")) {
         qno = "10";
-    } else if ($("#medium").hasClass("active")) {
+    } else if ($("#20q").hasClass("active")) {
         qno = "20";
     }
     return(qno);
 }
 
-// Function to return an array of active buttons
+/** Function to return an array of active buttons. **/
 function returnActiveButtons(btnIdList) {
     let btnActiveArray = [];
     for (let btnId of btnIdList) {
@@ -169,4 +163,17 @@ function returnActiveButtons(btnIdList) {
         }
     }
     return(btnActiveArray);
+}
+
+function playGame() {
+    checkButtons();
+    let gameMode = returnGameMode();
+    let btnIdList = ["#btn-all-1", "#btn-all-2", "#btn-all-3", "#btn-all-4", "#btn-md-5", "#btn-md-6", "#btn-md-7", "#btn-md-8", "#btn-md-9", "#btn-md-10", "#btn-md-11", "#btn-md-12", "#btn-md-13", "#btn-md-14"]
+    let qno = returnQuestions();
+    let difficulty = returnDifficulty();
+    let activeButtons = returnActiveButtons(btnIdList);
+    console.log(gameMode);
+    console.log(qno);
+    console.log(difficulty);
+    console.log(activeButtons);
 }
