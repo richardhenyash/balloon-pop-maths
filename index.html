@@ -69,6 +69,7 @@
         <div class="row collapse" id="options">
             <div class="col-md-2"></div>
             <div class="col-md-8">
+                <!-- Options applicable to all games -->
                 <div class="btn-group btn-group-toggle d-flex w-100 container-button-group" data-toggle="buttons">
                     <label id="10q" class="btn btn-xl w-100 btn-info btn-text active">
                         <input type="radio" name="questions" autocomplete="off" checked> 10 Questions
@@ -88,37 +89,37 @@
                         <input type="radio" name="difficulty" autocomplete="off"> Hard
                     </label>
                 </div>
-                <div class="row">
-                    <div class="col d-flex w-100 container-button">
-                        <span class="container-button"></span>
-                        <button id="btn-all-1" type="button" data-toggle="button" autocomplete="off" aria-pressed="true"
-                            class="btn btn-xl w-100 btn-info btn-text btn-xl-focus-none active">2x, 5x, 10x</button>
-                        <span class="container-button"></span>
-                        <button id="btn-all-2" type="button" data-toggle="button" autocomplete="off"
-                            class="btn btn-xl w-100 btn-info btn-text btn-xl-focus-none">Mixed 1 to 12</button>
-                        <span class="container-button"></span>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col d-flex w-100 container-button">
-                        <span class="container-button"></span>
-                        <button id="btn-all-3" type="button" data-toggle="button" autocomplete="off"
-                            class="btn btn-xl w-100 btn-info btn-text btn-xl-focus-none">1x</button>
-                        <span class="container-button"></span>
-                        <button id="btn-all-4" type="button" data-toggle="button" autocomplete="off"
-                            class="btn btn-xl w-100 btn-info btn-text btn-xl-focus-none">7x</button>
-                        <span class="container-button"></span>
-                    </div>
-                </div>
-                <!-- Collpasing Multiplication and Division Options -->
+                <!-- Multiplication and Division game options -->
                 <div id="options-multiply-divide">
                     <div class="row">
                         <div class="col d-flex w-100 container-button">
                             <span class="container-button"></span>
-                            <button id="btn-md-5" type="button" data-toggle="button" autocomplete="off"
+                            <button id="btn-mul-div-1" type="button" data-toggle="button" autocomplete="off" aria-pressed="true"
+                                class="btn btn-xl w-100 btn-info btn-text btn-xl-focus-none active">2x, 5x, 10x</button>
+                            <span class="container-button"></span>
+                            <button id="btn-mul-div-2" type="button" data-toggle="button" autocomplete="off"
+                                class="btn btn-xl w-100 btn-info btn-text btn-xl-focus-none">Mixed 1 to 12</button>
+                            <span class="container-button"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col d-flex w-100 container-button">
+                            <span class="container-button"></span>
+                            <button id="btn-mul-div-3" type="button" data-toggle="button" autocomplete="off"
+                                class="btn btn-xl w-100 btn-info btn-text btn-xl-focus-none">1x</button>
+                            <span class="container-button"></span>
+                            <button id="btn-mul-div-4" type="button" data-toggle="button" autocomplete="off"
+                                class="btn btn-xl w-100 btn-info btn-text btn-xl-focus-none">7x</button>
+                            <span class="container-button"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col d-flex w-100 container-button">
+                            <span class="container-button"></span>
+                            <button id="btn-mul-div-5" type="button" data-toggle="button" autocomplete="off"
                                 class="btn btn-xl w-100 btn-info btn-text btn-xl-focus-none">2x</button>
                             <span class="container-button"></span>
-                            <button id="btn-md-6" type="button" data-toggle="button" autocomplete="off"
+                            <button id="btn-mul-div-6" type="button" data-toggle="button" autocomplete="off"
                                 class="btn btn-xl w-100 btn-info btn-text btn-xl-focus-none">8x</button>
                             <span class="container-button"></span>
                         </div>
@@ -126,10 +127,10 @@
                     <div class="row">
                         <div class="col d-flex w-100 container-button">
                             <span class="container-button"></span>
-                            <button id="btn-md-7" type="button" data-toggle="button" autocomplete="off"
+                            <button id="btn-mul-div-7" type="button" data-toggle="button" autocomplete="off"
                                 class="btn btn-xl w-100 btn-info btn-text btn-xl-focus-none">3x</button>
                             <span class="container-button"></span>
-                            <button id="btn-md-8" type="button" data-toggle="button" autocomplete="off"
+                            <button id="btn-mul-div-8" type="button" data-toggle="button" autocomplete="off"
                                 class="btn btn-xl w-100 btn-info btn-text btn-xl-focus-none">9x</button>
                             <span class="container-button"></span>
                         </div>
@@ -137,10 +138,10 @@
                     <div class="row">
                         <div class="col d-flex w-100 container-button">
                             <span class="container-button"></span>
-                            <button id="btn-md-9" type="button" data-toggle="button" autocomplete="off"
+                            <button id="btn-mul-div-9" type="button" data-toggle="button" autocomplete="off"
                                 class="btn btn-xl w-100 btn-info btn-text btn-xl-focus-none">4x</button>
                             <span class="container-button"></span>
-                            <button id="btn-md-10" type="button" data-toggle="button" autocomplete="off"
+                            <button id="btn-mul-div-10" type="button" data-toggle="button" autocomplete="off"
                                 class="btn btn-xl w-100 btn-info btn-text btn-xl-focus-none">10x</button>
                             <span class="container-button"></span>
                         </div>
@@ -148,10 +149,10 @@
                     <div class="row">
                         <div class="col d-flex w-100 container-button">
                             <span class="container-button"></span>
-                            <button id="btn-md-11" type="button" data-toggle="button" autocomplete="off"
+                            <button id="btn-mul-div-11" type="button" data-toggle="button" autocomplete="off"
                                 class="btn btn-xl w-100 btn-info btn-text btn-xl-focus-none">5x</button>
                             <span class="container-button"></span>
-                            <button id="btn-md-12" type="button" data-toggle="button" autocomplete="off"
+                            <button id="btn-mul-div-12" type="button" data-toggle="button" autocomplete="off"
                                 class="btn btn-xl w-100 btn-info btn-text btn-xl-focus-none">11x</button>
                             <span class="container-button"></span>
                         </div>
@@ -159,11 +160,35 @@
                     <div class="row">
                         <div class="col d-flex w-100 container-button">
                             <span class="container-button"></span>
-                            <button id="btn-md-13" type="button" data-toggle="button" autocomplete="off"
+                            <button id="btn-mul-div-13" type="button" data-toggle="button" autocomplete="off"
                                 class="btn btn-xl w-100 btn-info btn-text btn-xl-focus-none">6x</button>
                             <span class="container-button"></span>
-                            <button id="btn-md-14" type="button" data-toggle="button" autocomplete="off"
+                            <button id="btn-mul-div-14" type="button" data-toggle="button" autocomplete="off"
                                 class="btn btn-xl w-100 btn-info btn-text btn-xl-focus-none">12x</button>
+                            <span class="container-button"></span>
+                        </div>
+                    </div>
+                </div>
+                <div id="options-add-subtract">
+                    <div class="row">
+                        <div class="col d-flex w-100 container-button">
+                            <span class="container-button"></span>
+                            <button id="btn-add-sub-1" type="button" data-toggle="button" autocomplete="off"
+                                class="btn btn-xl w-100 btn-info btn-text btn-xl-focus-none">Mixed to 10</button>
+                            <span class="container-button"></span>
+                            <button id="btn-add-sub-2" type="button" data-toggle="button" autocomplete="off"
+                                class="btn btn-xl w-100 btn-info btn-text btn-xl-focus-none">Mixed to 20</button>
+                            <span class="container-button"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col d-flex w-100 container-button">
+                            <span class="container-button"></span>
+                            <button id="btn-add-sub-3" type="button" data-toggle="button" autocomplete="off"
+                                class="btn btn-xl w-100 btn-info btn-text btn-xl-focus-none">Mixed to 50</button>
+                            <span class="container-button"></span>
+                            <button id="btn-add-sub-4" type="button" data-toggle="button" autocomplete="off"
+                                class="btn btn-xl w-100 btn-info btn-text btn-xl-focus-none">Mixed to 100</button>
                             <span class="container-button"></span>
                         </div>
                     </div>
