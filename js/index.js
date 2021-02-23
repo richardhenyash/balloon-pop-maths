@@ -225,8 +225,8 @@ function returnOptionArray (activeButtons) {
     return(optionArray);
 }
 
-/** Function to create times table array */
-function timesTableArray (tno) {
+/** Function to return times table array */
+function returnTimesTableArray (tno) {
     ttArray = [];
     for (i = 0; i <13; i++) {
         ttArray.push (i * tno);
