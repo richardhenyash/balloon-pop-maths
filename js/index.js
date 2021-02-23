@@ -33,25 +33,36 @@ $("#divide").click(function() {
     $("#btn-mul-div-14").html("&divide12");
 })
 
-// Remove active class to give toggle behaviour to option buttons in addition and subtraction mode
+// Remove active class to give toggle behaviour to first two option buttons in multiplication and division game
+$("#btn-mul-div-1").click(function() {
+    let btnIdList = ["#btn-mul-div-2", "#btn-mul-div-3", "#btn-mul-div-4", "#btn-mul-div-5", "#btn-mul-div-6", "#btn-mul-div-7", "#btn-mul-div-8", "#btn-mul-div-9", "#btn-mul-div-10", "#btn-mul-div-11", "#btn-mul-div-12", "#btn-mul-div-13", "#btn-mul-div-14"]
+    makeNotActive(btnIdList);
+})
+$("#btn-mul-div-2").click(function() {
+    let btnIdList = ["#btn-mul-div-1", "#btn-mul-div-3", "#btn-mul-div-4", "#btn-mul-div-5", "#btn-mul-div-6", "#btn-mul-div-7", "#btn-mul-div-8", "#btn-mul-div-9", "#btn-mul-div-10", "#btn-mul-div-11", "#btn-mul-div-12", "#btn-mul-div-13", "#btn-mul-div-14"]
+    makeNotActive(btnIdList);
+})
+let mdBtnIdList = ["#btn-mul-div-3", "#btn-mul-div-4", "#btn-mul-div-5", "#btn-mul-div-6", "#btn-mul-div-7", "#btn-mul-div-8", "#btn-mul-div-9", "#btn-mul-div-10", "#btn-mul-div-11", "#btn-mul-div-12", "#btn-mul-div-13", "#btn-mul-div-14"]
+for (mdBtn of mdBtnIdList) {
+    $(mdBtn).click(function() {
+        let btnIdList = ["#btn-mul-div-1", "#btn-mul-div-2"]
+        makeNotActive(btnIdList);
+    })
+}
+
+// Remove active class to give toggle behaviour to four option buttons in addition and subtraction mode
 $("#btn-add-sub-1").click(function() {
     let btnIdList = ["#btn-add-sub-2", "#btn-add-sub-3", "#btn-add-sub-4"]
     makeNotActive(btnIdList);
 })
-
-// Remove active class to give toggle behaviour to option buttons in addition and subtraction mode
 $("#btn-add-sub-2").click(function() {
     let btnIdList = ["#btn-add-sub-1", "#btn-add-sub-3", "#btn-add-sub-4"]
     makeNotActive(btnIdList);
 })
-
-// Remove active class to give toggle behaviour to option buttons in addition and subtraction mode //
 $("#btn-add-sub-3").click(function() {
     let btnIdList = ["#btn-add-sub-1", "#btn-add-sub-2", "#btn-add-sub-4"]
     makeNotActive(btnIdList);
 })
-
-// Remove active class to give toggle behaviour to option buttons in addition and subtraction mode //
 $("#btn-add-sub-4").click(function() {
     let btnIdList = ["#btn-add-sub-1", "#btn-add-sub-2", "#btn-add-sub-3"]
     makeNotActive(btnIdList);
@@ -209,20 +220,91 @@ function playGame() {
     let difficulty = returnDifficulty();
     let activeButtons = returnActiveButtons(gameMode);
     let optionArray = returnOptionArray(activeButtons);
+    let qArray = returnQuestionArray(gameMode, optionArray, qno);
     console.log(gameMode);
     console.log(qno);
     console.log(difficulty);
     console.log(activeButtons);
     console.log(optionArray);
+    console.log(qArray);
 }
 
 /** Function to generate options array from Active Buttons  */
 function returnOptionArray (activeButtons) {
-    optionArray = []
+    let optionArray = []
     for (let [key, btnId] of Object.entries(activeButtons)) {
         optionArray.push($(btnId).text());
     }
     return(optionArray);
+}
+
+function returnQuestionArray (gameMode, optionArray, qno) {
+    let questionArray = []
+    if (gameMode == "multiply") {
+        questionArray = returnMultiplicationQuestionArray(optionArray, qno);
+    } else if (gameMode == "divide") {
+        questionArray = returnDivisionQuestionArray(optionArray, qno);
+    } else if (gameMode == "add") {
+        questionArray = returnAdditionQuestionArray(optionArray, qno);        
+    } else if (gameMode == "subtract") {
+        questionArray = returnSubtractionQuestionArray(optionArray, qno);        
+    }
+    return(questionArray);
+}
+
+function returnMultiplicationQuestionArray (optionArray, qno) {
+    let mqArray = [];
+    if (optionArray[0] == "2x, 5x, 10x") {
+        let remq = (qno % 3)
+        let no2xQ = Math.floor(qno / 3) + remq;
+        let no5xQ = Math.floor(qno / 3);
+        let no10xQ = Math.floor(qno / 3);
+        let ttq;
+        for (i = 0; i < no2xQ; i++) {
+            ttq = returnMultiplicationQuestion(2);
+            mqArray.push(ttq);
+        }
+        for (i = 0; i < no5xQ; i++) {
+            ttq = returnMultiplicationQuestion(5);
+            mqArray.push(ttq);
+        }
+        for (i = 0; i < no10xQ; i++) {
+            ttq = returnMultiplicationQuestion(10);
+            mqArray.push(ttq);
+        }
+    } else if (optionArray[0] == "Mixed 1 to 12") {
+        let ttno
+        let ttq
+        for (i = 0; i < qno; i++) {
+            ttno = Math.floor((Math.random() * 12) + 1);
+            ttq = returnMultiplicationQuestion(ttno);
+            mqArray.push(ttq);
+        }
+    } else {
+        let ttk = 0;
+        let ttqstr;
+        let ttqstrnew;
+        for (i = 0; i < qno; i++) {
+            ttqstr = (optionArray[ttk]);
+            ttqstrnew = ttqstr.substring(0, ttqstr.length - 1);
+            ttq = returnMultiplicationQuestion(ttqstrnew);
+            mqArray.push(ttq);
+            if (ttk < (optionArray.length - 1)) {
+                ttk = (ttk + 1);
+            } else {
+                ttk = 0;
+            }
+        }
+    }
+    return(mqArray);
+}
+
+function returnMultiplicationQuestion(tno) {
+    let ttno = Math.floor((Math.random() * 12) + 1);
+    let ttqStr = tno.toString() + " x " + ttno.toString();
+    let ttAnswer = (tno * ttno);
+    let mq = [ttqStr, ttAnswer];
+    return mq
 }
 
 /** Function to return times table array */
