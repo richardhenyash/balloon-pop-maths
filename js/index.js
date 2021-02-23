@@ -208,8 +208,28 @@ function playGame() {
     let qno = returnQuestions();
     let difficulty = returnDifficulty();
     let activeButtons = returnActiveButtons(gameMode);
+    let optionArray = returnOptionArray(activeButtons);
     console.log(gameMode);
     console.log(qno);
     console.log(difficulty);
     console.log(activeButtons);
+    console.log(optionArray);
+}
+
+/** Function to generate options array from Active Buttons  */
+function returnOptionArray (activeButtons) {
+    optionArray = []
+    for (let [key, btnId] of Object.entries(activeButtons)) {
+        optionArray.push($(btnId).text());
+    }
+    return(optionArray);
+}
+
+/** Function to create times table array */
+function timesTableArray (tno) {
+    ttArray = [];
+    for (i = 0; i <13; i++) {
+        ttArray.push (i * tno);
+    }
+    return(ttArray);
 }
