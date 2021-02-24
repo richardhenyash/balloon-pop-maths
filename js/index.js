@@ -394,7 +394,8 @@ function returnTimesTableArray (tno) {
     return(ttArray);
 }
 
-/** Function to randomly shuffle an array*/
+/** Function to randomize an array in place using the Durstenfeld shuffle algorithm **/
+/** Function referenced from stack overflow link below, many thanks to Laurens Holst **/
 /** https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array **/
 function shuffleArray(array) {
     let j;
