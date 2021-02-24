@@ -229,7 +229,7 @@ function playGame() {
     console.log(qArray);
 }
 
-/** Function to generate options array from Active Buttons  */
+/** Function to generate options array from Active Buttons  **/
 function returnOptionArray (activeButtons) {
     let optionArray = []
     for (let [key, btnId] of Object.entries(activeButtons)) {
@@ -238,6 +238,7 @@ function returnOptionArray (activeButtons) {
     return(optionArray);
 }
 
+/** Function to return random question array, given game mode, options and number of questions**/
 function returnQuestionArray (gameMode, optionArray, qno) {
     let questionArray = []
     if (gameMode == "multiply") {
@@ -252,6 +253,7 @@ function returnQuestionArray (gameMode, optionArray, qno) {
     return(questionArray);
 }
 
+/** Function to return random multiplication question array, given options and number of questions**/
 function returnMultiplicationQuestionArray (optionArray, qno) {
     let mqArray = [];
     if (optionArray[0] == "2x, 5x, 10x") {
@@ -299,6 +301,72 @@ function returnMultiplicationQuestionArray (optionArray, qno) {
     return(mqArray);
 }
 
+/** Function to return random question array, given game mode, options and number of questions**/
+function returnQuestionArray (gameMode, optionArray, qno) {
+    let questionArray = []
+    if (gameMode == "multiply") {
+        questionArray = returnMultiplicationQuestionArray(optionArray, qno);
+    } else if (gameMode == "divide") {
+        questionArray = returnDivisionQuestionArray(optionArray, qno);
+    } else if (gameMode == "add") {
+        questionArray = returnAdditionQuestionArray(optionArray, qno);        
+    } else if (gameMode == "subtract") {
+        questionArray = returnSubtractionQuestionArray(optionArray, qno);        
+    }
+    questionArray = shuffleArray(questionArray);
+    return(questionArray);
+
+}
+
+/** Function to return random division question array, given options and number of questions**/
+function returnDivisionQuestionArray (optionArray, qno) {
+    let dqArray = [];
+    if ((optionArray[0].substring(1, 2) == "2") && (optionArray[0].substring(5, 6) == "5") && (optionArray[0].substring(9, 11) == "10")) {
+        let remq = (qno % 3)
+        let no2Q = Math.floor(qno / 3) + remq;
+        let no5Q = Math.floor(qno / 3);
+        let no10Q = Math.floor(qno / 3);
+        let dq;
+        for (i = 0; i < no2Q; i++) {
+            dq = returnDivisionQuestion(2);
+            dqArray.push(dq);
+        }
+        for (i = 0; i < no5Q; i++) {
+            dq = returnDivisionQuestion(5);
+            dqArray.push(dq);
+        }
+        for (i = 0; i < no10Q; i++) {
+            dq = returnDivisionQuestion(10);
+            dqArray.push(dq);
+        }
+    } else if (optionArray[0] == "Mixed 1 to 12") {
+        let dno
+        let dq
+        for (i = 0; i < qno; i++) {
+            dno = Math.floor((Math.random() * 12) + 1);
+            dq = returnDivisionQuestion(dno);
+            dqArray.push(dq);
+        }
+    } else {
+        let dk = 0;
+        let dqstr;
+        let dqstrnew;
+        for (i = 0; i < qno; i++) {
+            dqstr = (optionArray[dk]);
+            dqstrnew = dqstr.substring(1, dqstr.length);
+            dq = returnDivisionQuestion(dqstrnew);
+            dqArray.push(dq);
+            if (dk < (optionArray.length - 1)) {
+                dk = (dk + 1);
+            } else {
+                dk = 0;
+            }
+        }
+    }
+    return(dqArray);
+}
+
+/** Function to return random multiplication question and answer array from 1 to 12, given times table number**/
 function returnMultiplicationQuestion(tno) {
     let ttno = Math.floor((Math.random() * 12) + 1);
     let ttqStr = tno.toString() + " x " + ttno.toString();
@@ -307,11 +375,33 @@ function returnMultiplicationQuestion(tno) {
     return mq
 }
 
-/** Function to return times table array */
+/** Function to return random division question and answer array from 1 to 12, given division table number**/
+function returnDivisionQuestion(dno) {
+    let dtno = Math.floor((Math.random() * 12) + 1);
+    let dsum = dtno * dno;
+    let dqStr = dsum.toString() + " &divide " + dno.toString();
+    let dAnswer = (dtno);
+    let dq = [dqStr, dAnswer];
+    return dq
+}
+
+/** Function to return times table array, given times table number */
 function returnTimesTableArray (tno) {
     ttArray = [];
     for (i = 0; i <13; i++) {
         ttArray.push (i * tno);
     }
     return(ttArray);
+}
+
+/** Function to randomly shuffle an array*/
+/** https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array **/
+function shuffleArray(array) {
+    for (var i = array.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+    return(array);
 }
