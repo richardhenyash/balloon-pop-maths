@@ -112,6 +112,8 @@ within the multiplication game, or addition of numbers up to 20 in the addition 
 * The user needs to be able to initiate the game from the menu, and return to the main menu if they want to abort the current game.
 * The user would like to see their current score, and their previous top score. This will mean that the user is more likely to play
 another game or return to the site in the future to better their previous score.
+* The user would like to be able to contact the developer.
+
 
 #### Business Rules ####
 * It is not envisaged that the game will be sold for profit. However, the game should be as much fun as possible to play, in order to 
