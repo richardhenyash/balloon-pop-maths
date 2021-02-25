@@ -29,15 +29,17 @@ body {
 }
 
 .container-button {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
 }
 
 .container-button-group {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
+}
+
+.container-button-group-extra {
+    padding-top: 1.0rem;
+    padding-bottom: 1.0rem;
 }
 
 /*--Headings--*/
@@ -82,6 +84,12 @@ body {
     border-radius: 1.0rem;
     background-color: #908CD9;
     border-color: #3E8BC6;
+}
+
+/*--Balloon Image Sprites--*/
+.balloon img {
+    position: absolute;
+    clip-path: inset(0px 3072px 512px 2560px);
 }
 
 /*--Footer--*/
