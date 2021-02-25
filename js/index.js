@@ -14,8 +14,8 @@ $("#play").on("click", playGame);
 
 // Show multiplication and division option buttons and update option buttons for division game
 $("#divide").click(function() {
-    $("#options-add-subtract").hide("slow");
-    $("#options-multiply-divide").show("slow");
+    $("#options-add-subtract").hide("medium");
+    $("#options-multiply-divide").show("medium");
     makeActive("#btn-mul-div-1");
     $("#btn-mul-div-1").html("&divide2, &divide5, &divide10");
     $("#btn-mul-div-2").html("Mixed 1 to 12");
@@ -68,18 +68,25 @@ $("#btn-add-sub-4").click(function() {
     makeNotActive(btnIdList);
 })
 
+// Hide game section and show heading and options sections on click of options button in game mode
+$("#btn-game-section-options").click(function() {   
+    $("#game-section").hide("medium");   
+    $("#heading-section").show("medium");
+    $("#options-section").show("medium");
+})
+
 /** Function to hide multiplication and division option buttons and show option buttons for addition and subtraction game **/
 function modeAddSubtract() {
-   $("#options-multiply-divide").hide("slow");
-   $("#options-add-subtract").show("slow");
+   $("#options-multiply-divide").hide("medium");
+   $("#options-add-subtract").show("medium");
     makeActive("#btn-mul-div-1");
 }
 
 /** Function to hide addition and subtraction option buttons and show option buttons for multiplication game **/
 function modeMultiply()
  {
-    $("#options-add-subtract").hide("slow");
-    $("#options-multiply-divide").show("slow");
+    $("#options-add-subtract").hide("medium");
+    $("#options-multiply-divide").show("medium");
     makeActive("#btn-mul-div-1");
     $("#btn-mul-div-1").html("2x, 5x, 10x")
     $("#btn-mul-div-2").html("Mixed 1 to 12");
@@ -99,8 +106,8 @@ function modeMultiply()
 
 /** Function to hide addition and subtraction option buttons and show option buttons for division game **/
 function modeDivide() {
-    $("#options-add-subtract").hide("slow");
-    $("#options-multiply-divide").show("slow");
+    $("#options-add-subtract").hide("medium");
+    $("#options-multiply-divide").show("medium");
     makeActive("#btn-mul-div-1");
     $("#btn-mul-div-1").html("&divide2, &divide5, &divide10");
     $("#btn-mul-div-2").html("Mixed 1 to 12");
@@ -227,6 +234,12 @@ function playGame() {
     console.log(activeButtons);
     console.log(optionArray);
     console.log(qArray);
+    // Hide heading section and options section //
+    $("#heading-section").hide("medium");
+    $("#options-section").hide("medium");
+    $("#game-section").hide();
+    $("#game-section").removeClass( "d-none" )
+    $("#game-section").show(1000);
 }
 
 /** Function to generate options array from Active Buttons  **/
