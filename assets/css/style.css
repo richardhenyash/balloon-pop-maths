@@ -178,13 +178,13 @@ body {
 
 /*-- Game Question --*/
 .game-section-controls #question {
-    font-family: "Whale I Tried", sans-serif;
-    font-size: 6rem;
-    color: #9C70BD;
-    border-spacing: 1rem;
-    border: 2px solid #9C70BD;
-    border-radius: 2rem;
+    color:#EEFBFF;
     text-align: center;
+    font-size: 5rem;
+    font-weight: 700;
+    border-radius: 1.0rem;
+    background-color: #908CD9;
+    border: 1px solid #3E8BC6;
 }
 
 /*-- Game Health --*/
