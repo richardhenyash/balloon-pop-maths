@@ -163,7 +163,7 @@ body {
 
 /*-- Game Canvas Styling --*/
 .canvas-balloon canvas {
-    height: 70vh;
+    height: 60vh;
     width: 100%;
 }
 
@@ -212,7 +212,7 @@ body {
 /*-- Media query to re-size balloon canvas for small devices --*/
 @media (max-width: 768px) {
     .canvas-balloon canvas {
-        height: 35vh;
+        height: 30vh;
     }
 }
 
