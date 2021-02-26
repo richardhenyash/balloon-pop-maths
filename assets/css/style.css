@@ -163,7 +163,7 @@ body {
 
 /*-- Game Canvas Styling --*/
 .canvas-balloon canvas {
-    height: 60vh;
+    height: 70vh;
     width: 100%;
 }
 
@@ -176,7 +176,7 @@ body {
 }
 
 
-/*-- Game Question Styling --*/
+/*-- Game Question --*/
 .game-section-controls #question {
     font-family: "Whale I Tried", sans-serif;
     font-size: 6rem;
@@ -187,7 +187,7 @@ body {
     text-align: center;
 }
 
-/*-- Game Health Styling --*/
+/*-- Game Health --*/
 .game-section-controls #health {
     color: #9C70BD;
     text-align: center;
@@ -199,6 +199,7 @@ body {
     font-size: 2rem;
 }
 
+/*-- Game Score --*/
 .game-section-controls #score {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
@@ -211,7 +212,7 @@ body {
 /*-- Media query to re-size balloon canvas for small devices --*/
 @media (max-width: 768px) {
     .canvas-balloon canvas {
-        height: 30vh;
+        height: 35vh;
     }
 }
 
