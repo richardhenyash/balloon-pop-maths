@@ -221,19 +221,21 @@ function btnArray() {
 
 /** Function to launch game. **/
 function playGame() {
-    let gameMode = returnGameMode();
+    var gameMode = returnGameMode();
     checkButtons(gameMode);
-    let qno = returnQuestions();
-    let difficulty = returnDifficulty();
-    let activeButtons = returnActiveButtons(gameMode);
-    let optionArray = returnOptionArray(activeButtons);
-    let qArray = returnQuestionArray(gameMode, optionArray, qno);
+    var qno = returnQuestions();
+    var difficulty = returnDifficulty();
+    var activeButtons = returnActiveButtons(gameMode);
+    var optionArray = returnOptionArray(activeButtons);
+    var qArray = returnQuestionArray(gameMode, optionArray, qno);
+    var healthArray = initialiseHealthBar(difficulty);
     console.log(gameMode);
     console.log(qno);
     console.log(difficulty);
     console.log(activeButtons);
     console.log(optionArray);
     console.log(qArray);
+    console.log(healthArray);
     // Hide heading section and options section //
     $("#heading-section").hide("medium");
     $("#options-section").hide("medium");
@@ -474,4 +476,50 @@ function shuffleArray(array) {
         [array[i], array[j]] = [array[j], array[i]];
     }
     return(array);
+}
+
+/** Function to initialise health bar, given difficulty level **/
+function initialiseHealthBar(difficulty) {
+    let healthArray;
+    if (difficulty == "easy") {
+        healthArray = [5, 5];
+        $("#heart1").show();
+        $("#heart2").show();
+        $("#heart3").show();
+        $("#heart4").show();
+        $("#heart5").show();
+    } else if (difficulty == "medium") {
+        healthArray = [3, 3];
+        $("#heart1").show();
+        $("#heart2").show();
+        $("#heart3").show();
+        $("#heart4").hide();
+        $("#heart5").hide();
+    } else if (difficulty == "hard") {
+        healthArray = [1, 1];
+        $("#heart1").show();
+        $("#heart2").hide();
+        $("#heart3").hide();
+        $("#heart4").hide();
+        $("#heart5").hide();
+    }
+    setHealthBar(healthArray);
+    return healthArray;
+}
+
+/** Function to set health bar, given an array of 2 integers from 1 to 5 **/
+function setHealthBar(healthArray) {
+    let currentHealth = healthArray[0];
+    let totalHealth = healthArray[1];
+    let hdiff = healthArray[1] - healthArray[0];
+    let i;
+    for (i = 1; i < (totalHealth + 1); i++) {
+        hstr = "#heart" + i;
+        $(hstr).removeClass("far fa-heart").addClass("fas fa-heart");
+    }
+    for (i = (currentHealth + 1); i < (totalHealth + 1); i++) {
+        hstr = "#heart" + i;
+        $(hstr).removeClass("fas fa-heart").addClass("far fa-heart");
+    }
+    return(healthArray);
 }
