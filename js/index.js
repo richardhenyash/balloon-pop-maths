@@ -182,9 +182,9 @@ function returnDifficulty() {
 function returnQuestions() {
     let qno = "";
     if ($("#10q").hasClass("active")) {
-        qno = "10";
+        qno = 10;
     } else if ($("#20q").hasClass("active")) {
-        qno = "20";
+        qno = 20;
     }
     return(qno);
 }
@@ -229,6 +229,8 @@ function playGame() {
     var optionArray = returnOptionArray(activeButtons);
     var qArray = returnQuestionArray(gameMode, optionArray, qno);
     var healthArray = initialiseHealthBar(difficulty);
+    var scoreArray = setScore([0, qno]);
+    var qCurrent = setQuestion(qArray[0]);
     console.log(gameMode);
     console.log(qno);
     console.log(difficulty);
@@ -236,6 +238,8 @@ function playGame() {
     console.log(optionArray);
     console.log(qArray);
     console.log(healthArray);
+    console.log(scoreArray);
+    console.log(qCurrent);
     // Hide heading section and options section //
     $("#heading-section").hide("medium");
     $("#options-section").hide("medium");
@@ -522,4 +526,18 @@ function setHealthBar(healthArray) {
         $(hstr).removeClass("fas fa-heart").addClass("far fa-heart");
     }
     return(healthArray);
+}
+
+/** Function to set score, given an array of 2 integers**/
+function setScore(scoreArray) {
+    let scoreString = "Score: " + scoreArray[0] + " / " + scoreArray[1];
+    $("#score").html(scoreString);
+    return(scoreArray);
+}
+
+/** Function to set current question, given a 2 item array of question and answer **/
+function setQuestion(qCurrent) {
+    let qString = qCurrent[0];
+    $("#question").html(qString);
+    return(qCurrent);
 }
