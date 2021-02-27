@@ -541,3 +541,44 @@ function setQuestion(qCurrent) {
     $("#question").html(qString);
     return(qCurrent);
 }
+
+/** Function to generate 5 wrong multiplication answers, given current question**/
+function wrongAnswersMultiplication(qCurrent) {
+    let qStr = qCurrent[0];
+    let qStrArray = qStr.split(" ");
+    let no1 = parseInt(qStrArray[0]);
+    let no2 = parseInt(qStrArray[2]);
+    let wrongAnswerArray = []
+    if (no1 > 1) {
+        wrongAnswerArray.push((no1 - 1) * no2);
+    } else {
+        wrongAnswerArray.push((no1 + 2) * no2);
+    }
+    if (no1 > 2) {
+        wrongAnswerArray.push((no1 - 2) * no2);
+    } else {
+        wrongAnswerArray.push((no1 + 3) * no2);
+    }
+    wrongAnswerArray.push((no1 + 1) * no2);
+    let minInt = ((no1 - 1) * no2);
+    let maxInt = ((no1 + 1) * no2);
+    randomInt = getRandomInt(minInt, maxInt);
+    while (wrongAnswerArray.includes(randomInt)) {
+        randomInt = getRandomInt(minInt, maxInt);
+    }
+    wrongAnswerArray.push(randomInt);
+    randomInt = getRandomInt(minInt, maxInt);
+    while (wrongAnswerArray.includes(randomInt)) {
+        randomInt = getRandomInt(minInt, maxInt);
+    }
+    wrongAnswerArray.push(randomInt);
+    return(wrongAnswerArray);
+}
+
+/** Function to generate a random integer between the two integers given **/
+/** https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random **/
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
+}
