@@ -542,7 +542,7 @@ function setQuestion(qCurrent) {
     return(qCurrent);
 }
 
-/** Function to generate 5 wrong multiplication answers, given current question**/
+/** Function to generate array of 5 wrong multiplication answers, given current question**/
 function wrongAnswersMultiplication(qCurrent) {
     let qStr = qCurrent[0];
     let qStrArray = qStr.split(" ");
@@ -566,23 +566,24 @@ function wrongAnswersMultiplication(qCurrent) {
         minInt = 0;
         maxInt = 20;
     }
-    randomInt = getRandomInt(minInt, maxInt);
+    randomInt = getRandomIntInclusive(minInt, maxInt);
     while ((wrongAnswerArray.includes(randomInt)) || (randomInt == qCurrent[1])) {
-        randomInt = getRandomInt(minInt, maxInt);
+        randomInt = getRandomIntInclusive(minInt, maxInt);
     }
     wrongAnswerArray.push(randomInt);
-    randomInt = getRandomInt(minInt, maxInt);
+    randomInt = getRandomIntInclusive(minInt, maxInt);
     while ((wrongAnswerArray.includes(randomInt)) || (randomInt == qCurrent[1])) {
-        randomInt = getRandomInt(minInt, maxInt);
+        randomInt = getRandomIntInclusive(minInt, maxInt);
     }
     wrongAnswerArray.push(randomInt);
     return(wrongAnswerArray);
 }
 
 /** Function to generate a random integer between the two integers given **/
+/** Function referenced from MDN Web Docs link below **/
 /** https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random **/
-function getRandomInt(min, max) {
+function getRandomIntInclusive(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
+  return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive
 }
