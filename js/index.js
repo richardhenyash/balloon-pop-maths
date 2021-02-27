@@ -562,13 +562,17 @@ function wrongAnswersMultiplication(qCurrent) {
     wrongAnswerArray.push((no1 + 1) * no2);
     let minInt = ((no1 - 1) * no2);
     let maxInt = ((no1 + 1) * no2);
+    if (maxInt < 20) {
+        minInt = 0;
+        maxInt = 20;
+    }
     randomInt = getRandomInt(minInt, maxInt);
-    while (wrongAnswerArray.includes(randomInt)) {
+    while ((wrongAnswerArray.includes(randomInt)) || (randomInt == qCurrent[1])) {
         randomInt = getRandomInt(minInt, maxInt);
     }
     wrongAnswerArray.push(randomInt);
     randomInt = getRandomInt(minInt, maxInt);
-    while (wrongAnswerArray.includes(randomInt)) {
+    while ((wrongAnswerArray.includes(randomInt)) || (randomInt == qCurrent[1])) {
         randomInt = getRandomInt(minInt, maxInt);
     }
     wrongAnswerArray.push(randomInt);
