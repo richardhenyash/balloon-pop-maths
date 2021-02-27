@@ -562,9 +562,9 @@ function wrongAnswersMultiplication(qCurrent) {
     wrongAnswerArray.push((no1 + 1) * no2);
     let minInt = ((no1 - 1) * no2);
     let maxInt = ((no1 + 1) * no2);
-    if (maxInt < 20) {
+    if (maxInt < 10) {
         minInt = 0;
-        maxInt = 20;
+        maxInt = 10;
     }
     randomInt = getRandomIntInclusive(minInt, maxInt);
     while ((wrongAnswerArray.includes(randomInt)) || (randomInt == qCurrent[1])) {
