@@ -566,6 +566,7 @@ function wrongAnswersMultiplication(qCurrent) {
     let qStrArray = qStr.split(" ");
     let no1 = parseInt(qStrArray[0]);
     let no2 = parseInt(qStrArray[2]);
+    let cA = qCurrent[1];
     let wrongAnswerArray = []
     if (no1 > 1) {
         wrongAnswerArray.push((no1 - 1) * no2);
@@ -584,16 +585,7 @@ function wrongAnswersMultiplication(qCurrent) {
         minInt = 0;
         maxInt = 10;
     }
-    randomInt = getRandomIntInclusive(minInt, maxInt);
-    while ((wrongAnswerArray.includes(randomInt)) || (randomInt == qCurrent[1])) {
-        randomInt = getRandomIntInclusive(minInt, maxInt);
-    }
-    wrongAnswerArray.push(randomInt);
-    randomInt = getRandomIntInclusive(minInt, maxInt);
-    while ((wrongAnswerArray.includes(randomInt)) || (randomInt == qCurrent[1])) {
-        randomInt = getRandomIntInclusive(minInt, maxInt);
-    }
-    wrongAnswerArray.push(randomInt);
+    wrongAnswerArray = wrongAnswerArrayComplete(wrongAnswerArray, cA, minInt, maxInt);
     return(wrongAnswerArray);
 }
 
@@ -613,16 +605,7 @@ function wrongAnswersDivision(qCurrent) {
         maxInt = 6;
     }
     let wrongAnswerArray = [(cA - 1), (cA + 1), (cA + 2)];
-    randomInt = getRandomIntInclusive(minInt, maxInt);
-    while ((wrongAnswerArray.includes(randomInt)) || (randomInt == qCurrent[1])) {
-        randomInt = getRandomIntInclusive(minInt, maxInt);
-    }
-    wrongAnswerArray.push(randomInt);
-    randomInt = getRandomIntInclusive(minInt, maxInt);
-    while ((wrongAnswerArray.includes(randomInt)) || (randomInt == qCurrent[1])) {
-        randomInt = getRandomIntInclusive(minInt, maxInt);
-    }
-    wrongAnswerArray.push(randomInt);
+    wrongAnswerArray = wrongAnswerArrayComplete(wrongAnswerArray, cA, minInt, maxInt);
     return(wrongAnswerArray);
 }
 
@@ -634,18 +617,9 @@ function wrongAnswersAddition(qCurrent) {
     let no2 = parseInt(qStrArray[2]);
     let cA = qCurrent[1];
     let wrongAnswerArray = [(cA - 1), (cA + 1), (cA + 2)];
-    let minInt = (Math.min(no1, no2)) + 1;
+    let minInt = (Math.max(no1, no2)) + 1;
     let maxInt = (no1 + no2 + 6);
-    randomInt = getRandomIntInclusive(minInt, maxInt);
-    while ((wrongAnswerArray.includes(randomInt)) || (randomInt == qCurrent[1])) {
-        randomInt = getRandomIntInclusive(minInt, maxInt);
-    }
-    wrongAnswerArray.push(randomInt);
-    randomInt = getRandomIntInclusive(minInt, maxInt);
-    while ((wrongAnswerArray.includes(randomInt)) || (randomInt == qCurrent[1])) {
-        randomInt = getRandomIntInclusive(minInt, maxInt);
-    }
-    wrongAnswerArray.push(randomInt);
+    wrongAnswerArray = wrongAnswerArrayComplete(wrongAnswerArray, cA, minInt, maxInt);
     return(wrongAnswerArray);    
 }
 
@@ -662,17 +636,28 @@ function wrongAnswersSubtraction(qCurrent) {
     if (maxInt < 6) {
         maxInt = 6;
     }
-    randomInt = getRandomIntInclusive(minInt, maxInt);
-    while ((wrongAnswerArray.includes(randomInt)) || (randomInt == qCurrent[1])) {
-        randomInt = getRandomIntInclusive(minInt, maxInt);
-    }
-    wrongAnswerArray.push(randomInt);
-    randomInt = getRandomIntInclusive(minInt, maxInt);
-    while ((wrongAnswerArray.includes(randomInt)) || (randomInt == qCurrent[1])) {
-        randomInt = getRandomIntInclusive(minInt, maxInt);
-    }
-    wrongAnswerArray.push(randomInt);
+    wrongAnswerArray = wrongAnswerArrayComplete(wrongAnswerArray, cA, minInt, maxInt);
     return(wrongAnswerArray); 
+}
+
+/** Function to populate wrong answer array with two randomly generated integers between the two integers given.
+Generated random integers until a random integer not already in the array and not equal to the correct answer is found.
+Returns completed wrong answer array **/
+function wrongAnswerArrayComplete(wrongAnswerArray, cA, minInt, maxInt) {
+    if ((maxInt - minInt) < 6) {
+        maxInt = minInt + 6;
+    }
+    randomInt = getRandomIntInclusive(minInt, maxInt);
+    while ((wrongAnswerArray.includes(randomInt)) || (randomInt == cA)) {
+        randomInt = getRandomIntInclusive(minInt, maxInt);
+    }
+    wrongAnswerArray.push(randomInt);
+    randomInt = getRandomIntInclusive(minInt, maxInt);
+    while ((wrongAnswerArray.includes(randomInt)) || (randomInt == cA)) {
+        randomInt = getRandomIntInclusive(minInt, maxInt);
+    }
+    wrongAnswerArray.push(randomInt);
+    return(wrongAnswerArray);
 }
 
 /** Function to generate a random integer between the two integers given **/
