@@ -231,6 +231,7 @@ function playGame() {
     var healthArray = initialiseHealthBar(difficulty);
     var scoreArray = setScore([0, qno]);
     var qCurrent = setQuestion(qArray[0]);
+    var wrongAnswerArray = wrongAnswers(gameMode, qCurrent);
     console.log(gameMode);
     console.log(qno);
     console.log(difficulty);
@@ -240,6 +241,7 @@ function playGame() {
     console.log(healthArray);
     console.log(scoreArray);
     console.log(qCurrent);
+    console.log(wrongAnswerArray);
     // Hide heading section and options section //
     $("#heading-section").hide("medium");
     $("#options-section").hide("medium");
@@ -542,6 +544,22 @@ function setQuestion(qCurrent) {
     return(qCurrent);
 }
 
+/** Function to generate array of 5 wrong answers, given game mode and current question**/
+function wrongAnswers(gameMode, qCurrent) {
+    let wrongAnswerArray = [];
+    if (gameMode == "multiply") {
+        wrongAnswerArray = wrongAnswersMultiplication(qCurrent);
+    } else if (gameMode == "divide") {
+        wrongAnswerArray = wrongAnswersDivision(qCurrent);
+    } else if (gameMode == "add") {
+        wrongAnswerArray = wrongAnswersAddition(qCurrent);        
+    } else if (gameMode == "subtract") {
+        wrongAnswerArray = wrongAnswersSubtraction(qCurrent);
+    }
+    wrongAnswerArray = shuffleArray(wrongAnswerArray);
+    return(wrongAnswerArray);
+}
+
 /** Function to generate array of 5 wrong multiplication answers, given current question**/
 function wrongAnswersMultiplication(qCurrent) {
     let qStr = qCurrent[0];
@@ -577,6 +595,84 @@ function wrongAnswersMultiplication(qCurrent) {
     }
     wrongAnswerArray.push(randomInt);
     return(wrongAnswerArray);
+}
+
+/** Function to generate array of 5 wrong division answers, given current question**/
+function wrongAnswersDivision(qCurrent) {
+    let qStr = qCurrent[0];
+    let qStrArray = qStr.split(" ");
+    let no1 = parseInt(qStrArray[0]);
+    let no2 = parseInt(qStrArray[2]);
+    let cA = qCurrent[1];
+    let minInt = 1;
+    let maxInt = 12;
+    if (no1 < 12) {
+        maxInt = no1;
+    }
+    if (maxInt < 6) {
+        maxInt = 6;
+    }
+    let wrongAnswerArray = [(cA - 1), (cA + 1), (cA + 2)];
+    randomInt = getRandomIntInclusive(minInt, maxInt);
+    while ((wrongAnswerArray.includes(randomInt)) || (randomInt == qCurrent[1])) {
+        randomInt = getRandomIntInclusive(minInt, maxInt);
+    }
+    wrongAnswerArray.push(randomInt);
+    randomInt = getRandomIntInclusive(minInt, maxInt);
+    while ((wrongAnswerArray.includes(randomInt)) || (randomInt == qCurrent[1])) {
+        randomInt = getRandomIntInclusive(minInt, maxInt);
+    }
+    wrongAnswerArray.push(randomInt);
+    return(wrongAnswerArray);
+}
+
+/** Function to generate array of 5 wrong addition answers, given current question**/
+function wrongAnswersAddition(qCurrent) {
+    let qStr = qCurrent[0];
+    let qStrArray = qStr.split(" ");
+    let no1 = parseInt(qStrArray[0]);
+    let no2 = parseInt(qStrArray[2]);
+    let cA = qCurrent[1];
+    let wrongAnswerArray = [(cA - 1), (cA + 1), (cA + 2)];
+    let minInt = (Math.min(no1, no2)) + 1;
+    let maxInt = (no1 + no2 + 6);
+    randomInt = getRandomIntInclusive(minInt, maxInt);
+    while ((wrongAnswerArray.includes(randomInt)) || (randomInt == qCurrent[1])) {
+        randomInt = getRandomIntInclusive(minInt, maxInt);
+    }
+    wrongAnswerArray.push(randomInt);
+    randomInt = getRandomIntInclusive(minInt, maxInt);
+    while ((wrongAnswerArray.includes(randomInt)) || (randomInt == qCurrent[1])) {
+        randomInt = getRandomIntInclusive(minInt, maxInt);
+    }
+    wrongAnswerArray.push(randomInt);
+    return(wrongAnswerArray);    
+}
+
+/** Function to generate array of 5 wrong subtraction answers, given current question**/
+function wrongAnswersSubtraction(qCurrent) {
+    let qStr = qCurrent[0];
+    let qStrArray = qStr.split(" ");
+    let no1 = parseInt(qStrArray[0]);
+    let no2 = parseInt(qStrArray[2]);
+    let cA = qCurrent[1];
+    let wrongAnswerArray = [(cA - 1), (cA + 1), (cA + 2)];
+    let maxInt = no1 - 1;
+    let minInt = 0;
+    if (maxInt < 6) {
+        maxInt = 6;
+    }
+    randomInt = getRandomIntInclusive(minInt, maxInt);
+    while ((wrongAnswerArray.includes(randomInt)) || (randomInt == qCurrent[1])) {
+        randomInt = getRandomIntInclusive(minInt, maxInt);
+    }
+    wrongAnswerArray.push(randomInt);
+    randomInt = getRandomIntInclusive(minInt, maxInt);
+    while ((wrongAnswerArray.includes(randomInt)) || (randomInt == qCurrent[1])) {
+        randomInt = getRandomIntInclusive(minInt, maxInt);
+    }
+    wrongAnswerArray.push(randomInt);
+    return(wrongAnswerArray); 
 }
 
 /** Function to generate a random integer between the two integers given **/
