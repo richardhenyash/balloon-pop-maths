@@ -200,6 +200,9 @@ body {
     font-size: 5rem;
     font-weight: 700;
     border: 1px solid #EEFBFF;
+    width: 7.6rem;
+    height: 7.6rem;
+    z-index: 1;
 }
 
 .balloon-answer-text-top {
