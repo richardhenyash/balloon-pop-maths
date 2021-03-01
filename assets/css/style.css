@@ -167,14 +167,48 @@ body {
     width: 100%;
 }
 
-#canvas-balloon-left {
+#canvas-balloon-left-1 {
     background: blue;
 }
 
-#canvas-balloon-right {
+#canvas-balloon-left-2 {
+    background: turquoise;
+}
+
+#canvas-balloon-left-3 {
+    background: lightblue;
+}
+
+#canvas-balloon-right-1 {
     background: red;
 }
 
+#canvas-balloon-right-2 {
+    background: pink;
+}
+
+#canvas-balloon-right-3 {
+    background: orange;
+}
+
+
+/*-- Game Answer Balloon Text --*/
+.balloon-answer-text {
+    position: absolute;
+    color:#EEFBFF;
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 700;
+    border: 1px solid #EEFBFF;
+}
+
+.balloon-answer-text-top {
+    top: 10vw;
+}
+
+.balloon-answer-text-bottom {
+    bottom: 10vw;
+}
 
 /*-- Game Question --*/
 .game-section-controls #question {

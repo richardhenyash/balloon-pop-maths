@@ -668,3 +668,14 @@ function getRandomIntInclusive(min, max) {
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive
 }
+
+/** Function to return an array of canvas width and height, given canvas element ID **/
+function getCanvasSize(canvasID) {
+    if (canvasID.substr(0, 1) != "#") {
+        canvasID = "#" + canvasID;
+    }
+    let cW = $(canvasID).width();
+    let cH = $(canvasID).height();
+    let cArray = [cw, ch];
+    return cArray;
+}
