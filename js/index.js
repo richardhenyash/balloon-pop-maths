@@ -228,27 +228,48 @@ function playGame() {
     var activeButtons = returnActiveButtons(gameMode);
     var optionArray = returnOptionArray(activeButtons);
     var qArray = returnQuestionArray(gameMode, optionArray, qno);
-    var healthArray = initialiseHealthBar(difficulty);
-    var scoreArray = setScore([0, qno]);
-    var qCurrent = setQuestion(qArray[0]);
-    var wrongAnswerArray = wrongAnswers(gameMode, qCurrent);
     console.log(gameMode);
     console.log(qno);
     console.log(difficulty);
     console.log(activeButtons);
     console.log(optionArray);
     console.log(qArray);
-    console.log(healthArray);
-    console.log(scoreArray);
-    console.log(qCurrent);
-    console.log(wrongAnswerArray);
     // Hide heading section and options section //
     $("#heading-section").hide("medium");
     $("#options-section").hide("medium");
     $("#game-section").hide();
     $("#game-section").removeClass( "d-none" )
     $("#game-section").show(1000);
+    var scoreArray = runGame(qno, difficulty, qArray, healthArray, scoreArray)
+    return scoreArray;
 }
+
+/** Function to run game. **/
+function runGame(qno, difficulty, qArray) {
+    let healthArray = initialiseHealthBar(difficulty);
+    let health = healthArray[0];
+    let qi = 0;
+    let scoreArray = setScore([0, qno]);
+    let qCurrent;
+    let wrongAnswerArray;
+    let selectedAnswer;
+    let score = 0;
+    while (qi < qno) {
+        qCurrent = setQuestion(qArray[qi]);
+        wrongAnswerArray = wrongAnswers(gameMode, qCurrent);
+        qi = qi + 1;
+
+        if (selectedAnswer == qCurrent[1]) {
+            score = score + 1;
+            scoreArray = setScore([score, qno]);
+        } else {
+            health = health - 1;
+            healthArray = setHealthBar([health, healthArray[1]]);
+        }
+    }
+    return [scoreArray];
+}
+
 
 /** Function to generate options array from Active Buttons  **/
 function returnOptionArray (activeButtons) {
