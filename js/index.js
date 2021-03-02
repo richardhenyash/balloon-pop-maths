@@ -240,12 +240,12 @@ function playGame() {
     $("#game-section").hide();
     $("#game-section").removeClass( "d-none" )
     $("#game-section").show(1000);
-    var scoreArray = runGame(qno, difficulty, qArray, healthArray, scoreArray)
+    var scoreArray = runGame(gameMode, qno, difficulty, qArray)
     return scoreArray;
 }
 
 /** Function to run game. **/
-function runGame(qno, difficulty, qArray) {
+function runGame(gameMode, qno, difficulty, qArray) {
     let healthArray = initialiseHealthBar(difficulty);
     let health = healthArray[0];
     let qi = 0;
@@ -259,13 +259,13 @@ function runGame(qno, difficulty, qArray) {
         wrongAnswerArray = wrongAnswers(gameMode, qCurrent);
         qi = qi + 1;
 
-        if (selectedAnswer == qCurrent[1]) {
+        /** if (selectedAnswer == qCurrent[1]) {
             score = score + 1;
             scoreArray = setScore([score, qno]);
         } else {
             health = health - 1;
             healthArray = setHealthBar([health, healthArray[1]]);
-        }
+        } ***/
     }
     return [scoreArray];
 }
