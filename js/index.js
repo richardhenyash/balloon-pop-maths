@@ -12,6 +12,14 @@ $("#divide").on("click", modeDivide);
 // On click event added to play game when play button clicked
 $("#play").on("click", playGame);
 
+// On click event added to balloon answer text divs
+$("#balloon-answer-text-left-1").on("click", checkSelectedAnswer);
+$("#balloon-answer-text-left-2").on("click", checkSelectedAnswer);
+$("#balloon-answer-text-left-3").on("click", checkSelectedAnswer);
+$("#balloon-answer-text-right-1").on("click", checkSelectedAnswer);
+$("#balloon-answer-text-right-2").on("click", checkSelectedAnswer);
+$("#balloon-answer-text-right-3").on("click", checkSelectedAnswer);
+
 // Show multiplication and division option buttons and update option buttons for division game
 $("#divide").click(function() {
     $("#options-add-subtract").hide("medium");
@@ -69,11 +77,14 @@ $("#btn-add-sub-4").click(function() {
 })
 
 // Hide game section and show heading and options sections on click of options button in game mode
-$("#btn-game-section-options").click(function() {   
+$("#btn-game-section-options").on("click", returnToMenu);
+
+/** Function to return to menu - hides game section and shows heading and options **/
+function returnToMenu() {
     $("#game-section").hide("medium");   
     $("#heading-section").show("medium");
     $("#options-section").show("medium");
-})
+}
 
 /** Function to hide multiplication and division option buttons and show option buttons for addition and subtraction game **/
 function modeAddSubtract() {
@@ -221,53 +232,75 @@ function btnArray() {
 
 /** Function to launch game. **/
 function playGame() {
-    var gameMode = returnGameMode();
-    checkButtons(gameMode);
-    var qno = returnQuestions();
-    var difficulty = returnDifficulty();
-    var activeButtons = returnActiveButtons(gameMode);
-    var optionArray = returnOptionArray(activeButtons);
-    var qArray = returnQuestionArray(gameMode, optionArray, qno);
-    console.log(gameMode);
-    console.log(qno);
-    console.log(difficulty);
-    console.log(activeButtons);
-    console.log(optionArray);
-    console.log(qArray);
+
+    // Set global variables //  
+    bpmGameMode = returnGameMode();
+    checkButtons(bpmGameMode);
+    bpmQno = returnQuestions();
+    bpmDifficulty = returnDifficulty();
+    bpmActiveButtons = returnActiveButtons(bpmGameMode);
+    bpmOptionArray = returnOptionArray(bpmActiveButtons);
+    bpmQArray = returnQuestionArray(bpmGameMode, bpmOptionArray, bpmQno);
+    bpmHealthArray = initialiseHealthBar(bpmDifficulty);
+    bpmCQ = 0;
+    bpmQCurrent = setQuestion(bpmQArray[bpmCQ]);
+    bpmAnswerArray = answerArray(bpmGameMode, bpmQCurrent);
+    bpmAnswerArray = setBalloons(bpmAnswerArray);
+    bpmScoreArray = setScore([0, bpmQno]);
+
+    // Log global variables to console for debugging //
+    console.log(bpmGameMode);
+    console.log(bpmQno);
+    console.log(bpmDifficulty);
+    console.log(bpmActiveButtons);
+    console.log(bpmOptionArray);
+    console.log(bpmQArray);
+    console.log(bpmHealthArray);
+    console.log(bpmQCurrent);
+    console.log(bpmAnswerArray);
+    console.log(bpmScoreArray);
+
     // Hide heading section and options section //
     $("#heading-section").hide("medium");
     $("#options-section").hide("medium");
     $("#game-section").hide();
     $("#game-section").removeClass( "d-none" )
-    $("#game-section").show(1000);
-    var scoreArray = runGame(gameMode, qno, difficulty, qArray)
-    return scoreArray;
+    $("#game-section").show(1000);    
+    return bpmScoreArray;
 }
 
-/** Function to run game. **/
-function runGame(gameMode, qno, difficulty, qArray) {
-    let healthArray = initialiseHealthBar(difficulty);
-    let health = healthArray[0];
-    let qi = 0;
-    let scoreArray = setScore([0, qno]);
-    let qCurrent;
-    let wrongAnswerArray;
-    let selectedAnswer;
-    let score = 0;
-    while (qi < qno) {
-        qCurrent = setQuestion(qArray[qi]);
-        wrongAnswerArray = wrongAnswers(gameMode, qCurrent);
-        qi = qi + 1;
-
-        /** if (selectedAnswer == qCurrent[1]) {
-            score = score + 1;
-            scoreArray = setScore([score, qno]);
+/** Function to check selected answer on click of balloon **/
+function checkSelectedAnswer() {
+    console.log("test click event");
+    console.log(this.id);
+    let sAnswer = this.innerHTML;
+    console.log(sAnswer);
+    if (sAnswer == bpmQCurrent[1]) {
+        console.log("Correct!")
+        let currentScore = bpmScoreArray[0];
+        let scoreArray = [(currentScore + 1), bpmScoreArray[1]]
+        bpmScoreArray = setScore(scoreArray);
+        bpmCQ = bpmCQ + 1;
+        if (bpmCQ < bpmQno) {
+            bpmQCurrent = setQuestion(bpmQArray[bpmCQ]);
+            bpmAnswerArray = answerArray(bpmGameMode, bpmQCurrent);
+            bpmAnswerArray = setBalloons(bpmAnswerArray);
         } else {
-            health = health - 1;
-            healthArray = setHealthBar([health, healthArray[1]]);
-        } ***/
+            console.log("Well Done! - you scored " +  bpmScoreArray[0] + " out of " + bpmScoreArray[1] + "!")
+            returnToMenu();
+
+        }
+    } else {
+        console.log("Wrong!")
+        let cHealth = bpmHealthArray[0];
+        if (cHealth > 0) {
+            let healthArray = [(cHealth - 1), bpmHealthArray[1]];
+            bpmHealthArray = setHealthBar(healthArray);
+        } else {
+            console.log("Game Over!")
+            returnToMenu();
+        }
     }
-    return [scoreArray];
 }
 
 
@@ -565,20 +598,32 @@ function setQuestion(qCurrent) {
     return(qCurrent);
 }
 
-/** Function to generate array of 5 wrong answers, given game mode and current question**/
-function wrongAnswers(gameMode, qCurrent) {
-    let wrongAnswerArray = [];
+/** Function to set balloon text, given a 6 item array in random order with 5 wrong answers and 1 correct answer **/
+function setBalloons(answerArray) {
+    $("#balloon-answer-text-left-1").html(answerArray[0]);
+    $("#balloon-answer-text-left-2").html(answerArray[1]);
+    $("#balloon-answer-text-left-3").html(answerArray[2]);
+    $("#balloon-answer-text-right-1").html(answerArray[3]);
+    $("#balloon-answer-text-right-2").html(answerArray[4]);
+    $("#balloon-answer-text-right-3").html(answerArray[5]);
+    return(answerArray);
+}
+
+/** Function to generate array of 5 wrong answers and the correct answer, given game mode and current question**/
+function answerArray(gameMode, qCurrent) {
+    let answerArray = [];
     if (gameMode == "multiply") {
-        wrongAnswerArray = wrongAnswersMultiplication(qCurrent);
+        answerArray = wrongAnswersMultiplication(qCurrent);
     } else if (gameMode == "divide") {
-        wrongAnswerArray = wrongAnswersDivision(qCurrent);
+        answerArray = wrongAnswersDivision(qCurrent);
     } else if (gameMode == "add") {
-        wrongAnswerArray = wrongAnswersAddition(qCurrent);        
+        answerArray = wrongAnswersAddition(qCurrent);        
     } else if (gameMode == "subtract") {
-        wrongAnswerArray = wrongAnswersSubtraction(qCurrent);
+        answerArray = wrongAnswersSubtraction(qCurrent);
     }
-    wrongAnswerArray = shuffleArray(wrongAnswerArray);
-    return(wrongAnswerArray);
+    answerArray.push(qCurrent[1])
+    answerArray = shuffleArray(answerArray);
+    return(answerArray);
 }
 
 /** Function to generate array of 5 wrong multiplication answers, given current question**/
