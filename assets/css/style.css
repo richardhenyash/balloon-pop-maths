@@ -163,8 +163,8 @@ body {
 
 /*-- Game Canvas Styling --*/
 .canvas-balloon canvas {
-    height: 60vh;
     width: 100%;
+    height: 60vh;
 }
 
 #canvas-balloon-left-1 {
