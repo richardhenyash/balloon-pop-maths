@@ -289,7 +289,7 @@ function checkSelectedAnswer() {
         } else {
             console.log("Well Done! - you scored " +  bpmScoreArray[0] + " out of " + bpmScoreArray[1] + "!")
             // Display feedback modal //
-            if ((bpmScoreArray[0] / bpmScoreArray[1]) > (highScore[0] / highScore[1])){
+            if (checkHighScore(highScore, bpmScoreArray)) {
                 setHighScore(bpmScoreArray);
                 $("#modal-feedback-heading-text").text("Awesome - New High Score!!!");
             } else {                
@@ -310,7 +310,7 @@ function checkSelectedAnswer() {
             let healthArray = [(cHealth - 1), bpmHealthArray[1]];
             bpmHealthArray = setHealthBar(healthArray);
         } else {
-            if ((bpmScoreArray[0] / bpmScoreArray[1]) > (highScore[0] / highScore[1])) {
+            if (checkHighScore(highScore, bpmScoreArray)) {
                 setHighScore(bpmScoreArray);
                 $("#modal-feedback-heading-text").text("Awesome - New High Score!!!");
             } else {                
@@ -606,6 +606,20 @@ function setHealthBar(healthArray) {
         $(hstr).removeClass("fas fa-heart").addClass("far fa-heart");
     }
     return(healthArray);
+}
+
+/** Function to check high score, returns true or false**/
+function checkHighScore(highScore, scoreArray) {
+    let res;
+    if (
+            ((scoreArray[0] / scoreArray[1]) > (highScore[0] / highScore[1])) || 
+            ((scoreArray[0] / scoreArray[1]) == ((highScore[0] / highScore[1])) && (scoreArray[1] > highScore[1]))
+        ) {
+        res = true;
+    } else {
+        res = false;
+    }
+    return res;
 }
 
 /** Function to get high score, returns an array of 2 integers**/
