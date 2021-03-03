@@ -293,7 +293,11 @@ function checkSelectedAnswer() {
                 setHighScore(bpmScoreArray);
                 $("#modal-feedback-heading-text").text("Awesome - New High Score!!!");
             } else {                
-                $("#modal-feedback-heading-text").text("Well Done!!");
+                if ((bpmScoreArray[0]) < 4) {
+                    $("#modal-feedback-heading-text").text("Unlucky - try again!!");
+                } else {
+                    $("#modal-feedback-heading-text").text("Well Done!!");
+                }
             }
             $("#modal-feedback-body-text").text("You scored " +  bpmScoreArray[0] + " out of " + bpmScoreArray[1] + "!");
             $('#modal-feedback').modal();
@@ -310,7 +314,11 @@ function checkSelectedAnswer() {
                 setHighScore(bpmScoreArray);
                 $("#modal-feedback-heading-text").text("Awesome - New High Score!!!");
             } else {                
-                $("#modal-feedback-heading-text").text("Well Done!!");
+                if ((bpmScoreArray[0]) < 4) {
+                    $("#modal-feedback-heading-text").text("Unlucky - try again!!");
+                } else {
+                    $("#modal-feedback-heading-text").text("Well Done!!");
+                }
             }
             $("#modal-feedback-body-text").text("You scored " +  bpmScoreArray[0] + " out of " + bpmScoreArray[1] + "!");
             $('#modal-feedback').modal();
