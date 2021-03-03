@@ -275,11 +275,12 @@ function checkSelectedAnswer() {
     console.log(this.id);
     let sAnswer = this.innerHTML;
     console.log(sAnswer);
+    let highScore = getHighScore();
+    let currentScore;
     if (sAnswer == bpmQCurrent[1]) {
         console.log("Correct!")
-        let currentScore = bpmScoreArray[0];
-        let scoreArray = [(currentScore + 1), bpmScoreArray[1]]
-        bpmScoreArray = setScore(scoreArray);
+        currentScore = bpmScoreArray[0];
+        bpmScoreArray = setScore([(currentScore + 1), bpmScoreArray[1]]);
         bpmCQ = bpmCQ + 1;
         if (bpmCQ < bpmQno) {
             bpmQCurrent = setQuestion(bpmQArray[bpmCQ]);
@@ -288,6 +289,13 @@ function checkSelectedAnswer() {
         } else {
             console.log("Well Done! - you scored " +  bpmScoreArray[0] + " out of " + bpmScoreArray[1] + "!")
             // Display feedback modal //
+            if ((bpmScoreArray[0] / bpmScoreArray[1]) > (highScore[0] / highScore[1])){
+                setHighScore(bpmScoreArray);
+                $("#modal-feedback-heading-text").text("Awesome - New High Score!!!");
+            } else {                
+                $("#modal-feedback-heading-text").text("Well Done!!");
+            }
+            $("#modal-feedback-body-text").text("You scored " +  bpmScoreArray[0] + " out of " + bpmScoreArray[1] + "!");
             $('#modal-feedback').modal();
             returnToMenu();
         }
@@ -298,8 +306,13 @@ function checkSelectedAnswer() {
             let healthArray = [(cHealth - 1), bpmHealthArray[1]];
             bpmHealthArray = setHealthBar(healthArray);
         } else {
-            console.log("Well Done! - you scored " +  bpmScoreArray[0] + " out of " + bpmScoreArray[1] + "!")
-            // Display feedback modal //
+            if ((bpmScoreArray[0] / bpmScoreArray[1]) > (highScore[0] / highScore[1])) {
+                setHighScore(bpmScoreArray);
+                $("#modal-feedback-heading-text").text("Awesome - New High Score!!!");
+            } else {                
+                $("#modal-feedback-heading-text").text("Well Done!!");
+            }
+            $("#modal-feedback-body-text").text("You scored " +  bpmScoreArray[0] + " out of " + bpmScoreArray[1] + "!");
             $('#modal-feedback').modal();
             returnToMenu();
         }
@@ -587,10 +600,25 @@ function setHealthBar(healthArray) {
     return(healthArray);
 }
 
-/** Function to set score, given an array of 2 integers**/
+/** Function to get high score, returns an array of 2 integers**/
+function getHighScore() {
+    let scoreString = $("#highscore").text();
+    let scoreArrayTemp = scoreString.split(" ");
+    let scoreArray = [parseInt(scoreArrayTemp[2]), parseInt(scoreArrayTemp[4])];
+    return scoreArray;
+}
+
+/** Function to set high score, given an array of 2 integers**/
+function setHighScore(scoreArray) {
+    let scoreString = "High Score: " + scoreArray[0] + " / " + scoreArray[1];
+    $("#highscore").text(scoreString);
+    return(scoreArray);
+}
+
+/** Function to set current score, given an array of 2 integers**/
 function setScore(scoreArray) {
     let scoreString = "Score: " + scoreArray[0] + " / " + scoreArray[1];
-    $("#score").html(scoreString);
+    $("#score").text(scoreString);
     return(scoreArray);
 }
 
