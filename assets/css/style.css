@@ -246,6 +246,30 @@ body {
     text-align: center;
 }
 
+/*-- Game Feedback Modal --*/
+.modal-dialog h2,
+.modal-dialog span {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #A2529A;
+}
+
+.modal-dialog p {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #A2529A;
+}
+
+/*-- Bootstrap modal class overrides --*/
+.modal-header {
+    border-bottom: 1px solid #9C70BD;
+    background-color: #EEFBFF;
+}
+
+.modal-body {
+    background-color: #EEFBFF;
+}
+
 /*-- Media query to re-size balloon canvas for small devices --*/
 @media (max-width: 768px) {
     .canvas-balloon canvas {

@@ -287,8 +287,9 @@ function checkSelectedAnswer() {
             bpmAnswerArray = setBalloons(bpmAnswerArray);
         } else {
             console.log("Well Done! - you scored " +  bpmScoreArray[0] + " out of " + bpmScoreArray[1] + "!")
+            // Display feedback modal //
+            $('#modal-feedback').modal();
             returnToMenu();
-
         }
     } else {
         console.log("Wrong!")
@@ -297,7 +298,9 @@ function checkSelectedAnswer() {
             let healthArray = [(cHealth - 1), bpmHealthArray[1]];
             bpmHealthArray = setHealthBar(healthArray);
         } else {
-            console.log("Game Over!")
+            console.log("Well Done! - you scored " +  bpmScoreArray[0] + " out of " + bpmScoreArray[1] + "!")
+            // Display feedback modal //
+            $('#modal-feedback').modal();
             returnToMenu();
         }
     }
