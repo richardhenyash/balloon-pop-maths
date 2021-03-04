@@ -1,6 +1,13 @@
 // Event handler to switch to Multiply mode when document is ready
 $(document).ready(modeMultiply);
 
+// buffer sound effects automatically when created
+var soundPop = new Audio("../assets/sounds/pop.mp3");
+var soundDeflate = new Audio("../assets/sounds/deflate.mp3");
+var soundHighScore = new Audio("../assets/sounds/high-score.mp3");
+var soundUnlucky = new Audio("../assets/sounds/unlucky.mp3");
+var soundWellDone = new Audio("../assets/sounds/well-done.mp3");
+
 // On click event added to add and subtract buttons to switch to addition and subtraction options
 $("#add").on("click", modeAddSubtract);
 $("#subtract").on("click", modeAddSubtract);
@@ -278,6 +285,7 @@ function checkSelectedAnswer() {
     let highScore = getHighScore();
     let currentScore;
     if (sAnswer == bpmQCurrent[1]) {
+        soundPop.play();
         console.log("Correct!")
         currentScore = bpmScoreArray[0];
         bpmScoreArray = setScore([(currentScore + 1), bpmScoreArray[1]]);
@@ -292,11 +300,14 @@ function checkSelectedAnswer() {
             if (checkHighScore(highScore, bpmScoreArray)) {
                 setHighScore(bpmScoreArray);
                 $("#modal-feedback-heading-text").text("Awesome - New High Score!!!");
+                soundHighScore.play();
             } else {                
                 if ((bpmScoreArray[0]) < 4) {
                     $("#modal-feedback-heading-text").text("Unlucky - try again!!");
+                    soundUnlucky.play();
                 } else {
                     $("#modal-feedback-heading-text").text("Well Done!!");
+                    soundWellDone.play();
                 }
             }
             $("#modal-feedback-body-text").text("You scored " +  bpmScoreArray[0] + " out of " + bpmScoreArray[1] + "!");
@@ -309,15 +320,19 @@ function checkSelectedAnswer() {
         if (cHealth > 0) {
             let healthArray = [(cHealth - 1), bpmHealthArray[1]];
             bpmHealthArray = setHealthBar(healthArray);
+            soundDeflate.play();
         } else {
             if (checkHighScore(highScore, bpmScoreArray)) {
                 setHighScore(bpmScoreArray);
                 $("#modal-feedback-heading-text").text("Awesome - New High Score!!!");
+                soundHighScore.play();
             } else {                
                 if ((bpmScoreArray[0]) < 4) {
                     $("#modal-feedback-heading-text").text("Unlucky - try again!!");
+                    soundUnlucky.play();
                 } else {
                     $("#modal-feedback-heading-text").text("Well Done!!");
+                    soundWellDone.play();
                 }
             }
             $("#modal-feedback-body-text").text("You scored " +  bpmScoreArray[0] + " out of " + bpmScoreArray[1] + "!");
