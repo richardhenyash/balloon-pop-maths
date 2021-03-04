@@ -2,11 +2,11 @@
 $(document).ready(modeMultiply);
 
 // buffer sound effects automatically when created
-var soundPop = new Audio("../assets/sounds/pop.mp3");
-var soundDeflate = new Audio("../assets/sounds/deflate.mp3");
-var soundHighScore = new Audio("../assets/sounds/high-score.mp3");
-var soundUnlucky = new Audio("../assets/sounds/unlucky.mp3");
-var soundWellDone = new Audio("../assets/sounds/well-done.mp3");
+var soundPop = new Audio("./assets/sounds/pop.mp3");
+var soundDeflate = new Audio("./assets/sounds/deflate.mp3");
+var soundHighScore = new Audio("./assets/sounds/high-score.mp3");
+var soundUnlucky = new Audio("./assets/sounds/unlucky.mp3");
+var soundWellDone = new Audio("./assets/sounds/well-done.mp3");
 
 // On click event added to add and subtract buttons to switch to addition and subtraction options
 $("#add").on("click", modeAddSubtract);
