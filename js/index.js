@@ -4,14 +4,14 @@ $(document).ready(modeMultiply);
 // load balloon sprite images
 var imgBalloonBlue = new Image();
 imgBalloonBlue.src = "assets/images/balloon-blue-sprite.png";
-var imgBalloonGreen = new Image();
-imgBalloonGreen.src = "assets/images/balloon-green-sprite.png";
 var imgBalloonOrange = new Image();
 imgBalloonOrange.src = "assets/images/balloon-orange-sprite.png";
 var imgBalloonPurple = new Image();
 imgBalloonPurple.src = "assets/images/balloon-purple-sprite.png";
 var imgBalloonRed = new Image();
 imgBalloonRed.src = "assets/images/balloon-red-sprite.png";
+var imgBalloonGreen = new Image();
+imgBalloonGreen.src = "assets/images/balloon-green-sprite.png";
 var imgBalloonYellow = new Image();
 imgBalloonYellow.src = "assets/images/balloon-yellow-sprite.png";
 
@@ -286,21 +286,29 @@ function playGame() {
     $("#options-section").hide("medium");
     $("#game-section").hide();
     $("#game-section").removeClass( "d-none" )
-    $("#game-section").show(1000);    
+    $("#game-section").show(1000); 
+    
+    //  display balloon animation frame 1 in each canvas element
+    initialiseBalloons();
     return bpmScoreArray;
 }
 
 /** Function to check selected answer on click of balloon **/
 function checkSelectedAnswer() {
     console.log("test click event");
-    console.log(this.id);
+    let sID = (this.id);
+    let sIDArray = sID.split("-")
+    let canvasID = "canvas-balloon-" + sIDArray[3] + "-" + sIDArray[4]
+    console.log(sID);
+    console.log(canvasID);
     let sAnswer = this.innerHTML;
     console.log(sAnswer);
     let highScore = getHighScore();
     let currentScore;
     if (sAnswer == bpmQCurrent[1]) {
-        soundPop.play();
-        console.log("Correct!")
+        soundPop.play();        
+        let balloonTimeOut = animateBalloon(canvasID, imgBalloonBlue);
+        console.log("Correct!");
         currentScore = bpmScoreArray[0];
         bpmScoreArray = setScore([(currentScore + 1), bpmScoreArray[1]]);
         bpmCQ = bpmCQ + 1;
@@ -308,6 +316,7 @@ function checkSelectedAnswer() {
             bpmQCurrent = setQuestion(bpmQArray[bpmCQ]);
             bpmAnswerArray = answerArray(bpmGameMode, bpmQCurrent);
             bpmAnswerArray = setBalloons(bpmAnswerArray);
+            initialiseBalloons();
         } else {
             console.log("Well Done! - you scored " +  bpmScoreArray[0] + " out of " + bpmScoreArray[1] + "!")
             // Display feedback modal //
@@ -828,16 +837,39 @@ function getCanvasSize(canvasID) {
     return cArray;
 }
 
-function drawBalloonImage(canvasID, img) {
+/** Function to draw balloon image on the canvas, given canvasID, image and frame number **/
+function drawBalloonImage(canvasID, img, fno) {
     if (canvasID.substr(0, 1) != "#") {
         canvasID = "#" + canvasID;
     }
-    let canvasSize = getCanvasSize(canvasID);
-    let canvasWidth = canvasSize[0];
-    let canvasHeight = canvasSize[1];
-    let canvasRatio = (canvasWidth /  canvasHeight);
+    let beginX = 3072- (fno * 512);
     let canvasElement =  $(canvasID)[0];
     let canvasContext = canvasElement.getContext('2d');
-    canvasContext.drawImage(img, 2560, 0, 512, 512, 0, 14, 300, 60);
+    canvasContext.clearRect(0, 0, 300, 150);
+    canvasContext.drawImage(img, beginX, 0, 512, 512, 0, 0, 300, 150);
+}
 
+/** Function to animate balloon popping image on the canvas, given canvasID and image **/
+function animateBalloon(canvasID, img) {
+    if (canvasID.substr(0, 1) != "#") {
+        canvasID = "#" + canvasID;
+    }
+    let balloonTimeout
+    balloonTimeout = setTimeout(drawBalloonImage, 100, canvasID, img, 1);        
+    balloonTimeout = setTimeout(drawBalloonImage, 200, canvasID, img, 2);
+    balloonTimeout = setTimeout(drawBalloonImage, 200, canvasID, img, 3);
+    balloonTimeout = setTimeout(drawBalloonImage, 300, canvasID, img, 4);
+    balloonTimeout = setTimeout(drawBalloonImage, 300, canvasID, img, 5);
+    balloonTimeout = setTimeout(drawBalloonImage, 400, canvasID, img, 6); 
+    return(balloonTimeout)   
+}
+
+/** Function to initialise balloons on animation frame 1 **/
+function initialiseBalloons() {
+    drawBalloonImage("canvas-balloon-left-1", imgBalloonBlue, 1);
+    drawBalloonImage("canvas-balloon-left-2", imgBalloonOrange, 1);
+    drawBalloonImage("canvas-balloon-left-3", imgBalloonPurple, 1);
+    drawBalloonImage("canvas-balloon-right-1", imgBalloonRed, 1);
+    drawBalloonImage("canvas-balloon-right-2", imgBalloonGreen, 1);
+    drawBalloonImage("canvas-balloon-right-3", imgBalloonYellow, 1);
 }
