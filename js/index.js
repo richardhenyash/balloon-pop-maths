@@ -296,18 +296,17 @@ function playGame() {
 /** Function to check selected answer on click of balloon **/
 function checkSelectedAnswer() {
     console.log("test click event");
-    let sID = (this.id);
-    let sIDArray = sID.split("-")
-    let canvasID = "canvas-balloon-" + sIDArray[3] + "-" + sIDArray[4]
-    console.log(sID);
+    let answerTextID = (this.id);
+    console.log(answerTextID);
+    let canvasID = returnCanvasID(answerTextID);
     console.log(canvasID);
     let sAnswer = this.innerHTML;
     console.log(sAnswer);
     let highScore = getHighScore();
     let currentScore;
     if (sAnswer == bpmQCurrent[1]) {
-        soundPop.play();        
-        let balloonTimeOut = animateBalloon(canvasID, imgBalloonBlue);
+        soundPop.play();
+        let balloonTimeout = animateBalloon(canvasID);
         console.log("Correct!");
         currentScore = bpmScoreArray[0];
         bpmScoreArray = setScore([(currentScore + 1), bpmScoreArray[1]]);
@@ -848,12 +847,42 @@ function drawBalloonImage(canvasID, img, fno) {
     canvasContext.drawImage(img, beginX, 0, 512, 512, 0, 0, 300, 150);
 }
 
+/** Function to return canvasID, given balloon text div id **/
+function returnCanvasID(answerTextID) {
+    if (answerTextID.substr(0, 1) != "#") {
+        answerTextID = "#" + answerTextID;
+    }
+    let sArray = $(answerTextID).siblings();
+    let canvasID = sArray[0].id;
+    return(canvasID);
+}
+
 /** Function to animate balloon popping image on the canvas, given canvasID and image **/
-function animateBalloon(canvasID, img) {
+function animateBalloon(canvasID) {
     if (canvasID.substr(0, 1) != "#") {
         canvasID = "#" + canvasID;
     }
-    let balloonTimeout
+    let img;
+    if (canvasID == "#canvas-balloon-left-1") {
+        img = imgBalloonBlue;
+        console.log("Blue");
+    } else if (canvasID == "#canvas-balloon-left-2") {
+        img = imgBalloonOrange;
+        console.log("Orange");
+    } else if (canvasID == "#canvas-balloon-left-3") {
+        img = imgBalloonPurple;
+        console.log("Purple");
+    } else if (canvasID == "#canvas-balloon-right-1") {
+        img = imgBalloonRed;
+        console.log("Red");
+    } else if (canvasID == "#canvas-balloon-right-2") {
+        img = imgBalloonGreen;
+        console.log("Green");
+    } else if (canvasID == "#canvas-balloon-right-3") {
+        img = imgBalloonYellow;
+        console.log("Yellow");
+    }
+    let balloonTimeout; 
     balloonTimeout = setTimeout(drawBalloonImage, 50, canvasID, img, 1);        
     balloonTimeout = setTimeout(drawBalloonImage, 100, canvasID, img, 2);
     balloonTimeout = setTimeout(drawBalloonImage, 150, canvasID, img, 3);
