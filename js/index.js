@@ -904,6 +904,7 @@ function initialiseBalloons() {
     drawBalloonImage("canvas-balloon-right-1", imgBalloonRed, 1);
     drawBalloonImage("canvas-balloon-right-2", imgBalloonGreen, 1);
     drawBalloonImage("canvas-balloon-right-3", imgBalloonYellow, 1);
+    initialiseBalloonsNewQuestion();
 }
 
 /** Function to initialise answer balloons for new question  **/
@@ -918,6 +919,6 @@ function initialiseBalloonsNewQuestion() {
     $("#balloon-answer-text-left-2").fadeIn("fast");
     $("#balloon-answer-text-left-3").fadeIn("fast");
     $("#balloon-answer-text-right-1").fadeIn("fast");
-    $("#balloon-answer-text-right-1").fadeIn("fast");
+    $("#balloon-answer-text-right-2").fadeIn("fast");
     $("#balloon-answer-text-right-3").fadeIn("fast");
 }
