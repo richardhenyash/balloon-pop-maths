@@ -861,7 +861,7 @@ function animateBalloon(canvasID, img) {
     balloonTimeout = setTimeout(drawBalloonImage, 300, canvasID, img, 4);
     balloonTimeout = setTimeout(drawBalloonImage, 300, canvasID, img, 5);
     balloonTimeout = setTimeout(drawBalloonImage, 400, canvasID, img, 6); 
-    return(balloonTimeout)   
+    return(balloonTimeout);
 }
 
 /** Function to initialise balloons on animation frame 1 **/
