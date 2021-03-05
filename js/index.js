@@ -841,5 +841,3 @@ function drawBalloonImage(canvasID, img) {
     canvasContext.drawImage(img, 2560, 0, 512, 512, 0, 14, 300, 60);
 
 }
-
-$(canvasID)
