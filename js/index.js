@@ -316,7 +316,6 @@ function checkSelectedAnswer() {
             bpmQCurrent = setQuestion(bpmQArray[bpmCQ]);
             bpmAnswerArray = answerArray(bpmGameMode, bpmQCurrent);
             bpmAnswerArray = setBalloons(bpmAnswerArray);
-            initialiseBalloons();
         } else {
             console.log("Well Done! - you scored " +  bpmScoreArray[0] + " out of " + bpmScoreArray[1] + "!")
             // Display feedback modal //
@@ -855,12 +854,13 @@ function animateBalloon(canvasID, img) {
         canvasID = "#" + canvasID;
     }
     let balloonTimeout
-    balloonTimeout = setTimeout(drawBalloonImage, 100, canvasID, img, 1);        
-    balloonTimeout = setTimeout(drawBalloonImage, 200, canvasID, img, 2);
-    balloonTimeout = setTimeout(drawBalloonImage, 200, canvasID, img, 3);
-    balloonTimeout = setTimeout(drawBalloonImage, 300, canvasID, img, 4);
-    balloonTimeout = setTimeout(drawBalloonImage, 300, canvasID, img, 5);
-    balloonTimeout = setTimeout(drawBalloonImage, 400, canvasID, img, 6); 
+    balloonTimeout = setTimeout(drawBalloonImage, 50, canvasID, img, 1);        
+    balloonTimeout = setTimeout(drawBalloonImage, 100, canvasID, img, 2);
+    balloonTimeout = setTimeout(drawBalloonImage, 150, canvasID, img, 3);
+    balloonTimeout = setTimeout(drawBalloonImage, 200, canvasID, img, 4);
+    balloonTimeout = setTimeout(drawBalloonImage, 275, canvasID, img, 5);
+    balloonTimeout = setTimeout(drawBalloonImage, 350, canvasID, img, 6); 
+    balloonTimeout = setTimeout(drawBalloonImage, 500, canvasID, img, 1);
     return(balloonTimeout);
 }
 
