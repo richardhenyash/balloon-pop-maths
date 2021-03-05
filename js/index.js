@@ -1,6 +1,20 @@
 // Event handler to switch to Multiply mode when document is ready
 $(document).ready(modeMultiply);
 
+// load balloon sprite images
+var imgBalloonBlue = new Image();
+imgBalloonBlue.src = "assets/images/balloon-blue-sprite.png";
+var imgBalloonGreen = new Image();
+imgBalloonGreen.src = "assets/images/balloon-green-sprite.png";
+var imgBalloonOrange = new Image();
+imgBalloonOrange.src = "assets/images/balloon-orange-sprite.png";
+var imgBalloonPurple = new Image();
+imgBalloonPurple.src = "assets/images/balloon-purple-sprite.png";
+var imgBalloonRed = new Image();
+imgBalloonRed.src = "assets/images/balloon-red-sprite.png";
+var imgBalloonYellow = new Image();
+imgBalloonYellow.src = "assets/images/balloon-yellow-sprite.png";
+
 // buffer sound effects automatically when created
 var soundPop = new Audio("assets/sounds/pop.mp3");
 var soundDeflate = new Audio("assets/sounds/deflate.mp3");
@@ -810,6 +824,22 @@ function getCanvasSize(canvasID) {
     }
     let cW = $(canvasID).width();
     let cH = $(canvasID).height();
-    let cArray = [cw, ch];
+    let cArray = [cW, cH];
     return cArray;
 }
+
+function drawBalloonImage(canvasID, img) {
+    if (canvasID.substr(0, 1) != "#") {
+        canvasID = "#" + canvasID;
+    }
+    let canvasSize = getCanvasSize(canvasID);
+    let canvasWidth = canvasSize[0];
+    let canvasHeight = canvasSize[1];
+    let canvasRatio = (canvasWidth /  canvasHeight);
+    let canvasElement =  $(canvasID)[0];
+    let canvasContext = canvasElement.getContext('2d');
+    canvasContext.drawImage(img, 2560, 0, 512, 512, 0, 14, 300, 60);
+
+}
+
+$(canvasID)
