@@ -296,9 +296,9 @@ function playGame() {
 /** Function to check selected answer on click of balloon **/
 function checkSelectedAnswer() {
     console.log("test click event");
-    let answerTextID = (this.id);
+    let answerTextID = "#"+ (this.id);
     console.log(answerTextID);
-    let canvasID = returnCanvasID(answerTextID);
+    let canvasID = "#"+ returnCanvasID(answerTextID);
     console.log(canvasID);
     let sAnswer = this.innerHTML;
     console.log(sAnswer);
@@ -312,6 +312,7 @@ function checkSelectedAnswer() {
         bpmScoreArray = setScore([(currentScore + 1), bpmScoreArray[1]]);
         bpmCQ = bpmCQ + 1;
         if (bpmCQ < bpmQno) {
+            initialiseBalloonsNewQuestion();
             bpmQCurrent = setQuestion(bpmQArray[bpmCQ]);
             bpmAnswerArray = answerArray(bpmGameMode, bpmQCurrent);
             bpmAnswerArray = setBalloons(bpmAnswerArray);
@@ -339,6 +340,8 @@ function checkSelectedAnswer() {
         console.log("Wrong!")
         let cHealth = bpmHealthArray[0];
         if (cHealth > 0) {
+            $(answerTextID).fadeOut("slow");
+            $(canvasID).fadeOut("slow");
             let healthArray = [(cHealth - 1), bpmHealthArray[1]];
             bpmHealthArray = setHealthBar(healthArray);
             soundDeflate.play();
@@ -901,4 +904,20 @@ function initialiseBalloons() {
     drawBalloonImage("canvas-balloon-right-1", imgBalloonRed, 1);
     drawBalloonImage("canvas-balloon-right-2", imgBalloonGreen, 1);
     drawBalloonImage("canvas-balloon-right-3", imgBalloonYellow, 1);
+}
+
+/** Function to initialise answer balloons for new question  **/
+function initialiseBalloonsNewQuestion() {
+    $("#canvas-balloon-left-1").fadeIn("fast");
+    $("#canvas-balloon-left-2").fadeIn("fast");
+    $("#canvas-balloon-left-3").fadeIn("fast");
+    $("#canvas-balloon-right-1").fadeIn("fast");
+    $("#canvas-balloon-right-2").fadeIn("fast");
+    $("#canvas-balloon-right-3").fadeIn("fast");
+    $("#balloon-answer-text-left-1").fadeIn("fast");
+    $("#balloon-answer-text-left-2").fadeIn("fast");
+    $("#balloon-answer-text-left-3").fadeIn("fast");
+    $("#balloon-answer-text-right-1").fadeIn("fast");
+    $("#balloon-answer-text-right-1").fadeIn("fast");
+    $("#balloon-answer-text-right-3").fadeIn("fast");
 }
