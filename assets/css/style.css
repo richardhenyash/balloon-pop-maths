@@ -186,6 +186,11 @@ body {
     z-index: 1;
 }
 
+/*-- Game Answer Balloon Text Hover Styling --*/
+.balloon-answer-text:hover {
+   cursor: crosshair; 
+}
+
 /*-- Game Question --*/
 .game-section-controls #question {
     color:#EEFBFF;
