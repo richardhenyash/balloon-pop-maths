@@ -166,3 +166,14 @@ and [Game]("/assets/wireframes/rev1/game-multiplication.png) page layouts on [Ta
 <img src="/assets/wireframes/rev2/game-multiplication-tablet.png" style="margin: 15px; width:250px;"> 
 <img src="/assets/wireframes/rev2/game-multiplication-phone.png" style="margin: 15px; width:250px;">
 
+## Credits ##
+
+Sprite animation:
+https://spicyyoghurt.com/tutorials/html5-javascript-game-development/images-and-sprite-animations
+https://dev.to/martyhimmel/animating-sprite-sheets-with-javascript-ag3
+
+Ramdom integer between 2 given integers:
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+
+Function to randomize an array in place using the Durstenfeld shuffle algorithm, eferenced from stack overflow link below, many thanks to Laurens Holst
+https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
