@@ -161,12 +161,9 @@ body {
     border-color: #3E8BC6;
 }
 
-/*-- Game Canvas Container --*/
-.container-canvas-balloon {
-    position: absolute;
-    width: 110px;
-    height: 110px;
-    z-index: -2;
+/*-- Set minimum row height for balloon canvas elements --*/
+.canvas-balloon {
+    min-height: 110px;
 }
 
 /*-- Game Canvas Styling --*/
@@ -249,9 +246,8 @@ body {
 
 /*-- Media query to re-size balloon canvas and text elements for devices over 400px wide --*/
  @media (min-width: 400px) {
-     .container-canvas-balloon {
-        width: 150px;
-        height: 150px;
+    .canvas-balloon {
+        min-height: 150px;
     }
     .canvas-balloon canvas {
         width: 150px;
@@ -266,9 +262,8 @@ body {
 
 /*-- Media query to re-size balloon canvas and text elements for large devices --*/
  @media (min-width: 768px) {
-        .container-canvas-balloon {
-        width: 200px;
-        height: 200px;
+    .canvas-balloon {
+        min-height: 200px;
     }
     .canvas-balloon canvas {
         width: 200px;

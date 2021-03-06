@@ -856,7 +856,7 @@ function returnCanvasID(answerTextID) {
         answerTextID = "#" + answerTextID;
     }
     let sArray = $(answerTextID).siblings();
-    let canvasID = sArray[1].id;
+    let canvasID = sArray[0].id;
     return(canvasID);
 }
 
