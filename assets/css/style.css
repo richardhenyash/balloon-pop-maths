@@ -163,34 +163,9 @@ body {
 
 /*-- Game Canvas Styling --*/
 .canvas-balloon canvas {
-    width: 100px;
-    height: 100px;
+    width: 110px;
+    height: 110px;
 }
-
-#canvas-balloon-left-1 {
-    background: blue;
-}
-
-#canvas-balloon-left-2 {
-    background: orange;
-}
-
-#canvas-balloon-left-3 {
-    background: purple;
-}
-
-#canvas-balloon-right-1 {
-    background: red;
-}
-
-#canvas-balloon-right-2 {
-    background: green;
-}
-
-#canvas-balloon-right-3 {
-    background: yellow;
-}
-
 
 /*-- Game Answer Balloon Text --*/
 .balloon-answer-text {
@@ -200,10 +175,9 @@ body {
     display: inline-block;
     font-size: 4.4rem;
     font-weight: 700;
-    border: 1px solid #EEFBFF;
     line-height: 100px;
-    width: 100px;
-    height: 100px;
+    width: 110px;
+    height: 110px;
     z-index: 1;
 }
 
@@ -232,8 +206,7 @@ body {
 .game-section-controls #health {
     color: #DC7774;
     text-align: center;
-    padding-left: 0.5rem;
-    padding-bottom: 0.5rem;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
 }
 
 .game-section-controls #health i {
@@ -275,27 +248,28 @@ body {
 }
 
 
-/*-- Media query to re-size balloon canvas elements for medium devices --*/
- @media (min-width: 470px) {
+
+/*-- Media query to re-size balloon canvas and text elements for devices over 400px wide --*/
+ @media (min-width: 400px) {
     .canvas-balloon canvas {
         width: 150px;
         height: 150px;
     }
     .balloon-answer-text {
-        line-height: 150px;
+        line-height: 140px;
         width: 150px;
         height: 150px;
     }
 }
 
-/*-- Media query to re-size balloon canvas elements for large devices --*/
+/*-- Media query to re-size balloon canvas and text elements for large devices --*/
  @media (min-width: 768px) {
     .canvas-balloon canvas {
         width: 200px;
         height: 200px;
     }
     .balloon-answer-text {
-        line-height: 200px;
+        line-height: 180px;
         width: 200px;
         height: 200px;
     }
