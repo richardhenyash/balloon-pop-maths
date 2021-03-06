@@ -1,7 +1,7 @@
 // Event handler to switch to Multiply mode when document is ready
 $(document).ready(modeMultiply);
 
-// load balloon sprite images
+// buffer balloon sprite images
 var imgBalloonBlue = new Image();
 imgBalloonBlue.src = "assets/images/balloon-blue-sprite.png";
 var imgBalloonOrange = new Image();
@@ -15,7 +15,7 @@ imgBalloonGreen.src = "assets/images/balloon-green-sprite.png";
 var imgBalloonYellow = new Image();
 imgBalloonYellow.src = "assets/images/balloon-yellow-sprite.png";
 
-// buffer sound effects automatically when created
+// buffer sound effects
 var soundPop = new Audio("assets/sounds/pop.mp3");
 var soundDeflate = new Audio("assets/sounds/deflate.mp3");
 var soundHighScore = new Audio("assets/sounds/high-score.mp3");
