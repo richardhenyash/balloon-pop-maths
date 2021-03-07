@@ -890,10 +890,10 @@ function animateBalloon(canvasID) {
     balloonTimeout = setTimeout(drawBalloonImage, 25, canvasID, img, 1);        
     balloonTimeout = setTimeout(drawBalloonImage, 50, canvasID, img, 2);
     balloonTimeout = setTimeout(drawBalloonImage, 75, canvasID, img, 3);
-    balloonTimeout = setTimeout(drawBalloonImage, 150, canvasID, img, 4);
-    balloonTimeout = setTimeout(drawBalloonImage, 225, canvasID, img, 5);
-    balloonTimeout = setTimeout(drawBalloonImage, 300, canvasID, img, 6); 
-    balloonTimeout = setTimeout(drawBalloonImage, 400, canvasID, img, 1);
+    balloonTimeout = setTimeout(drawBalloonImage, 200, canvasID, img, 4);
+    balloonTimeout = setTimeout(drawBalloonImage, 300, canvasID, img, 5);
+    balloonTimeout = setTimeout(drawBalloonImage, 400, canvasID, img, 6); 
+    balloonTimeout = setTimeout(drawBalloonImage, 500, canvasID, img, 1);
     return(balloonTimeout);
 }
 
@@ -905,24 +905,4 @@ function initialiseBalloons() {
     drawBalloonImage("canvas-balloon-right-1", imgBalloonRed, 1);
     drawBalloonImage("canvas-balloon-right-2", imgBalloonGreen, 1);
     drawBalloonImage("canvas-balloon-right-3", imgBalloonYellow, 1);
-    $("[id^=canvas-balloon]").fadeIn("fast");
-    $("[id^=balloon-answer-text]").fadeIn("fast");
-}
-
-/** Function to initialise answer balloons for new question  **/
-function initialiseBalloonsNewQuestion() {
-    $("[id^=canvas-balloon]").fadeIn("fast");
-    $("[id^=balloon-answer-text]").fadeIn("fast");
-    $("#canvas-balloon-left-1").fadeIn("fast");
-    $("#canvas-balloon-left-2").fadeIn("fast");
-    $("#canvas-balloon-left-3").fadeIn("fast");
-    $("#canvas-balloon-right-1").fadeIn("fast");
-    $("#canvas-balloon-right-2").fadeIn("fast");
-    $("#canvas-balloon-right-3").fadeIn("fast");
-    $("#balloon-answer-text-left-1").fadeIn("fast");
-    $("#balloon-answer-text-left-2").fadeIn("fast");
-    $("#balloon-answer-text-left-3").fadeIn("fast");
-    $("#balloon-answer-text-right-1").fadeIn("fast");
-    $("#balloon-answer-text-right-2").fadeIn("fast");
-    $("#balloon-answer-text-right-3").fadeIn("fast");
 }
