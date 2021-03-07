@@ -43,8 +43,8 @@ $("#balloon-answer-text-right-3").on("click", checkSelectedAnswer);
 
 // Show multiplication and division option buttons and update option buttons for division game
 $("#divide").click(function() {
-    $("#options-add-subtract").hide("medium");
-    $("#options-multiply-divide").show("medium");
+    $("#options-add-subtract").hide(400);
+    $("#options-multiply-divide").show(400);
     makeActive("#btn-mul-div-1");
     $("#btn-mul-div-1").html("&divide2, &divide5, &divide10");
     $("#btn-mul-div-2").html("Mixed 1 to 12");
@@ -102,23 +102,23 @@ $("#btn-game-section-options").on("click", returnToMenu);
 
 /** Function to return to menu - hides game section and shows heading and options **/
 function returnToMenu() {
-    $("#game-section").hide("medium");   
-    $("#heading-section").show("medium");
-    $("#options-section").show("medium");
+    $("#game-section").hide(400);   
+    $("#heading-section").show(400);
+    $("#options-section").show(400);
 }
 
 /** Function to hide multiplication and division option buttons and show option buttons for addition and subtraction game **/
 function modeAddSubtract() {
-   $("#options-multiply-divide").hide("medium");
-   $("#options-add-subtract").show("medium");
+   $("#options-multiply-divide").hide(400);
+   $("#options-add-subtract").show(400);
     makeActive("#btn-mul-div-1");
 }
 
 /** Function to hide addition and subtraction option buttons and show option buttons for multiplication game **/
 function modeMultiply()
  {
-    $("#options-add-subtract").hide("medium");
-    $("#options-multiply-divide").show("medium");
+    $("#options-add-subtract").hide(400);
+    $("#options-multiply-divide").show(400);
     makeActive("#btn-mul-div-1");
     $("#btn-mul-div-1").html("2x, 5x, 10x")
     $("#btn-mul-div-2").html("Mixed 1 to 12");
@@ -138,8 +138,8 @@ function modeMultiply()
 
 /** Function to hide addition and subtraction option buttons and show option buttons for division game **/
 function modeDivide() {
-    $("#options-add-subtract").hide("medium");
-    $("#options-multiply-divide").show("medium");
+    $("#options-add-subtract").hide(400);
+    $("#options-multiply-divide").show(400);
     makeActive("#btn-mul-div-1");
     $("#btn-mul-div-1").html("&divide2, &divide5, &divide10");
     $("#btn-mul-div-2").html("Mixed 1 to 12");
@@ -203,7 +203,7 @@ function returnDifficulty() {
     if ($("#easy").hasClass("active")) {
         difficulty = "easy";
     } else if ($("#medium").hasClass("active")) {
-        difficulty = "medium";
+        difficulty = 400;
     } else if ($("#hard").hasClass("active")) {
         difficulty = "hard";
     } 
@@ -282,8 +282,8 @@ function playGame() {
     console.log(bpmScoreArray);
 
     // Hide heading section and options section //
-    $("#heading-section").hide("medium");
-    $("#options-section").hide("medium");
+    $("#heading-section").hide(400);
+    $("#options-section").hide(400);
     $("#game-section").hide();
     $("#game-section").removeClass( "d-none" )
     $("#game-section").show(1000); 
@@ -312,7 +312,8 @@ function checkSelectedAnswer() {
         bpmScoreArray = setScore([(currentScore + 1), bpmScoreArray[1]]);
         bpmCQ = bpmCQ + 1;
         if (bpmCQ < bpmQno) {
-            initialiseBalloonsNewQuestion();
+            $("[id^=canvas-balloon]").fadeIn("fast");
+            $("[id^=balloon-answer-text]").fadeIn("fast");
             bpmQCurrent = setQuestion(bpmQArray[bpmCQ]);
             bpmAnswerArray = answerArray(bpmGameMode, bpmQCurrent);
             bpmAnswerArray = setBalloons(bpmAnswerArray);
@@ -611,7 +612,7 @@ function initialiseHealthBar(difficulty) {
         $("#heart3").show();
         $("#heart4").show();
         $("#heart5").show();
-    } else if (difficulty == "medium") {
+    } else if (difficulty == 400) {
         healthArray = [3, 3];
         $("#heart1").show();
         $("#heart2").show();
@@ -904,21 +905,6 @@ function initialiseBalloons() {
     drawBalloonImage("canvas-balloon-right-1", imgBalloonRed, 1);
     drawBalloonImage("canvas-balloon-right-2", imgBalloonGreen, 1);
     drawBalloonImage("canvas-balloon-right-3", imgBalloonYellow, 1);
-    initialiseBalloonsNewQuestion();
-}
-
-/** Function to initialise answer balloons for new question  **/
-function initialiseBalloonsNewQuestion() {
-    $("#canvas-balloon-left-1").fadeIn("fast");
-    $("#canvas-balloon-left-2").fadeIn("fast");
-    $("#canvas-balloon-left-3").fadeIn("fast");
-    $("#canvas-balloon-right-1").fadeIn("fast");
-    $("#canvas-balloon-right-2").fadeIn("fast");
-    $("#canvas-balloon-right-3").fadeIn("fast");
-    $("#balloon-answer-text-left-1").fadeIn("fast");
-    $("#balloon-answer-text-left-2").fadeIn("fast");
-    $("#balloon-answer-text-left-3").fadeIn("fast");
-    $("#balloon-answer-text-right-1").fadeIn("fast");
-    $("#balloon-answer-text-right-2").fadeIn("fast");
-    $("#balloon-answer-text-right-3").fadeIn("fast");
+    $("[id^=canvas-balloon]").fadeIn("fast");
+    $("[id^=balloon-answer-text]").fadeIn("fast");
 }
