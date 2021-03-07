@@ -1,6 +1,12 @@
 // Event handler to switch to Multiply mode when document is ready
 $(document).ready(modeMultiply);
 
+// Hide play button, add Event handler to show Play button when game window has loaded
+$(window).on("load", function() {
+    $("#play").show()
+    $("#optionsbutton").show()
+})
+
 // buffer balloon sprite images
 var imgBalloonBlue = new Image();
 imgBalloonBlue.src = "assets/images/balloon-blue-sprite.png";
