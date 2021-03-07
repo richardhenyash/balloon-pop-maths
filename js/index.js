@@ -1,7 +1,7 @@
 // Event handler to switch to Multiply mode when document is ready
 $(document).ready(modeMultiply);
 
-// Hide play button, add Event handler to show Play button when game window has loaded
+// Hide play button, add Event handler to show Play button when window has completed loading
 $("#play").hide()
 $(window).on("load", function() {
     $("#play").show()
