@@ -890,10 +890,10 @@ function animateBalloon(canvasID) {
     balloonTimeout = setTimeout(drawBalloonImage, 25, canvasID, img, 1);        
     balloonTimeout = setTimeout(drawBalloonImage, 50, canvasID, img, 2);
     balloonTimeout = setTimeout(drawBalloonImage, 75, canvasID, img, 3);
-    balloonTimeout = setTimeout(drawBalloonImage, 200, canvasID, img, 4);
-    balloonTimeout = setTimeout(drawBalloonImage, 300, canvasID, img, 5);
-    balloonTimeout = setTimeout(drawBalloonImage, 400, canvasID, img, 6); 
-    balloonTimeout = setTimeout(drawBalloonImage, 500, canvasID, img, 1);
+    balloonTimeout = setTimeout(drawBalloonImage, 150, canvasID, img, 4);
+    balloonTimeout = setTimeout(drawBalloonImage, 225, canvasID, img, 5);
+    balloonTimeout = setTimeout(drawBalloonImage, 300, canvasID, img, 6); 
+    balloonTimeout = setTimeout(drawBalloonImage, 400, canvasID, img, 1);
     return(balloonTimeout);
 }
 
