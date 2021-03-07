@@ -2,9 +2,9 @@
 $(document).ready(modeMultiply);
 
 // Hide play button, add Event handler to show Play button when game window has loaded
+$("#play").hide()
 $(window).on("load", function() {
     $("#play").show()
-    $("#optionsbutton").show()
 })
 
 // buffer balloon sprite images
