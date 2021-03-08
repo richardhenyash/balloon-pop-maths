@@ -32,6 +32,7 @@ var soundUnlucky = new Audio("assets/sounds/unlucky.mp3");
 soundUnlucky.volume = 0.8;
 var soundWellDone = new Audio("assets/sounds/well-done.mp3");
 soundWellDone.volume = 0.8;
+var soundEffectsMuted = false;
 
 // On click event added to mute button to toggle audio mute
 $("#mute").on("click", muteAudioToggle);
@@ -198,20 +199,22 @@ function checkButtons(gameMode) {
 
 /** Function to toggle audio mute.  **/
 function muteAudioToggle(){
-    if (soundPop.volume > 0) {
-        soundPop.volume = 0;
-        soundDeflate.volume = 0;
-        soundHighScore.volume = 0;
-        soundUnlucky.volume = 0;
-        soundWellDone.volume = 0;
+    if (soundEffectsMuted == false) {
+        soundPop.muted = true;
+        soundDeflate.muted = true;
+        soundHighScore.muted = true;
+        soundUnlucky.muted = true;
+        soundWellDone.muted = true;
         $(this).removeClass("fa-volume-off").addClass("fas fa-volume-mute");
+        soundEffectsMuted = true;
     } else {
-        soundPop.volume = 0.8;
-        soundDeflate.volume = 0.8;
-        soundHighScore.volume = 0.8;
-        soundUnlucky.volume = 0.8;
-        soundWellDone.volume = 0.8;
+        soundPop.muted = false;
+        soundDeflate.muted = false;
+        soundHighScore.muted = false;
+        soundUnlucky.muted = false;
+        soundWellDone.muted = false;
         $(this).removeClass("fa-volume-mute").addClass("fas fa-volume-off");
+        soundEffectsMuted = false;
     }
 }
 
