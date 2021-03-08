@@ -21,12 +21,20 @@ imgBalloonGreen.src = "assets/images/balloon-green-sprite.png";
 var imgBalloonYellow = new Image();
 imgBalloonYellow.src = "assets/images/balloon-yellow-sprite.png";
 
-// buffer sound effects
+// buffer sound effects, set volume to 0.8
 var soundPop = new Audio("assets/sounds/pop.mp3");
+soundPop.volume = 0.8;
 var soundDeflate = new Audio("assets/sounds/deflate.mp3");
+soundDeflate.volume = 0.8;
 var soundHighScore = new Audio("assets/sounds/high-score.mp3");
+soundHighScore = 0.8;
 var soundUnlucky = new Audio("assets/sounds/unlucky.mp3");
+soundUnlucky.volume = 0.8;
 var soundWellDone = new Audio("assets/sounds/well-done.mp3");
+soundWellDone.volume = 0.8;
+
+// On click event added to mute buttons to toggle audio mute
+$("#mute").on("click", muteAudioToggle);
 
 // On click event added to add and subtract buttons to switch to addition and subtraction options
 $("#add").on("click", modeAddSubtract);
@@ -179,12 +187,33 @@ function makeNotActive(btnIdList) {
     return(btnIdList);
 }
 
-/** Function to activate #btn-mul-div-1 if all other buttons are inactive . **/
+/** Function to activate #btn-mul-div-1 if all other buttons are inactive. **/
 function checkButtons(gameMode) {
     if ((returnActiveButtons(gameMode).length) === 0) {
         if (gameMode == "add" || gameMode == "subtract") {
             $("#btn-add-sub-1").addClass("active").addClass("focus").attr("aria-pressed", "true");    
         } else $("#btn-mul-div-1").addClass("active").addClass("focus").attr("aria-pressed", "true");
+    }
+}
+
+/** Function to toggle audio mute.  **/
+function muteAudioToggle(){
+    if (soundPop.volume > 0) {
+        soundPop.volume = 0;
+        soundDeflate.volume = 0;
+        soundHighScore.volume = 0;
+        soundUnlucky.volume = 0;
+        soundWellDone.volume = 0;
+        $("#mute").removeClass("audio-mute-off");
+        $("#mute").addClass("audio-mute-on");
+    } else {
+        soundPop.volume = 0.8;
+        soundDeflate.volume = 0.8;
+        soundHighScore.volume = 0.8;
+        soundUnlucky.volume = 0.8;
+        soundWellDone.volume = 0.8;
+        $("#mute").removeClass("audio-mute-on");
+        $("#mute").addClass("audio-mute-off");
     }
 }
 

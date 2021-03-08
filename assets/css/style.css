@@ -203,6 +203,21 @@ body {
     border: 1px solid #3E8BC6;
 }
 
+/*-- Audio Controls --*/
+#audio-controls i {
+    padding: 0.5rem 1.0rem 0.5rem 1.0rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.audio-mute-on {
+    color: #A2529A;
+}
+
+.audio-mute-off {
+    color: #84A6EF;
+}
+
 /*-- Game Health --*/
 .game-section-controls #health {
     color: #DC7774;
