@@ -33,8 +33,11 @@ soundUnlucky.volume = 0.8;
 var soundWellDone = new Audio("assets/sounds/well-done.mp3");
 soundWellDone.volume = 0.8;
 
-// On click event added to mute buttons to toggle audio mute
+// On click event added to mute button to toggle audio mute
 $("#mute").on("click", muteAudioToggle);
+
+// On click event added to mute buttons to toggle audio mute
+$("#question").on("click", muteAudioToggle);
 
 // On click event added to add and subtract buttons to switch to addition and subtraction options
 $("#add").on("click", modeAddSubtract);
