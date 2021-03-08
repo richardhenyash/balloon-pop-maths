@@ -210,6 +210,10 @@ body {
     text-align: center;
 }
 
+#audio-controls i:visited {
+    color: #84A6EF;
+}
+
 .audio-mute-on {
     color: #A2529A;
 }
