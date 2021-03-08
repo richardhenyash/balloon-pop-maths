@@ -36,9 +36,6 @@ soundWellDone.volume = 0.8;
 // On click event added to mute button to toggle audio mute
 $("#mute").on("click", muteAudioToggle);
 
-// On click event added to mute buttons to toggle audio mute
-$("#question").on("click", muteAudioToggle);
-
 // On click event added to add and subtract buttons to switch to addition and subtraction options
 $("#add").on("click", modeAddSubtract);
 $("#subtract").on("click", modeAddSubtract);
@@ -207,14 +204,14 @@ function muteAudioToggle(){
         soundHighScore.volume = 0;
         soundUnlucky.volume = 0;
         soundWellDone.volume = 0;
-        $("#mute").removeClass("fa-volume-off").addClass("fas fa-volume-mute");
+        $(this).removeClass("fa-volume-off").addClass("fas fa-volume-mute");
     } else {
         soundPop.volume = 0.8;
         soundDeflate.volume = 0.8;
         soundHighScore.volume = 0.8;
         soundUnlucky.volume = 0.8;
         soundWellDone.volume = 0.8;
-        $("#mute").removeClass("fa-volume-mute").addClass("fas fa-volume-off");
+        $(this).removeClass("fa-volume-mute").addClass("fas fa-volume-off");
     }
 }
 
