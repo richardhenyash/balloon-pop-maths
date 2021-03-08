@@ -204,16 +204,14 @@ function muteAudioToggle(){
         soundHighScore.volume = 0;
         soundUnlucky.volume = 0;
         soundWellDone.volume = 0;
-        $("#mute").removeClass("audio-mute-off");
-        $("#mute").addClass("audio-mute-on");
+        $("#mute").removeClass("fa-volume-off").addClass("fas fa-volume-mute");
     } else {
         soundPop.volume = 0.8;
         soundDeflate.volume = 0.8;
         soundHighScore.volume = 0.8;
         soundUnlucky.volume = 0.8;
         soundWellDone.volume = 0.8;
-        $("#mute").removeClass("audio-mute-on");
-        $("#mute").addClass("audio-mute-off");
+        $("#mute").removeClass("fa-volume-mute").addClass("fas fa-volume-off");
     }
 }
 
