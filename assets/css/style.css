@@ -244,7 +244,9 @@ body {
     color: #A2529A;
 }
 
-.modal-dialog p {
+.modal-dialog p,
+.modal-dialog input,
+.modal-dialog textarea {
     font-size: 1.6rem;
     font-weight: 400;
     color: #A2529A;
@@ -258,6 +260,11 @@ body {
 
 .modal-body {
     background-color: #EEFBFF;
+}
+
+/*-- Bootstrap button class overrides --*/
+.btn-lg {
+    font-size: 1.6rem;
 }
 
 /*-- Media query to re-size balloon canvas and text elements for devices over 400px wide --*/
