@@ -935,6 +935,8 @@ function animateBalloon(canvasID) {
 
 /** Function to initialise balloons on animation frame 1 **/
 function initialiseBalloons() {
+    $("[id^=canvas-balloon]").show();
+    $("[id^=balloon-answer-text]").show();
     drawBalloonImage("canvas-balloon-left-1", imgBalloonBlue, 1);
     drawBalloonImage("canvas-balloon-left-2", imgBalloonOrange, 1);
     drawBalloonImage("canvas-balloon-left-3", imgBalloonPurple, 1);
