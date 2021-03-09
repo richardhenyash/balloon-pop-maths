@@ -260,8 +260,6 @@ body {
     background-color: #EEFBFF;
 }
 
-
-
 /*-- Media query to re-size balloon canvas and text elements for devices over 400px wide --*/
  @media (min-width: 400px) {
     .canvas-balloon {

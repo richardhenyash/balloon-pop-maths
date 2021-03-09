@@ -288,10 +288,40 @@
             </div>
         </div>
     </div>
+    <div id="modal-contact" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 id="modal-contact-heading-text" class="modal-title">Contact Developer</h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="form-contact" role="form" method="post">
+                        <p>Please feel free to contact me with suggestions on how I can improve Balloon Pop Maths, or if you need a developer!</p>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="form-name" name="form-name" aria-describedby="emailHelp" placeholder="Enter name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="form-email" name="form-email" placeholder="Enter email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" type="textarea" id="form-message" name="form-message" placeholder="Enter message" maxlength="6000" rows="7" required></textarea>
+                        </div>
+                        <div id="form-buttons" class="text-right">
+                            <button type="button" class="btn btn-lg btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="submit" id="form-submit" class="btn btn-lg btn-primary">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Footer -->
     <footer class="container-sm">
         <div class="container-footer">
-            <a href="contact.html">Contact Developer</a>
+            <a href="#modal-contact" data-toggle="modal" data-target="#modal-contact">Contact Developer</a>
             <a href="https://github.com/richardhenyash" target="_blank"><i class="fab fa-github-square fa-lg"></i></a>
         </div>
     </footer>
