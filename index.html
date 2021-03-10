@@ -15,6 +15,13 @@
     <script src="https://kit.fontawesome.com/7863bec69d.js" crossorigin="anonymous"></script>
     <!-- Link to Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Link to Email JS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script type="text/javascript">
+    (function() {
+        emailjs.init("user_JExUJN7eCUWFqFAl29Mbl");
+    })();
+    </script>
     <title>Balloon Pop Maths</title>
 </head>
 <body>
@@ -298,16 +305,16 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form id="form-contact" role="form" method="post">
+                    <form id="contact" onsubmit="return sendMail(this);">
                         <p>Please feel free to contact me with suggestions on how I can improve Balloon Pop Maths, or if you need a developer!</p>
                         <div class="form-group">
-                            <input type="text" class="form-control" id="form-name" name="form-name" aria-describedby="emailHelp" placeholder="Enter name" required>
+                            <input type="text" class="form-control" id="name" name="name" aria-describedby="emailHelp" placeholder="Enter name" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" class="form-control" id="form-email" name="form-email" placeholder="Enter email" required>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" required>
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control" type="textarea" id="form-message" name="form-message" placeholder="Enter message" maxlength="6000" rows="7" required></textarea>
+                            <textarea class="form-control" type="textarea" id="message" name="message" placeholder="Enter message" maxlength="6000" rows="7" required></textarea>
                         </div>
                         <div id="form-buttons" class="text-right">
                             <button type="button" class="btn btn-lg btn-secondary" data-dismiss="modal">Close</button>
