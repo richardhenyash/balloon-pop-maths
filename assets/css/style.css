@@ -50,6 +50,14 @@ body {
     color: #EEFBFF;
 }
 
+/*--Heading Imgae--*/
+.container-heading-main img {
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    margin-left: -40px;
+}
+
 /*--Buttons--*/
 .btn-text {
     color:#EEFBFF;

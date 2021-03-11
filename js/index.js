@@ -945,14 +945,6 @@ function initialiseBalloons() {
     drawBalloonImage("canvas-balloon-right-3", imgBalloonYellow, 1);
 }
 
-/** function sendMail(contactForm) {
-    console.log(contactForm.id);
-    console.log(contactForm.name.value);
-    console.log(contactForm.email.value);
-    console.log(contactForm.message.value);
-    return false;
-}
-
 /** Function to send email from modal contact form **/
 function sendMail(contactForm) {
     emailjs.send("PersonalGmail","balloon-pop-maths",{
