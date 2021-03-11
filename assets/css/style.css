@@ -24,8 +24,13 @@ body {
 
 /*--Containers--*/
 .container-heading-main {
-    padding-top: 1.5rem;
-    padding-bottom: 1.0rem;
+    padding-top: 1.0rem;
+    padding-bottom: 0.5rem;
+}
+
+.container-heading-main-large {
+    padding-top: 3.0rem;
+    padding-bottom: 3.0rem;
 }
 
 .container-button {
@@ -51,7 +56,8 @@ body {
 }
 
 /*--Heading Imgae--*/
-.container-heading-main img {
+.container-heading-main img,
+.container-heading-main-large img {
     position: absolute;
     z-index: -1;
     left: 50%;
