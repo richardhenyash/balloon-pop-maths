@@ -23,15 +23,15 @@ imgBalloonYellow.src = "assets/images/balloon-yellow-sprite.png";
 
 // buffer sound effects, set volume to 0.8
 var soundPop = new Audio("assets/sounds/pop.mp3");
-soundPop.volume = 0.8;
+soundPop.volume = 0.6;
 var soundDeflate = new Audio("assets/sounds/deflate.mp3");
-soundDeflate.volume = 0.8;
+soundDeflate.volume = 0.6;
 var soundHighScore = new Audio("assets/sounds/high-score.mp3");
-soundHighScore.volume = 0.8;
+soundHighScore.volume = 0.6;
 var soundUnlucky = new Audio("assets/sounds/unlucky.mp3");
-soundUnlucky.volume = 0.8;
+soundUnlucky.volume = 0.6;
 var soundWellDone = new Audio("assets/sounds/well-done.mp3");
-soundWellDone.volume = 0.8;
+soundWellDone.volume = 0.6;
 var soundEffectsMuted = false;
 
 // On click event added to mute button to toggle audio mute
