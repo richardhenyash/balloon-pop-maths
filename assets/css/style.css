@@ -201,9 +201,13 @@ body {
     text-shadow: 1px 1px 2px #a9a9a9;
 }
 
-/*-- Game Answer Balloon Text Hover Styling --*/
+/*-- Game Answer Balloon Text Hover Styling --
 .balloon-answer-text:hover {
    cursor: crosshair; 
+}
+--*/
+.balloon-answer-text:hover {
+  cursor: url('../images/pin.svg'), crosshair; 
 }
 
 /*-- Game Question --*/
