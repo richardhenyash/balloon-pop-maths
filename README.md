@@ -171,6 +171,9 @@ and [Game]("/assets/wireframes/rev1/game-multiplication.png) page layouts on [Ta
 Balloon Sprite Images:
 http://www.gamedeveloperstudio.com/
 
+Pin SVG Image
+https://www.svgrepo.com/svg/207632/push-pin
+
 Sound Effects:
 https://mixkit.co/free-sound-effects/game/
 
