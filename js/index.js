@@ -8,31 +8,31 @@ $(window).on("load", function() {
 })
 
 // buffer balloon sprite images
-var imgBalloonBlue = new Image();
+let imgBalloonBlue = new Image();
 imgBalloonBlue.src = "assets/images/balloon-blue-sprite.png";
-var imgBalloonOrange = new Image();
+let imgBalloonOrange = new Image();
 imgBalloonOrange.src = "assets/images/balloon-orange-sprite.png";
-var imgBalloonPurple = new Image();
+let imgBalloonPurple = new Image();
 imgBalloonPurple.src = "assets/images/balloon-purple-sprite.png";
-var imgBalloonRed = new Image();
+let imgBalloonRed = new Image();
 imgBalloonRed.src = "assets/images/balloon-red-sprite.png";
-var imgBalloonGreen = new Image();
+let imgBalloonGreen = new Image();
 imgBalloonGreen.src = "assets/images/balloon-green-sprite.png";
-var imgBalloonYellow = new Image();
+let imgBalloonYellow = new Image();
 imgBalloonYellow.src = "assets/images/balloon-yellow-sprite.png";
 
-// buffer sound effects, set volume to 0.8
-var soundPop = new Audio("assets/sounds/pop.mp3");
+// buffer sound effects, set volume to 0.6
+let soundPop = new Audio("assets/sounds/pop.mp3");
 soundPop.volume = 0.6;
-var soundDeflate = new Audio("assets/sounds/deflate.mp3");
+let soundDeflate = new Audio("assets/sounds/deflate.mp3");
 soundDeflate.volume = 0.6;
-var soundHighScore = new Audio("assets/sounds/high-score.mp3");
+let soundHighScore = new Audio("assets/sounds/high-score.mp3");
 soundHighScore.volume = 0.6;
-var soundUnlucky = new Audio("assets/sounds/unlucky.mp3");
+let soundUnlucky = new Audio("assets/sounds/unlucky.mp3");
 soundUnlucky.volume = 0.6;
-var soundWellDone = new Audio("assets/sounds/well-done.mp3");
+let soundWellDone = new Audio("assets/sounds/well-done.mp3");
 soundWellDone.volume = 0.6;
-var soundEffectsMuted = false;
+let soundEffectsMuted = false;
 
 // On click event added to mute button to toggle audio mute
 $("#mute").on("click", muteAudioToggle);
@@ -239,7 +239,7 @@ function returnDifficulty() {
     if ($("#easy").hasClass("active")) {
         difficulty = "easy";
     } else if ($("#medium").hasClass("active")) {
-        difficulty = 400;
+        difficulty = "medium";
     } else if ($("#hard").hasClass("active")) {
         difficulty = "hard";
     } 
@@ -648,7 +648,7 @@ function initialiseHealthBar(difficulty) {
         $("#heart3").show();
         $("#heart4").show();
         $("#heart5").show();
-    } else if (difficulty == 400) {
+    } else if (difficulty == "medium") {
         healthArray = [3, 3];
         $("#heart1").show();
         $("#heart2").show();
