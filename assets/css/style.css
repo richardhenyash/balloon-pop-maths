@@ -267,13 +267,20 @@ body {
 }
 
 /*-- Bootstrap modal class overrides --*/
+.modal-content {
+    border-radius: 1rem;
+}
+
 .modal-header {
     border-bottom: 1px solid #9C70BD;
     background-color: #EEFBFF;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
 }
 
 .modal-body {
     background-color: #EEFBFF;
+    border-radius: 1rem;
 }
 
 /*-- Bootstrap button class overrides --*/
