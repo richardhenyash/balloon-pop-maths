@@ -207,13 +207,16 @@
         </div>
     </section>
     <!-- Game Section -->
-    <section id="game-section" class="container-sm p-3 d-none">
+    <section id="game-section" class="container-xl d-none">
         <!-- Options Button -->
-        <div id="game-section-options" class="row">
-            <div class="container-button-game">
+        <div id="game-section-options" class="row container-button-game">
+            <div class="col text-left pr-0">
                 <button id="btn-game-section-options" type="button" data-toggle="button" autocomplete="off"
                     class="btn btn-xl btn-info btn-text btn-xl-focus-none">Options
                 </button>
+            </div>
+            <div class="col text-right pl-0">            
+                <div id="score" class="btn btn-xl-nofill btn-text-score">Score: 0 / 20</div>
             </div>
         </div>
         <!-- Game Canvas, 2 panels - stacked on medium and small devices -->
@@ -276,7 +279,7 @@
                 <div id="question">10 x 10</div>                
             </div>
             <div class="col-md-4">
-                <div id="score">Score: 0 / 20</div>
+                <!-- <div id="score">Score: 0 / 20</div> -->
             </div>
         </div>
     </section>
