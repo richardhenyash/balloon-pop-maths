@@ -1,6 +1,6 @@
-/** JavaScript mail functions **/
+// JavaScript mail functions //
 
-/** Initialise EmailJS with assigned user ID **/
+// Initialise EmailJS with assigned user ID //
 emailjs.init("user_JExUJN7eCUWFqFAl29Mbl");
 
 /** Function to send email from modal contact form **/
