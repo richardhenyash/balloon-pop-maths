@@ -37,7 +37,7 @@ body {
     background-image: linear-gradient(to bottom, #7cc0ff, #77c4fe, #72c7fc, #6fcafa, #6ecdf8, #6fd2f7, #71d7f6, #75dcf5, #7de4f5, #86ecf6, #92f4f5, #9efbf5);
 }
 
-/*--Containers--*/
+/*-- Containers --*/
 .container-heading-main {
     padding-top: 1.0rem;
     padding-bottom: 0.5rem;
@@ -62,7 +62,13 @@ body {
     padding-bottom: 1.5rem;
 }
 
-/*--Headings--*/
+.container-footer {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-align: center;
+}
+
+/*-- Headings --*/
 .heading-main {
     font-family: var(--titlefont);
     font-size: 6rem;
@@ -70,7 +76,7 @@ body {
     color: var(--bluevlight);
 }
 
-/*--Heading Imgae--*/
+/*-- Heading Image --*/
 .container-heading-main img,
 .container-heading-main-large img {
     position: absolute;
@@ -79,7 +85,7 @@ body {
     margin-left: -40px;
 }
 
-/*--Buttons--*/
+/*-- Buttons --*/
 .btn-text {
     color: var(--bluevlight);
 }
@@ -116,25 +122,111 @@ body {
     border-color: var(--bluemed);
 }
 
-/*--Button Hover Styling--*/
+/*-- Button Hover Styling --*/
 .btn-text-score:hover {
     color: var(--purpledark);
     cursor: auto;
 }
 
-/*--Balloon Image Sprites--*/
-.balloon img {
+/*-- Button Pseudo Class Styling --*/
+.btn-xl-focus-none:focus,
+.btn-xl-focus-none:visited {
+    background-color: var(--purplelight);
+    box-shadow: none;
+    border-color: var(--bluemed);
+}
+
+/*-- Game Elements --*/
+/*-- Set minimum row height for balloon canvas elements --*/
+.canvas-balloon {
+    min-height: 110px;
+}
+
+/*-- Game Canvas --*/
+.canvas-balloon canvas {
+    width: 110px;
+    height: 110px;
+}
+
+/*-- Game Answer Balloon Text --*/
+.balloon-answer-text {
     position: absolute;
-    clip-path: inset(0px 3072px 512px 2560px);
+    color: var(--bluevlight);
+    text-align: center;
+    display: inline-block;
+    font-size: 4.4rem;
+    font-weight: 700;
+    line-height: 100px;
+    width: 110px;
+    height: 110px;
+    z-index: 1;
+    text-shadow: 1px 1px 2px var(--medgrey);
+}
+
+/*-- Game Answer Balloon Text Hover Styling --*/
+.balloon-answer-text:hover {
+  cursor: url('../images/pin.svg'), crosshair; 
+}
+
+/*-- Game Question --*/
+.game-section-controls #question {
+    color: var(--bluevlight);
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 700;
+    border-radius: 1.0rem;
+    background-color: var(--purplelight);
+    border: 1px solid var(--bluemed);
+}
+
+/*-- Game Audio Controls --*/
+#audio-controls i {
+    padding: 0.5rem 1.0rem 0.5rem 1.0rem;
+    font-size: 2rem;
+    text-align: center;
+    color: var(--purplemed);
+}
+
+#audio-controls i:hover {
+    color: var(--purpledark);
+}
+
+/*-- Game Health --*/
+.game-section-controls #health {
+    color: var(--redlight);
+    text-align: center;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+}
+
+.game-section-controls #health i {
+    font-size: 2rem;
+}
+
+/*-- Game Score --*/
+.score {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    color: var(--purplemed);
+    text-align: right;
+}
+
+/*-- Generic Feedback Modal --*/
+.modal-dialog h2,
+.modal-dialog span {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--purpledark);
+}
+
+.modal-dialog p,
+.modal-dialog input,
+.modal-dialog textarea {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--purpledark);
 }
 
 /*--Footer--*/
-.container-footer {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    text-align: center;
-}
-
 .container-footer a {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
@@ -172,6 +264,13 @@ body {
     text-decoration: none;
 }
 
+/*-- Bootstrap Class Overrides --*
+
+/*-- Bootstrap Button Class Overrides --*/
+.btn-lg {
+    font-size: 1.6rem;
+}
+
 /*--Bootstrap Button Pseudo Class Overrides--*/
 .btn-info:active {
     background-color: var(--purpledark);
@@ -188,105 +287,6 @@ body {
 .btn-info:hover {
     background-color: var(--purplemed); 
 }
-
-/*-- Button Pseudo Class Overrides --*/
-.btn-xl-focus-none:focus,
-.btn-xl-focus-none:visited {
-    background-color: var(--purplelight);
-    box-shadow: none;
-    border-color: var(--bluemed);
-}
-
-/*-- Set minimum row height for balloon canvas elements --*/
-.canvas-balloon {
-    min-height: 110px;
-}
-
-/*-- Game Canvas Styling --*/
-.canvas-balloon canvas {
-    width: 110px;
-    height: 110px;
-}
-
-/*-- Game Answer Balloon Text --*/
-.balloon-answer-text {
-    position: absolute;
-    color: var(--bluevlight);
-    text-align: center;
-    display: inline-block;
-    font-size: 4.4rem;
-    font-weight: 700;
-    line-height: 100px;
-    width: 110px;
-    height: 110px;
-    z-index: 1;
-    text-shadow: 1px 1px 2px var(--medgrey);
-}
-
-/*-- Game Answer Balloon Text Hover Styling --*/
-.balloon-answer-text:hover {
-  cursor: url('../images/pin.svg'), crosshair; 
-}
-
-/*-- Game Question --*/
-.game-section-controls #question {
-    color: var(--bluevlight);
-    text-align: center;
-    font-size: 5rem;
-    font-weight: 700;
-    border-radius: 1.0rem;
-    background-color: var(--purplelight);
-    border: 1px solid var(--bluemed);
-}
-
-/*-- Audio Controls --*/
-#audio-controls i {
-    padding: 0.5rem 1.0rem 0.5rem 1.0rem;
-    font-size: 2rem;
-    text-align: center;
-    color: var(--purplemed);
-}
-
-#audio-controls i:hover {
-    color: var(--purpledark);
-}
-
-/*-- Game Health --*/
-.game-section-controls #health {
-    color: var(--redlight);
-    text-align: center;
-    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
-}
-
-.game-section-controls #health i {
-    font-size: 2rem;
-}
-
-/*-- Game Score --*/
-.score {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    color: var(--purplemed);
-    text-align: right;
-}
-
-/*-- Game Feedback Modal --*/
-.modal-dialog h2,
-.modal-dialog span {
-    font-size: 2rem;
-    font-weight: 600;
-    color: var(--purpledark);
-}
-
-.modal-dialog p,
-.modal-dialog input,
-.modal-dialog textarea {
-    font-size: 1.6rem;
-    font-weight: 400;
-    color: var(--purpledark);
-}
-
-/*-- Bootstrap Class Overrides --*
 
 /*-- Bootstrap Modal Class Overrides --*/
 .modal-content {
@@ -305,11 +305,7 @@ body {
     border-radius: 1rem;
 }
 
-/*-- Bootstrap Button Class Overrides --*/
-.btn-lg {
-    font-size: 1.6rem;
-}
-
+/*-- Media Queries --*/
 /*-- Media query to re-size balloon canvas and text elements for devices over 400px wide --*/
  @media (min-width: 400px) {
     .canvas-balloon {
