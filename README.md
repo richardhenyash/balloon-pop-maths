@@ -168,6 +168,9 @@ and [Game]("/assets/wireframes/rev1/game-multiplication.png) page layouts on [Ta
 
 ## Credits ##
 
+Balloon Favicon:
+https://www.favicon.cc/?action=icon&file_id=706495
+
 Balloon Sprite Images:
 http://www.gamedeveloperstudio.com/
 
