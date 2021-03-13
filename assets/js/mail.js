@@ -1,3 +1,5 @@
+/** JavaScript mail functions **/
+
 /** Initialise EmailJS with assigned user ID **/
 emailjs.init("user_JExUJN7eCUWFqFAl29Mbl");
 
