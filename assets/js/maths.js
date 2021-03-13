@@ -339,3 +339,15 @@ function getRandomIntInclusive(min, max) {
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive
 }
+
+/** Function to randomize an array in place using the Durstenfeld shuffle algorithm **/
+/** Function referenced from stack overflow link below, many thanks to Laurens Holst **/
+/** https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array **/
+function shuffleArray(array) {
+    let j;
+    for (let i = array.length - 1; i > 0; i--) {
+        j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return(array);
+}
