@@ -226,10 +226,6 @@ body {
     color: var(--purpledark);
 }
 
-.modal-dialog p {
-    white-space: nowrap;
-}
-
 /*--Footer--*/
 .container-footer a {
     padding-left: 0.5rem;
