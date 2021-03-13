@@ -1,4 +1,4 @@
-// JavaScript event handlers //
+// JavaScript Event Handlers //
 
 // Event handler to switch to Multiply mode when document is ready
 $(document).ready(modeMultiply);
