@@ -1,3 +1,18 @@
+/*-- Global Variable Declarations--*/
+:root {
+/*-- Fonts--*/
+    --titlefont: "Whale I Tried", sans-serif;
+    --bodyfont: 'Nunito', sans-serif;
+/*-- Colour Palette--*/
+    --purplelight: #908CD9;
+    --purplemed: #9C70BD;
+    --purpledark: #A2529A;
+    --bluemed: #3E8BC6;
+    --bluevlight: #EEFBFF;
+    --redlight: #DC7774;
+    --medgrey: #a9a9a9;
+}
+
 /*-- Custom Fonts--*/
 @font-face {
     font-family: 'Whale I Tried';
@@ -16,7 +31,7 @@ html {
 
 /*-- Body--*/
 body {
-    font-family: 'Nunito', sans-serif;
+    font-family: var(--bodyfont);
     font-size: 1.6rem;
     min-height: 100vh;
     background-image: linear-gradient(to bottom, #7cc0ff, #77c4fe, #72c7fc, #6fcafa, #6ecdf8, #6fd2f7, #71d7f6, #75dcf5, #7de4f5, #86ecf6, #92f4f5, #9efbf5);
@@ -49,10 +64,10 @@ body {
 
 /*--Headings--*/
 .heading-main {
-    font-family: "Whale I Tried", sans-serif;
+    font-family: var(--titlefont);
     font-size: 6rem;
     text-align: center;
-    color: #EEFBFF;
+    color: var(--bluevlight);
 }
 
 /*--Heading Imgae--*/
@@ -66,11 +81,11 @@ body {
 
 /*--Buttons--*/
 .btn-text {
-    color:#EEFBFF;
+    color: var(--bluevlight);
 }
 
 .btn-text-score {
-    color:#A2529A;
+    color: var(--purpledark);
     text-align: center;
     white-space: nowrap;
 }
@@ -80,15 +95,15 @@ body {
     font-size: 1.7rem;
     font-weight: 600;
     border-radius: 0.5rem;
-    background-color: #908CD9;
-    border-color: #3E8BC6;
+    background-color: var(--purplelight);
+    border-color: var(--bluemed);
 }
 
 .btn-xl-nofill {
     padding: 0.7rem 0.7rem;
     font-size: 1.7rem;
     font-weight: 600;
-    border: 2px solid #908CD9;
+    border: 2px solid var(--purplelight);
     border-radius: 0.5rem;
 }
 
@@ -97,13 +112,13 @@ body {
     font-size: 5rem;
     font-weight: 700;
     border-radius: 1.0rem;
-    background-color: #908CD9;
-    border-color: #3E8BC6;
+    background-color: var(--purplelight);
+    border-color: var(--bluemed);
 }
 
 /*--Button Hover Styling--*/
 .btn-text-score:hover {
-    color:#A2529A;
+    color: var(--purpledark);
     cursor: auto;
 }
 
@@ -126,60 +141,60 @@ body {
     text-align: center;
     font-size: 1.8rem;
     font-weight: 700;
-    color: #9C70BD;
+    color: var(--purplemed);
 }
 
 .container-footer i {
-    color: #9C70BD;
+    color: var(--purplemed);
 }
 
 .container-footer a:link,
 .container-footer i:link {
-    color: #9C70BD;
+    color: var(--purplemed);
     text-decoration: none;
 }
 
 .container-footer a:visited,
 .container-footer i:visited {
-    color: #9C70BD;
+    color: var(--purplemed);
     text-decoration: none;
 }
 
 .container-footer a:hover,
 .container-footer i:hover {
-    color: #A2529A;
+    color: var(--purpledark);
     text-decoration: none;
 }
 
 .container-footer a:active,
 .container-footer i:active {
-    color: #A2529A;
+    color: var(--purpledark);
     text-decoration: none;
 }
 
 /*--Bootstrap Button Pseudo Class Overrides--*/
 .btn-info:active {
-    background-color: #A2529A;
+    background-color: var(--purpledark);
 }
 
 .btn-info:not(:disabled):not(.disabled).active, .btn-info:not(:disabled):not(.disabled):active {
-    background-color: #A2529A;
+    background-color: var(--purpledark);
 }
 
 .btn-info:focus {
-    background-color: #9C70BD;
+    background-color: var(--purplemed);
 }
 
 .btn-info:hover {
-    background-color: #9C70BD; 
+    background-color: var(--purplemed); 
 }
 
 /*-- Button Pseudo Class Overrides --*/
 .btn-xl-focus-none:focus,
 .btn-xl-focus-none:visited {
-    background-color: #908CD9;
+    background-color: var(--purplelight);
     box-shadow: none;
-    border-color: #3E8BC6;
+    border-color: var(--bluemed);
 }
 
 /*-- Set minimum row height for balloon canvas elements --*/
@@ -196,7 +211,7 @@ body {
 /*-- Game Answer Balloon Text --*/
 .balloon-answer-text {
     position: absolute;
-    color:#EEFBFF;
+    color: var(--bluevlight);
     text-align: center;
     display: inline-block;
     font-size: 4.4rem;
@@ -205,27 +220,23 @@ body {
     width: 110px;
     height: 110px;
     z-index: 1;
-    text-shadow: 1px 1px 2px #a9a9a9;
+    text-shadow: 1px 1px 2px var(--medgrey);
 }
 
-/*-- Game Answer Balloon Text Hover Styling --
-.balloon-answer-text:hover {
-   cursor: crosshair; 
-}
---*/
+/*-- Game Answer Balloon Text Hover Styling --*/
 .balloon-answer-text:hover {
   cursor: url('../images/pin.svg'), crosshair; 
 }
 
 /*-- Game Question --*/
 .game-section-controls #question {
-    color:#EEFBFF;
+    color: var(--bluevlight);
     text-align: center;
     font-size: 5rem;
     font-weight: 700;
     border-radius: 1.0rem;
-    background-color: #908CD9;
-    border: 1px solid #3E8BC6;
+    background-color: var(--purplelight);
+    border: 1px solid var(--bluemed);
 }
 
 /*-- Audio Controls --*/
@@ -233,16 +244,16 @@ body {
     padding: 0.5rem 1.0rem 0.5rem 1.0rem;
     font-size: 2rem;
     text-align: center;
-    color: #9C70BD;
+    color: var(--purplemed);
 }
 
 #audio-controls i:hover {
-    color: #A2529A;
+    color: var(--purpledark);
 }
 
 /*-- Game Health --*/
 .game-section-controls #health {
-    color: #DC7774;
+    color: var(--redlight);
     text-align: center;
     padding: 0.5rem 0.5rem 0.5rem 0.5rem;
 }
@@ -255,7 +266,7 @@ body {
 .score {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-    color: #9C70BD;
+    color: var(--purplemed);
     text-align: right;
 }
 
@@ -264,7 +275,7 @@ body {
 .modal-dialog span {
     font-size: 2rem;
     font-weight: 600;
-    color: #A2529A;
+    color: var(--purpledark);
 }
 
 .modal-dialog p,
@@ -272,27 +283,29 @@ body {
 .modal-dialog textarea {
     font-size: 1.6rem;
     font-weight: 400;
-    color: #A2529A;
+    color: var(--purpledark);
 }
 
-/*-- Bootstrap modal class overrides --*/
+/*-- Bootstrap Class Overrides --*
+
+/*-- Bootstrap Modal Class Overrides --*/
 .modal-content {
     border-radius: 1rem;
 }
 
 .modal-header {
-    border-bottom: 1px solid #9C70BD;
-    background-color: #EEFBFF;
+    border-bottom: 1px solid var(--purplemed);
+    background-color: var(--bluevlight);
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
 }
 
 .modal-body {
-    background-color: #EEFBFF;
+    background-color: var(--bluevlight);
     border-radius: 1rem;
 }
 
-/*-- Bootstrap button class overrides --*/
+/*-- Bootstrap Button Class Overrides --*/
 .btn-lg {
     font-size: 1.6rem;
 }
