@@ -144,8 +144,10 @@ body {
 
 /*-- Game Canvas --*/
 .canvas-balloon canvas {
+    position: absolute;
     width: 110px;
     height: 110px;
+    z-index: -1;
 }
 
 /*-- Game Answer Balloon Text --*/
@@ -153,7 +155,6 @@ body {
     position: absolute;
     color: var(--bluevlight);
     text-align: center;
-    display: inline-block;
     font-size: 4.4rem;
     font-weight: 700;
     line-height: 100px;
