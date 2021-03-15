@@ -19,16 +19,16 @@ function playGame() {
     bpmScoreArray = setScore([0, bpmQno]);
 
     // Log global variables to console for debugging //
-    console.log(bpmGameMode);
-    console.log(bpmQno);
-    console.log(bpmDifficulty);
-    console.log(bpmActiveButtons);
-    console.log(bpmOptionArray);
-    console.log(bpmQArray);
-    console.log(bpmHealthArray);
-    console.log(bpmQCurrent);
-    console.log(bpmAnswerArray);
-    console.log(bpmScoreArray);
+    // console.log(bpmGameMode); //
+    // console.log(bpmQno); //
+    // console.log(bpmDifficulty); //
+    // console.log(bpmActiveButtons); //
+    // console.log(bpmOptionArray); //
+    // console.log(bpmQArray); //
+    // console.log(bpmHealthArray); //
+    // console.log(bpmQCurrent); //
+    // console.log(bpmAnswerArray); //
+    // console.log(bpmScoreArray); //
 
     // Hide heading section and options section //
     $("#heading-section").hide(400);
@@ -44,19 +44,16 @@ function playGame() {
 
 /** Function to check selected answer on click of balloon **/
 function checkSelectedAnswer() {
-    console.log("test click event");
     let answerTextID = "#"+ (this.id);
-    console.log(answerTextID);
     let canvasID = "#"+ returnCanvasID(answerTextID);
-    console.log(canvasID);
     let sAnswer = this.innerHTML;
-    console.log(sAnswer);
     let highScore = getHighScore();
     let currentScore;
     if (sAnswer == bpmQCurrent[1]) {
         soundPop.play();
         let balloonTimeout = animateBalloon(canvasID);
-        console.log("Correct!");
+        // Log to console for debugging //
+        // console.log("Correct!"); //
         currentScore = bpmScoreArray[0];
         bpmScoreArray = setScore([(currentScore + 1), bpmScoreArray[1]]);
         bpmCQ = bpmCQ + 1;
@@ -67,7 +64,8 @@ function checkSelectedAnswer() {
             bpmAnswerArray = answerArray(bpmGameMode, bpmQCurrent);
             bpmAnswerArray = setBalloons(bpmAnswerArray);
         } else {
-            console.log("Well Done! - you scored " +  bpmScoreArray[0] + " out of " + bpmScoreArray[1] + "!")
+            // Log to console for debugging //
+            // console.log("Well Done! - you scored " +  bpmScoreArray[0] + " out of " + bpmScoreArray[1] + "!") //
             // Display feedback modal //
             if (checkHighScore(highScore, bpmScoreArray)) {
                 setHighScore(bpmScoreArray);
@@ -87,7 +85,8 @@ function checkSelectedAnswer() {
             returnToMenu();
         }
     } else {
-        console.log("Wrong!")
+        // Log to console for debugging //
+        // console.log("Wrong!") //
         let cHealth = bpmHealthArray[0];
         if (cHealth > 0) {
             $(answerTextID).fadeOut("slow");

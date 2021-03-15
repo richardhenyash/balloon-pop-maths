@@ -12,14 +12,16 @@ function sendMail(contactForm) {
     })
     .then(
         function(response) {
-            console.log("SUCCESS", response);
+            // Log to console for debugging //
+            // console.log("SUCCESS", response); //
             $("#modal-contact").modal('hide');
             $("#modal-feedback-heading-text").text("Success!");
             $("#modal-feedback-body-text").text("Your contact form was submitted succesfully.");
             $('#modal-feedback').modal();
         },
         function(error) {
-            console.log("FAILED", error);
+            // Log to console for debugging //
+            // console.log("FAILED", error); //
             $("#modal-contact").modal('hide');
             $("#modal-feedback-heading-text").text("Oops!");
             $("#modal-feedback-body-text").text("Your contact form was not submitted.");

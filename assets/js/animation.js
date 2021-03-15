@@ -41,22 +41,16 @@ function animateBalloon(canvasID) {
     let img;
     if (canvasID == "#canvas-balloon-left-1") {
         img = imgBalloonBlue;
-        console.log("Blue");
     } else if (canvasID == "#canvas-balloon-left-2") {
         img = imgBalloonOrange;
-        console.log("Orange");
     } else if (canvasID == "#canvas-balloon-left-3") {
         img = imgBalloonPurple;
-        console.log("Purple");
     } else if (canvasID == "#canvas-balloon-right-1") {
         img = imgBalloonRed;
-        console.log("Red");
     } else if (canvasID == "#canvas-balloon-right-2") {
         img = imgBalloonGreen;
-        console.log("Green");
     } else if (canvasID == "#canvas-balloon-right-3") {
         img = imgBalloonYellow;
-        console.log("Yellow");
     }
     let balloonTimeout; 
     balloonTimeout = setTimeout(drawBalloonImage, 25, canvasID, img, 1);        
