@@ -2,24 +2,34 @@
 
 /** Function to return to menu - hides game section and shows heading and options **/
 function returnToMenu() {
-    $("#game-section").hide(400);   
+    // Hide game section
+    $("#game-section").hide(400);  
+    // Show heading section 
     $("#heading-section").show(400);
+    // Show options section 
     $("#options-section").show(400);
 }
 
 /** Function to hide multiplication and division option buttons and show option buttons for addition and subtraction game **/
 function modeAddSubtract() {
-   $("#options-multiply-divide").hide(400);
-   $("#options-add-subtract").show(400);
+    // Hide multiply and divide options
+    $("#options-multiply-divide").hide(400);
+    // Show add and subtract options
+    $("#options-add-subtract").show(400);
+    // Make first option button active
     makeActive("#btn-mul-div-1");
 }
 
 /** Function to hide addition and subtraction option buttons and show option buttons for multiplication game **/
 function modeMultiply()
  {
+    // Hide add and subtract options
     $("#options-add-subtract").hide(400);
+    // Show multiply and divide options
     $("#options-multiply-divide").show(400);
+    // Make first option button active
     makeActive("#btn-mul-div-1");
+    // Update button text values
     $("#btn-mul-div-1").html("2x, 5x, 10x")
     $("#btn-mul-div-2").html("Mixed 1 to 12");
     $("#btn-mul-div-3").html("1x");
@@ -38,9 +48,13 @@ function modeMultiply()
 
 /** Function to hide addition and subtraction option buttons and show option buttons for division game **/
 function modeDivide() {
+    // Hide add and subtract options
     $("#options-add-subtract").hide(400);
+    // Show multiply and divide options
     $("#options-multiply-divide").show(400);
+    // Make first option button active
     makeActive("#btn-mul-div-1");
+    // Update button text values
     $("#btn-mul-div-1").html("&divide2, &divide5, &divide10");
     $("#btn-mul-div-2").html("Mixed 1 to 12");
     $("#btn-mul-div-3").html("&divide1");
@@ -59,23 +73,29 @@ function modeDivide() {
 
 /** Function to make the passed button active, and all other buttons not active. **/
 function makeActive(btnId) {
-    let btnIdList = ["#btn-mul-div-1", "#btn-mul-div-2", "#btn-mul-div-3", "#btn-mul-div-4", "#btn-mul-div-5", "#btn-mul-div-6", "#btn-mul-div-7", "#btn-mul-div-8", "#btn-mul-div-9", "#btn-mul-div-10", "#btn-mul-div-11", "#btn-mul-div-12", "#btn-mul-div-13", "#btn-mul-div-14"]
-    makeNotActive(btnIdList);
+    // Set button ID array
+    let btnIdArray = ["#btn-mul-div-1", "#btn-mul-div-2", "#btn-mul-div-3", "#btn-mul-div-4", "#btn-mul-div-5", "#btn-mul-div-6", "#btn-mul-div-7", "#btn-mul-div-8", "#btn-mul-div-9", "#btn-mul-div-10", "#btn-mul-div-11", "#btn-mul-div-12", "#btn-mul-div-13", "#btn-mul-div-14"]
+    // Make all buttons in button ID array not active
+    makeNotActive(btnIdArray);
+    // Make passed button active
     $(btnId).addClass("active").attr("aria-pressed", "true");
     return(btnId);
 }
 
-/** Function to make the passed list of buttons not active**/
-function makeNotActive(btnIdList) {
-    for (let btnId of btnIdList) {
+/** Function to make the passed array of buttons not active**/
+function makeNotActive(btnIdArray) {
+    // Iterate through passed button array, make each button not active
+    for (let btnId of btnIdArray) {
         $(btnId).removeClass("active").removeClass("focus").attr("aria-pressed", "false");
     }
-    return(btnIdList);
+    return(btnIdArray);
 }
 
 /** Function to activate #btn-mul-div-1 if all other buttons are inactive. **/
 function checkButtons(gameMode) {
+    // Get active button array and check length
     if ((returnActiveButtons(gameMode).length) === 0) {
+        // Check game mode and make relevant first button active
         if (gameMode == "add" || gameMode == "subtract") {
             $("#btn-add-sub-1").addClass("active").addClass("focus").attr("aria-pressed", "true");    
         } else $("#btn-mul-div-1").addClass("active").addClass("focus").attr("aria-pressed", "true");
@@ -85,6 +105,7 @@ function checkButtons(gameMode) {
 /** Function to return selected game mode. **/
 function returnGameMode() {
     let gameMode = "";
+    // Check active class and set game mode
     if ($("#multiply").hasClass("active")) {
         gameMode = "multiply";
     } else if ($("#divide").hasClass("active")) {
@@ -100,6 +121,7 @@ function returnGameMode() {
 /** Function to return selected difficulty level. **/
 function returnDifficulty() {
     let difficulty = "";
+    // Check active class and set difficulty
     if ($("#easy").hasClass("active")) {
         difficulty = "easy";
     } else if ($("#medium").hasClass("active")) {
@@ -113,6 +135,7 @@ function returnDifficulty() {
 /** Function to return number of questions. **/
 function returnQuestions() {
     let qno = "";
+    // Check active class and set number of questions
     if ($("#10q").hasClass("active")) {
         qno = 10;
     } else if ($("#20q").hasClass("active")) {
@@ -123,10 +146,14 @@ function returnQuestions() {
 
 /** Function to return an array of active buttons with a defined id attribute. **/
 function returnActiveButtons(gameMode) {
-    let btnIdList = btnArray();
+    // Return array of all buttons with a defined ID attribute
+    let btnIdArray = btnArray();
+    // Initialise active button array
     let btnActiveArray = [];
-    for (let btnId of btnIdList) {
+    for (let btnId of btnIdArray) {
+        // Add "#" to button ID
         btnId = "#" + btnId
+        // Check if button is active, and add to array of it is
         if ($(btnId).hasClass("active")) {
             if ((gameMode == "add" || gameMode == "subtract") && ((btnId.substring(1, 12)) == "btn-add-sub")) {
                 btnActiveArray.push(btnId)
@@ -141,7 +168,9 @@ function returnActiveButtons(gameMode) {
 
 /** Function to return an array of all buttons with a defined id attribute. **/
 function btnArray() {
+    // Initialise button array
     let btnArray = [];
+    // Iterate through each button and add ID to button array if it has a defined ID
     $(':button.btn-xl').each(function() {
         let btnId = (this.id);
         if (btnId != "") {
@@ -151,9 +180,11 @@ function btnArray() {
     return btnArray;
 }
 
-/** Function to generate options array from Active Buttons  **/
+/** Function to return options array, given array of Active Button ID's.  **/
 function returnOptionArray (activeButtons) {
+    // Initialise option array
     let optionArray = []
+    // Iterate through active button array, get button text value and add to option array
     for (let [key, btnId] of Object.entries(activeButtons)) {
         optionArray.push($(btnId).text());
     }
@@ -162,8 +193,11 @@ function returnOptionArray (activeButtons) {
 
 /** Function to initialise health bar, given difficulty level **/
 function initialiseHealthBar(difficulty) {
+    // Initialise health array
     let healthArray;
+    // Check difficulty level
     if (difficulty == "easy") {
+        // If difficulty level is "easy", initialise health bar with 5 hearts
         healthArray = [5, 5];
         $("#heart1").show();
         $("#heart2").show();
@@ -171,6 +205,7 @@ function initialiseHealthBar(difficulty) {
         $("#heart4").show();
         $("#heart5").show();
     } else if (difficulty == "medium") {
+        // If difficulty level is "medium", initialise health bar with 3 hearts
         healthArray = [3, 3];
         $("#heart1").show();
         $("#heart2").show();
@@ -178,6 +213,7 @@ function initialiseHealthBar(difficulty) {
         $("#heart4").hide();
         $("#heart5").hide();
     } else if (difficulty == "hard") {
+        // If difficulty level is "hard", initialise health bar with 1 heart
         healthArray = [1, 1];
         $("#heart1").show();
         $("#heart2").hide();
@@ -185,20 +221,24 @@ function initialiseHealthBar(difficulty) {
         $("#heart4").hide();
         $("#heart5").hide();
     }
+    // Set health bar, given health array of 2 integers from 1 to 5
     setHealthBar(healthArray);
     return healthArray;
 }
 
 /** Function to set health bar, given an array of 2 integers from 1 to 5 **/
 function setHealthBar(healthArray) {
+    // Set current health
     let currentHealth = healthArray[0];
+    // Set total health
     let totalHealth = healthArray[1];
-    let hdiff = healthArray[1] - healthArray[0];
     let i;
+    // iterate through all hearts, add "solid" heart icon
     for (i = 1; i < (totalHealth + 1); i++) {
         hstr = "#heart" + i;
         $(hstr).removeClass("far fa-heart").addClass("fas fa-heart");
     }
+    // iterate through hearts, add "empty" heart icon to reflect current health
     for (i = (currentHealth + 1); i < (totalHealth + 1); i++) {
         hstr = "#heart" + i;
         $(hstr).removeClass("fas fa-heart").addClass("far fa-heart");
@@ -209,6 +249,7 @@ function setHealthBar(healthArray) {
 /** Function to check high score, returns true or false**/
 function checkHighScore(highScore, scoreArray) {
     let res;
+    // Check if current score is greater than high score. Check uses a ratio of score divided by number of questions.
     if (
             ((scoreArray[0] / scoreArray[1]) > (highScore[0] / highScore[1])) || 
             ((scoreArray[0] / scoreArray[1]) == ((highScore[0] / highScore[1])) && (scoreArray[1] > highScore[1]))
@@ -222,35 +263,45 @@ function checkHighScore(highScore, scoreArray) {
 
 /** Function to get high score, returns an array of 2 integers**/
 function getHighScore() {
+    // Get current score string
     let scoreString = $("#highscore").text();
+    // Split string into temporary array
     let scoreArrayTemp = scoreString.split(" ");
+    // Initialise score array of 2 integers
     let scoreArray = [parseInt(scoreArrayTemp[2]), parseInt(scoreArrayTemp[4])];
     return scoreArray;
 }
 
 /** Function to set high score, given an array of 2 integers**/
 function setHighScore(scoreArray) {
+    // Set score string from score array of 2 integers
     let scoreString = "High Score: " + scoreArray[0] + " / " + scoreArray[1];
+    // Update high score
     $("#highscore").text(scoreString);
     return(scoreArray);
 }
 
 /** Function to set current score, given an array of 2 integers**/
 function setScore(scoreArray) {
+    // Set score string from score array of 2 integers
     let scoreString = "Score: " + scoreArray[0] + " / " + scoreArray[1];
     $("#score").text(scoreString);
+    // Update current score
     return(scoreArray);
 }
 
 /** Function to set current question, given a 2 item array of question and answer **/
 function setQuestion(qCurrent) {
+    // Set question string from current question array
     let qString = qCurrent[0];
+    // Update current question
     $("#question").html(qString);
     return(qCurrent);
 }
 
 /** Function to set balloon text, given a 6 item array in random order with 5 wrong answers and 1 correct answer **/
 function setBalloons(answerArray) {
+    // Set ballon text from answer array
     $("#balloon-answer-text-left-1").html(answerArray[0]);
     $("#balloon-answer-text-left-2").html(answerArray[1]);
     $("#balloon-answer-text-left-3").html(answerArray[2]);

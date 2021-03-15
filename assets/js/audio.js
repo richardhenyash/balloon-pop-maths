@@ -2,7 +2,9 @@
 
 /** Function to toggle audio mute.  **/
 function muteAudioToggle(){
+    // Check bpmSoundEffectsMuted global variable
     if (bpmSoundEffectsMuted == false) {
+        // Mute sound effects
         soundPop.muted = true;
         soundDeflate.muted = true;
         soundHighScore.muted = true;
@@ -11,6 +13,7 @@ function muteAudioToggle(){
         $(this).removeClass("fa-volume-off").addClass("fas fa-volume-mute");
         bpmSoundEffectsMuted = true;
     } else {
+        // Un-mute sound effects
         soundPop.muted = false;
         soundDeflate.muted = false;
         soundHighScore.muted = false;
