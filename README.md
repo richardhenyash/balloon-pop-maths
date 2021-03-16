@@ -170,7 +170,16 @@ and [Game]("./assets/wireframes/rev1/game-multiplication.png) page layouts on [T
 ### Design Choices ###
 
 #### Fonts ####
+**Whale I Tried** has been chosen as the title font, and is used for the Balloon Pop Maths title. 
+This is a custom outlined cartoon font available from [Misti's Fonts](https://mistifonts.com/whale-i-tried/), 
+and is free for personal and non-profit use. This font was chosen as it has a balloon like look and a playful feel.
+* font-family: "Whale I Tried", sans-serif;
 
+**Nunito** has been chosen as the main body font for text content. The font is clean, rounded and modern and has a soft, 
+playful feel which works well with a maths game. Nunito is available from 
+[Google Fonts](https://fonts.google.com/specimen/Nunito?preview.text_type=custom) and is licensed under the 
+[Open Font License](https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL).
+* font-family: 'Nunito', sans-serif;
 
 #### Colours ####
 
