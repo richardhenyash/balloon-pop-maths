@@ -68,6 +68,11 @@ body {
     text-align: center;
 }
 
+.container-text-information {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
 /*-- Headings --*/
 .heading-main {
     font-family: var(--titlefont);
@@ -134,6 +139,15 @@ body {
     background-color: var(--purplelight);
     box-shadow: none;
     border-color: var(--bluemed);
+}
+
+/*-- Information Text --*/
+.text-information {
+    font-size: 1.7rem;
+    padding: 1.0rem 1.0rem 1.0rem 1.0rem;
+    color: var(--purpledark);
+    border: 2px solid var(--purplelight);
+    border-radius: 0.5rem;
 }
 
 /*-- Game Elements --*/
@@ -241,24 +255,29 @@ body {
     color: var(--purplemed);
 }
 
+/*--Navigation Links--*/
+.text-information a:link,
 .container-footer a:link,
 .container-footer i:link {
     color: var(--purplemed);
     text-decoration: none;
 }
 
+.text-information a:visited,
 .container-footer a:visited,
 .container-footer i:visited {
     color: var(--purplemed);
     text-decoration: none;
 }
 
+.text-information a:hover,
 .container-footer a:hover,
 .container-footer i:hover {
     color: var(--purpledark);
     text-decoration: none;
 }
 
+.text-information a:active,
 .container-footer a:active,
 .container-footer i:active {
     color: var(--purpledark);
