@@ -280,7 +280,7 @@ If the contact form is succesfully submitted, a "Success" modal is displayed.
 <img src="./assets/testing/modal-high-score.png" style="margin: 15px; width:300px;">
 
 ### Features To Be Implemented In Future Development Phases ###
-* Subscribe feature on [Contact Form](contact.html) - this may be implemented in the future
+* Subscribe feature on [Contact Modal]("./assets/testing/contact-modal.png") - this may be implemented in the future
 if the developer decides to develop further similar games.
 
 ### Design Changes During The Phase 1 Development ###
