@@ -8,6 +8,8 @@ function returnToMenu() {
     $("#heading-section").show(400);
     // Show options section 
     $("#options-section").show(400);
+    // Show information section 
+    $("#information-section").show(400);
 }
 
 /** Function to hide multiplication and division option buttons and show option buttons for addition and subtraction game **/

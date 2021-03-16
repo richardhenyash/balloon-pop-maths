@@ -33,6 +33,7 @@ function playGame() {
     // Hide heading section and options section
     $("#heading-section").hide(400);
     $("#options-section").hide(400);
+    $("#information-section").hide(400);
 
     // Show game section
     $("#game-section").hide();
