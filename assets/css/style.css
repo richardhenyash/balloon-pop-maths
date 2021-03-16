@@ -256,6 +256,24 @@ body {
 }
 
 /*--Navigation Links--*/
+.container-heading-main a:active,
+.container-heading-main-large a:active {
+    color: var(--bluevlight);
+    text-decoration: none;
+}
+
+.container-heading-main a:hover,
+.container-heading-main-large a:hover {
+    color: var(--bluevlight);
+    text-decoration: none;
+}
+
+.container-heading-main a:visited,
+.container-heading-main-large a:visited {
+    color: var(--bluevlight);
+    text-decoration: none;
+}
+
 .text-information a:link,
 .container-footer a:link,
 .container-footer i:link {
