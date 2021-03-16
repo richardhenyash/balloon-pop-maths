@@ -29,6 +29,7 @@
     - [Features Implemented in Phase 1](#features-implemented-in-phase-1)
     - [Features To Be Implemented In Future Development Phases](#features-to-be-implemented-in-future-development-phases)
     - [Design Changes During The Phase 1 Development](#design-changes-during-the-phase-1-development)
+- [Game Logic](#game-logic)
 - [Testing](#testing)
 - [Deployment](#deployment)
 - [Credits](#credits)
@@ -170,18 +171,52 @@ and [Game]("./assets/wireframes/rev1/game-multiplication.png) page layouts on [T
 ### Design Choices ###
 
 #### Fonts ####
-**Whale I Tried** has been chosen as the title font, and is used for the Balloon Pop Maths title. 
+**Whale I Tried** has been chosen as the title font, and is used for the main Balloon Pop Maths heading. 
 **Whale I Tried** is a custom outlined cartoon font available from [Misti's Fonts](https://mistifonts.com/whale-i-tried/), 
-and is free for personal and non-profit use. This font was chosen as it has a balloon like look and a playful feel.
+and is free for personal and non-profit use. This font was chosen as it has a balloon like look and a soft, playful feel.
 * font-family: "Whale I Tried", sans-serif;
 
-**Nunito** has been chosen as the main body font for text content. The font is clean, rounded and modern and has a soft, 
-playful feel which works well with a maths game. **Nunito** is available from 
-[Google Fonts](https://fonts.google.com/specimen/Nunito?preview.text_type=custom) and is licensed under the 
+**Nunito** has been chosen as the main body font for text content. **Nunito** is a clean, rounded and modern sans-serif font 
+which works well with the maths game theme and complements the **Whale I Tried** title font. 
+**Nunito** is available from [Google Fonts](https://fonts.google.com/specimen/Nunito?preview.text_type=custom) and is licensed under the 
 [Open Font License](https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL).
 * font-family: 'Nunito', sans-serif;
 
 #### Colours ####
+The "sky" background colour is a 3 colour gradient generated using [ColorSpace](https://mycolor.space/gradient3). 
+The three colours used (#7CC0FF, #6FD1F4, #9EFBF5) and the colour gradient generated are shown below:  
+
+<img src="./assets/wireframes/colour-gradient.png" width="600px" style="margin: 15px;"> 
+
+The colour palette was chosen to tie-in with the first colour in the 3 colour gradient (#7CC0FF). 
+Colour ideas were generated using the [ColorSpace](https://mycolor.space/) colour palette generator. 
+The final colour palette selected is shown below:  
+
+<img src="./assets/wireframes/colour-palette.png" width="600px" style="margin: 15px;">  
+
+* #908CD9 - "Blue Bell" - used for buttons, question area, score and high score outlines.
+* #9C70BD - "Purple Mountain Majesty" - Used for button highlighting, footer and information area links and audio controls.
+* #A2529A - "Purpureus" - Used for modal dialog text, high score text, score text, information text and highlighting.
+* #3E8BC6 - "Green Blue Crayola" - Used for button and question area borders, 
+* #EEFBFF - "Azure X 11 Web Color" - Used for title, button text, question text, balloon answer text and modal dialog background.
+* #DC7774 - "Candy Pink" - Used for "Health" bar.
+* #A9A9A9 - "Silver Chalice" - Used for text shadow on balloon answer text.
+
+## Technologies ##
+### Languages ###
+* [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+* [CSS](https://www.w3.org/Style/CSS/Overview.en.html)
+* [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+
+### Frameworks Libraries and Tools ###
+* [Bootstrap](https://getbootstrap.com/docs/4.5/getting-started/introduction/)
+* [jQuery](https://jquery.com/)
+* [Font Awesome](https://fontawesome.com/)
+* [Google Fonts](https://fonts.google.com/)
+* [Email JS](https://www.emailjs.com/)
+
+## Features ##
+### Features Implemented in Phase 1 ###
 
 
 ## Credits ##
