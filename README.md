@@ -163,7 +163,7 @@ and [Game]("./assets/wireframes/rev1/game-multiplication.png) page layouts on [T
 
 <img src="./assets/wireframes/rev2/home-multiplication-tablet.png" width="300px" align="left" style="margin: 15px;">
 <img src="./assets/wireframes/rev2/game-multiplication-tablet.png" width="300px" style="margin: 15px;">
-<img src="./assets/wireframes/rev2/home-multiplication-phone.png" width="300px" style="margin: 15px;">
+<img src="./assets/wireframes/rev2/home-multiplication-phone.png" width="300px" align="left" style="margin: 15px;">
 <img src="./assets/wireframes/rev2/game-multiplication-phone.png" width="300px" style="margin: 15px;">  
 
 
