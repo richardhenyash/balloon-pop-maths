@@ -161,10 +161,10 @@ layout is also shown below:
 and [Game]("./assets/wireframes/rev1/game-multiplication.png) page layouts on [Tablet]("/assets/wireframes/rev2/home-multiplication-tablet.png) and
 [Phone]("./assets/wireframes/rev2/home-multiplication-phone.png). The [Responsive design wireframes](/assets/wireframes/rev2) are also shown below:  
 
-<img src="./assets/wireframes/rev2/home-multiplication-tablet.png" width="300px" style="margin: 15px;">
-<img src="./assets/wireframes/rev2/home-multiplication-phone.png" width="300px" style="margin: 15px;">
-<img src="./assets/wireframes/rev2/game-multiplication-tablet.png" width="300px" style="margin: 15px;">
-<img src="./assets/wireframes/rev2/game-multiplication-phone.png" width="300px" style="margin: 15px;">
+<img src="./assets/wireframes/rev2/home-multiplication-tablet.png" width="300px" align="left" valign="middle" style="margin: 15px;">
+<img src="./assets/wireframes/rev2/home-multiplication-phone.png" width="300px" align="left" valign="middle" style="margin: 15px;">
+<img src="./assets/wireframes/rev2/game-multiplication-tablet.png" width="300px" align="left" valign="middle" style="margin: 15px;">
+<img src="./assets/wireframes/rev2/game-multiplication-phone.png" width="300px" align="left" valign="middle" style="margin: 15px;">
 
 ### Design Choices ###
 
