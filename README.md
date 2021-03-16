@@ -217,28 +217,148 @@ The final colour palette selected is shown below:
 
 ## Features ##
 ### Features Implemented in Phase 1 ###
+* Ballon Pop Maths title, links to home page if selected:
+<img src="./assets/testing/title.png" style="margin: 15px; width:300px;"> 
 
+* Game mode selector (including hover styling), facilitates switching between multiplication, division, subtraction and addition games:  
+<img src="./assets/testing/game-mode.png" style="margin: 15px; width:300px;"> 
+
+* High Score panel, shows current high score. Updated if the user gets a new high score.
+<img src="./assets/testing/high-score.png" style="margin: 15px; width:300px;"> 
+
+* Play button (including hover styling), launches game:  
+<img src="./assets/testing/play.png" style="margin: 15px; width:300px;"> 
+
+* Options button (including hover styling), opens collapsing options panel:  
+<img src="./assets/testing/options.png" style="margin: 15px; width:300px;"> 
+
+* How To Play button (including hover styling), opens collapsing information panel:  
+<img src="./assets/testing/how-to-play.png" style="margin: 15px; width:300px;"> 
+
+* Contact Developer link (including hover styling), opens contact modal:  
+<img src="./assets/testing/contact-developer-link.png" style="margin: 15px; width:150px;"> 
+
+* GitHub link (including hover styling), links to developer page on github:  
+<img src="./assets/testing/github-link.png" style="margin: 15px; width:50px;"> 
+
+* In game options button, returns to Options panel from game:  
+<img src="./assets/testing/game-options.png" style="margin: 15px; width:100px;">
+
+* In game score, records current score in game:  
+<img src="./assets/testing/game-score.png" style="margin: 15px; width:100px;">
+
+* Answer balloons showing potential answers. Balloons are animated using 
+[JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript), showing a 
+"pop" animation sequence and playing a "pop" sound if the correct answer is selected. 
+If an incorrect answer is selected, a "deflate" sound is played and the ballon and
+answer fades out:
+<img src="./assets/testing/game-balloons.png" style="margin: 15px; width:500px;">
+
+* Custom cursor - cursor is changed to a drawing pin when hovering over answer balloons:  
+<img src="./assets/images/pin.svg" style="margin: 15px; width:30px;">
+
+* In game audio controls, allows audio mute to be toggled on and off in game:  
+<img src="./assets/testing/game-audio.png" style="margin: 15px; width:40px;">
+
+* Health bar, shows current health. Game finishes when health is fully depleted. 
+If game is played on "Easy" difficulty level (selected in options), health is set to 5 hearts.
+If game is played on "Medium" difficulty level (selected in options), health is set to 3 hearts.
+If game is played on "Hard" difficulty level (selected in options), health is set to 1 heart:
+<img src="./assets/testing/game-health.png" style="margin: 15px; width:150px;">
+
+* Question panel, shows current question:
+<img src="./assets/testing/game-question.png" style="margin: 15px; width:200px;">
+
+* Contact modal, implemented using [Email JS](https://www.emailjs.com/). 
+If the contact form is succesfully submitted, a "Success" modal is displayed. 
+<img src="./assets/testing/contact-modal.png" style="margin: 15px; width:300px;">
+<img src="./assets/testing/contact-modal-success.png" style="margin: 15px; width:300px;">
+
+* Game feedback modal, gives varying feedback to the user at the end of a game:
+<img src="./assets/testing/modal-unlucky.png" style="margin: 15px; width:300px;">
+<img src="./assets/testing/modal-well-done.png" style="margin: 15px; width:300px;">
+<img src="./assets/testing/modal-high-score.png" style="margin: 15px; width:300px;">
+
+### Features To Be Implemented In Future Development Phases ###
+* Subscribe feature on [Contact Form](contact.html) - this may be implemented in the future
+if the developer decides to develop further similar games.
+
+### Design Changes During The Phase 1 Development ###
+After initial early user testing and feedback, the following minor changes were made:
+
+* In game score was moved from underneath the game question to the top right corner.
+* Audio controls were added to allow audio to be muted in game.
+* Collapsing "How To Play" section was added underneath "Options" to explain how to play
+and to give some further information about the game.  
+
+## Testing ##
+
+Further testing information and screen prints can be found in [TESTING.md](TESTING.md).
+
+## Deployment ##
+The project has been developed using [Gitpod](https://www.Gitpod.io/) and [GitHub](https://github.com/). 
+The project was regularly commited to [GitHub](https://github.com/) during the initial development phase.
+The website resides as a repository in [GitHub](https://github.com/) and has been been deployed 
+using [GitHub Pages](https://richardhenyash.github.io/balloon-pop-maths/). 
+
+The steps required to deploy the website to [GitHub Pages](https://pages.github.com/) are as follows:
+* Go to the [Project Code Repository Location](https://github.com/richardhenyash/balloon-pop-maths) on [GitHub](https://github.com/).
+* Select "Settings" (the gear icon) in the top right corner.
+* Scroll Down to the [GitHub Pages](https://pages.github.com/) section.
+* Set the desired source branch. For [Balloon Pop Maths](https://richardhenyash.github.io/balloon-pop-maths/), 
+the deployed source branch is the 
+[Master](https://github.com/richardhenyash/balloon-pop-maths/tree/master) branch.
+* Click the "Save" button. A tick should now be shown above the "Source" panel in a 
+green panel which also contains the published site address. 
+For [Balloon Pop Maths](https://richardhenyash.github.io/balloon-pop-maths/) 
+this is https://richardhenyash.github.io/balloon-pop-maths/.
+* For further help and information, see the following links:
+[About GitHub Pages](https://docs.github.com/en/github/working-with-github-pages/about-github-pages#publishing-sources-for-github-pages-sites).  
+[Creating A GitHub Pages Site](https://docs.github.com/en/github/working-with-github-pages/creating-a-github-pages-site).
+
+In order to make a fork or clone of the project, a [GitHub](https://www.Gitpod.io/) account is required. 
+The [Gitpod Browser Extension](https://www.Gitpod.io/docs/browser-extension/) is also recommended.  
+
+The project may be forked by following these steps:
+* Go to the [Project Code Repository Location](https://github.com/richardhenyash/balloon-pop-maths) on [GitHub](https://github.com/).
+* In the top-right corner of the page, click "Fork".  
+
+For further information on forking a [GitHub](https://github.com/) repository, 
+see the [GitHub Documentation](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo).
+
+The project may be cloned by following these steps:
+* Go to the [Project Code Repository Location](https://github.com/richardhenyash/balloon-pop-maths) on [GitHub](https://github.com/).
+* Select the "Code" dropdown and choose "GitHub CLI" under "Clone". This will give you a URL that may be copied into the clipboard. 
+* Open the Git Bash command line interface in [Gitpod](https://www.Gitpod.io/).
+* Change the current working directory to the location where you would like the cloned directory to reside.
+* Type git clone, and then paste the URL copied earlier, eg:  
+$ git clone https://github.com/richardhenyash/balloon-pop-maths
+* Press Enter to create the local clone.
+
+The code may also be downloaded to a local computer by following these steps:
+* Go to the [Project Code Repository Location](https://github.com/richardhenyash/balloon-pop-maths) on [GitHub](https://github.com/).
+* Select the "Code" dropdown and choose the "Download ZIP" option.
+* This will download a copy of the entire project locally as a .zip file.  
+
+For further information on cloning a [GitHub](https://github.com/) repository, see the [GitHub Documentation](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository).
 
 ## Credits ##
 
-Balloon Favicon:
-https://www.favicon.cc/?action=icon&file_id=706495
+Many thanks to [favicon.cc](https://www.favicon.cc/) for the [Balloon Favicon](https://www.favicon.cc/?action=icon&file_id=706495).
 
-Balloon Sprite Images:
-http://www.gamedeveloperstudio.com/
+Many thanks to [Game Developer Studio](http://www.gamedeveloperstudio.com/) for the awesome [Ballon Sprite Images](https://www.gamedeveloperstudio.com/graphics/viewgraphic.php?item=134l668d3b3n083827).
 
-Pin SVG Image
-https://www.svgrepo.com/svg/207632/push-pin
+Many thanks to [SVG repo](https://www.svgrepo.com/) for the [Pin SVG Image](https://www.svgrepo.com/svg/207632/push-pin).
 
-Sound Effects:
-https://mixkit.co/free-sound-effects/game/
+Many thanks to [mixkit](https://mixkit.co/) for the asweome [Sound Effects](https://mixkit.co/free-sound-effects/game/).
 
-Sprite animation:
-https://spicyyoghurt.com/tutorials/html5-javascript-game-development/images-and-sprite-animations
-https://dev.to/martyhimmel/animating-sprite-sheets-with-javascript-ag3
+Many thanks to [Martin Himmel](https://dev.to/martyhimmel/animating-sprite-sheets-with-javascript-ag3) 
+and [Spicy Yoghurt](https://spicyyoghurt.com/tutorials/html5-javascript-game-development/images-and-sprite-animations) 
+for additional help on sprite animations.  
 
-Ramdom integer between 2 given integers:
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+Many thanks to [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random) 
+for the JavaScript [getRandomIntInclusive Function]("./assets/js/maths.js") to 
+return a random integer between the two integers given.
 
-Function to randomize an array in place using the Durstenfeld shuffle algorithm, referenced from stack overflow link below, many thanks to Laurens Holst
-https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
+Many thanks to [Laurens Holst](https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array) for the
+ JavaScript [shuffleArray Function]("./assets/js/maths.js") to randomize an array in place using the Durstenfeld shuffle algorithm.
