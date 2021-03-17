@@ -16,7 +16,7 @@
         - [Contraints](#constraints)
         - [Functional Requirements](#functional-requirements)
         - [Business Rules](#business-rules)
-        - [Features](#features)
+        - [Key Features](#key-features)
     - [Site Map](#site-map)
     - [Wireframes](#wireframes)
     - [Design Choices](#design-choices)
@@ -25,7 +25,7 @@
 - [Technologies](#technologies)
     - [Languages](#languages)
     - [Frameworks Libraries and Tools](#frameworks-libraries-and-tools)
-- [Features](#features)
+- [Features Implemented](#features-implemented)
     - [Features Implemented in Phase 1](#features-implemented-in-phase-1)
     - [Features To Be Implemented In Future Development Phases](#features-to-be-implemented-in-future-development-phases)
     - [Design Changes During The Phase 1 Development](#design-changes-during-the-phase-1-development)
@@ -117,12 +117,11 @@ within the multiplication game, or addition of numbers up to 20 in the addition 
 another game or return to the site in the future to better their previous score.
 * The user would like to be able to contact the developer.
 
-
 #### Business Rules ####
 * It is not envisaged that the game will be sold for profit. However, the game should be as much fun as possible to play, in order to 
 maximise the learning opportunities for users, increase the game's following and therefore increase the profile of the developer.
 
-#### Features ####
+#### Key Features ####
 The following key features have been identified and scored from 1 - 5 for importance and difficulty. The proposed development phase has also been indicated:
 Feature|Importance|Difficulty|Development Phase
 -------|----------|----------|-----------------
@@ -218,7 +217,7 @@ The final colour palette selected is shown below:
 * [Google Fonts](https://fonts.google.com/)
 * [Email JS](https://www.emailjs.com/)
 
-## Features ##
+## Features Implemented ##
 ### Features Implemented in Phase 1 ###
 * Ballon Pop Maths title, links to home page if selected:
 <img src="./assets/testing/title.png" style="margin: 15px; width:300px;"> 
@@ -294,6 +293,37 @@ After initial early user testing and feedback, the following minor changes were 
 * Collapsing [How To Play](./assets/testing/how-to-play.png) section was added underneath 
 [Options](./assets/testing/game-options.png) to explain how to play and to give some further information about the game.  
 
+## Game Logic ##
+The game logic was developed using [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript).  
+
+When the user hits the [Play](./assets/testing/play.png) button, the heading, options and information
+sections of the [index](index.html) page are hidden and the game section is shown. 
+The selected options are gathered using functions in the [JavaScript Display Interaction Functions Library](./assets/js/display.js) 
+and are stored in global variables. All global variables are initialised in the 
+[JavaScript Initialisation Library](./assets/js/initialisation.js) and are prefixed with "bpm".  
+
+The user is presented with a [maths question](./assets/testing/game-question.png). The question type depends on the selected 
+[Game Mode](./assets/testing/game-mode.png). 
+6 potential answers are presented in the [answer ballons](./assets/js/game-balloons.js), 1 correct answer and 5 wrong answers. 
+Random maths questions and correct and incorrect answers are generated using functions in the 
+[JavaScript Maths Function Library](./assets/js/maths.js).
+
+If the game is played on "Easy" difficulty level (selected in options), [health](./assets/testing/game-health.png) is set to 5 hearts.
+If the game is played on "Medium" difficulty level (selected in options), [health](./assets/testing/game-health.png) is set to 3 hearts.
+If the game is played on "Hard" difficulty level (selected in options), [health](./assets/testing/game-health.png) is set to 1 heart.  
+
+If the user selects the correct answer, the balloon "popping" animation and sound is played using functions in the 
+[JavaScript Animation Function Library](./assets/js/animation.js), and the score increments by 1. 
+If the user selects the wrong answer, the "deflate" sound is played, the selected balloon and answer text fades out and 
+[health](./assets/testing/game-health.png) is depleted by 1 heart. The game continues until the user has either answered 
+all of the questions or their [health](./assets/testing/game-health.png) has been fully depleted.  
+
+When the game is complete, the user is presented with a [Feedback Modal](./assets/testing/modal-well-done.png). The feedback message 
+varies depending on how well the user has played the game. If the user has scored less than 4, the [Unlucky](./assets/testing/modal-unlucky.png)
+modal is shown. If the user has scored 4 or more but has not achieved a new high score, the [Well Done](./assets/testing/modal-well-done.png) modal is shown.
+If the user has achieved a new high score, the [High Score](./assets/testing/modal-high-score.png) modal is shown, and the 
+[High Score](./assets/testing/high-score.png) panel on the [index](index.html) page is updated.
+
 ## Testing ##
 
 Further testing information and screen prints can be found in [TESTING.md](TESTING.md).
@@ -347,8 +377,7 @@ For further information on cloning a [GitHub](https://github.com/) repository, s
 
 ## Credits ##
 
-May thanks to the following for help and inspiration:
-
+Many thanks to the following:
 * [favicon.cc](https://www.favicon.cc/) for the [Balloon Favicon](https://www.favicon.cc/?action=icon&file_id=706495).
 * [Game Developer Studio](http://www.gamedeveloperstudio.com/) for the awesome [Ballon Sprite Images](https://www.gamedeveloperstudio.com/graphics/viewgraphic.php?item=134l668d3b3n083827).
 * [SVG repo](https://www.svgrepo.com/) for the [Pin SVG Image](https://www.svgrepo.com/svg/207632/push-pin).
@@ -361,6 +390,10 @@ for additional help on sprite animations.
 * [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random) 
 for the JavaScript [getRandomIntInclusive Function]("./assets/js/maths.js") to 
 return a random integer between the two integers given.
+
+## Acknowledgements ##
+
+Many thanks to the following for help and inspiration during this project:
 * [Neringa Bickmore](https://github.com/neringabickmore) for your valued early review and comments on the game and documentation.
 * My mentor [Reuben Ferrante](https://github.com/) for helping to get me started off on the right footing and for the insightful
 review and comments on the game.

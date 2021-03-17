@@ -1,4 +1,4 @@
-// JavaScript Display Interaction Functions //
+// JavaScript Display Interaction Function Library //
 
 /** Function to return to menu - hides game section and shows heading and options **/
 function returnToMenu() {

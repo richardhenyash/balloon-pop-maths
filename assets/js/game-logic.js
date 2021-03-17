@@ -1,4 +1,4 @@
-// JavaScript Game Logic Functions //
+// JavaScript Game Logic Library //
 
 /** Function to launch game. **/
 function playGame() {

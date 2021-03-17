@@ -1,4 +1,4 @@
-// JavaScript Maths Functions //
+// JavaScript Maths Function Library //
 
 /** Function to return random question array, given game mode, options and number of questions **/
 function returnQuestionArray (gameMode, optionArray, qno) {
