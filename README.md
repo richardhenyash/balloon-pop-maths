@@ -43,7 +43,7 @@ learning new maths skills and reinforcing existing maths knowledge independently
 
 ## Site Owner Goals ##
 Developing the site will serve as a learning experience for the developer. The finished website will act as a showcase for the
-developer's new skills and will also help to raise the developer's profile. The devloper also hopes that his 7 year old
+developer's new skills and will also help to raise the developer's profile. The developer also hopes that his 7 year old
 son will become a keen user of the site!
 
 ## Project Goals ##
@@ -102,8 +102,10 @@ Subscribe Option|2
 * ***As a user or parent, I would like to to provide feedback to the developer about the game.***
 
 #### Constraints #####
-* Developer skill set - the developer is currently learning JavaScript. This may impact on whether all four maths games
-can be incorporated into the site in the initial development phase.
+* Developer skill set - the developer is currently learning JavaScript.
+* Developer's available time - the developer is working full time whilst studying.
+This coupled with the developer's current skills constraints may impact on whether
+all four maths games can be incorporated into the site in the initial development phase.
 
 #### Functional Requirements ####
 * The User would like to be able to select different maths games to play.
@@ -171,15 +173,16 @@ and [Game]("./assets/wireframes/rev1/game-multiplication.png) page layouts on [T
 ### Design Choices ###
 
 #### Fonts ####
-**Whale I Tried** has been chosen as the title font, and is used for the main Balloon Pop Maths heading. 
-**Whale I Tried** is a custom outlined cartoon font available from [Misti's Fonts](https://mistifonts.com/whale-i-tried/), 
+[Whale I Tried](https://mistifonts.com/whale-i-tried/) has been chosen as the title font, and is used for the main **Balloon Pop Maths** heading. 
+[Whale I Tried](https://mistifonts.com/whale-i-tried/) is a custom outlined cartoon font available from [Misti's Fonts](https://mistifonts.com/), 
 and is free for personal and non-profit use. This font was chosen as it has a balloon like look and a soft, playful feel.
 * font-family: "Whale I Tried", sans-serif;
 
-**Nunito** has been chosen as the main body font for text content. **Nunito** is a clean, rounded and modern sans-serif font 
-which works well with the maths game theme and complements the **Whale I Tried** title font. 
-**Nunito** is available from [Google Fonts](https://fonts.google.com/specimen/Nunito?preview.text_type=custom) and is licensed under the 
-[Open Font License](https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL).
+[Nunito](https://fonts.google.com/specimen/Nunito?preview.text_type=custom) has been chosen as the main body font for text content. 
+[Nunito](https://fonts.google.com/specimen/Nunito?preview.text_type=custom) is a clean, rounded and modern sans-serif font 
+which works well with the maths game theme and complements the [Whale I Tried](https://mistifonts.com/whale-i-tried/) title font. 
+[Nunito](https://fonts.google.com/specimen/Nunito?preview.text_type=custom) is available from [Google Fonts](https://fonts.google.com/) 
+and is licensed under the [Open Font License](https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL).
 * font-family: 'Nunito', sans-serif;
 
 #### Colours ####
@@ -280,16 +283,16 @@ If the contact form is succesfully submitted, a "Success" modal is displayed.
 <img src="./assets/testing/modal-high-score.png" style="margin: 15px; width:300px;">
 
 ### Features To Be Implemented In Future Development Phases ###
-* Subscribe feature on [Contact Modal]("./assets/testing/contact-modal.png") - this may be implemented in the future
+* Subscribe feature on [Contact Modal](./assets/testing/contact-modal.png) - this may be implemented in the future
 if the developer decides to develop further similar games.
 
 ### Design Changes During The Phase 1 Development ###
 After initial early user testing and feedback, the following minor changes were made:
 
-* In game score was moved from underneath the game question to the top right corner.
-* Audio controls were added to allow audio to be muted in game.
-* Collapsing "How To Play" section was added underneath "Options" to explain how to play
-and to give some further information about the game.  
+* [In game score](./assets/testing/game-score.png) was moved from underneath the game question to the top right corner.
+* [Audio controls](./assets/testing/game-audio.png) were added to allow audio to be muted in game.
+* Collapsing [How To Play](./assets/testing/how-to-play.png) section was added underneath 
+[Options](./assets/testing/game-options.png) to explain how to play and to give some further information about the game.  
 
 ## Testing ##
 
@@ -344,21 +347,20 @@ For further information on cloning a [GitHub](https://github.com/) repository, s
 
 ## Credits ##
 
-Many thanks to [favicon.cc](https://www.favicon.cc/) for the [Balloon Favicon](https://www.favicon.cc/?action=icon&file_id=706495).
+May thanks to the following for help and inspiration:
 
-Many thanks to [Game Developer Studio](http://www.gamedeveloperstudio.com/) for the awesome [Ballon Sprite Images](https://www.gamedeveloperstudio.com/graphics/viewgraphic.php?item=134l668d3b3n083827).
-
-Many thanks to [SVG repo](https://www.svgrepo.com/) for the [Pin SVG Image](https://www.svgrepo.com/svg/207632/push-pin).
-
-Many thanks to [mixkit](https://mixkit.co/) for the asweome [Sound Effects](https://mixkit.co/free-sound-effects/game/).
-
-Many thanks to [Martin Himmel](https://dev.to/martyhimmel/animating-sprite-sheets-with-javascript-ag3) 
+* [favicon.cc](https://www.favicon.cc/) for the [Balloon Favicon](https://www.favicon.cc/?action=icon&file_id=706495).
+* [Game Developer Studio](http://www.gamedeveloperstudio.com/) for the awesome [Ballon Sprite Images](https://www.gamedeveloperstudio.com/graphics/viewgraphic.php?item=134l668d3b3n083827).
+* [SVG repo](https://www.svgrepo.com/) for the [Pin SVG Image](https://www.svgrepo.com/svg/207632/push-pin).
+* [mixkit](https://mixkit.co/) for the brilliant [Sound Effects](https://mixkit.co/free-sound-effects/game/).
+* [Martin Himmel](https://dev.to/martyhimmel/animating-sprite-sheets-with-javascript-ag3) 
 and [Spicy Yoghurt](https://spicyyoghurt.com/tutorials/html5-javascript-game-development/images-and-sprite-animations) 
 for additional help on sprite animations.  
-
-Many thanks to [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random) 
+* [Laurens Holst](https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array) for the
+ JavaScript [shuffleArray Function]("./assets/js/maths.js") to randomize an array in place using the Durstenfeld shuffle algorithm.
+* [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random) 
 for the JavaScript [getRandomIntInclusive Function]("./assets/js/maths.js") to 
 return a random integer between the two integers given.
-
-Many thanks to [Laurens Holst](https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array) for the
- JavaScript [shuffleArray Function]("./assets/js/maths.js") to randomize an array in place using the Durstenfeld shuffle algorithm.
+* [Neringa Bickmore](https://github.com/neringabickmore) for your valued early review and comments on the game and documentation.
+* My mentor [Reuben Ferrante](https://github.com/) for helping to get me started off on the right footing and for the insightful
+review and comments on the game.
