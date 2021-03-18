@@ -245,13 +245,13 @@ The final colour palette selected is shown below:
 * GitHub link (including hover styling), links to developer page on github:  
 <img src="./assets/testing/github-link.png" style="margin: 15px; width:50px;"> 
 
-* In game options button, returns to Options panel from game:  
+* In-game options button, returns to Options panel from game:  
 <img src="./assets/testing/game-options.png" style="margin: 15px; width:100px;">
 
 * Game loader, displayed while game window is loading:
 <img src="./assets/testing/game-loader.png" style="margin: 15px; width:100px;">
 
-* In game score, records current score in game:  
+* In-game score, records current score in-game:  
 <img src="./assets/testing/game-score.png" style="margin: 15px; width:100px;">
 
 * Answer balloons showing potential answers. Balloons are animated using 
@@ -264,7 +264,10 @@ answer fades out:
 * Custom cursor - cursor is changed to a drawing pin when hovering over answer balloons:  
 <img src="./assets/images/pin.svg" style="margin: 15px; width:30px;">
 
-* In game audio controls, allows audio mute to be toggled on and off in game:  
+* Options audio controls, allows audio to be toggled on and off from the options area:  
+<img src="./assets/testing/options-audio.png" style="margin: 15px; width:300px;">
+
+* In-game audio controls, allows audio to be toggled on and off in-game:  
 <img src="./assets/testing/game-audio.png" style="margin: 15px; width:40px;">
 
 * Health bar, shows current health. Game finishes when health is fully depleted. 
@@ -293,8 +296,9 @@ if the developer decides to develop further similar games.
 ### Design Changes During The Phase 1 Development ###
 After initial early user testing and feedback, the following minor changes were made:
 
-* [In game score](./assets/testing/game-score.png) was moved from underneath the game question to the top right corner.
-* [Audio controls](./assets/testing/game-audio.png) were added to allow audio to be muted in game.
+* [In-game score](./assets/testing/game-score.png) was moved from underneath the game question to the top right corner.
+* [Options audio controls](./assets/testing/options-audio.png) were added to allow audio to be toggled on and off from the options area.
+* [In-game audio controls](./assets/testing/game-audio.png) were added to allow audio to be toggled on and off in-game.
 * Collapsing [How To Play](./assets/testing/how-to-play.png) section was added underneath 
 [Options](./assets/testing/game-options.png) to explain how to play and to give some further information about the game. 
 * [Game loader](./assets/testing/game-loader.png) was added and is now shown until the game window is completelety loaded.
