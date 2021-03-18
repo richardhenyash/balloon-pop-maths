@@ -1,4 +1,5 @@
 # Balloon Pop Maths #
+<img src="./assets/testing/balloon-pop-maths-responsive.png" width="100%" style="margin: 15px;">
 
 ## Contents ##
 - [Background](#background)
@@ -416,7 +417,7 @@ return a random integer between the two integers given.
 
 Many thanks to the following for help and inspiration during this project:
 * [Neringa Bickmore](https://github.com/neringabickmore) for your valued early review and comments on the game and documentation.
-* My mentor [Reuben Ferrante](https://github.com/) for helping to get me started off on the right footing and for the insightful
+* My mentor [Reuben Ferrante](https://github.com/arex18) for helping to get me started off on the right footing and for the insightful
 review and comments on the game.
 * The [Code Institute](https://codeinstitute.net/) [slack](https://slack.com/intl/en-gb/) community, for your encouragement and comments 
 on the game.
