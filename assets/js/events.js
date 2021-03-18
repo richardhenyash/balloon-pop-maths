@@ -105,5 +105,11 @@ $("#balloon-answer-text-right-3").on("click", checkSelectedAnswer);
 // On click event added to game mode options button to hide game section and show heading and options sections //
 $("#btn-game-section-options").on("click", returnToMenu);
 
-// On click event added to mute button to toggle audio mute //
+// On click event added to options audio off button to mute audio //
+$("#audio-off").on("click", muteAudio);
+
+// On click event added to options audio on button to un-mute audio //
+$("#audio-on").on("click", unMuteAudio);
+
+// On click event added to in-game mute button to toggle audio mute //
 $("#mute").on("click", muteAudioToggle);

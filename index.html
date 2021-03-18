@@ -68,9 +68,18 @@
                 <div class="container-button-group d-flex w-100">
                     <span id="highscore" class="btn-xl-nofill w-100 btn-text-score">High Score: 0 / 10</span> 
                 </div>
-                <!-- Play Button, hidden until window has finished loading -->
+                 <!-- Play Button, hidden until window has finished loading -->
                 <div class="container-button-group d-flex w-100">
                     <button id="play" type="button" class="btn btn-xxl w-100 btn-info btn-text">PLAY</button>
+                </div>
+                <!-- Audio Controls -->
+                <div class="btn-group btn-group-toggle d-flex w-100 container-button-group" data-toggle="buttons">
+                    <label id="audio-on" class="btn btn-xl w-100 btn-info btn-text active">
+                        <input type="radio" name="audio-on" autocomplete="off" checked><i class="fas fa-volume-up"></i>
+                    </label>
+                    <label id="audio-off" class="btn btn-xl w-100 btn-info btn-text">
+                        <input type="radio" name="audio-off" autocomplete="off"><i class="fas fa-volume-mute"></i>
+                    </label>
                 </div>
                 <!-- Options Button -->
                 <div class="container-button-group d-flex w-100">
@@ -305,7 +314,7 @@
                 <div class="col-md-4">
                     <div class="row">
                         <div id="audio-controls" class="col-2">
-                            <i id="mute" class="fas fa-volume-off"></i>
+                            <i id="mute" class="fas fa-volume-up"></i>
                         </div>
                         <div id="health" class="col-8">
                             <i id="heart1" class="fas fa-heart"></i>
@@ -321,7 +330,6 @@
                     <div id="question">10 x 10</div>                
                 </div>
                 <div class="col-md-4">
-                    <!-- <div id="score">Score: 0 / 20</div> -->
                 </div>
             </div>
         </div>
