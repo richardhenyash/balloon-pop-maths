@@ -37,7 +37,7 @@ function playGame() {
 
     // Show game section
     $("#game-section").hide();
-    $("#game-section").removeClass( "d-none" )
+    $("#game-section").removeClass("d-none")
     $("#game-section").show(1000); 
     
     // Display balloon animation frame 1 in each canvas element
