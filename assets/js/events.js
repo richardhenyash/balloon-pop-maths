@@ -6,9 +6,15 @@
 $(document).ready(modeMultiply);
 
 // Hide play button, add Event handler to show Play button when window has completed loading //
-$("#play").hide()
 $(window).on("load", function() {
-    $("#play").show(400)
+    setTimeout(function(){
+        console.log("Timeout"); 
+        // Hide game loader
+        $("#game-loader").hide();
+        // Show game canvas and controls
+        $("#game-canvas-controls").removeClass("d-none")
+        $("#game-canvas-controls").show(1000);
+    }, 1500);     
 })
 
 // Options Event Handlers //

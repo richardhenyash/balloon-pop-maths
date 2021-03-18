@@ -253,69 +253,79 @@
                 <div id="score" class="btn btn-xl-nofill btn-text-score">Score: 0 / 20</div>
             </div>
         </div>
-        <!-- Game Canvas, 2 panels - stacked on medium and small devices -->
-        <div class="row game-section-balloons p-0 m-0">
-            <div class="col-lg-6 p-0 m-0">
-                <div class="row canvas-balloon p-0 m-0">
-                    <div class="col d-flex justify-content-center p-0 m-0">
-                        <canvas id="canvas-balloon-left-1"></canvas>
-                        <div id="balloon-answer-text-left-1" class="balloon-answer-text balloon-answer-text-top">8</div>
+        <!-- Game Loader, shown until window has completed loading -->
+        <div id="game-loader" class="container-xl text-center">
+            <div class="container-loader"></div>
+            <div class="lds-grid"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+            <div class="container-loader"></div>
+        </div>
+        <!-- Game Div, hidden until window has completed loading -->
+        <div id="game-canvas-controls" class="d-none">
+            <!-- Game Canvas, 2 panels - stacked on medium and small devices -->
+            <div class="row game-section-balloons p-0 m-0">
+                <div class="col-lg-6 p-0 m-0">
+                    <div class="row canvas-balloon p-0 m-0">
+                        <div class="col d-flex justify-content-center p-0 m-0">
+                            <canvas id="canvas-balloon-left-1"></canvas>
+                            <div id="balloon-answer-text-left-1" class="balloon-answer-text balloon-answer-text-top">8</div>
+                        </div>
+                        <div class="col d-flex justify-content-center p-0 m-0">
+                            <canvas id="canvas-balloon-left-2"></canvas>
+                            <div id="balloon-answer-text-left-2" class="balloon-answer-text balloon-answer-text-bottom">10</div>
+                        </div>
                     </div>
-                    <div class="col d-flex justify-content-center p-0 m-0">
-                        <canvas id="canvas-balloon-left-2"></canvas>
-                        <div id="balloon-answer-text-left-2" class="balloon-answer-text balloon-answer-text-bottom">10</div>
+                    <div class="row canvas-balloon p-0 m-0">
+                        <div class="col d-flex justify-content-center p-0 m-0">
+                            <canvas id="canvas-balloon-left-3"></canvas>
+                            <div id="balloon-answer-text-left-3" class="balloon-answer-text balloon-answer-text-top">12</div>
+                        </div>
                     </div>
                 </div>
-                <div class="row canvas-balloon p-0 m-0">
-                    <div class="col d-flex justify-content-center p-0 m-0">
-                        <canvas id="canvas-balloon-left-3"></canvas>
-                        <div id="balloon-answer-text-left-3" class="balloon-answer-text balloon-answer-text-top">12</div>
+                <div class="col-lg-6 p-0 m-0">
+                    <div class="row canvas-balloon p-0 m-0">
+                        <div class="col d-flex justify-content-center p-0 m-0">
+                            <canvas id="canvas-balloon-right-1"></canvas>
+                            <div id="balloon-answer-text-right-1" class="balloon-answer-text balloon-answer-text-top">18</div>
+                        </div>
+                        <div class="col d-flex justify-content-center p-0 m-0">
+                            <canvas id="canvas-balloon-right-2"></canvas>
+                            <div id="balloon-answer-text-right-2" class="balloon-answer-text balloon-answer-text-bottom">18</div>
+                        </div>
+                    </div>
+                    <div class="row canvas-balloon p-0 m-0">
+                        <div class="col d-flex justify-content-center p-0 m-0">
+                            <canvas id="canvas-balloon-right-3"></canvas>
+                            <div id="balloon-answer-text-right-3" class="balloon-answer-text balloon-answer-text-top">18</div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 p-0 m-0">
-                <div class="row canvas-balloon p-0 m-0">
-                    <div class="col d-flex justify-content-center p-0 m-0">
-                        <canvas id="canvas-balloon-right-1"></canvas>
-                        <div id="balloon-answer-text-right-1" class="balloon-answer-text balloon-answer-text-top">18</div>
-                    </div>
-                    <div class="col d-flex justify-content-center p-0 m-0">
-                        <canvas id="canvas-balloon-right-2"></canvas>
-                        <div id="balloon-answer-text-right-2" class="balloon-answer-text balloon-answer-text-bottom">18</div>
+            <!-- Game Controls - 3 columns, stacked on small devices -->
+            <div class="row game-section-controls p-0 m-0">
+                <div class="col-md-4">
+                    <div class="row">
+                        <div id="audio-controls" class="col-2">
+                            <i id="mute" class="fas fa-volume-off"></i>
+                        </div>
+                        <div id="health" class="col-8">
+                            <i id="heart1" class="fas fa-heart"></i>
+                            <i id="heart2" class="fas fa-heart"></i>
+                            <i id="heart3" class="fas fa-heart"></i>
+                            <i id="heart4" class="fas fa-heart"></i>
+                            <i id="heart5" class="fas fa-heart"></i>
+                        </div>
+                        <div class="col-2"></div>
                     </div>
                 </div>
-                <div class="row canvas-balloon p-0 m-0">
-                    <div class="col d-flex justify-content-center p-0 m-0">
-                        <canvas id="canvas-balloon-right-3"></canvas>
-                        <div id="balloon-answer-text-right-3" class="balloon-answer-text balloon-answer-text-top">18</div>
-                    </div>
+                <div class="col-md-4">
+                    <div id="question">10 x 10</div>                
+                </div>
+                <div class="col-md-4">
+                    <!-- <div id="score">Score: 0 / 20</div> -->
                 </div>
             </div>
         </div>
-        <!-- Game Controls - 3 columns, stacked on small devices -->
-        <div class="row game-section-controls p-0 m-0">
-            <div class="col-md-4">
-                <div class="row">
-                    <div id="audio-controls" class="col-2">
-                        <i id="mute" class="fas fa-volume-off"></i>
-                    </div>
-                    <div id="health" class="col-8">
-                        <i id="heart1" class="fas fa-heart"></i>
-                        <i id="heart2" class="fas fa-heart"></i>
-                        <i id="heart3" class="fas fa-heart"></i>
-                        <i id="heart4" class="fas fa-heart"></i>
-                        <i id="heart5" class="fas fa-heart"></i>
-                    </div>
-                    <div class="col-2"></div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div id="question">10 x 10</div>                
-            </div>
-            <div class="col-md-4">
-                <!-- <div id="score">Score: 0 / 20</div> -->
-            </div>
-        </div>
+        </section>
     </section>
     <!-- Feedback modal -->
     <div id="modal-feedback" class="modal" tabindex="-1" role="dialog">
