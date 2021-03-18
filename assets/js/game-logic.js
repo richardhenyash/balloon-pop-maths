@@ -3,6 +3,9 @@
 /** Function to launch game. **/
 function playGame() {
 
+    // Display balloon animation frame 1 in each canvas element
+    initialiseBalloons();
+
     // Set global variables 
     bpmGameMode = returnGameMode();
     checkButtons(bpmGameMode);
@@ -40,9 +43,6 @@ function playGame() {
     $("#game-section").removeClass("d-none")
     $("#game-section").show(1000); 
     
-    // Display balloon animation frame 1 in each canvas element
-    initialiseBalloons();
-
     // Reyurn score array
     return bpmScoreArray;
 }

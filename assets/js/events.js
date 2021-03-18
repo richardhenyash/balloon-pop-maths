@@ -5,15 +5,28 @@
 // Event handler to switch to multiply mode when document is ready //
 $(document).ready(modeMultiply);
 
-// Hide play button, add Event handler to show Play button when window has completed loading //
+// Hide in game score
+$("#score").hide()
+// Hide game canvas and controls.
+$("#game-canvas-controls").hide()
+
+// Show game loader until 1000ms after window has completed loading.
+// Display balloon animation frame 1 in each canvas element
+// Fade-in game score, game canvas and controls 1000ms after window has completed loading //
 $(window).on("load", function() {
+    // Display balloon animation frame 1 in each canvas element
+    initialiseBalloons();
+    // Set timeout
     setTimeout(function(){
         // Hide game loader
         $("#game-loader").hide();
-        // Show game canvas and controls
-        $("#game-canvas-controls").removeClass("d-none")
-        $("#game-canvas-controls").show(1000);
-    }, 1500);     
+        // Fade-in score
+        $("#score").removeClass("d-none");
+        $("#score").fadeIn(1000);
+        // Fade-in game canvas and controls
+        $("#game-canvas-controls").removeClass("d-none");
+        $("#game-canvas-controls").fadeIn(1000);
+    }, 1000);     
 })
 
 // Options Event Handlers //
