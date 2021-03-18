@@ -2,7 +2,10 @@
 
 /** Function to launch game. **/
 function playGame() {
-
+    // Show all balloon canvas elements
+    $("[id^=canvas-balloon]").show();
+    // Show all balloon text elements
+    $("[id^=balloon-answer-text]").show();
     // Set global variables 
     bpmGameMode = returnGameMode();
     checkButtons(bpmGameMode);
@@ -17,7 +20,6 @@ function playGame() {
     bpmAnswerArray = answerArray(bpmGameMode, bpmQCurrent);
     bpmAnswerArray = setBalloons(bpmAnswerArray);
     bpmScoreArray = setScore([0, bpmQno]);
-
     // Log global variables to console for debugging
     // console.log(bpmGameMode);
     // console.log(bpmQno);
@@ -29,18 +31,15 @@ function playGame() {
     // console.log(bpmQCurrent);
     // console.log(bpmAnswerArray);
     // console.log(bpmScoreArray);
-
     // Hide heading section and options section
     $("#heading-section").hide(400);
     $("#options-section").hide(400);
     $("#information-section").hide(400);
-
     // Show game section
     $("#game-section").hide();
     $("#game-section").removeClass("d-none")
-    $("#game-section").show(1000); 
-    
-    // Reyurn score array
+    $("#game-section").show(1000);     
+    // Return score array
     return bpmScoreArray;
 }
 
