@@ -434,6 +434,21 @@ body {
 }
 
 /*-- Media Queries --*/
+
+/*-- Media query to re-size heading, reposition heading image and re-size Play button for screen sizes under 680px high --*/
+@media (max-height: 680px) {
+    .heading-main {
+        font-size: 5rem;    
+    }
+    .container-heading-main img, .container-heading-main-large img {
+        margin-top: -0.6rem;
+    }
+    .btn-xxl {
+        padding: 0.5rem 0.5rem;
+        font-size: 4.0rem;
+    }
+}
+
 /*-- Media query to re-size balloon canvas and text elements for devices over 400px wide --*/
  @media (min-width: 400px) {
     .canvas-balloon {
