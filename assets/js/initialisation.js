@@ -1,4 +1,4 @@
-// JavaScript initialisation functions //
+// JavaScript Initialisation Library //
 
 // Buffer balloon sprite images //
 const imgBalloonBlue = new Image();

@@ -1,4 +1,4 @@
-// JavaScript Event Handlers //
+// JavaScript Event Handler Library //
 
 // Initialisation Event Handlers //
 

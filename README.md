@@ -29,6 +29,7 @@
     - [Features Implemented in Phase 1](#features-implemented-in-phase-1)
     - [Features To Be Implemented In Future Development Phases](#features-to-be-implemented-in-future-development-phases)
     - [Design Changes During The Phase 1 Development](#design-changes-during-the-phase-1-development)
+- [JavaScript Code Library](#javascript-code-library)
 - [Game Logic](#game-logic)
 - [Testing](#testing)
 - [Deployment](#deployment)
@@ -246,6 +247,9 @@ The final colour palette selected is shown below:
 * In game options button, returns to Options panel from game:  
 <img src="./assets/testing/game-options.png" style="margin: 15px; width:100px;">
 
+* Game loader, displayed while game window is loading:
+<img src="./assets/testing/game-loader.png" style="margin: 15px; width:100px;">
+
 * In game score, records current score in game:  
 <img src="./assets/testing/game-score.png" style="margin: 15px; width:100px;">
 
@@ -291,7 +295,23 @@ After initial early user testing and feedback, the following minor changes were 
 * [In game score](./assets/testing/game-score.png) was moved from underneath the game question to the top right corner.
 * [Audio controls](./assets/testing/game-audio.png) were added to allow audio to be muted in game.
 * Collapsing [How To Play](./assets/testing/how-to-play.png) section was added underneath 
-[Options](./assets/testing/game-options.png) to explain how to play and to give some further information about the game.  
+[Options](./assets/testing/game-options.png) to explain how to play and to give some further information about the game. 
+* [Game loader](./assets/testing/game-loader.png) was added and is now shown until the game window is completelety loaded.
+Note the game loader will only be visible the first time the game is played, depending on how quickly the game is initiated 
+as it is shown only until the [window load event](https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event) is fired. 
+The event handler is located in the [JavaScript Event Handler Library](./assets/js/events.js).
+
+## JavaScript Code Library ##
+The [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) code has been broken down into seperate, re-usable 
+functions where possible and is contained within several [JavaScript Code Library](./assets/js) files:
+* [JavaScript Animation Function Library](./assets/js/events.js)
+* [JavaScript Audio Function Library](./assets/js/audio.js)
+* [JavaScript Display Interaction Function Library](./assets/js/audio.js)
+* [JavaScript Event Handler Library](./assets/js/events.js)
+* [JavaScript Game Logic Function Library](./assets/js/game-logic.js)
+* [JavaScript Initialisation Library](./assets/js/initialisation.js)
+* [JavaScript Mail Library](./assets/js/mail.js)
+* [JavaScript Maths Function Library](./assets/js/maths.js)
 
 ## Game Logic ##
 The game logic was developed using [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript).  
@@ -385,10 +405,11 @@ Many thanks to the following:
 * [Martin Himmel](https://dev.to/martyhimmel/animating-sprite-sheets-with-javascript-ag3) 
 and [Spicy Yoghurt](https://spicyyoghurt.com/tutorials/html5-javascript-game-development/images-and-sprite-animations) 
 for additional help on sprite animations.  
+* [loading.io](https://loading.io/css/) for the attractive [Game loader](./assets/testing/game-loader.png).
 * [Laurens Holst](https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array) for the
- JavaScript [shuffleArray Function]("./assets/js/maths.js") to randomize an array in place using the Durstenfeld shuffle algorithm.
+ JavaScript [shuffleArray function]("./assets/js/maths.js") to randomize an array in place using the Durstenfeld shuffle algorithm.
 * [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random) 
-for the JavaScript [getRandomIntInclusive Function]("./assets/js/maths.js") to 
+for the JavaScript [getRandomIntInclusive function]("./assets/js/maths.js") to 
 return a random integer between the two integers given.
 
 ## Acknowledgements ##
@@ -397,3 +418,5 @@ Many thanks to the following for help and inspiration during this project:
 * [Neringa Bickmore](https://github.com/neringabickmore) for your valued early review and comments on the game and documentation.
 * My mentor [Reuben Ferrante](https://github.com/) for helping to get me started off on the right footing and for the insightful
 review and comments on the game.
+* The [Code Institute](https://codeinstitute.net/) [slack](https://slack.com/intl/en-gb/) community, for your encouragement and comments 
+on the game.

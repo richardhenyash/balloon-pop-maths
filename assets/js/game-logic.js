@@ -1,10 +1,7 @@
-// JavaScript Game Logic Library //
+// JavaScript Game Logic Function Library //
 
 /** Function to launch game. **/
 function playGame() {
-
-    // Display balloon animation frame 1 in each canvas element
-    initialiseBalloons();
 
     // Set global variables 
     bpmGameMode = returnGameMode();

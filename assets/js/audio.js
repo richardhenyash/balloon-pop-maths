@@ -1,4 +1,4 @@
-// JavaScript Audio Functions //
+// JavaScript Audio Function Library //
 
 /** Function to toggle audio mute.  **/
 function muteAudioToggle(){

@@ -1,4 +1,4 @@
-// JavaScript Animation Functions //
+// JavaScript Animation Function Library //
 
 /** Function to return an array of canvas width and height, given canvas element ID **/
 function getCanvasSize(canvasID) {
