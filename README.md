@@ -233,6 +233,9 @@ The final colour palette selected is shown below:
 * Play button (including hover styling), launches game:  
 <img src="./assets/testing/play.png" style="margin: 15px; width:300px;"> 
 
+* Options audio controls, allows audio to be toggled on and off from the options area:  
+<img src="./assets/testing/options-audio.png" style="margin: 15px; width:300px;">
+
 * Options button (including hover styling), opens collapsing options panel:  
 <img src="./assets/testing/options.png" style="margin: 15px; width:300px;"> 
 
@@ -263,9 +266,6 @@ answer fades out:
 
 * Custom cursor - cursor is changed to a drawing pin when hovering over answer balloons:  
 <img src="./assets/images/pin.svg" style="margin: 15px; width:30px;">
-
-* Options audio controls, allows audio to be toggled on and off from the options area:  
-<img src="./assets/testing/options-audio.png" style="margin: 15px; width:300px;">
 
 * In-game audio controls, allows audio to be toggled on and off in-game:  
 <img src="./assets/testing/game-audio.png" style="margin: 15px; width:40px;">
