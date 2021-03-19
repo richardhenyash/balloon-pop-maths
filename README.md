@@ -1,5 +1,5 @@
 # Balloon Pop Maths #
-<img src="./assets/testing/balloon-pop-maths-responsive.png" width="100%" style="margin: 15px;">
+<img src="./assets/testing/responsive/balloon-pop-maths-responsive.png" width="100%" style="margin: 15px;">
 
 ## Contents ##
 - [Background](#background)
@@ -222,86 +222,86 @@ The final colour palette selected is shown below:
 ## Features Implemented ##
 ### Features Implemented in Phase 1 ###
 * Ballon Pop Maths title, links to home page if selected:
-<img src="./assets/testing/title.png" style="margin: 15px; width:300px;"> 
+<img src="./assets/testing/features/title.png" style="margin: 15px; width:300px;"> 
 
 * Game mode selector (including hover styling), facilitates switching between multiplication, division, subtraction and addition games:  
-<img src="./assets/testing/game-mode.png" style="margin: 15px; width:300px;"> 
+<img src="./assets/testing/features/game-mode.png" style="margin: 15px; width:300px;"> 
 
 * High Score panel, shows current high score. Updated if the user gets a new high score.
-<img src="./assets/testing/high-score.png" style="margin: 15px; width:300px;"> 
+<img src="./assets/testing/features/high-score.png" style="margin: 15px; width:300px;"> 
 
 * Play button (including hover styling), launches game:  
-<img src="./assets/testing/play.png" style="margin: 15px; width:300px;"> 
+<img src="./assets/testing/features/play.png" style="margin: 15px; width:300px;"> 
 
 * Options audio controls, allows audio to be toggled on and off from the options area:  
-<img src="./assets/testing/options-audio.png" style="margin: 15px; width:300px;">
+<img src="./assets/testing/features/options-audio.png" style="margin: 15px; width:300px;">
 
 * Options button (including hover styling), opens collapsing options panel:  
-<img src="./assets/testing/options.png" style="margin: 15px; width:300px;"> 
+<img src="./assets/testing/features/options.png" style="margin: 15px; width:300px;"> 
 
 * How To Play button (including hover styling), opens collapsing information panel:  
-<img src="./assets/testing/how-to-play.png" style="margin: 15px; width:300px;"> 
+<img src="./assets/testing/features/how-to-play.png" style="margin: 15px; width:300px;"> 
 
 * Contact Developer link (including hover styling), opens contact modal:  
-<img src="./assets/testing/contact-developer-link.png" style="margin: 15px; width:150px;"> 
+<img src="./assets/testing/features/contact-developer-link.png" style="margin: 15px; width:150px;"> 
 
 * GitHub link (including hover styling), links to developer page on github:  
-<img src="./assets/testing/github-link.png" style="margin: 15px; width:50px;"> 
+<img src="./assets/testing/features/github-link.png" style="margin: 15px; width:50px;"> 
 
-* In-game options button, returns to Options panel from game:  
-<img src="./assets/testing/game-options.png" style="margin: 15px; width:100px;">
+* In-game home button, returns to Home panel from game:  
+<img src="./assets/testing/features/game-home.png" style="margin: 15px; width:100px;">
 
 * Game loader, displayed while game window is loading:
-<img src="./assets/testing/game-loader.png" style="margin: 15px; width:100px;">
+<img src="./assets/testing/features/game-loader.png" style="margin: 15px; width:100px;">
 
 * In-game score, records current score in-game:  
-<img src="./assets/testing/game-score.png" style="margin: 15px; width:100px;">
+<img src="./assets/testing/features/game-score.png" style="margin: 15px; width:100px;">
 
 * Answer balloons showing potential answers. Balloons are animated using 
 [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript), showing a 
 "pop" animation sequence and playing a "pop" sound if the correct answer is selected. 
 If an incorrect answer is selected, a "deflate" sound is played and the ballon and
 answer fades out:
-<img src="./assets/testing/game-balloons.png" style="margin: 15px; width:500px;">
+<img src="./assets/testing/features/game-balloons.png" style="margin: 15px; width:500px;">
 
 * Custom cursor - cursor is changed to a drawing pin when hovering over answer balloons:  
 <img src="./assets/images/pin.svg" style="margin: 15px; width:30px;">
 
 * In-game audio controls, allows audio to be toggled on and off in-game:  
-<img src="./assets/testing/game-audio.png" style="margin: 15px; width:40px;">
+<img src="./assets/testing/features/game-audio.png" style="margin: 15px; width:40px;">
 
 * Health bar, shows current health. Game finishes when health is fully depleted. 
 If game is played on "Easy" difficulty level (selected in options), health is set to 5 hearts.
 If game is played on "Medium" difficulty level (selected in options), health is set to 3 hearts.
 If game is played on "Hard" difficulty level (selected in options), health is set to 1 heart:
-<img src="./assets/testing/game-health.png" style="margin: 15px; width:150px;">
+<img src="./assets/testing/features/game-health.png" style="margin: 15px; width:150px;">
 
 * Question panel, shows current question:
-<img src="./assets/testing/game-question.png" style="margin: 15px; width:200px;">
+<img src="./assets/testing/features/game-question.png" style="margin: 15px; width:200px;">
 
 * Contact modal, implemented using [Email JS](https://www.emailjs.com/). 
 If the contact form is succesfully submitted, a "Success" modal is displayed. 
-<img src="./assets/testing/contact-modal.png" style="margin: 15px; width:300px;">
-<img src="./assets/testing/contact-modal-success.png" style="margin: 15px; width:300px;">
+<img src="./assets/testing/features/contact-modal.png" style="margin: 15px; width:300px;">
+<img src="./assets/testing/features/contact-modal-success.png" style="margin: 15px; width:300px;">
 
 * Game feedback modal, gives varying feedback to the user at the end of a game:
-<img src="./assets/testing/modal-unlucky.png" style="margin: 15px; width:300px;">
-<img src="./assets/testing/modal-well-done.png" style="margin: 15px; width:300px;">
-<img src="./assets/testing/modal-high-score.png" style="margin: 15px; width:300px;">
+<img src="./assets/testing/features/modal-unlucky.png" style="margin: 15px; width:300px;">
+<img src="./assets/testing/features/modal-well-done.png" style="margin: 15px; width:300px;">
+<img src="./assets/testing/features/modal-high-score.png" style="margin: 15px; width:300px;">
 
 ### Features To Be Implemented In Future Development Phases ###
-* Subscribe feature on [Contact Modal](./assets/testing/contact-modal.png) - this may be implemented in the future
+* Subscribe feature on [Contact Modal](./assets/testing/features/contact-modal.png) - this may be implemented in the future
 if the developer decides to develop further similar games.
 
 ### Design Changes During The Phase 1 Development ###
 After initial early user testing and feedback, the following minor changes were made:
 
-* [In-game score](./assets/testing/game-score.png) was moved from underneath the game question to the top right corner.
-* [Options audio controls](./assets/testing/options-audio.png) were added to allow audio to be toggled on and off from the options area.
-* [In-game audio controls](./assets/testing/game-audio.png) were added to allow audio to be toggled on and off in-game.
-* Collapsing [How To Play](./assets/testing/how-to-play.png) section was added underneath 
-[Options](./assets/testing/game-options.png) to explain how to play and to give some further information about the game. 
-* [Game loader](./assets/testing/game-loader.png) was added and is now shown until the game window is completelety loaded.
+* [In-game score](./assets/testing/features/game-score.png) was moved from underneath the game question to the top right corner.
+* [Options audio controls](./assets/testing/features/options-audio.png) were added to allow audio to be toggled on and off from the options area.
+* [In-game audio controls](./assets/testing/features/game-audio.png) were added to allow audio to be toggled on and off in-game.
+* Collapsing [How To Play](./assets/testing/features/how-to-play.png) section was added underneath 
+[Options](./assets/testing/features/game-options.png) to explain how to play and to give some further information about the game. 
+* [Game loader](./assets/testing/features/game-loader.png) was added and is now shown until the game window is completelety loaded.
 Note the game loader will only be visible the first time the game is played, depending on how quickly the game is initiated 
 as it is shown only until the [window load event](https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event) is fired. 
 The event handler is located in the [JavaScript Event Handler Library](./assets/js/events.js).
@@ -321,33 +321,33 @@ functions where possible and is contained within several [JavaScript Code Librar
 ## Game Logic ##
 The game logic was developed using [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript).  
 
-When the user hits the [Play](./assets/testing/play.png) button, the heading, options and information
+When the user hits the [Play](./assets/testing/features/play.png) button, the heading, options and information
 sections of the [index](index.html) page are hidden and the game section is shown. 
 The selected options are gathered using functions in the [JavaScript Display Interaction Functions Library](./assets/js/display.js) 
 and are stored in global variables. All global variables are initialised in the 
 [JavaScript Initialisation Library](./assets/js/initialisation.js) and are prefixed with "bpm".  
 
-The user is presented with a [maths question](./assets/testing/game-question.png). The question type depends on the selected 
-[Game Mode](./assets/testing/game-mode.png). 
+The user is presented with a [maths question](./assets/testing/features/game-question.png). The question type depends on the selected 
+[Game Mode](./assets/testing/features/game-mode.png). 
 6 potential answers are presented in the [answer ballons](./assets/js/game-balloons.js), 1 correct answer and 5 wrong answers. 
 Random maths questions and correct and incorrect answers are generated using functions in the 
 [JavaScript Maths Function Library](./assets/js/maths.js).
 
-If the game is played on "Easy" difficulty level (selected in options), [health](./assets/testing/game-health.png) is set to 5 hearts.
-If the game is played on "Medium" difficulty level (selected in options), [health](./assets/testing/game-health.png) is set to 3 hearts.
-If the game is played on "Hard" difficulty level (selected in options), [health](./assets/testing/game-health.png) is set to 1 heart.  
+If the game is played on "Easy" difficulty level (selected in options), [health](./assets/testing/features/game-health.png) is set to 5 hearts.
+If the game is played on "Medium" difficulty level (selected in options), [health](./assets/testing/features/game-health.png) is set to 3 hearts.
+If the game is played on "Hard" difficulty level (selected in options), [health](./assets/testing/features/game-health.png) is set to 1 heart.  
 
 If the user selects the correct answer, the balloon "popping" animation and sound is played using functions in the 
 [JavaScript Animation Function Library](./assets/js/animation.js), and the score increments by 1. 
 If the user selects the wrong answer, the "deflate" sound is played, the selected balloon and answer text fades out and 
-[health](./assets/testing/game-health.png) is depleted by 1 heart. The game continues until the user has either answered 
-all of the questions or their [health](./assets/testing/game-health.png) has been fully depleted.  
+[health](./assets/testing/features/game-health.png) is depleted by 1 heart. The game continues until the user has either answered 
+all of the questions or their [health](./assets/testing/features/game-health.png) has been fully depleted.  
 
-When the game is complete, the user is presented with a [Feedback Modal](./assets/testing/modal-well-done.png). The feedback message 
-varies depending on how well the user has played the game. If the user has scored less than 4, the [Unlucky](./assets/testing/modal-unlucky.png)
-modal is shown. If the user has scored 4 or more but has not achieved a new high score, the [Well Done](./assets/testing/modal-well-done.png) modal is shown.
-If the user has achieved a new high score, the [High Score](./assets/testing/modal-high-score.png) modal is shown, and the 
-[High Score](./assets/testing/high-score.png) panel on the [index](index.html) page is updated.
+When the game is complete, the user is presented with a [Feedback Modal](./assets/testing/features/modal-well-done.png). The feedback message 
+varies depending on how well the user has played the game. If the user has scored less than 4, the [Unlucky](./assets/testing/features/modal-unlucky.png)
+modal is shown. If the user has scored 4 or more but has not achieved a new high score, the [Well Done](./assets/testing/features/modal-well-done.png) modal is shown.
+If the user has achieved a new high score, the [High Score](./assets/testing/features/modal-high-score.png) modal is shown, and the 
+[High Score](./assets/testing/features/high-score.png) panel on the [index](index.html) page is updated.
 
 ## Testing ##
 
@@ -410,7 +410,7 @@ Many thanks to the following:
 * [Martin Himmel](https://dev.to/martyhimmel/animating-sprite-sheets-with-javascript-ag3) 
 and [Spicy Yoghurt](https://spicyyoghurt.com/tutorials/html5-javascript-game-development/images-and-sprite-animations) 
 for additional help on sprite animations.  
-* [loading.io](https://loading.io/css/) for the attractive [Game loader](./assets/testing/game-loader.png).
+* [loading.io](https://loading.io/css/) for the attractive [Game loader](./assets/testing/features/game-loader.png).
 * [Laurens Holst](https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array) for the
  JavaScript [shuffleArray function]("./assets/js/maths.js") to randomize an array in place using the Durstenfeld shuffle algorithm.
 * [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random) 
@@ -423,6 +423,6 @@ Many thanks to the following for help and inspiration during this project:
 * [Neringa Bickmore](https://github.com/neringabickmore) for your valued early review and comments on the game and documentation.
 * My mentor [Reuben Ferrante](https://github.com/arex18) for helping to get me started off on the right footing and for the insightful
 review and comments on the game.
-* [Ben Kavanagh](https://github.com/BAK2K3) for the [Game loader](./assets/testing/game-loader.png) inspiration.
+* [Ben Kavanagh](https://github.com/BAK2K3) for the [Game loader](./assets/testing/features/game-loader.png) inspiration.
 * The [Code Institute](https://codeinstitute.net/) [slack](https://slack.com/intl/en-gb/) community, for your encouragement and comments 
 on the game.
