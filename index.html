@@ -50,18 +50,18 @@
             <div class="col-md-2"></div>
             <div class="col-md-8">
                 <!-- Game Mode Options -->
-                <div class="btn-group btn-group-toggle d-flex w-100 container-button-group" data-toggle="buttons">
+                <div aria-label="Game Mode" class="btn-group btn-group-toggle d-flex w-100 container-button-group" data-toggle="buttons">
                     <label id="multiply" class="btn btn-xl w-100 btn-info btn-text active" aria-pressed="true">
-                        <input type="radio" name="game-mode" autocomplete="off" checked> x
+                        <input type="radio" aria-label="Multiplication" name="game-mode" autocomplete="off" checked> x
                     </label>
                     <label id="divide" class="btn btn-xl w-100 btn-info btn-text">
-                        <input type="radio" name="game-mode" autocomplete="off"> &divide
+                        <input type="radio" aria-label="Division" name="game-mode" autocomplete="off"> &divide
                     </label>
                     <label id="add" class="btn btn-xl w-100 btn-info btn-text">
-                        <input type="radio" name="game-mode" autocomplete="off"> +
+                        <input type="radio" aria-label="Addition" name="game-mode" autocomplete="off"> +
                     </label>
                     <label id="subtract" class="btn btn-xl w-100 btn-info btn-text">
-                        <input type="radio" name="game-mode" autocomplete="off"> -
+                        <input type="radio" aria-label="Subtraction" name="game-mode" autocomplete="off"> -
                     </label>
                 </div>
                 <!-- High Score -->
@@ -73,12 +73,12 @@
                     <button id="play" type="button" class="btn btn-xxl w-100 btn-info btn-text">PLAY</button>
                 </div>
                 <!-- Audio Controls -->
-                <div class="btn-group btn-group-toggle d-flex w-100 container-button-group" data-toggle="buttons">
+                <div aria-label="Audio Controls" class="btn-group btn-group-toggle d-flex w-100 container-button-group" data-toggle="buttons">
                     <label id="audio-on" class="btn btn-xl w-100 btn-info btn-text active">
-                        <input type="radio" name="audio-on" autocomplete="off" checked><i class="fas fa-volume-up"></i>
+                        <input type="radio" aria-label="Audio On" name="audio-on" autocomplete="off" checked><i class="fas fa-volume-up"></i>
                     </label>
                     <label id="audio-off" class="btn btn-xl w-100 btn-info btn-text">
-                        <input type="radio" name="audio-off" autocomplete="off"><i class="fas fa-volume-mute"></i>
+                        <input type="radio" aria-label="Audio Off" name="audio-off" autocomplete="off"><i class="fas fa-volume-mute"></i>
                     </label>
                 </div>
                 <!-- Options Button -->
@@ -92,7 +92,7 @@
             <div class="col-md-2"></div>
             <div class="col-md-8">
                 <!-- Options applicable to all games -->
-                <div class="btn-group btn-group-toggle d-flex w-100 container-button-group" data-toggle="buttons">
+                <div aria-label="Number Of Questions" class="btn-group btn-group-toggle d-flex w-100 container-button-group" data-toggle="buttons">
                     <label id="10q" class="btn btn-xl w-100 btn-info btn-text active">
                         <input type="radio" name="questions" autocomplete="off" checked> 10 Questions
                     </label>
@@ -100,7 +100,7 @@
                         <input type="radio" name="questions" autocomplete="off"> 20 Questions
                     </label>
                 </div>
-                <div class="btn-group btn-group-toggle d-flex w-100 container-button-group" data-toggle="buttons">
+                <div aria-label="Difficulty Level" class="btn-group btn-group-toggle d-flex w-100 container-button-group" data-toggle="buttons">
                     <label id="easy" class="btn btn-xl w-100 btn-info btn-text active">
                         <input type="radio" name="difficulty" autocomplete="off" checked> Easy
                     </label>
@@ -251,11 +251,11 @@
     </section>
     <!-- Game Section -->
     <section id="game-section" class="container-xl d-none">
-        <!-- Options Button -->
-        <div id="game-section-options" class="row container-button-game">
+        <!-- Home Button -->
+        <div id="game-section-home" class="row container-button-game">
             <div class="col text-left pr-0">
-                <button id="btn-game-section-options" type="button" data-toggle="button" autocomplete="off"
-                    class="btn btn-xl btn-info btn-text btn-xl-focus-none">Options
+                <button id="btn-game-section-home" type="button" data-toggle="button" autocomplete="off"
+                    class="btn btn-xl btn-info btn-text btn-xl-focus-none">Home
                 </button>
             </div>
             <div class="col text-right pl-0">            
