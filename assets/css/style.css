@@ -11,6 +11,9 @@
     --bluevlight: #EEFBFF;
     --redlight: #DC7774;
     --medgrey: #a9a9a9;
+/*-- Canvas Size--*/
+    --canvassize: calc((100vh - 22.6rem) / 4);
+    --balloontextsize: calc((100vh - 22.6rem) / 14);
 }
 
 /*-- Custom Fonts--*/
@@ -238,29 +241,32 @@ body {
   }
 }
 
-/*-- Set minimum row height for balloon canvas elements --*/
+/*-- Set row height for balloon canvas elements --*/
+/*-- Row height calculated using viewport height --*/
 .canvas-balloon {
-    min-height: 110px;
+    height: var(--canvassize);
 }
 
 /*-- Game Canvas --*/
+/*-- Width and height calculated using viewport height --*/
 .canvas-balloon canvas {
     position: absolute;
-    width: 110px;
-    height: 110px;
+    width: var(--canvassize);
+    height: var(--canvassize);
     z-index: -1;
 }
 
 /*-- Game Answer Balloon Text --*/
+/*-- Font size, line height, width and height calculated using viewport height --*/
 .balloon-answer-text {
     position: absolute;
     color: var(--bluevlight);
     text-align: center;
-    font-size: 4.4rem;
+    font-size: var(--balloontextsize);
     font-weight: 700;
-    line-height: 100px;
-    width: 110px;
-    height: 110px;
+    line-height: calc(var(--canvassize) - (var(--canvassize) / 11));
+    width: var(--canvassize);
+    height: var(--canvassize);
     z-index: 1;
     text-shadow: 1px 1px 2px var(--medgrey);
 }
@@ -449,34 +455,26 @@ body {
     }
 }
 
-/*-- Media query to re-size balloon canvas and text elements for devices over 400px wide --*/
- @media (min-width: 400px) {
-    .canvas-balloon {
-        min-height: 150px;
-    }
-    .canvas-balloon canvas {
-        width: 150px;
-        height: 150px;
-    }
+/*-- Media query to fix balloon text height to a maximum of 5rem for devices over 926px high --*/
+ @media (min-height: 926px) {
     .balloon-answer-text {
-        line-height: 140px;
-        width: 150px;
-        height: 150px;
+        font-size: 5rem;
     }
-}
+ }
 
 /*-- Media query to re-size balloon canvas and text elements for medium and large devices over 768px wide --*/
  @media (min-width: 768px) {
     .canvas-balloon {
-        min-height: 200px;
+        min-height: 20rem;
     }
     .canvas-balloon canvas {
-        width: 200px;
-        height: 200px;
+        width: 20rem;
+        height: 20rem;
     }
     .balloon-answer-text {
-        line-height: 180px;
-        width: 200px;
-        height: 200px;
+        font-size: 5rem;
+        line-height: 18rem;
+        width: 20rem;
+        height: 20rem;
     }
 }
