@@ -462,7 +462,7 @@ body {
     }
  }
 
-/*-- Media query to re-size balloon canvas and text elements medium and large devices over 768px wide --*/
+/*-- Media query to re-size balloon canvas and text elements for medium and large devices over 768px wide --*/
  @media (min-width: 768px) {
     .canvas-balloon {
         min-height: 20rem;
@@ -479,7 +479,7 @@ body {
     }
 }
 
-/*-- Media query to re-size balloon canvas and text elements medium and large devices over 992px wide --*/
+/*-- Media query to re-size balloon canvas and text elements for medium and large devices over 992px wide --*/
  @media (min-width: 992px) {
     .canvas-balloon {
         min-height: 22rem;
