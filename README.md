@@ -221,7 +221,7 @@ The final colour palette selected is shown below:
 
 ## Features Implemented ##
 ### Features Implemented in Phase 1 ###
-* Ballon Pop Maths title, links to home page if selected:
+* balloon Pop Maths title, links to home page if selected:
 <img src="./assets/testing/features/title.png" style="margin: 15px; width:300px;"> 
 
 * Game mode selector (including hover styling), facilitates switching between multiplication, division, subtraction and addition games:  
@@ -260,7 +260,7 @@ The final colour palette selected is shown below:
 * Answer balloons showing potential answers. Balloons are animated using 
 [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript), showing a 
 "pop" animation sequence and playing a "pop" sound if the correct answer is selected. 
-If an incorrect answer is selected, a "deflate" sound is played and the ballon and
+If an incorrect answer is selected, a "deflate" sound is played and the balloon and
 answer fades out:
 <img src="./assets/testing/features/game-balloons.png" style="margin: 15px; width:500px;">
 
@@ -305,6 +305,7 @@ After initial early user testing and feedback, the following minor changes were 
 Note the game loader will only be visible the first time the game is played, depending on how quickly the game is initiated 
 as it is shown only until the [window load event](https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event) is fired. 
 The event handler is located in the [JavaScript Event Handler Library](./assets/js/events.js).
+* [In-game home button](./assets/testing/features/game-home.png) renamed from "Options" to "Home".
 
 ## JavaScript Code Library ##
 The [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) code has been broken down into seperate, re-usable 
@@ -329,7 +330,7 @@ and are stored in global variables. All global variables are initialised in the
 
 The user is presented with a [maths question](./assets/testing/features/game-question.png). The question type depends on the selected 
 [Game Mode](./assets/testing/features/game-mode.png). 
-6 potential answers are presented in the [answer ballons](./assets/js/game-balloons.js), 1 correct answer and 5 wrong answers. 
+6 potential answers are presented in the [answer balloons](./assets/js/game-balloons.js), 1 correct answer and 5 wrong answers. 
 Random maths questions and correct and incorrect answers are generated using functions in the 
 [JavaScript Maths Function Library](./assets/js/maths.js).
 
@@ -404,7 +405,7 @@ For further information on cloning a [GitHub](https://github.com/) repository, s
 
 Many thanks to the following:
 * [favicon.cc](https://www.favicon.cc/) for the [Balloon Favicon](https://www.favicon.cc/?action=icon&file_id=706495).
-* [Game Developer Studio](http://www.gamedeveloperstudio.com/) for the awesome [Ballon Sprite Images](https://www.gamedeveloperstudio.com/graphics/viewgraphic.php?item=134l668d3b3n083827).
+* [Game Developer Studio](http://www.gamedeveloperstudio.com/) for the awesome [balloon Sprite Images](https://www.gamedeveloperstudio.com/graphics/viewgraphic.php?item=134l668d3b3n083827).
 * [SVG repo](https://www.svgrepo.com/) for the [Pin SVG Image](https://www.svgrepo.com/svg/207632/push-pin).
 * [mixkit](https://mixkit.co/) for the brilliant [Sound Effects](https://mixkit.co/free-sound-effects/game/).
 * [Martin Himmel](https://dev.to/martyhimmel/animating-sprite-sheets-with-javascript-ag3) 
@@ -423,7 +424,7 @@ Many thanks to the following for help and inspiration during this project:
 * [Neringa Bickmore](https://github.com/neringabickmore) for your valued early review and comments on the game and documentation.
 * My mentor [Reuben Ferrante](https://github.com/arex18) for helping to get me started off on the right footing and for the insightful
 review and comments on the game.
-* [Ben Kavanagh](https://github.com/BAK2K3) for the [Game loader](./assets/testing/features/game-loader.png) inspiration and comments 
+* [Ben Kavanagh](https://github.com/BAK2K3) for the [Game loader](./assets/testing/features/game-loader.png) inspiration and helpful comments 
 on the game.
 * The [Code Institute](https://codeinstitute.net/) [slack](https://slack.com/intl/en-gb/) community, for your encouragement and comments 
 on the game.
