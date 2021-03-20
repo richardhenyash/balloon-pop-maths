@@ -16,15 +16,15 @@ imgBalloonYellow.src = "assets/images/balloon-yellow-sprite.png";
 
 // Buffer sound effects, set volume to 0.6 //
 const soundPop = new Audio("assets/sounds/pop.mp3");
-soundPop.volume = 0.6;
+soundPop.volume = 0.5;
 const soundDeflate = new Audio("assets/sounds/deflate.mp3");
-soundDeflate.volume = 0.6;
+soundDeflate.volume = 0.5;
 const soundHighScore = new Audio("assets/sounds/high-score.mp3");
-soundHighScore.volume = 0.6;
+soundHighScore.volume = 0.5;
 const soundUnlucky = new Audio("assets/sounds/unlucky.mp3");
-soundUnlucky.volume = 0.6;
+soundUnlucky.volume = 0.5;
 const soundWellDone = new Audio("assets/sounds/well-done.mp3");
-soundWellDone.volume = 0.6;
+soundWellDone.volume = 0.5;
 
 // Initialise global variables //
 let bpmSoundEffectsMuted = false;
