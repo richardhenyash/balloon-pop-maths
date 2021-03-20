@@ -53,7 +53,7 @@ The option to select specific times tables to practice enables targeted learning
 The **Contact Modal** has been succesfully implemented using 
 [Email JS](https://www.emailjs.com/) and the [JavaScript Mail Library](./assets/js/mail.js) 
 and has been tested. See below screen prints:  
-<img src="./assets/testing/features/contact-modal.png" style="margin: 15px; align="left" width:300px;">
+<img src="./assets/testing/features/contact-modal.png" style="margin: 15px; align=left width:300px;">
 <img src="./assets/testing/features/contact-modal-success.png" style="margin: 15px; width:300px;">
 <img src="./assets/testing/features/contact-modal-email.png" style="margin: 15px; width:300px;">
 
