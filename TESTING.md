@@ -45,9 +45,9 @@ does not currenty support CSS variable declaration are are not considered to be 
 * ***As a user, I am playing the game for fun and enjoyment.*** The game has been tested thouroughly by my 7 year old son and his classmates. 
 I have received very positive feedback from users so far, who appear to enjoy playing the game.
 * ***As a user, I am playing the game to learn new maths skills.*** My son has been succesfully learning his 3 and 4 times tables using the game. 
-The option to select specific times tables to practice enables targeted learning. See [Options]("/assets/testing/features/options.png).
+The option to select specific times tables to practice enables targeted learning. See [Options]("/assets/testing/features/options.png").
 * ***As a user, I am playing the game to reinforce existing maths knowledge.*** My son has been reinforcing his existing knowledge of 2, 5 and 10 times tables using the game.
-The option to select specific times tables to practice enables targeted learning. See [Options]("/assets/testing/features/options.png).
+The option to select specific times tables to practice enables targeted learning. See [Options]("/assets/testing/features/options.png").
 * ***As a user or parent, I would like to to provide feedback to the developer about the game.***
 The **Contact Modal** has been succesfully implemented using 
 [Email JS](https://www.emailjs.com/) and the [JavaScript Mail Library](./assets/js/mail.js), has been tested and works as intended. 
