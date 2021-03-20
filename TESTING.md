@@ -50,10 +50,10 @@ The option to select specific times tables to practice enables targeted learning
 * ***As a user, I am playing the game to reinforce existing maths knowledge.*** My son has been reinforcing his existing knowledge of 2, 5 and 10 times tables using the game.
 The option to select specific times tables to practice enables targeted learning.
 * ***As a user or parent, I would like to to provide feedback to the developer about the game.***
-The **Contact Modal** has been succesfully implemented and tested using 
-[Email JS](https://www.emailjs.com/) and the [JavaScript Mail Library](./assets/js/mail.js). 
-See below screen prints:  
-<img src="./assets/testing/features/contact-modal.png" style="margin: 15px; width:300px;">
+The **Contact Modal** has been succesfully implemented using 
+[Email JS](https://www.emailjs.com/) and the [JavaScript Mail Library](./assets/js/mail.js) 
+and has been tested. See below screen prints:  
+<img src="./assets/testing/features/contact-modal.png" style="margin: 15px; align="left" width:300px;">
 <img src="./assets/testing/features/contact-modal-success.png" style="margin: 15px; width:300px;">
 <img src="./assets/testing/features/contact-modal-email.png" style="margin: 15px; width:300px;">
 
