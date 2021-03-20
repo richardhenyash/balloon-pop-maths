@@ -83,6 +83,25 @@ for (mdBtn of mdbtnIdArray) {
     })
 }
 
+// On click event handler added to all multiply and divide options buttons except the first two //
+// Makes first two multiply and divide option buttons not active //
+$("[id^=btn-mul-div]").each(function() {
+  let btnId = "#" + $(this).id
+  let btnNo = btnId.substring(13, 14)
+  console.log(btnNo)
+  if (btnNo > 2) {
+    $(this).click(function() {
+        // Initialise button ID array
+        let btnIdArray = ["#btn-mul-div-1", "#btn-mul-div-2"]
+        // Make all buttons in button ID array not active
+        makeNotActive(btnIdArray);
+        if ($(this).hasClass("active")) {
+            $(this).button('toggle');
+        }
+    })
+  }
+})
+
 // On click event handler added to first four options buttons in addition and subtraction mode //
 // Removes active class to give toggle behaviour to first four option buttons //
 $("#btn-add-sub-1").click(function() {
