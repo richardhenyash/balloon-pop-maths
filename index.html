@@ -18,7 +18,7 @@
     <!-- Link to Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- Link to Email JS -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
     <title>Balloon Pop Maths</title>
 </head>
 <body>
@@ -31,7 +31,7 @@
                 <a href="index.html">
                     <h1 class="heading-main">Balloon</h1>
                     <h1 class="heading-main">Pop
-                        <img src="assets/images/balloon-purple-cropped.png" height="80" width="80"/>
+                        <img src="assets/images/balloon-purple-cropped.png" alt="Purple balloon popping" height="80" width="80"/>
                     </h1>
                     <h1 class="heading-main">Maths</h1>
                 </a>
@@ -39,29 +39,29 @@
             <!-- Screens larger than md -->
             <div class="col-12 d-none d-md-block container-heading-main-large text-center">
                 <a href="index.html">
-                    <h1 class="heading-main">Balloon Pop<img src="assets/images/balloon-purple-cropped.png" height="80" width="80"> Maths</h1>
+                    <h1 class="heading-main">Balloon Pop<img src="assets/images/balloon-purple-cropped.png" alt="Purple balloon popping" height="80" width="80"> Maths</h1>
                 </a>
             </div>
         </div>
     </section>
     <!-- Options -->
-    <section id="options-section" class="container-sm">
+    <section id="options-section" class="container-sm" aria-label="Options Section">
         <div class="row">
             <div class="col-md-2"></div>
             <div class="col-md-8">
                 <!-- Game Mode Options -->
-                <div aria-label="Game Mode" class="btn-group btn-group-toggle d-flex w-100 container-button-group" data-toggle="buttons">
-                    <label id="multiply" class="btn btn-xl w-100 btn-info btn-text active" aria-pressed="true">
-                        <input type="radio" aria-label="Multiplication" name="game-mode" autocomplete="off" checked> x
+                <div class="btn-group btn-group-toggle d-flex w-100 container-button-group" data-toggle="buttons">
+                    <label id="multiply" class="btn btn-xl w-100 btn-info btn-text active">
+                        <input type="radio" aria-label="Multiplication" name="game-mode" checked> x
                     </label>
                     <label id="divide" class="btn btn-xl w-100 btn-info btn-text">
-                        <input type="radio" aria-label="Division" name="game-mode" autocomplete="off"> &divide
+                        <input type="radio" aria-label="Division" name="game-mode"> &divide;
                     </label>
                     <label id="add" class="btn btn-xl w-100 btn-info btn-text">
-                        <input type="radio" aria-label="Addition" name="game-mode" autocomplete="off"> +
+                        <input type="radio" aria-label="Addition" name="game-mode"> +
                     </label>
                     <label id="subtract" class="btn btn-xl w-100 btn-info btn-text">
-                        <input type="radio" aria-label="Subtraction" name="game-mode" autocomplete="off"> -
+                        <input type="radio" aria-label="Subtraction" name="game-mode"> -
                     </label>
                 </div>
                 <!-- High Score -->
@@ -73,17 +73,17 @@
                     <button id="play" type="button" class="btn btn-xxl w-100 btn-info btn-text">PLAY</button>
                 </div>
                 <!-- Audio Controls -->
-                <div aria-label="Audio Controls" class="btn-group btn-group-toggle d-flex w-100 container-button-group" data-toggle="buttons">
+                <div class="btn-group btn-group-toggle d-flex w-100 container-button-group" data-toggle="buttons">
                     <label id="audio-on" class="btn btn-xl w-100 btn-info btn-text active">
-                        <input type="radio" aria-label="Audio On" name="audio-on" autocomplete="off" checked><i class="fas fa-volume-up"></i>
+                        <input type="radio" aria-label="Audio On" name="audio-on" checked><i class="fas fa-volume-up"></i>
                     </label>
                     <label id="audio-off" class="btn btn-xl w-100 btn-info btn-text">
-                        <input type="radio" aria-label="Audio Off" name="audio-off" autocomplete="off"><i class="fas fa-volume-mute"></i>
+                        <input type="radio" aria-label="Audio Off" name="audio-off"><i class="fas fa-volume-mute"></i>
                     </label>
                 </div>
                 <!-- Options Button -->
                 <div class="container-button-group d-flex w-100">
-                    <button type="button" data-toggle="collapse" href="#options" aria-expanded="false" aria-controls="options" class="btn btn-xl w-100 btn-info btn-text">Options</button>
+                    <button type="button" data-toggle="collapse" data-target="#options" aria-expanded="false" aria-controls="options" class="btn btn-xl w-100 btn-info btn-text">Options</button>
                 </div>
             </div>
         </div>
@@ -92,23 +92,23 @@
             <div class="col-md-2"></div>
             <div class="col-md-8">
                 <!-- Options applicable to all games -->
-                <div aria-label="Number Of Questions" class="btn-group btn-group-toggle d-flex w-100 container-button-group" data-toggle="buttons">
+                <div class="btn-group btn-group-toggle d-flex w-100 container-button-group" data-toggle="buttons">
                     <label id="10q" class="btn btn-xl w-100 btn-info btn-text active">
-                        <input type="radio" name="questions" autocomplete="off" checked> 10 Questions
+                        <input type="radio" name="questions" checked> 10 Questions
                     </label>
                     <label id="20q" class="btn btn-xl w-100 btn-info btn-text">
-                        <input type="radio" name="questions" autocomplete="off"> 20 Questions
+                        <input type="radio" name="questions"> 20 Questions
                     </label>
                 </div>
-                <div aria-label="Difficulty Level" class="btn-group btn-group-toggle d-flex w-100 container-button-group" data-toggle="buttons">
+                <div class="btn-group btn-group-toggle d-flex w-100 container-button-group" data-toggle="buttons">
                     <label id="easy" class="btn btn-xl w-100 btn-info btn-text active">
-                        <input type="radio" name="difficulty" autocomplete="off" checked> Easy
+                        <input type="radio" name="difficulty" checked> Easy
                     </label>
                     <label id="medium" class="btn btn-xl w-100 btn-info btn-text">
-                        <input type="radio" name="difficulty" autocomplete="off"> Medium
+                        <input type="radio" name="difficulty"> Medium
                     </label>
                     <label id="hard" class="btn btn-xl w-100 btn-info btn-text">
-                        <input type="radio" name="difficulty" autocomplete="off"> Hard
+                        <input type="radio" name="difficulty"> Hard
                     </label>
                 </div>
                 <!-- Multiplication and Division game options -->
@@ -116,10 +116,10 @@
                     <div class="row">
                         <div class="col d-flex w-100 container-button">
                             <span class="container-button"></span>
-                            <button id="btn-mul-div-1" type="button" data-toggle="button" autocomplete="off" aria-pressed="true"
+                            <button id="btn-mul-div-1" type="button" data-toggle="button" aria-pressed="true"
                                 class="btn btn-xl w-100 btn-info btn-text btn-xl-focus-none active">2x, 5x, 10x</button>
                             <span class="container-button"></span>
-                            <button id="btn-mul-div-2" type="button" data-toggle="button" autocomplete="off"
+                            <button id="btn-mul-div-2" type="button" data-toggle="button"
                                 class="btn btn-xl w-100 btn-info btn-text btn-xl-focus-none">Mixed 1 to 12</button>
                             <span class="container-button"></span>
                         </div>
@@ -127,10 +127,10 @@
                     <div class="row">
                         <div class="col d-flex w-100 container-button">
                             <span class="container-button"></span>
-                            <button id="btn-mul-div-3" type="button" data-toggle="button" autocomplete="off"
+                            <button id="btn-mul-div-3" type="button" data-toggle="button" 
                                 class="btn btn-xl w-100 btn-info btn-text btn-xl-focus-none">1x</button>
                             <span class="container-button"></span>
-                            <button id="btn-mul-div-4" type="button" data-toggle="button" autocomplete="off"
+                            <button id="btn-mul-div-4" type="button" data-toggle="button"
                                 class="btn btn-xl w-100 btn-info btn-text btn-xl-focus-none">7x</button>
                             <span class="container-button"></span>
                         </div>
@@ -138,10 +138,10 @@
                     <div class="row">
                         <div class="col d-flex w-100 container-button">
                             <span class="container-button"></span>
-                            <button id="btn-mul-div-5" type="button" data-toggle="button" autocomplete="off"
+                            <button id="btn-mul-div-5" type="button" data-toggle="button"
                                 class="btn btn-xl w-100 btn-info btn-text btn-xl-focus-none">2x</button>
                             <span class="container-button"></span>
-                            <button id="btn-mul-div-6" type="button" data-toggle="button" autocomplete="off"
+                            <button id="btn-mul-div-6" type="button" data-toggle="button"
                                 class="btn btn-xl w-100 btn-info btn-text btn-xl-focus-none">8x</button>
                             <span class="container-button"></span>
                         </div>
@@ -149,10 +149,10 @@
                     <div class="row">
                         <div class="col d-flex w-100 container-button">
                             <span class="container-button"></span>
-                            <button id="btn-mul-div-7" type="button" data-toggle="button" autocomplete="off"
+                            <button id="btn-mul-div-7" type="button" data-toggle="button"
                                 class="btn btn-xl w-100 btn-info btn-text btn-xl-focus-none">3x</button>
                             <span class="container-button"></span>
-                            <button id="btn-mul-div-8" type="button" data-toggle="button" autocomplete="off"
+                            <button id="btn-mul-div-8" type="button" data-toggle="button"
                                 class="btn btn-xl w-100 btn-info btn-text btn-xl-focus-none">9x</button>
                             <span class="container-button"></span>
                         </div>
@@ -160,10 +160,10 @@
                     <div class="row">
                         <div class="col d-flex w-100 container-button">
                             <span class="container-button"></span>
-                            <button id="btn-mul-div-9" type="button" data-toggle="button" autocomplete="off"
+                            <button id="btn-mul-div-9" type="button" data-toggle="button"
                                 class="btn btn-xl w-100 btn-info btn-text btn-xl-focus-none">4x</button>
                             <span class="container-button"></span>
-                            <button id="btn-mul-div-10" type="button" data-toggle="button" autocomplete="off"
+                            <button id="btn-mul-div-10" type="button" data-toggle="button"
                                 class="btn btn-xl w-100 btn-info btn-text btn-xl-focus-none">10x</button>
                             <span class="container-button"></span>
                         </div>
@@ -171,10 +171,10 @@
                     <div class="row">
                         <div class="col d-flex w-100 container-button">
                             <span class="container-button"></span>
-                            <button id="btn-mul-div-11" type="button" data-toggle="button" autocomplete="off"
+                            <button id="btn-mul-div-11" type="button" data-toggle="button"
                                 class="btn btn-xl w-100 btn-info btn-text btn-xl-focus-none">5x</button>
                             <span class="container-button"></span>
-                            <button id="btn-mul-div-12" type="button" data-toggle="button" autocomplete="off"
+                            <button id="btn-mul-div-12" type="button" data-toggle="button"
                                 class="btn btn-xl w-100 btn-info btn-text btn-xl-focus-none">11x</button>
                             <span class="container-button"></span>
                         </div>
@@ -182,10 +182,10 @@
                     <div class="row">
                         <div class="col d-flex w-100 container-button">
                             <span class="container-button"></span>
-                            <button id="btn-mul-div-13" type="button" data-toggle="button" autocomplete="off"
+                            <button id="btn-mul-div-13" type="button" data-toggle="button" 
                                 class="btn btn-xl w-100 btn-info btn-text btn-xl-focus-none">6x</button>
                             <span class="container-button"></span>
-                            <button id="btn-mul-div-14" type="button" data-toggle="button" autocomplete="off"
+                            <button id="btn-mul-div-14" type="button" data-toggle="button" 
                                 class="btn btn-xl w-100 btn-info btn-text btn-xl-focus-none">12x</button>
                             <span class="container-button"></span>
                         </div>
@@ -195,10 +195,10 @@
                     <div class="row">
                         <div class="col d-flex w-100 container-button">
                             <span class="container-button"></span>
-                            <button id="btn-add-sub-1" type="button" data-toggle="button" autocomplete="off"
-                                class="btn btn-xl w-100 btn-info btn-text btn-xl-focus-none">Mixed to 10</button>
+                            <button id="btn-add-sub-1" type="button" data-toggle="button" aria-pressed="true"
+                                class="btn btn-xl w-100 btn-info btn-text btn-xl-focus-none active">Mixed to 10</button>
                             <span class="container-button"></span>
-                            <button id="btn-add-sub-2" type="button" data-toggle="button" autocomplete="off"
+                            <button id="btn-add-sub-2" type="button" data-toggle="button" 
                                 class="btn btn-xl w-100 btn-info btn-text btn-xl-focus-none">Mixed to 20</button>
                             <span class="container-button"></span>
                         </div>
@@ -206,10 +206,10 @@
                     <div class="row">
                         <div class="col d-flex w-100 container-button">
                             <span class="container-button"></span>
-                            <button id="btn-add-sub-3" type="button" data-toggle="button" autocomplete="off"
+                            <button id="btn-add-sub-3" type="button" data-toggle="button" 
                                 class="btn btn-xl w-100 btn-info btn-text btn-xl-focus-none">Mixed to 50</button>
                             <span class="container-button"></span>
-                            <button id="btn-add-sub-4" type="button" data-toggle="button" autocomplete="off"
+                            <button id="btn-add-sub-4" type="button" data-toggle="button" 
                                 class="btn btn-xl w-100 btn-info btn-text btn-xl-focus-none">Mixed to 100</button>
                             <span class="container-button"></span>
                         </div>
@@ -220,12 +220,12 @@
         </div>
     </section>
     <!-- Information -->
-    <section id="information-section" class="container-sm">
+    <section id="information-section" class="container-sm" aria-label="Information Section">
         <div class="row">
             <div class="col-md-2"></div>
             <div class="col-md-8">
                 <div class="container-button-group d-flex w-100">
-                    <button type="button" data-toggle="collapse" href="#information" aria-expanded="false" aria-controls="information" class="btn btn-xl w-100 btn-info btn-text">How To Play</button>
+                    <button type="button" data-toggle="collapse" data-target="#information" aria-expanded="false" aria-controls="information" class="btn btn-xl w-100 btn-info btn-text">How To Play</button>
                 </div>
             </div>
         </div>
@@ -250,11 +250,11 @@
         </div>
     </section>
     <!-- Game Section -->
-    <section id="game-section" class="container-xl d-none">
+    <section id="game-section" class="container-xl d-none" aria-label="Game Section">
         <!-- Home Button -->
         <div id="game-section-home" class="row container-button-game">
             <div class="col text-left pr-0">
-                <button id="btn-game-section-home" type="button" data-toggle="button" autocomplete="off"
+                <button id="btn-game-section-home" type="button" data-toggle="button" 
                     class="btn btn-xl btn-info btn-text btn-xl-focus-none">Home
                 </button>
             </div>
@@ -365,13 +365,13 @@
                     <form id="contact" onsubmit="return sendMail(this);">
                         <p>Please feel free to contact me with suggestions on how I can improve Balloon Pop Maths, or if you need a developer to make your ideas reality! </p>
                         <div class="form-group">
-                            <input type="text" class="form-control" id="name" name="name" aria-describedby="emailHelp" placeholder="Enter name" required>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Enter name" aria-label="Enter name" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" required>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" aria-label="Enter email" required>
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control" type="textarea" id="message" name="message" placeholder="Enter message" maxlength="6000" rows="7" required></textarea>
+                            <textarea class="form-control" id="message" name="message" placeholder="Enter message" aria-label="Enter message" maxlength="6000" rows="7" required></textarea>
                         </div>
                         <div id="form-buttons" class="text-right">
                             <button type="button" class="btn btn-lg btn-secondary" data-dismiss="modal">Close</button>
