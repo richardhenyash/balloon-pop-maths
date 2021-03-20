@@ -16,7 +16,25 @@
 ## Automated Testing ##
 
 ### HTML ###
-All HTML code was validated using the [W3C Markup Validation Service](https://validator.w3.org/).  
+All HTML code was validated using the [W3C Markup Validation Service](https://validator.w3.org/). 
+38 errors and 8 warnings were initially generated. See [HTML Validation Report 1](./assets/testing/validation/html-validation-report-1.pdf).
+* 29 errors were caused by the autocomplete="off" attribute being set on all buttons. 
+This attribute was originally set as per the [Bootstrap](https://getbootstrap.com/docs/4.5/getting-started/introduction/) 
+documentation on [buttons](https://getbootstrap.com/docs/4.0/components/buttons/), 
+but is not required. The attribute was removed in all cases.
+* 2 errors were caused by the aria-pressed="true" attribute being incorrectly set on label elements. These attributes were removed in both cases.
+* 2 errors were caused by images not having "alt" attributes. Alt attributes were added in both cases.
+* 2 errors were caused by the "href" attribute being used on button elements. The attribute was replaced with the correct data-target attribute in both cases.
+* 1 error was caused by the "type" attribute being incorrectly set on the textarea form element. The attribute was removed.
+* 1 error was caused by the "aria-describedby" attribute being incorrectly set on the form name input. The attribute was removed.
+* 1 error was caused by the "divide" character on the divide mode button not being terminated correctly with a semi colon. A semi colon was added.
+* 4 warnings were caused by the misuse of the "aria-label" attribute. The attributes were removed in all cases.
+* 3 warnings were related to sections lacking a heading. Appropriate "aria-label" attributes were added to identify the sections in each case.
+* 1 warning was caused by the "type" attribute being set unnecesarilly for JavaScript resources, where the Email.JS JavaScript is loaded. This code snippet was 
+originally copied from the [Email JS](https://www.emailjs.com/) [documentation](https://www.emailjs.com/docs/sdk/installation/). The attribute was removed.
+
+The HTML code was then re-validated and now passes validation with no error or warnings. 
+See [HTML Validation Report 2](./assets/testing/validation/html-validation-report-2.pdf).
 
 ### Custom CSS Styling ###
 [Custom CSS styling](./assets/css/style.css) was validated using the [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/).  

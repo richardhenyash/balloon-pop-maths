@@ -14,6 +14,7 @@
 /*-- Canvas Size--*/
     --canvassize: calc((100vh - 22.6rem) / 4);
     --balloontextsize: calc((100vh - 22.6rem) / 14);
+    --balloontextlineheight: calc((100vh - 22.6rem) / 4.4);
 }
 
 /*-- Custom Fonts--*/
@@ -264,7 +265,7 @@ body {
     text-align: center;
     font-size: var(--balloontextsize);
     font-weight: 700;
-    line-height: calc(var(--canvassize) - (var(--canvassize) / 11));
+    line-height: var(--balloontextlineheight);
     width: var(--canvassize);
     height: var(--canvassize);
     z-index: 1;

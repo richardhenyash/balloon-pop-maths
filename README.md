@@ -110,7 +110,7 @@ This coupled with the developer's current skills constraints may impact on wheth
 all four maths games can be incorporated into the site in the initial development phase.
 
 #### Functional Requirements ####
-* The User would like to be able to select different maths games to play.
+* The user would like to be able to select different maths games to play.
 * The user would like to be able to select different options within each maths game - e.g. 2x, 5x and 10x tables
 within the multiplication game, or addition of numbers up to 20 in the addition game.
 * The user would like to be able to set the difficulty level of the maths games -  this will give the games a wider age appeal.
@@ -129,7 +129,7 @@ Feature|Importance|Difficulty|Development Phase
 -------|----------|----------|-----------------
 Balloon Pop Multiplication game| 5 | 3 | 1 |
 Contact Form to contact developer | 4 | 2 | 1
-Link to developer [GitHub] page (https://github.com/richardhenyash) | 3 | 1 | 1
+Link to developer [GitHub](https://github.com/richardhenyash) page | 3 | 1 | 1
 Balloon Pop Division game| 3 | 3 | 1
 Balloon Pop Addition game| 3 | 3 | 1
 Balloon Pop Subtraction game| 3 | 3 | 1
@@ -140,12 +140,12 @@ An initial [Site Map](/assets/wireframes/site-map.png) was produced, and is show
 <img src="./assets/wireframes/site-map.png" width="400px" style="margin: 15px;">
 
 ### Wireframes ###
-[Hand Sketches](/assets/wireframes/rev0) were initially produced showing the home page and times table game:  
+[Hand Sketches](/assets/wireframes/rev0) were drafted showing the home page and times table game:  
 
 <img src="./assets/wireframes/rev0/home-sketch.jpg" width="600px" style="margin: 15px;">
 <img src="./assets/wireframes/rev0/game-sketch.jpg" width="600px" style="margin: 15px;">
 
-[Initial Wireframes](/assets/wireframes/rev1) were produced showing the [Home]("/assets/wireframes/rev1/home-multiplication.png)
+[Initial Wireframes](/assets/wireframes/rev1) were then produced showing the [Home]("/assets/wireframes/rev1/home-multiplication.png)
 page layout for each game mode: ([Multiplication]("/assets/wireframes/rev1/home-multiplication.png), 
 [Division]("/assets/wireframes/rev1/home-division.png), [Addition]("/assets/wireframes/rev1/home-addition.png) 
 and [Subtraction]("/assets/wireframes/rev1/home-subtraction.png).  The  home page [Multiplication]("/assets/wireframes/rev1/home-multiplication.png)
@@ -174,7 +174,7 @@ and [Game]("./assets/wireframes/rev1/game-multiplication.png) page layouts on [T
 ### Design Choices ###
 
 #### Fonts ####
-[Whale I Tried](https://mistifonts.com/whale-i-tried/) has been chosen as the title font, and is used for the main **Balloon Pop Maths** heading. 
+[Whale I Tried](https://mistifonts.com/whale-i-tried/) has been chosen as the title font, and is used for the main **Balloon Pop Maths** [heading](./assets/testing/features/title.png). 
 [Whale I Tried](https://mistifonts.com/whale-i-tried/) is a custom outlined cartoon font available from [Misti's Fonts](https://mistifonts.com/), 
 and is free for personal and non-profit use. This font was chosen as it has a balloon like look and a soft, playful feel.
 * font-family: "Whale I Tried", sans-serif;
@@ -190,13 +190,13 @@ and is licensed under the [Open Font License](https://scripts.sil.org/cms/script
 The "sky" background colour is a 3 colour gradient generated using [ColorSpace](https://mycolor.space/gradient3). 
 The three colours used (#7CC0FF, #6FD1F4, #9EFBF5) and the colour gradient generated are shown below:  
 
-<img src="./assets/wireframes/colour-gradient.png" width="600px" style="margin: 15px;"> 
+<img src="./assets/wireframes/colour-gradient.png" width="800px" style="margin: 15px;"> 
 
 The colour palette was chosen to tie-in with the first colour in the 3 colour gradient (#7CC0FF). 
 Colour ideas were generated using the [ColorSpace](https://mycolor.space/) colour palette generator. 
 The final colour palette selected is shown below:  
 
-<img src="./assets/wireframes/colour-palette.png" width="600px" style="margin: 15px;">  
+<img src="./assets/wireframes/colour-palette.png" width="800px" style="margin: 15px;">  
 
 * #908CD9 - "Blue Bell" - used for buttons, question area, score and high score outlines.
 * #9C70BD - "Purple Mountain Majesty" - Used for button highlighting, footer and information area links and audio controls.
@@ -233,7 +233,7 @@ The final colour palette selected is shown below:
 * Play button (including hover styling), launches game:  
 <img src="./assets/testing/features/play.png" style="margin: 15px; width:300px;"> 
 
-* Options audio controls, allows audio to be toggled on and off from the options area:  
+* Options audio controls (including hover styling), allows audio to be toggled on and off from the options area:  
 <img src="./assets/testing/features/options-audio.png" style="margin: 15px; width:300px;">
 
 * Options button (including hover styling), opens collapsing options panel:  
@@ -248,7 +248,7 @@ The final colour palette selected is shown below:
 * GitHub link (including hover styling), links to developer page on github:  
 <img src="./assets/testing/features/github-link.png" style="margin: 15px; width:50px;"> 
 
-* In-game home button, returns to Home panel from game:  
+* In-game home button (including hover styling), returns to Home panel from game:  
 <img src="./assets/testing/features/game-home.png" style="margin: 15px; width:100px;">
 
 * Game loader, displayed while game window is loading:
@@ -279,7 +279,7 @@ If game is played on "Hard" difficulty level (selected in options), health is se
 * Question panel, shows current question:
 <img src="./assets/testing/features/game-question.png" style="margin: 15px; width:200px;">
 
-* Contact modal, implemented using [Email JS](https://www.emailjs.com/). 
+* Contact modal, implemented using [Email JS](https://www.emailjs.com/) and [JavaScript Mail Library](./assets/js/mail.js). 
 If the contact form is succesfully submitted, a "Success" modal is displayed. 
 <img src="./assets/testing/features/contact-modal.png" style="margin: 15px; width:300px;">
 <img src="./assets/testing/features/contact-modal-success.png" style="margin: 15px; width:300px;">
@@ -302,8 +302,9 @@ After initial early user testing and feedback, the following minor changes were 
 * Collapsing [How To Play](./assets/testing/features/how-to-play.png) section was added underneath 
 [Options](./assets/testing/features/game-options.png) to explain how to play and to give some further information about the game. 
 * [Game loader](./assets/testing/features/game-loader.png) was added and is now shown until the game window is completelety loaded.
-Note the game loader will only be visible the first time the game is played, depending on how quickly the game is initiated 
-as it is shown only until the [window load event](https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event) is fired. 
+Note the [game loader](./assets/testing/features/game-loader.png) will only be visible the first time the game is played, depending 
+on how quickly the game is initiated as it is shown only until the 
+[window load event](https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event) is fired. 
 The event handler is located in the [JavaScript Event Handler Library](./assets/js/events.js).
 * [In-game home button](./assets/testing/features/game-home.png) renamed from "Options" to "Home".
 
@@ -372,7 +373,7 @@ green panel which also contains the published site address.
 For [Balloon Pop Maths](https://richardhenyash.github.io/balloon-pop-maths/) 
 this is https://richardhenyash.github.io/balloon-pop-maths/.
 * For further help and information, see the following links:
-[About GitHub Pages](https://docs.github.com/en/github/working-with-github-pages/about-github-pages#publishing-sources-for-github-pages-sites).  
+[About GitHub Pages](https://docs.github.com/en/github/working-with-github-pages/about-github-pages#publishing-sources-for-github-pages-sites), and  
 [Creating A GitHub Pages Site](https://docs.github.com/en/github/working-with-github-pages/creating-a-github-pages-site).
 
 In order to make a fork or clone of the project, a [GitHub](https://www.Gitpod.io/) account is required. 
