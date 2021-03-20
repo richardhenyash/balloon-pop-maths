@@ -53,12 +53,20 @@ $("#btn-mul-div-1").click(function() {
     let btnIdArray = ["#btn-mul-div-2", "#btn-mul-div-3", "#btn-mul-div-4", "#btn-mul-div-5", "#btn-mul-div-6", "#btn-mul-div-7", "#btn-mul-div-8", "#btn-mul-div-9", "#btn-mul-div-10", "#btn-mul-div-11", "#btn-mul-div-12", "#btn-mul-div-13", "#btn-mul-div-14"]
     // Make all buttons in button ID array not active
     makeNotActive(btnIdArray);
+    // Toggle button back on if de-selected
+    if ($("#btn-mul-div-1").hasClass("active")) {
+        $("#btn-mul-div-1").button('toggle');
+    }
 })
 $("#btn-mul-div-2").click(function() {
     // Initialise button ID array
     let btnIdArray = ["#btn-mul-div-1", "#btn-mul-div-3", "#btn-mul-div-4", "#btn-mul-div-5", "#btn-mul-div-6", "#btn-mul-div-7", "#btn-mul-div-8", "#btn-mul-div-9", "#btn-mul-div-10", "#btn-mul-div-11", "#btn-mul-div-12", "#btn-mul-div-13", "#btn-mul-div-14"]
     // Make all buttons in button ID array not active
     makeNotActive(btnIdArray);
+    // Toggle button back on if de-selected
+    if ($("#btn-mul-div-2").hasClass("active")) {
+        $("#btn-mul-div-2").button('toggle');
+    }
 })
 
 // Initialise button ID array with all multiply and divide options buttons except the first two //
@@ -68,7 +76,9 @@ let mdbtnIdArray = ["#btn-mul-div-3", "#btn-mul-div-4", "#btn-mul-div-5", "#btn-
 // Makes first two multiply and divide option buttons not active //
 for (mdBtn of mdbtnIdArray) {
     $(mdBtn).click(function() {
+        // Initialise button ID array
         let btnIdArray = ["#btn-mul-div-1", "#btn-mul-div-2"]
+        // Make all buttons in button ID array not active
         makeNotActive(btnIdArray);
     })
 }
@@ -76,20 +86,44 @@ for (mdBtn of mdbtnIdArray) {
 // On click event handler added to first four options buttons in addition and subtraction mode //
 // Removes active class to give toggle behaviour to first four option buttons //
 $("#btn-add-sub-1").click(function() {
+    // Initialise button ID array
     let btnIdArray = ["#btn-add-sub-2", "#btn-add-sub-3", "#btn-add-sub-4"]
+    // Make all buttons in button ID array not active
     makeNotActive(btnIdArray);
+    // Toggle button back on if de-selected
+    if ($("#btn-add-sub-1").hasClass("active")) {
+        $("#btn-add-sub-1").button('toggle');
+    }
 })
 $("#btn-add-sub-2").click(function() {
+    // Initialise button ID array
     let btnIdArray = ["#btn-add-sub-1", "#btn-add-sub-3", "#btn-add-sub-4"]
+    // Make all buttons in button ID array not active
     makeNotActive(btnIdArray);
+    // Toggle button back on if de-selected
+    if ($("#btn-add-sub-2").hasClass("active")) {
+        $("#btn-add-sub-2").button('toggle');
+    }
 })
 $("#btn-add-sub-3").click(function() {
+    // Initialise button ID array
     let btnIdArray = ["#btn-add-sub-1", "#btn-add-sub-2", "#btn-add-sub-4"]
+    // Make all buttons in button ID array not active
     makeNotActive(btnIdArray);
+    // Toggle button back on if de-selected
+    if ($("#btn-add-sub-3").hasClass("active")) {
+        $("#btn-add-sub-3").button('toggle');
+    }
 })
 $("#btn-add-sub-4").click(function() {
+    // Initialise button ID array
     let btnIdArray = ["#btn-add-sub-1", "#btn-add-sub-2", "#btn-add-sub-3"]
+    // Make all buttons in button ID array not active
     makeNotActive(btnIdArray);
+    // Toggle button back on if de-selected
+    if ($("#btn-add-sub-4").hasClass("active")) {
+        $("#btn-add-sub-4").button('toggle');
+    }
 })
 
 // Game Event Handlers //
