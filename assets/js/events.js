@@ -70,7 +70,6 @@ $(".btn-mul-div-toggle").click(function(){
 // Makes the first two multiply and divide option buttons not active //
 // Allows selection of multiple buttons with the .btn-mul-div-sticky class. Checks to see if other sticky buttons //
 // are selected before releasing button selection, to ensure that one option is always selected //
-
 $(".btn-mul-div-sticky").click(function(){
     // Initialise button ID array
     let btnIdArray = ["#btn-mul-div-1", "#btn-mul-div-2"]
