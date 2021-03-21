@@ -46,102 +46,61 @@ $("#divide").on("click", modeDivide);
 // On click event added to run playGame function when play button is clicked //
 $("#play").on("click", playGame);
 
-// On click event handler added to first two options buttons in multiplication and division modes //
-// Removes active class to give toggle behaviour to first two option buttons //
-$("#btn-mul-div-1").click(function() {
+// On click event handler added to multiplication and division options buttons with the .btn-mul-div-toggle class in multiplication and division modes //
+// Removes active class on all other multiplication and division buttons to give toggle behaviour to options buttons with the .btn-mul-div-toggle class //
+$(".btn-mul-div-toggle").click(function(){
+    // Get button ID
+    let btnId = "#" + ($(this)[0].id);
     // Initialise button ID array
-    let btnIdArray = ["#btn-mul-div-2", "#btn-mul-div-3", "#btn-mul-div-4", "#btn-mul-div-5", "#btn-mul-div-6", "#btn-mul-div-7", "#btn-mul-div-8", "#btn-mul-div-9", "#btn-mul-div-10", "#btn-mul-div-11", "#btn-mul-div-12", "#btn-mul-div-13", "#btn-mul-div-14"]
-    // Make all buttons in button ID array not active
-    makeNotActive(btnIdArray);
-    // Toggle button back on if de-selected
-    if ($("#btn-mul-div-1").hasClass("active")) {
-        $("#btn-mul-div-1").button('toggle');
+    let btnIdArray = returnBtnIdArray("btn-mul-div");
+    // Remove clicked button from button ID array
+    let i = btnIdArray.indexOf(btnId);
+    if (i > -1) {
+        btnIdArray.splice(i, 1);
     }
-})
-$("#btn-mul-div-2").click(function() {
-    // Initialise button ID array
-    let btnIdArray = ["#btn-mul-div-1", "#btn-mul-div-3", "#btn-mul-div-4", "#btn-mul-div-5", "#btn-mul-div-6", "#btn-mul-div-7", "#btn-mul-div-8", "#btn-mul-div-9", "#btn-mul-div-10", "#btn-mul-div-11", "#btn-mul-div-12", "#btn-mul-div-13", "#btn-mul-div-14"]
     // Make all buttons in button ID array not active
     makeNotActive(btnIdArray);
-    // Toggle button back on if de-selected
-    if ($("#btn-mul-div-2").hasClass("active")) {
-        $("#btn-mul-div-2").button('toggle');
+    // Toggle button back on if de-selected;
+    if ($(this).hasClass("active")) {
+        $(this).button('toggle');
     }
 })
 
-// Initialise button ID array with all multiply and divide options buttons except the first two //
-let mdbtnIdArray = ["#btn-mul-div-3", "#btn-mul-div-4", "#btn-mul-div-5", "#btn-mul-div-6", "#btn-mul-div-7", "#btn-mul-div-8", "#btn-mul-div-9", "#btn-mul-div-10", "#btn-mul-div-11", "#btn-mul-div-12", "#btn-mul-div-13", "#btn-mul-div-14"]
+// On click event handler added to all multiplication and division options buttons with the .btn-mul-div-sticky class //
+// Makes the first two multiply and divide option buttons not active //
+// Allows selection of multiple buttons with the .btn-mul-div-sticky class. Checks to see if other sticky buttons //
+// are selected before releasing button selection, to ensure that one option is always selected //
 
-// On click event handler added to all multiply and divide options buttons except the first two //
-// Makes first two multiply and divide option buttons not active //
-for (mdBtn of mdbtnIdArray) {
-    $(mdBtn).click(function() {
-        // Initialise button ID array
-        let btnIdArray = ["#btn-mul-div-1", "#btn-mul-div-2"]
-        // Make all buttons in button ID array not active
-        makeNotActive(btnIdArray);
-    })
-}
-
-// On click event handler added to all multiply and divide options buttons except the first two //
-// Makes first two multiply and divide option buttons not active //
-$("[id^=btn-mul-div]").each(function() {
-  let btnId = "#" + $(this).id
-  let btnNo = btnId.substring(13, 14)
-  console.log(btnNo)
-  if (btnNo > 2) {
-    $(this).click(function() {
-        // Initialise button ID array
-        let btnIdArray = ["#btn-mul-div-1", "#btn-mul-div-2"]
-        // Make all buttons in button ID array not active
-        makeNotActive(btnIdArray);
-        if ($(this).hasClass("active")) {
-            $(this).button('toggle');
-        }
-    })
-  }
-})
-
-// On click event handler added to first four options buttons in addition and subtraction mode //
-// Removes active class to give toggle behaviour to first four option buttons //
-$("#btn-add-sub-1").click(function() {
+$(".btn-mul-div-sticky").click(function(){
     // Initialise button ID array
-    let btnIdArray = ["#btn-add-sub-2", "#btn-add-sub-3", "#btn-add-sub-4"]
+    let btnIdArray = ["#btn-mul-div-1", "#btn-mul-div-2"]
     // Make all buttons in button ID array not active
     makeNotActive(btnIdArray);
-    // Toggle button back on if de-selected
-    if ($("#btn-add-sub-1").hasClass("active")) {
-        $("#btn-add-sub-1").button('toggle');
+    // Get button ID
+    let btnId = ($(this)[0].id);
+    // Toggle button back on if de-selected, and no other buttons with the .btn-mul-div-sticky class are selected
+    if (($(this).hasClass("active")) && ((checkOtherStickyButtons(btnId)) == false)) {
+        $(this).button('toggle');
     }
 })
-$("#btn-add-sub-2").click(function() {
+
+// On click event handler added to addition and subtraction options buttons with the .btn-add-sub-toggle class in addition and subtraction modes //
+// Removes active class on all other buttons to give toggle behaviour to addition and subtraction options buttons with the .btn-add-sub-toggle class //
+$(".btn-add-sub-toggle").click(function(){
+    // Get button ID
+    let btnId = "#" + ($(this)[0].id);
     // Initialise button ID array
-    let btnIdArray = ["#btn-add-sub-1", "#btn-add-sub-3", "#btn-add-sub-4"]
-    // Make all buttons in button ID array not active
-    makeNotActive(btnIdArray);
-    // Toggle button back on if de-selected
-    if ($("#btn-add-sub-2").hasClass("active")) {
-        $("#btn-add-sub-2").button('toggle');
+    let btnIdArray = returnBtnIdArray("btn-add-sub");
+    // Remove clicked button from button ID array
+    let i = btnIdArray.indexOf(btnId);
+    if (i > -1) {
+        btnIdArray.splice(i, 1);
     }
-})
-$("#btn-add-sub-3").click(function() {
-    // Initialise button ID array
-    let btnIdArray = ["#btn-add-sub-1", "#btn-add-sub-2", "#btn-add-sub-4"]
     // Make all buttons in button ID array not active
     makeNotActive(btnIdArray);
-    // Toggle button back on if de-selected
-    if ($("#btn-add-sub-3").hasClass("active")) {
-        $("#btn-add-sub-3").button('toggle');
-    }
-})
-$("#btn-add-sub-4").click(function() {
-    // Initialise button ID array
-    let btnIdArray = ["#btn-add-sub-1", "#btn-add-sub-2", "#btn-add-sub-3"]
-    // Make all buttons in button ID array not active
-    makeNotActive(btnIdArray);
-    // Toggle button back on if de-selected
-    if ($("#btn-add-sub-4").hasClass("active")) {
-        $("#btn-add-sub-4").button('toggle');
+    // Toggle button back on if de-selected;
+    if ($(this).hasClass("active")) {
+        $(this).button('toggle');
     }
 })
 

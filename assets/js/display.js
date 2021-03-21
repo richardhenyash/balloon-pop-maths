@@ -73,6 +73,19 @@ function modeDivide() {
     $("#btn-mul-div-14").html("&divide12");
 }
 
+/** Function to return an array of button id's, given button prefix. **/
+function returnBtnIdArray(btnPrefix) {
+    let btnArray = $(":button");
+    let btnIdArray = [];
+    let i = 0;
+    for (i = 0; i < btnArray.length; i++) {
+        if (((btnArray[i].id).search(btnPrefix)) > -1) {
+            btnIdArray.push("#" + btnArray[i].id);
+        }
+    }     
+    return(btnIdArray);
+}
+
 /** Function to make the passed button active, and all other buttons not active. **/
 function makeActive(btnId) {
     // Set button ID array
@@ -93,15 +106,18 @@ function makeNotActive(btnIdArray) {
     return(btnIdArray);
 }
 
-/** Function to activate #btn-mul-div-1 if all other buttons are inactive. **/
-function checkButtons(gameMode) {
-    // Get active button array and check length
-    if ((returnActiveButtons(gameMode).length) === 0) {
-        // Check game mode and make relevant first button active
-        if (gameMode == "add" || gameMode == "subtract") {
-            $("#btn-add-sub-1").addClass("active").addClass("focus").attr("aria-pressed", "true");    
-        } else $("#btn-mul-div-1").addClass("active").addClass("focus").attr("aria-pressed", "true");
+/** Function to check if any other buttons with the .btn-mul-div-sticky class are selected. **/
+function checkOtherStickyButtons(btnId) {
+    let mdbtnIdArray = $(".btn-mul-div-sticky");
+    let activeFlag = false;
+    let i = 0;
+    while ((activeFlag == false) && (i < mdbtnIdArray.length)) {
+        if (((mdbtnIdArray[i].id) !== btnId) && (mdbtnIdArray[i].classList.contains("active"))) {
+            activeFlag = true;
+        }
+        i++;
     }
+    return(activeFlag);
 }
 
 /** Function to return selected game mode. **/

@@ -8,7 +8,6 @@ function playGame() {
     $("[id^=balloon-answer-text]").show();
     // Set global variables 
     bpmGameMode = returnGameMode();
-    checkButtons(bpmGameMode);
     bpmQno = returnQuestions();
     bpmDifficulty = returnDifficulty();
     bpmActiveButtons = returnActiveButtons(bpmGameMode);
