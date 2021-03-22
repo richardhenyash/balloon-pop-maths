@@ -26,10 +26,12 @@
 - [Technologies](#technologies)
     - [Languages](#languages)
     - [Frameworks Libraries and Tools](#frameworks-libraries-and-tools)
-- [Features Implemented](#features-implemented)
-    - [Features Implemented in Phase 1](#features-implemented-in-phase-1)
-    - [Features To Be Implemented In Future Development Phases](#features-to-be-implemented-in-future-development-phases)
-    - [Design Changes During The Phase 1 Development](#design-changes-during-the-phase-1-development)
+- [Structure](#structure)
+    - [Information Architecture](#information-architecture)
+    - [Features Implemented](#features-implemented)
+        - [Features Implemented in Phase 1](#features-implemented-in-phase-1)
+        - [Features To Be Implemented In Future Development Phases](#features-to-be-implemented-in-future-development-phases)
+        - [Design Changes During The Phase 1 Development](#design-changes-during-the-phase-1-development)
 - [JavaScript Code Library](#javascript-code-library)
 - [Game Logic](#game-logic)
 - [Testing](#testing)
@@ -219,81 +221,93 @@ The final colour palette selected is shown below:
 * [Google Fonts](https://fonts.google.com/)
 * [Email JS](https://www.emailjs.com/)
 
-## Features Implemented ##
-### Features Implemented in Phase 1 ###
-* balloon Pop Maths title, links to home page if selected:
+### Structure ###
+
+### Information Architecture ###
+The game is comprised of a single web page, [index.html](./index.html), divided into the following sections:
+* The **Heading** section, containing the **Balloon Pop Maths** title.
+* The **Options** section, containing the collapsing **[Game Options](./assets/testing/features/options.png)**.
+* The **Information** section, containing the collapsing **[How To Play](./assets/testing/features/how-to-play.png)** information.
+* The **Game** section, containing the [**In Game Elements**](./assets/testing/responsive/game-iPad.png). The **Heading**, **Options** and **Information** sections
+are hidden when in **Game** mode. The **Game** section is hidden when not in **Game** mode.
+* The **Footer** section, containing the **[Contact Developer](./assets/testing/features/contact-developer-link.png)** 
+and **[GitHub](./assets/testing/features/github-link.png)** links. The footer visible at all times.
+
+### Features Implemented ###
+#### Features Implemented in Phase 1 ####
+* **Balloon Pop Maths** title, links to home page if selected:
 <img src="./assets/testing/features/title.png" style="margin: 15px; width:300px;"> 
 
-* Game mode selector (including hover styling), facilitates switching between multiplication, division, subtraction and addition games:  
+* **Game Mode Selector** (including hover styling), facilitates switching between multiplication, division, subtraction and addition games:  
 <img src="./assets/testing/features/game-mode.png" style="margin: 15px; width:300px;"> 
 
-* High Score panel, shows current high score. Updated if the user gets a new high score.
+* **High Score Panel**, shows current high score. Updated if the user gets a new high score.
 <img src="./assets/testing/features/high-score.png" style="margin: 15px; width:300px;"> 
 
-* Play button (including hover styling), launches game:  
+* **Play Button** (including hover styling), launches game:  
 <img src="./assets/testing/features/play.png" style="margin: 15px; width:300px;"> 
 
-* Options audio controls (including hover styling), allows audio to be toggled on and off from the options area:  
+* **Options Audio Controls** (including hover styling), allows audio to be toggled on and off from the options area:  
 <img src="./assets/testing/features/options-audio.png" style="margin: 15px; width:300px;">
 
-* Options button (including hover styling), opens collapsing options panel:  
+* **Options Button** (including hover styling), opens collapsing options panel:  
 <img src="./assets/testing/features/options.png" style="margin: 15px; width:300px;"> 
 
-* How To Play button (including hover styling), opens collapsing information panel:  
+* **How To Play Button** (including hover styling), opens collapsing information panel:  
 <img src="./assets/testing/features/how-to-play.png" style="margin: 15px; width:300px;"> 
 
-* Contact Developer link (including hover styling), opens contact modal:  
+* **Footer Contact Developer Link** (including hover styling), opens contact modal:  
 <img src="./assets/testing/features/contact-developer-link.png" style="margin: 15px; width:150px;"> 
 
-* GitHub link (including hover styling), links to developer page on github:  
+* **Footer GitHub Link** (including hover styling), links to developer page on github:  
 <img src="./assets/testing/features/github-link.png" style="margin: 15px; width:50px;"> 
 
-* In-game home button (including hover styling), returns to Home panel from game:  
+* **In Game Home Button** (including hover styling), returns to Home panel from game:  
 <img src="./assets/testing/features/game-home.png" style="margin: 15px; width:100px;">
 
-* Game loader, displayed while game window is loading:
+* **Game Loader**, displayed while game window is loading:
 <img src="./assets/testing/features/game-loader.png" style="margin: 15px; width:100px;">
 
-* In-game score, records current score in-game:  
+* **In Game Score**, records current score in-game:  
 <img src="./assets/testing/features/game-score.png" style="margin: 15px; width:100px;">
 
-* Answer balloons showing potential answers. Balloons are animated using 
+* **Answer Balloons** showing potential answers. Balloons are animated using 
 [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript), showing a 
 "pop" animation sequence and playing a "pop" sound if the correct answer is selected. 
 If an incorrect answer is selected, a "deflate" sound is played and the balloon and
 answer fades out:
 <img src="./assets/testing/features/game-balloons.png" style="margin: 15px; width:500px;">
 
-* Custom cursor - cursor is changed to a drawing pin when hovering over answer balloons:  
+* **Custom Cursor** - cursor is changed to a drawing pin when hovering over answer balloons:  
 <img src="./assets/images/pin.svg" style="margin: 15px; width:30px;">
 
-* In-game audio controls, allows audio to be toggled on and off in-game:  
+* **In Game Audio Controls**, allows audio to be toggled on and off in-game:  
 <img src="./assets/testing/features/game-audio.png" style="margin: 15px; width:40px;">
 
-* Health bar, shows current health. Game finishes when health is fully depleted. 
+* **Health Bar**, shows current health. Game finishes when health is fully depleted. 
 If game is played on "Easy" difficulty level (selected in options), health is set to 5 hearts.
 If game is played on "Medium" difficulty level (selected in options), health is set to 3 hearts.
 If game is played on "Hard" difficulty level (selected in options), health is set to 1 heart:
 <img src="./assets/testing/features/game-health.png" style="margin: 15px; width:150px;">
 
-* Question panel, shows current question:
+* **Question Panel**, shows current question:
 <img src="./assets/testing/features/game-question.png" style="margin: 15px; width:200px;">
 
-* Contact modal, implemented using [Email JS](https://www.emailjs.com/) and [JavaScript Mail Library](./assets/js/mail.js). 
+* **Contact Modal**, implemented using [Email JS](https://www.emailjs.com/) and [JavaScript Mail Library](./assets/js/mail.js). 
 If the contact form is succesfully submitted, a "Success" modal is displayed. 
 <img src="./assets/testing/features/contact-modal.png" style="margin: 15px; width:300px;">
 <img src="./assets/testing/features/contact-modal-success.png" style="margin: 15px; width:300px;">
 
-* Game feedback modal, gives varying feedback to the user at the end of a game:
+* **Game Feedback Modal**, gives varying feedback to the user at the end of a game:
 <img src="./assets/testing/features/modal-unlucky.png" style="margin: 15px; width:300px;">
 <img src="./assets/testing/features/modal-well-done.png" style="margin: 15px; width:300px;">
 <img src="./assets/testing/features/modal-high-score.png" style="margin: 15px; width:300px;">
 
-### Features To Be Implemented In Future Development Phases ###
+#### Features To Be Implemented In Future Development Phases ####
 * Subscribe feature on [Contact Modal](./assets/testing/features/contact-modal.png) - this may be implemented in the future
 if the developer decides to develop further similar games.
 
-### Design Changes During The Phase 1 Development ###
+#### Design Changes During The Phase 1 Development ####
 After initial early user testing and feedback, the following minor changes were made:
 
 * [In-game score](./assets/testing/features/game-score.png) was moved from underneath the game question to the top right corner.
