@@ -266,7 +266,11 @@ and **[GitHub](./assets/testing/features/github-link.png)** links. The footer vi
 <img src="./assets/testing/features/game-home.png" style="margin: 15px; width:100px;">
 
 * **Game Loader**, displayed while game window is loading:
-<img src="./assets/testing/features/game-loader.png" style="margin: 15px; width:100px;">
+<img src="./assets/testing/features/game-loader.png" style="margin: 15px; width:100px;">  
+Note that the **Game Loader** 
+will only be visible the first time the game is played, depending 
+on how quickly the game is initiated, as it is shown only until the 
+[window load event](https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event) is fired.  
 
 * **In Game Score**, records current score in-game:  
 <img src="./assets/testing/features/game-score.png" style="margin: 15px; width:100px;">
@@ -315,9 +319,9 @@ After initial early user testing and feedback, the following minor changes were 
 * [In-game audio controls](./assets/testing/features/game-audio.png) were added to allow audio to be toggled on and off in-game.
 * Collapsing [How To Play](./assets/testing/features/how-to-play.png) section was added underneath 
 [Options](./assets/testing/features/game-options.png) to explain how to play and to give some further information about the game. 
-* [Game loader](./assets/testing/features/game-loader.png) was added and is now shown until the game window is completelety loaded.
-Note the [game loader](./assets/testing/features/game-loader.png) will only be visible the first time the game is played, depending 
-on how quickly the game is initiated as it is shown only until the 
+* [Game loader](./assets/testing/features/game-loader.png) was added and is now shown until the game window is completeley loaded.
+Note that the [game loader](./assets/testing/features/game-loader.png) will only be visible the first time the game is played, depending 
+on how quickly the game is initiated, as it is shown only until the 
 [window load event](https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event) is fired. 
 The event handler is located in the [JavaScript Event Handler Library](./assets/js/events.js).
 * [In-game home button](./assets/testing/features/game-home.png) renamed from "Options" to "Home".
