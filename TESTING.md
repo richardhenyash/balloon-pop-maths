@@ -155,12 +155,12 @@ See [Responsive Design Testing](./assets/testing/responsive) screen prints, a se
 <img src="./assets/testing/responsive/home-iphone11.png" width="250px" align="left" style="margin: 15px;">  
 <img src="./assets/testing/responsive/game-iphone11.png" width="250px" style="margin: 15px;">  
 
-<img src="./assets/testing/responsive/home-ipad.png" width="250px" align="left" style="margin: 15px;">  
-<img src="./assets/testing/responsive/game-ipad.png" width="250px" style="margin: 15px;">  
+<img src="./assets/testing/responsive/home-ipad.png" width="300px" align="left" style="margin: 15px;">  
+<img src="./assets/testing/responsive/game-ipad.png" width="300px" style="margin: 15px;">  
 
 
-<img src="./assets/testing/responsive/home-medium-screen.png" width="250px" align="left" style="margin: 15px;">  
-<img src="./assets/testing/responsive/game-medium-screen.png" width="250px" style="margin: 15px;">  
+<img src="./assets/testing/responsive/home-medium-screen.png" width="400px" align="left" style="margin: 15px;">  
+<img src="./assets/testing/responsive/game-medium-screen.png" width=400px" style="margin: 15px;">  
 
 * Responsive design was then further tested using the 
 [Responsive Viewer](https://chrome.google.com/webstore/detail/responsive-viewer/inmopeiepgfljkpkidclfgbgbmfcennb?hl=en)
