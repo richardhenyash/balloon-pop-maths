@@ -151,11 +151,11 @@ to emulate viewing the website on a number of devices with varying screen dimens
 including iPhone 5/SE, iPhone 6/7/8, iPhone 6/7/8 plus, iPhone 11, iPad, iPad Pro, Moto G4, Galaxy S5, Surface Duo, 
 Galaxy Fold, Widescreen Laptop and Desktop PC. 
 See [Responsive Design Testing](./assets/testing/responsive) screen prints, a selection of which are shown below:  
-<img src="./assets/testing/responsive/home-iphone11.png" width="250px" style="margin: 15px;">  
+<img src="./assets/testing/responsive/home-iphone11.png" width="250px" align="left" style="margin: 15px;">  
 <img src="./assets/testing/responsive/home-ipad.png" width="250px" style="margin: 15px;">  
-<img src="./assets/testing/responsive/home-medium-screen.png" width="250px" style="margin: 15px;">  
+<img src="./assets/testing/responsive/home-medium-screen.png" width="250px" align="left" style="margin: 15px;">  
 <img src="./assets/testing/responsive/game-iphone11.png" width="250px" style="margin: 15px;">  
-<img src="./assets/testing/responsive/game-ipad.png" width="250px" style="margin: 15px;">  
+<img src="./assets/testing/responsive/game-ipad.png" width="250px" align="left" style="margin: 15px;">  
 <img src="./assets/testing/responsive/game-medium-screen.png" width="250px" style="margin: 15px;">  
 
 * Responsive design was then further tested using the 
@@ -164,13 +164,13 @@ plug in for chrome. This emulates viewing the website on a large number of devic
 including iPhone XR, iPhone XS Max, iPhone XS, iPhone X, Galaxy S9 Plus, Galaxy S8 Plus, Galaxy S9, Note 8, Note S8, Pixel 3, Pixel 3XL,
 Medium Desktop PC and Large Desktop PC. See 
 [Responsive Design Testing](./assets/testing/responsive) screen prints, also shown below: 
-<img src="./assets/testing/responsive/responsive-viewer-home-1.png" width="250px" style="margin: 15px;">  
+<img src="./assets/testing/responsive/responsive-viewer-home-1.png" width="250px" align="left" style="margin: 15px;">  
 <img src="./assets/testing/responsive/responsive-viewer-home-2.png" width="250px" style="margin: 15px;">  
-<img src="./assets/testing/responsive/responsive-viewer-home-3.png" width="250px" style="margin: 15px;">  
+<img src="./assets/testing/responsive/responsive-viewer-home-3.png" width="250px" align="left" style="margin: 15px;">  
 <img src="./assets/testing/responsive/responsive-viewer-home-4.png" width="250px" style="margin: 15px;"> 
-<img src="./assets/testing/responsive/responsive-viewer-game-1.png" width="250px" style="margin: 15px;">  
+<img src="./assets/testing/responsive/responsive-viewer-game-1.png" width="250px" align="left" style="margin: 15px;">  
 <img src="./assets/testing/responsive/responsive-viewer-game-2.png" width="250px" style="margin: 15px;">  
-<img src="./assets/testing/responsive/responsive-viewer-game-3.png" width="250px" style="margin: 15px;">  
+<img src="./assets/testing/responsive/responsive-viewer-game-3.png" width="250px" align="left" style="margin: 15px;">  
 <img src="./assets/testing/responsive/responsive-viewer-game-4.png" width="250px" style="margin: 15px;">   
 
 * The **Balloon Pop Maths** title behaves as expected, stacking on screens under 768 pixels wide.
