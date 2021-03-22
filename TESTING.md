@@ -169,12 +169,16 @@ including iPhone XR, iPhone XS Max, iPhone XS, iPhone X, Galaxy S9 Plus, Galaxy 
 Medium Desktop PC and Large Desktop PC. See 
 [Responsive Design Testing](./assets/testing/responsive) screen prints, also shown below: 
 <img src="./assets/testing/responsive/responsive-viewer-home-1.png" width="250px" align="left" style="margin: 15px;">  
-<img src="./assets/testing/responsive/responsive-viewer-home-2.png" width="250px" style="margin: 15px;">  
-<img src="./assets/testing/responsive/responsive-viewer-home-3.png" width="250px" align="left" style="margin: 15px;">  
-<img src="./assets/testing/responsive/responsive-viewer-home-4.png" width="250px" style="margin: 15px;"> 
-<img src="./assets/testing/responsive/responsive-viewer-game-1.png" width="250px" align="left" style="margin: 15px;">  
-<img src="./assets/testing/responsive/responsive-viewer-game-2.png" width="250px" style="margin: 15px;">  
-<img src="./assets/testing/responsive/responsive-viewer-game-3.png" width="250px" align="left" style="margin: 15px;">  
+<img src="./assets/testing/responsive/responsive-viewer-game-1.png" width="250px" style="margin: 15px;">  
+
+<img src="./assets/testing/responsive/responsive-viewer-home-2.png" width="250px" align="left" style="margin: 15px;">  
+<img src="./assets/testing/responsive/responsive-viewer-game-2.png" width="250px" style="margin: 15px;"> 
+
+
+<img src="./assets/testing/responsive/responsive-viewer-home-3.png" width="250px" align="left" style="margin: 15px;">   
+<img src="./assets/testing/responsive/responsive-viewer-game-3.png" width="250px" style="margin: 15px;">  
+
+<img src="./assets/testing/responsive/responsive-viewer-home-4.png" width="250px" align="left" style="margin: 15px;">  
 <img src="./assets/testing/responsive/responsive-viewer-game-4.png" width="250px" style="margin: 15px;">   
 
 * The **Balloon Pop Maths** title behaves as expected, stacking on screens under 768 pixels wide.
