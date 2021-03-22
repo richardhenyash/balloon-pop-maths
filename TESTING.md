@@ -151,11 +151,15 @@ to emulate viewing the website on a number of devices with varying screen dimens
 including iPhone 5/SE, iPhone 6/7/8, iPhone 6/7/8 plus, iPhone 11, iPad, iPad Pro, Moto G4, Galaxy S5, Surface Duo, 
 Galaxy Fold, Widescreen Laptop and Desktop PC. 
 See [Responsive Design Testing](./assets/testing/responsive) screen prints, a selection of which are shown below:  
+
 <img src="./assets/testing/responsive/home-iphone11.png" width="250px" align="left" style="margin: 15px;">  
-<img src="./assets/testing/responsive/home-ipad.png" width="250px" style="margin: 15px;">  
-<img src="./assets/testing/responsive/home-medium-screen.png" width="250px" align="left" style="margin: 15px;">  
 <img src="./assets/testing/responsive/game-iphone11.png" width="250px" style="margin: 15px;">  
-<img src="./assets/testing/responsive/game-ipad.png" width="250px" align="left" style="margin: 15px;">  
+
+<img src="./assets/testing/responsive/home-ipad.png" width="250px" align="left" style="margin: 15px;">  
+<img src="./assets/testing/responsive/game-ipad.png" width="250px" style="margin: 15px;">  
+
+
+<img src="./assets/testing/responsive/home-medium-screen.png" width="250px" align="left" style="margin: 15px;">  
 <img src="./assets/testing/responsive/game-medium-screen.png" width="250px" style="margin: 15px;">  
 
 * Responsive design was then further tested using the 
