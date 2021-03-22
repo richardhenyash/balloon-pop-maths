@@ -225,7 +225,7 @@ The final colour palette selected is shown below:
 
 ### Information Architecture ###
 The game is comprised of a single web page, [index.html](./index.html), divided into the following sections:
-* The **Heading** section, containing the **Balloon Pop Maths** title.
+* The **Heading** section, containing the [**Balloon Pop Maths**](./assets/testing/features/title.png) title.
 * The **Options** section, containing the collapsing **[Game Options](./assets/testing/features/options.png)**.
 * The **Information** section, containing the collapsing **[How To Play](./assets/testing/features/how-to-play.png)** information.
 * The **Game** section, containing the [**In Game Elements**](./assets/testing/responsive/game-iPad.png). The **Heading**, **Options** and **Information** sections
