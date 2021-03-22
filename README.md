@@ -229,7 +229,8 @@ The game is comprised of a single web page, [index.html](./index.html), divided 
 * The **Options** section, containing the collapsing **[Game Options](./assets/testing/features/options.png)**.
 * The **Information** section, containing the collapsing **[How To Play](./assets/testing/features/how-to-play.png)** information.
 * The **Game** section, containing the [**In Game Elements**](./assets/testing/responsive/game-ipad.png). The **Heading**, **Options** and **Information** sections
-are hidden when in **Game** mode. The **Game** section is hidden when not in **Game** mode.
+are hidden when in **Game** mode. The **Game** section is hidden when not in **Game** mode. The **Game** section is responsively 
+styled, showing 2  panels of 3 balloons stacked vertically on smaller devices, and side by side on large devices over 992 pixels wide.
 * The **Footer** section, containing the **[Contact Developer](./assets/testing/features/contact-developer-link.png)** 
 and **[GitHub](./assets/testing/features/github-link.png)** links. The footer visible at all times.
 
