@@ -269,8 +269,8 @@ and **[GitHub](./assets/testing/features/github-link.png)** links. The footer vi
 <img src="./assets/testing/features/game-loader.png" style="margin: 15px; width:100px;">  
 Note that the **Game Loader** 
 will only be visible the first time the game is played, depending 
-on how quickly the game is initiated, as it is shown only until the 
-[window load event](https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event) is fired.  
+on how quickly the game is initiated, as it is shown only until the [window load event](https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event) is fired.  
+
 
 * **In Game Score**, records current score in-game:  
 <img src="./assets/testing/features/game-score.png" style="margin: 15px; width:100px;">
