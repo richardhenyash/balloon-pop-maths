@@ -327,12 +327,14 @@ The event handler is located in the [JavaScript Event Handler Library](./assets/
 
 ### Responsive Styling ###
 * The [**Balloon Pop Maths**](./assets/testing/features/title.png) title is responsively styled, and stacks on screens under 768 pixels wide.
-* The [**Balloon Pop Maths**](./assets/testing/features/title.png) title is re-sized and re-positioned for screen sizes under 680px high.
-* The [**Play Button**](./assets/testing/features/play.png) is re-sized for screen sizes under 680px high.
+* The [**Balloon Pop Maths**](./assets/testing/features/title.png) title is re-sized and re-positioned for screen sizes under 680 pixels high.
+* The [**Play Button**](./assets/testing/features/play.png) is re-sized for screen sizes under 680 pixels high.
 * The [**Game**](./assets/testing/responsive/game-medium-screen.png) section is responsively styled, showing 2 
 panels of 3 balloons stacked vertically on smaller devices, and side by side on large devices over 992 pixels wide.
-* The [**Game**] section is dynamically sized for devices up to 768 pixels wide, so that it takes up the full screen height. 
-See **Responsive Design** section in [TESTING.md](TESTING.md) for further information and screen prints.
+* The [**Game**](./assets/testing/responsive/game-iphone11.png) section is dynamically sized for devices up to 768 pixels wide, 
+so that it takes up the full screen height.  
+
+See **Responsive Design** section in [TESTING.md](TESTING.md) for further information and [Responsive Testing](./assets/testing/responsive) screen prints.
 
 ## JavaScript Code Library ##
 The [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) code has been broken down into seperate, re-usable 
