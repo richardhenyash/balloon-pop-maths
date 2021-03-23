@@ -362,7 +362,7 @@ functions where possible and is contained within several [JavaScript Code Librar
 * [JavaScript Mail Library](./assets/js/mail.js)
 * [JavaScript Maths Function Library](./assets/js/maths.js)  
 
-Each function is fully documented within the function library using [JSDoc](https://jsdoc.app/about-getting-started.html) comments.
+Each function is fully documented using [JSDoc](https://jsdoc.app/about-getting-started.html) comments.
 
 ## Game Logic ##
 The game logic was developed using [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript).  
