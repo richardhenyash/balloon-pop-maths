@@ -26,6 +26,7 @@
 - [Technologies](#technologies)
     - [Languages](#languages)
     - [Frameworks Libraries and Tools](#frameworks-libraries-and-tools)
+    - [Browser Support](#browser-support)
 - [Structure](#structure)
     - [Information Architecture](#information-architecture)
     - [Features Implemented](#features-implemented)
@@ -222,6 +223,19 @@ The final colour palette selected is shown below:
 * [Google Fonts](https://fonts.google.com/)
 * [Email JS](https://www.emailjs.com/)
 
+### Browser Support ###
+The following browser are all supported by **Balloon Pop Maths**.
+* [Google Chrome](https://www.google.com/intl/en_uk/chrome/).
+* [Microsoft Edge](https://www.microsoft.com/en-us/edge).
+* [Safari](https://www.apple.com/uk/safari/).
+* [Firefox](https://www.mozilla.org/en-GB/firefox/new/).
+* [Yandex](https://browser.yandex.com/).
+* [Opera](https://www.opera.com/).
+
+Please note that **Balloon Pop Maths** does not function correctly in 
+[Microsoft Internet Explorer] (https://support.microsoft.com/en-us/topic/internet-explorer-downloads-d49e1f0d-571c-9a7b-d97e-be248806ca70#ID0EBBD=Windows_10).
+For further information please see  the **Browser Compatibility** section in [TESTING.md](TESTING.md).  
+
 ## Structure ##
 
 ### Information Architecture ###
@@ -348,7 +362,7 @@ functions where possible and is contained within several [JavaScript Code Librar
 * [JavaScript Mail Library](./assets/js/mail.js)
 * [JavaScript Maths Function Library](./assets/js/maths.js)  
 
-Each function is documented within the function library using JSDoc comments.
+Each function is fully documented within the function library using JSDoc comments.
 
 ## Game Logic ##
 The game logic was developed using [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript).  
