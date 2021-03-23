@@ -189,11 +189,26 @@ devices under 992 pixels wide, and shown side by side on large devices over 992 
 implemented and behave as expected, on medium devices over 768 pixels wide and large devices over 992 pixels wide. 
 
 ### Browser Compatibility Testing ###
+The website was tested on the following browsers and operating systems, 
+using a combination of manual testing across various devices and the [Browserstack](https://www.browserstack.com/) emulator:
+* [Google Chrome](https://www.google.com/intl/en_uk/chrome/) ([Windows 10](https://www.microsoft.com/en-us/windows), [Android 11](https://www.android.com/android-11/) and [Mac OS Big Sur](https://www.apple.com/uk/macos/big-sur/)).
+* [Microsoft Edge](https://www.microsoft.com/en-us/edge) ([Windows 10](https://www.microsoft.com/en-us/windows) and [Mac OS Big Sur](https://www.apple.com/uk/macos/big-sur/)).
+* [Microsoft Internet Explorer 11](https://support.microsoft.com/en-us/topic/internet-explorer-downloads-d49e1f0d-571c-9a7b-d97e-be248806ca70#ID0EBBD=Windows_10) ([Windows 10](https://www.microsoft.com/en-us/windows)).
+* [Safari](https://www.apple.com/uk/safari/) ([Mac OS Big Sur](https://www.apple.com/uk/macos/big-sur/) and [iOS](https://www.apple.com/uk/ios/ios-14/)).
+* [Firefox](https://www.mozilla.org/en-GB/firefox/new/) ([Windows 10](https://www.microsoft.com/en-us/windows) and [Mac OS Big Sur](https://www.apple.com/uk/macos/big-sur/)).
+* [Yandex](https://browser.yandex.com/) ([Windows 10](https://www.microsoft.com/en-us/windows)).
+* [Opera](https://www.opera.com/) ([Windows 10](https://www.microsoft.com/en-us/windows) and [Mac OS Big Sur](https://www.apple.com/uk/macos/big-sur/)).  
+
+The following issue was uncovered during browser compatibility testing: 
+* CSS global variables are not supported by [Microsoft Internet Explorer 11](https://support.microsoft.com/en-us/topic/internet-explorer-downloads-d49e1f0d-571c-9a7b-d97e-be248806ca70#ID0EBBD=Windows_10).
+See [link](https://caniuse.com/css-variables). This is not envisaged to be a major problem, as usage of [Microsoft Internet Explorer 11](https://support.microsoft.com/en-us/topic/internet-explorer-downloads-d49e1f0d-571c-9a7b-d97e-be248806ca70#ID0EBBD=Windows_10)
+is now very low. A statement has been added into the [README.md](README.md) to make it clear that **Balloon Pop Maths** 
+does not support [Microsoft Internet Explorer](https://support.microsoft.com/en-us/topic/internet-explorer-downloads-d49e1f0d-571c-9a7b-d97e-be248806ca70#ID0EBBD=Windows_10).
 
 ## Javascript Code Library Testing ##
 Each individual function and event handler contained in the [JavaScript Code Library](./assets/js) was thoroughly 
-tested in the Console window during the **Phase 1 Development**, to confirm correct operation. 
-See [Bugs Fixed During Testing](#bugs-fixed-during-testing) for JavaScript bugs fixed during the testing process.
+tested and de-bugged in the Console window during the **Phase 1 Development**, to confirm correct operation. 
+See [Bugs Fixed During Testing](#bugs-fixed-during-testing) for additional JavaScript bugs fixed during the testing process.
 
 ## Bugs Fixed During Testing ##
 High Score should not be set if new score is 0.
