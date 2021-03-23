@@ -202,7 +202,7 @@ using a combination of manual testing across various devices and the [Browsersta
 The following issue was uncovered during browser compatibility testing: 
 * [CSS custom properties (variables)](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) are not supported by [Microsoft Internet Explorer](https://support.microsoft.com/en-us/topic/internet-explorer-downloads-d49e1f0d-571c-9a7b-d97e-be248806ca70#ID0EBBD=Windows_10).
 See [Can I Use link](https://caniuse.com/css-variables). This is not envisaged to be a major problem, as usage of [Microsoft Internet Explorer](https://support.microsoft.com/en-us/topic/internet-explorer-downloads-d49e1f0d-571c-9a7b-d97e-be248806ca70#ID0EBBD=Windows_10)
-is now very low. A statement has been added into the [README.md](README.md) to make it clear that **Balloon Pop Maths** 
+is now very low. A statement has been added into the **Browser Support** section in the [README.md](README.md) to make it clear that **Balloon Pop Maths** 
 does not support [Microsoft Internet Explorer](https://support.microsoft.com/en-us/topic/internet-explorer-downloads-d49e1f0d-571c-9a7b-d97e-be248806ca70#ID0EBBD=Windows_10).
 
 ## Javascript Code Library Testing ##
