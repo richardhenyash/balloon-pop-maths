@@ -32,6 +32,7 @@
         - [Features Implemented in Phase 1](#features-implemented-in-phase-1)
         - [Features To Be Implemented In Future Development Phases](#features-to-be-implemented-in-future-development-phases)
         - [Design Changes During The Phase 1 Development](#design-changes-during-the-phase-1-development)
+    - [Responsive Styling](#responsive-styling)
 - [JavaScript Code Library](#javascript-code-library)
 - [Game Logic](#game-logic)
 - [Testing](#testing)
@@ -221,16 +222,15 @@ The final colour palette selected is shown below:
 * [Google Fonts](https://fonts.google.com/)
 * [Email JS](https://www.emailjs.com/)
 
-### Structure ###
+## Structure ##
 
 ### Information Architecture ###
 The game is comprised of a single web page, [index.html](./index.html), divided into the following sections:
-* The **Heading** section, containing the [**Balloon Pop Maths**](./assets/testing/features/title.png) title.
+* The **Heading** section, containing the [**Balloon Pop Maths**](./assets/testing/features/title.png) title. 
 * The **Options** section, containing the collapsing **[Game Options](./assets/testing/features/options.png)**.
 * The **Information** section, containing the collapsing **[How To Play](./assets/testing/features/how-to-play.png)** information.
 * The **Game** section, containing the [**In Game Elements**](./assets/testing/responsive/game-ipad.png). The **Heading**, **Options** and **Information** sections
-are hidden when in **Game** mode. The **Game** section is hidden when not in **Game** mode. The **Game** section is responsively 
-styled, showing 2  panels of 3 balloons stacked vertically on smaller devices, and side by side on large devices over 992 pixels wide.
+are hidden when in **Game** mode. The **Game** section is hidden when not in **Game** mode.
 * The **Footer** section, containing the **[Contact Developer](./assets/testing/features/contact-developer-link.png)** 
 and **[GitHub](./assets/testing/features/github-link.png)** links. The footer visible at all times.
 
@@ -324,6 +324,15 @@ on how quickly the game is initiated, as it is shown only until the
 [window load event](https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event) is fired. 
 The event handler is located in the [JavaScript Event Handler Library](./assets/js/events.js).
 * [In-game home button](./assets/testing/features/game-home.png) renamed from "Options" to "Home".
+
+### Responsive Styling ###
+* The [**Balloon Pop Maths**](./assets/testing/features/title.png) title is responsively styled, and stacks on screens under 768 pixels wide.
+* The [**Balloon Pop Maths**](./assets/testing/features/title.png) title is re-sized and re-positioned for screen sizes under 680px high.
+* The [**Play Button**](./assets/testing/features/play.png) is re-sized for screen sizes under 680px high.
+* The [**Game**](./assets/testing/responsive/game-medium-screen.png) section is responsively styled, showing 2 
+panels of 3 balloons stacked vertically on smaller devices, and side by side on large devices over 992 pixels wide.
+* The [**Game**] section is dynamically sized for devices up to 768 pixels wide, so that it takes up the full screen height. 
+See **Responsive Design** section in [TESTING.md](TESTING.md) for further information and screen prints.
 
 ## JavaScript Code Library ##
 The [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) code has been broken down into seperate, re-usable 
