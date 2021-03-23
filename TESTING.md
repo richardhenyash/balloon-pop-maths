@@ -181,7 +181,9 @@ Medium Desktop PC and Large Desktop PC. See
 <img src="./assets/testing/responsive/responsive-viewer-home-4.png" width="250px" align="left" style="margin: 15px;">  
 <img src="./assets/testing/responsive/responsive-viewer-game-4.png" width="250px" style="margin: 15px;">   
 
-* The **Balloon Pop Maths** title behaves as expected, stacking on screens under 768 pixels wide.
+* The **Balloon Pop Maths** title behaves as expected, stacking as intended on screens under 768 pixels wide.
+ and 
+* The **Balloon Pop Maths** title dynamically re-sizes and re-positions as intended on screen sizes under 680px high.
 * The **Game** view behaves as expected, showing 2 panels of 3 balloons stacked vertically on small and medium 
 devices under 992 pixels wide, and shown side by side on large devices over 992 pixels wide.
 * The **Game** view dynamically sizes as expected on devices up to 768 pixels wide. Two further sizes are 
