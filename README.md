@@ -224,7 +224,7 @@ The final colour palette selected is shown below:
 * [Email JS](https://www.emailjs.com/)
 
 ### Browser Support ###
-The following browser are all supported by **Balloon Pop Maths**.
+The following browsers are all supported by **Balloon Pop Maths**.
 * [Google Chrome](https://www.google.com/intl/en_uk/chrome/).
 * [Microsoft Edge](https://www.microsoft.com/en-us/edge).
 * [Safari](https://www.apple.com/uk/safari/).
@@ -233,7 +233,7 @@ The following browser are all supported by **Balloon Pop Maths**.
 * [Opera](https://www.opera.com/).
 
 Please note that **Balloon Pop Maths** does not function correctly in 
-[Microsoft Internet Explorer] (https://support.microsoft.com/en-us/topic/internet-explorer-downloads-d49e1f0d-571c-9a7b-d97e-be248806ca70#ID0EBBD=Windows_10).
+[Microsoft Internet Explorer](https://support.microsoft.com/en-us/topic/internet-explorer-downloads-d49e1f0d-571c-9a7b-d97e-be248806ca70#ID0EBBD=Windows_10).
 For further information please see  the **Browser Compatibility** section in [TESTING.md](TESTING.md).  
 
 ## Structure ##
