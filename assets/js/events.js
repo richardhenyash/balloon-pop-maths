@@ -3,6 +3,9 @@
 * @author <a href="https://github.com/richardhenyash">Richard Ash</a>
 * @version 1.1.1
 */
+/*jshint esversion: 6 */
+/* globals $, modeMultiply, initialiseBalloons, modeAddSubtract, modeDivide, playGame, returnBtnIdArray, makeNotActive */
+/* globals checkOtherStickyButtons, checkSelectedAnswer, returnToMenu, muteAudio, unMuteAudio, muteAudioToggle */
 
 // Initialisation Event Handlers //
 

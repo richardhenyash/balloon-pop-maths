@@ -3,6 +3,8 @@
 * @author <a href="https://github.com/richardhenyash">Richard Ash</a>
 * @version 1.1.1
 */
+/*jshint esversion: 6 */
+/* globals $, soundPop, soundDeflate, soundHighScore, soundUnlucky, soundWellDone, bpmSoundEffectsMuted:true */
 
 /**
 * [Function to toggle audio mute]

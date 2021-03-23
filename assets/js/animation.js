@@ -3,6 +3,10 @@
 * @author <a href="https://github.com/richardhenyash">Richard Ash</a>
 * @version 1.1.1
 */
+/*jshint esversion: 6 */
+/* globals $, imgBalloonBlue, imgBalloonOrange, imgBalloonPurple, imgBalloonYellow */
+/* globals imgBalloonRed, imgBalloonGreen, imgBalloonYellow */
+/* globals getCanvasSize, returnCanvasID, animateBalloon, initialiseBalloons */
 
 /**
 * [Function to return an array of canvas width and height, given canvas element ID]

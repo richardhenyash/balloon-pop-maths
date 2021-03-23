@@ -3,6 +3,8 @@
 * @author <a href="https://github.com/richardhenyash">Richard Ash</a>
 * @version 1.1.1
 */
+/*jshint esversion: 6 */
+/* globals $ */
 
 /**
 * [Function to return to menu - hides game section and shows heading and options]

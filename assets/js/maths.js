@@ -1,9 +1,9 @@
-// JavaScript Maths Function Library //
 /**
 * @fileOverview JavaScript Maths Function Library.
 * @author <a href="https://github.com/richardhenyash">Richard Ash</a>
 * @version 1.1.1
 */
+/*jshint esversion: 6 */
 
 /**
 * [Function to return random question and answer array, given game mode, options and number of questions]

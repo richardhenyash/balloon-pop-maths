@@ -3,6 +3,8 @@
 * @author <a href="https://github.com/richardhenyash">Richard Ash</a>
 * @version 1.1.1
 */
+/*jshint esversion: 6 */
+/* globals emailjs */
 
 // Initialise EmailJS with assigned user ID //
 emailjs.init("user_JExUJN7eCUWFqFAl29Mbl");
