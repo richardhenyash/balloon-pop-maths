@@ -498,8 +498,8 @@ function getRandomIntInclusive(min, max) {
 * [Function to randomize an array in place using the Durstenfeld shuffle algorithm. 
   Function referenced from stack overflow link below, many thanks to Laurens Holst:
   https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array]
-* @param  {[array]}     arrayToShuffle  [Array]
-* @return {[array]}                     [Array]
+* @param  {[array]}     arrayToShuffle  [Array to shuffle]
+* @return {[array]}                     [Shuffled array]
 */
 function shuffleArray(arrayToShuffle) {
     let j;
