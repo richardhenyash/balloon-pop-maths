@@ -1,4 +1,8 @@
-// JavaScript Initialisation Library //
+/**
+* @fileOverview JavaScript Initialisation Library.
+* @author <a href="https://github.com/richardhenyash">Richard Ash</a>
+* @version 1.1.1
+*/
 
 // Buffer balloon sprite images //
 const imgBalloonBlue = new Image();

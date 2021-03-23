@@ -1,6 +1,13 @@
-// JavaScript Game Logic Function Library //
+/**
+* @fileOverview JavaScript Game Logic Function Library.
+* @author <a href="https://github.com/richardhenyash">Richard Ash</a>
+* @version 1.1.1
+*/
 
-/** Function to launch game. **/
+/**
+* [Function to launch game]
+* @return {[array]}                     [Score array - array of 2 numbers, score and number of questions]          
+*/
 function playGame() {
     // Show all balloon canvas elements
     $("[id^=canvas-balloon]").show();
@@ -42,7 +49,9 @@ function playGame() {
     return bpmScoreArray;
 }
 
-/** Function to check selected answer on click of balloon **/
+/**
+* [Function to check selected answer on click of balloon]   
+*/
 function checkSelectedAnswer() {
     // Add "#" to ID
     let answerTextID = "#"+ (this.id);

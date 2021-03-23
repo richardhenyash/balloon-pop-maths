@@ -346,7 +346,9 @@ functions where possible and is contained within several [JavaScript Code Librar
 * [JavaScript Game Logic Function Library](./assets/js/game-logic.js)
 * [JavaScript Initialisation Library](./assets/js/initialisation.js)
 * [JavaScript Mail Library](./assets/js/mail.js)
-* [JavaScript Maths Function Library](./assets/js/maths.js)
+* [JavaScript Maths Function Library](./assets/js/maths.js)  
+
+Each function is documented within the function library using JSDoc comments.
 
 ## Game Logic ##
 The game logic was developed using [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript).  

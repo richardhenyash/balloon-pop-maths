@@ -1,6 +1,13 @@
-// JavaScript Audio Function Library //
+/**
+* @fileOverview JavaScript Audio Function Library.
+* @author <a href="https://github.com/richardhenyash">Richard Ash</a>
+* @version 1.1.1
+*/
 
-/** Function to toggle audio mute.  **/
+/**
+* [Function to toggle audio mute]
+* @return {[boolean]}     [bpmSoundEffectsMuted global variable]
+*/
 function muteAudioToggle(){
     // Check bpmSoundEffectsMuted global variable
     if (bpmSoundEffectsMuted == false) {
@@ -10,9 +17,13 @@ function muteAudioToggle(){
         // Un-mute sound effects
         unMuteAudio();
     }
+    return(bpmSoundEffectsMuted);
 }
 
-/** Function to mute audio.  **/
+/**
+* [Function to mute audio]
+* @return {[boolean]}     [bpmSoundEffectsMuted global variable]
+*/
 function muteAudio(){
     // Mute sound effects
     soundPop.muted = true;
@@ -24,9 +35,13 @@ function muteAudio(){
     $("#audio-on").removeClass("active").attr("aria-pressed", "false");
     $("#audio-off").addClass("active").attr("aria-pressed", "true");
     bpmSoundEffectsMuted = true; 
+    return(bpmSoundEffectsMuted);
 }
 
-/** Function to un-mute audio.  **/
+/**
+* [Function to un-mute audio]
+* @return {[boolean]}     [bpmSoundEffectsMuted global variable]
+*/
 function unMuteAudio() {
     // Unmute sound effects
     soundPop.muted = false;
@@ -38,4 +53,5 @@ function unMuteAudio() {
     $("#audio-off").removeClass("active").attr("aria-pressed", "false");
     $("#audio-on").addClass("active").attr("aria-pressed", "true");
     bpmSoundEffectsMuted = false;
+    return(bpmSoundEffectsMuted);
 }

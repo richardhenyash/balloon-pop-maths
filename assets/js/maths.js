@@ -1,6 +1,17 @@
 // JavaScript Maths Function Library //
+/**
+* @fileOverview JavaScript Maths Function Library.
+* @author <a href="https://github.com/richardhenyash">Richard Ash</a>
+* @version 1.1.1
+*/
 
-/** Function to return random question array, given game mode, options and number of questions **/
+/**
+* [Function to return random question and answer array, given game mode, options and number of questions]
+* @param  {[string]}    gameMode        [Game mode]
+* @param  {[string]}    optionArray     [Array of active option button text value strings]
+* @param  {[number]}    qno             [Number of questions]
+* @return {[array]}                     [Question and answer array - an array of 2 item arrays giving question and answer]
+*/
 function returnQuestionArray (gameMode, optionArray, qno) {
     let questionArray = []
     // Check game mode and run correct question array function
@@ -16,7 +27,12 @@ function returnQuestionArray (gameMode, optionArray, qno) {
     return(questionArray);
 }
 
-/** Function to return random multiplication question array, given options and number of questions **/
+/**
+* [Function to return random multiplication question and answer array, given options and number of questions]
+* @param  {[string]}    optionArray     [Array of active option button text value strings]
+* @param  {[number]}    qno             [Number of questions]
+* @return {[array]}                     [Question and answer array - an array of 2 item arrays giving question and answer]
+*/
 function returnMultiplicationQuestionArray (optionArray, qno) {
     // Initialise multiplication question array
     let mqArray = [];
@@ -73,7 +89,12 @@ function returnMultiplicationQuestionArray (optionArray, qno) {
     return(mqArray);
 }
 
-/** Function to return random division question array, given options and number of questions **/
+/**
+* [Function to return random division question and answer array, given options and number of questions]
+* @param  {[string]}    optionArray     [Array of active option button text value strings]
+* @param  {[number]}    qno             [Number of questions]
+* @return {[array]}                     [Question and answer array - an array of 2 item arrays giving question and answer]
+*/
 function returnDivisionQuestionArray (optionArray, qno) {
     // Initialise division question array
     let dqArray = [];
@@ -131,7 +152,12 @@ function returnDivisionQuestionArray (optionArray, qno) {
     return(dqArray);
 }
 
-/** Function to return random addition question and answer array, given options and number of questions **/
+/**
+* [Function to return random addition question and answer array, given options and number of questions]
+* @param  {[string]}    optionArray     [Array of active option button text value strings]
+* @param  {[number]}    qno             [Number of questions]
+* @return {[array]}                     [Question and answer array - an array of 2 item arrays giving question and answer]
+*/
 function returnAdditionQuestionArray (optionArray, qno) {
     // Initialise addition question array
     let aqArray = [];
@@ -155,7 +181,12 @@ function returnAdditionQuestionArray (optionArray, qno) {
     return(aqArray);
 }
 
-/** Function to return random subtraction question and answer array, given options and number of questions **/
+/**
+* [Function to return random subtraction question and answer array, given options and number of questions]
+* @param  {[string]}    optionArray     [Array of active option button text value strings]
+* @param  {[number]}    qno             [Number of questions]
+* @return {[array]}                     [Question and answer array - an array of 2 item arrays giving question and answer]
+*/
 function returnSubtractionQuestionArray (optionArray, qno) {
     // Initialise subtraction question array
     let sqArray = [];
@@ -179,7 +210,11 @@ function returnSubtractionQuestionArray (optionArray, qno) {
     return(sqArray);
 }
 
-/** Function to return random multiplication question and answer array from 1 to 12, given times table number **/
+/**
+* [Function to return random multiplication question and answer array from 1 to 12, given times table number]
+* @param  {[number]}    tno             [Times table number, integer from 1 to 12]
+* @return {[array]}                     [Question and answer array - an array of 2 items giving question and answer]
+*/
 function returnMultiplicationQuestion(tno) {
     // Set random number between 1 and 12
     let ttno = Math.floor((Math.random() * 12) + 1);
@@ -192,7 +227,11 @@ function returnMultiplicationQuestion(tno) {
     return mq;
 }
 
-/** Function to return random division question and answer array from 1 to 12, given division table number **/
+/**
+* [Function to return random division question and answer array from 1 to 12, given division table number]
+* @param  {[number]}    dno             [Division table number, integer from 1 to 12]
+* @return {[array]}                     [Question and answer array - an array of 2 items giving question and answer]
+*/
 function returnDivisionQuestion(dno) {
     // Set random number between 1 and 12
     let dtno = Math.floor((Math.random() * 12) + 1);
@@ -207,7 +246,11 @@ function returnDivisionQuestion(dno) {
     return dq;
 }
 
-/** Function to return random addition question and answer array, given maximum sum **/
+/**
+* [Function to return random addition question and answer array, given maximum sum]
+* @param  {[number]}    maxsum          [Maximum sum]
+* @return {[array]}                     [Question and answer array - an array of 2 items giving question and answer]
+*/
 function returnAdditionQuestion(maxsum) {
     // Set first random number
     let no1 = Math.floor((Math.random() * (maxsum / 2)) + 1);
@@ -222,7 +265,11 @@ function returnAdditionQuestion(maxsum) {
     return aq;
 }
 
-/** Function to return random subtraction question and answer array, given maximum sum **/
+/**
+* [Function to return random subtraction question and answer array, given maximum sum]
+* @param  {[number]}    maxsum          [Maximum sum]
+* @return {[array]}                     [Question and answer array - an array of 2 items giving question and answer]
+*/
 function returnSubtractionQuestion(maxsum) {
     // Set first random number
     let no1 = Math.floor((Math.random() * maxsum) + 1);
@@ -241,8 +288,12 @@ function returnSubtractionQuestion(maxsum) {
     return mq;
 }
 
-
-/** Function to generate array of 5 wrong answers and the correct answer, given game mode and current question**/
+/**
+* [Function to generate array of 5 wrong answers and the correct answer, given game mode and current question]
+* @param  {[string]}    gameMode        [Game mode]
+* @param  {[array]}     qCurrent        [Current question array, array of 2 items giving question and answer]
+* @return {[array]}                     [Array of 2 item arrays, 5 wrong answers and 1 correct answer]
+*/
 function answerArray(gameMode, qCurrent) {
     // Initialise answer array
     let answerArray = [];
@@ -263,7 +314,11 @@ function answerArray(gameMode, qCurrent) {
     return(answerArray);
 }
 
-/** Function to generate array of 5 wrong multiplication answers, given current question**/
+/**
+* [Function to generate array of 5 wrong multiplication answers, given current question]
+* @param  {[array]}     qCurrent        [Current question array, array of 2 items giving question and answer]
+* @return {[array]}                     [Array of 2 item arrays, 5 wrong answers and 1 correct answer]
+*/
 function wrongAnswersMultiplication(qCurrent) {
     // Set question string
     let qStr = qCurrent[0];
@@ -300,7 +355,11 @@ function wrongAnswersMultiplication(qCurrent) {
     return(wrongAnswerArray);
 }
 
-/** Function to generate array of 5 wrong division answers, given current question**/
+/**
+* [Function to generate array of 5 wrong division answers, given current question]
+* @param  {[array]}     qCurrent        [Current question array, array of 2 items giving question and answer]
+* @return {[array]}                     [Array of 2 item arrays, 5 wrong answers and 1 correct answer]
+*/
 function wrongAnswersDivision(qCurrent) {
     // Set question string
     let qStr = qCurrent[0];
@@ -331,7 +390,11 @@ function wrongAnswersDivision(qCurrent) {
     return(wrongAnswerArray);
 }
 
-/** Function to generate array of 5 wrong addition answers, given current question**/
+/**
+* [Function to generate array of 5 wrong addition answers, given current question]
+* @param  {[array]}     qCurrent        [Current question array, array of 2 items giving question and answer]
+* @return {[array]}                     [Array of 2 item arrays, 5 wrong answers and 1 correct answer]
+*/
 function wrongAnswersAddition(qCurrent) {
     // Set question string
     let qStr = qCurrent[0];
@@ -354,7 +417,11 @@ function wrongAnswersAddition(qCurrent) {
     return(wrongAnswerArray);    
 }
 
-/** Function to generate array of 5 wrong subtraction answers, given current question**/
+/**
+* [Function to generate array of 5 wrong subtraction answers, given current question]
+* @param  {[array]}     qCurrent        [Current question array, array of 2 items giving question and answer]
+* @return {[array]}                     [Array of 2 item arrays, 5 wrong answers and 1 correct answer]
+*/
 function wrongAnswersSubtraction(qCurrent) {
     // Set question string
     let qStr = qCurrent[0];
@@ -379,9 +446,16 @@ function wrongAnswersSubtraction(qCurrent) {
     return(wrongAnswerArray); 
 }
 
-/** Function to populate wrong answer array with two randomly generated integers between the two integers given.
-Generates random integers until a random integer not already in the array and not equal to the correct answer is found.
-Returns completed wrong answer array **/
+/**
+* [Function to populate wrong answer array with two randomly generated integers between the two integers given. 
+  Generates random integers until a random integer not already in the array and not equal to the correct answer is found.
+  Returns completed wrong answer array]
+* @param  {[array]}     wrongAnswerArray    [Array of 2 item arrays]
+* @param  {[number]}    cA                  [Current answer]
+* @param  {[number]}    minInt              [Minimum integer]
+* @param  {[number]}    maxInt              [Maximum integer]
+* @return {[array]}                         [Array of 2 item arrays]
+*/
 function wrongAnswerArrayComplete(wrongAnswerArray, cA, minInt, maxInt) {
     if ((maxInt - minInt) < 6) {
         maxInt = minInt + 6;
@@ -405,9 +479,14 @@ function wrongAnswerArrayComplete(wrongAnswerArray, cA, minInt, maxInt) {
     return(wrongAnswerArray);
 }
 
-/** Function to generate a random integer between the two integers given **/
-/** Function referenced from MDN Web Docs link below **/
-/** https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random **/
+/**
+* [Function to generate a random integer between the two integers given. 
+  Function referenced from MDN Web Docs link below:
+  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random]
+* @param  {[number]}    min             [Minimum integer]
+* @param  {[number]}    max             [Maximum integer]
+* @return {[number]}                    [Integer]
+*/
 function getRandomIntInclusive(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
@@ -415,14 +494,18 @@ function getRandomIntInclusive(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-/** Function to randomize an array in place using the Durstenfeld shuffle algorithm **/
-/** Function referenced from stack overflow link below, many thanks to Laurens Holst **/
-/** https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array **/
-function shuffleArray(array) {
+/**
+* [Function to randomize an array in place using the Durstenfeld shuffle algorithm. 
+  Function referenced from stack overflow link below, many thanks to Laurens Holst:
+  https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array]
+* @param  {[array]}     arrayToShuffle  [Array]
+* @return {[array]}                     [Array]
+*/
+function shuffleArray(arrayToShuffle) {
     let j;
-    for (let i = array.length - 1; i > 0; i--) {
+    for (let i = arrayToShuffle.length - 1; i > 0; i--) {
         j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
+        [arrayToShuffle[i], arrayToShuffle[j]] = [arrayToShuffle[j], arrayToShuffle[i]];
     }
-    return(array);
+    return(arrayToShuffle);
 }

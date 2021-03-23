@@ -1,6 +1,14 @@
-// JavaScript Animation Function Library //
+/**
+* @fileOverview JavaScript Animation Function Library.
+* @author <a href="https://github.com/richardhenyash">Richard Ash</a>
+* @version 1.1.1
+*/
 
-/** Function to return an array of canvas width and height, given canvas element ID **/
+/**
+* [Function to return an array of canvas width and height, given canvas element ID]
+* @param  {[string]}   canvasID     [Canvas ID]
+* @return {[array]}                 [Array of canvas width and height]
+*/
 function getCanvasSize(canvasID) {
     // Check if canvasID starts with #, otherwise add it
     if (canvasID.substr(0, 1) != "#") {
@@ -14,7 +22,13 @@ function getCanvasSize(canvasID) {
     return cArray;
 }
 
-/** Function to draw balloon image on the canvas, given canvasID, image and frame number **/
+/**
+* [Function to draw balloon image on the canvas, given canvasID, image and frame number]
+* @param  {[string]}   canvasID     [Canvas ID]
+* @param  {[object]}   img          [Image object]
+* @param  {[number]}   fno          [Frame number]
+* @return {[object]}                [Canvas context]
+*/
 function drawBalloonImage(canvasID, img, fno) {
     // Check if canvasID starts with #, otherwise add it
     if (canvasID.substr(0, 1) != "#") {
@@ -30,9 +44,14 @@ function drawBalloonImage(canvasID, img, fno) {
     canvasContext.clearRect(0, 0, 300, 150);
     // Draw balloon image frame
     canvasContext.drawImage(img, beginX, 0, 512, 512, 0, 0, 300, 150);
+    return(canvasContext);
 }
 
-/** Function to return canvasID, given balloon text div id **/
+/**
+* [Function to return canvasID, given balloon text div id]
+* @param  {[string]}    answerTextID    [Balloon answer text div ID]
+* @return {[string]}                    [Canvas ID]
+*/
 function returnCanvasID(answerTextID) {
     // Check if canvasID starts with #, otherwise add it
     if (answerTextID.substr(0, 1) != "#") {
@@ -45,7 +64,11 @@ function returnCanvasID(answerTextID) {
     return(canvasID);
 }
 
-/** Function to animate balloon popping image on the canvas, given canvasID and image **/
+/**
+* [Function to animate balloon popping image on the canvas, given canvasID]
+* @param  {[string]}    canvasID    [Balloon answer text div ID]
+* @return {[number]}                [Timeout ID]
+*/
 function animateBalloon(canvasID) {
     // Check if canvasID starts with #, otherwise add it
     if (canvasID.substr(0, 1) != "#") {
@@ -78,7 +101,9 @@ function animateBalloon(canvasID) {
     return(balloonTimeout);
 }
 
-/** Function to initialise balloons on animation frame 1 **/
+/**
+* [Function to initialise balloons on animation frame 1]
+*/
 function initialiseBalloons() {
     // Show all balloon canvas elements
     $("[id^=canvas-balloon]").show();

@@ -1,9 +1,17 @@
-// JavaScript Mail Library //
+/**
+* @fileOverview JavaScript Mail Library.
+* @author <a href="https://github.com/richardhenyash">Richard Ash</a>
+* @version 1.1.1
+*/
 
 // Initialise EmailJS with assigned user ID //
 emailjs.init("user_JExUJN7eCUWFqFAl29Mbl");
 
-/** Function to send email from modal contact form **/
+/**
+* [Function to send email from modal contact form]
+* @param  {[object]}   contactForm      [Contact form object]
+* @return {[boolean]}                   [Boolean - returns false if not succesfull]
+*/
 function sendMail(contactForm) {
     emailjs.send("PersonalGmail","balloon-pop-maths",{
         from_name: contactForm.name.value,
