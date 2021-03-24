@@ -49,17 +49,17 @@ Each library file was configured using [JSHint](https://jshint.com/about/) confi
 any global variables and functions which are defined in other [JavaScript Code Library](./assets/js) files. The results were as follows:
 
 * The [JavaScript Animation Function Library](./assets/js/events.js) initially reported 8 unused variables. These unused variables are
-all related to function names which are defined in the [JavaScript Animation Function Library](./assets/js/animation.js) and called in other library files.
+all related to function names which are defined in the [JavaScript Animation Function Library](./assets/js/animation.js) and are called in other library files.
 The code was then re-validated with the Report options disabled for "Unused Variables", and now passes without errors or warnings. 
 See [JShint Animation Function Library Validation Report](./assets/testing/validation/javascript-validation-report-animation.txt).
 
 * The [JavaScript Audio Function Library](./assets/js/audio.js) initially reported 1 unused variable. The unused variable is
-related to the muteAudioToggle function which is defined in the [JavaScript Audio Function Library](./assets/js/events.js) and called in other library files.
+related to the muteAudioToggle function which is defined in the [JavaScript Audio Function Library](./assets/js/events.js) and is called in other library files.
 The code was then re-validated with the Report options disabled for "Unused Variables", and now passes without errors or warnings. 
 See [JShint Audio Function Library Validation Report](./assets/testing/validation/javascript-validation-report-audio.txt).
 
 * The [JavaScript Display Interaction Function Library](./assets/js/audio.js) initially reported 18 unused variables. These unused variables are
-all related to function names which are defined in the [JavaScript Display Interaction Function Library](./assets/js/display.js) and called in other library files.
+all related to function names which are defined in the [JavaScript Display Interaction Function Library](./assets/js/display.js) and are called in other library files.
 Seven warnings were generated for missing semicolons - these were added. 4 warnings were generated for undefined variables, these were defined with "let".
 The code was then re-validated with the Report options disabled for "Unused Variables", and now passes without errors or warnings. 
 See [JShint Display Interaction Library Validation Report](./assets/testing/validation/javascript-validation-report-display.txt).
@@ -69,7 +69,7 @@ These were added, the code was then re-validated, and now passes without errors 
 See [JShint Display Event Handler Library Validation Report](./assets/testing/validation/javascript-validation-report-events.txt).
 
 * The [JavaScript Game Logic Function Library](./assets/js/game-logic.js) initially reported 3 unused variables. These unused variables are
-all related to function names which are defined in the [JavaScript Game Logic Function Library](./assets/js/game-logic.js) and called in other library files. 
+all related to function names which are defined in the [JavaScript Game Logic Function Library](./assets/js/game-logic.js) and are called in other library files. 
 One warning was generated for a missing semicolon - this was added, the code was then re-validated with the Report options disabled 
 for "Unused Variables", and now passes without errors or warnings. 
 See [JShint Game Logic Validation Report](./assets/testing/validation/javascript-validation-report-game-logic.txt).
@@ -83,7 +83,7 @@ See [JShint Initialisation Library Validation Report](./assets/testing/validatio
 
 * The [JavaScript Mail Library](./assets/js/mail.js) initially reported 1 warning for an unused variable. 
 This warning is related to the function sendMail which is defined in the [JavaScript Mail Library](./assets/js/mail.js) 
-and called in [index.html](index.html). The code was then re-validated with the Report options disabled for
+and is called in [index.html](index.html). The code was then re-validated with the Report options disabled for
 "Unused Variables", and now passes without errors or warnings.
 See [JShint Mail Library Validation Report](./assets/testing/validation/javascript-validation-report-mail.txt).
 

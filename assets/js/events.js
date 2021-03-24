@@ -130,4 +130,4 @@ $("#audio-off").on("click", muteAudio);
 $("#audio-on").on("click", unMuteAudio);
 
 // On click event added to in-game mute button to toggle audio mute //
-$("#mute").on("click", muteAudioToggle);
+$("#mute").on("click", );
