@@ -44,7 +44,7 @@ function modeMultiply()
     // Make first option button active
     makeActive("#btn-mul-div-1");
     // Update button text values
-    $("#btn-mul-div-1").html("2x, 5x, 10x")
+    $("#btn-mul-div-1").html("2x, 5x, 10x");
     $("#btn-mul-div-2").html("Mixed 1 to 12");
     $("#btn-mul-div-3").html("1x");
     $("#btn-mul-div-4").html("7x");
@@ -111,7 +111,7 @@ function returnBtnIdArray(btnPrefix) {
 */
 function makeActive(btnId) {
     // Set button ID array
-    let btnIdArray = ["#btn-mul-div-1", "#btn-mul-div-2", "#btn-mul-div-3", "#btn-mul-div-4", "#btn-mul-div-5", "#btn-mul-div-6", "#btn-mul-div-7", "#btn-mul-div-8", "#btn-mul-div-9", "#btn-mul-div-10", "#btn-mul-div-11", "#btn-mul-div-12", "#btn-mul-div-13", "#btn-mul-div-14"]
+    let btnIdArray = ["#btn-mul-div-1", "#btn-mul-div-2", "#btn-mul-div-3", "#btn-mul-div-4", "#btn-mul-div-5", "#btn-mul-div-6", "#btn-mul-div-7", "#btn-mul-div-8", "#btn-mul-div-9", "#btn-mul-div-10", "#btn-mul-div-11", "#btn-mul-div-12", "#btn-mul-div-13", "#btn-mul-div-14"];
     // Make all buttons in button ID array not active
     makeNotActive(btnIdArray);
     // Make passed button active
@@ -214,14 +214,14 @@ function returnActiveButtons(gameMode) {
     let btnActiveArray = [];
     for (let btnId of btnIdArray) {
         // Add "#" to button ID
-        btnId = "#" + btnId
+        btnId = "#" + btnId;
         // Check if button is active, and add to array of it is
         if ($(btnId).hasClass("active")) {
             if ((gameMode == "add" || gameMode == "subtract") && ((btnId.substring(1, 12)) == "btn-add-sub")) {
-                btnActiveArray.push(btnId)
+                btnActiveArray.push(btnId);
             }
             if ((gameMode == "multiply" || gameMode == "divide") && ((btnId.substring(1, 12)) == "btn-mul-div")) {
-                btnActiveArray.push(btnId)
+                btnActiveArray.push(btnId);
             }
         }
     }
@@ -239,7 +239,7 @@ function btnArray() {
     $(':button.btn-xl').each(function() {
         let btnId = (this.id);
         if (btnId != "") {
-            btnArray.push(btnId)
+            btnArray.push(btnId);
         }
     });
     return btnArray;
@@ -252,10 +252,11 @@ function btnArray() {
 */
 function returnOptionArray (activeButtons) {
     // Initialise option array
-    let optionArray = []
+    let optionArray = [];
     // Iterate through active button array, get button text value and add to option array
     for (let [key, btnId] of Object.entries(activeButtons)) {
         optionArray.push($(btnId).text());
+        key = key;
     }
     return(optionArray);
 }
@@ -310,6 +311,7 @@ function setHealthBar(healthArray) {
     // Set total health
     let totalHealth = healthArray[1];
     let i;
+    let hstr;
     // iterate through all hearts, add "solid" heart icon
     for (i = 1; i < (totalHealth + 1); i++) {
         hstr = "#heart" + i;

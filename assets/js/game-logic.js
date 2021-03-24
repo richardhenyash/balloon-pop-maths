@@ -50,7 +50,7 @@ function playGame() {
     $("#information-section").hide(400);
     // Show game section
     $("#game-section").hide();
-    $("#game-section").removeClass("d-none")
+    $("#game-section").removeClass("d-none");
     $("#game-section").show(1000);     
     // Return score array
     return bpmScoreArray;

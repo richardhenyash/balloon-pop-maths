@@ -13,9 +13,9 @@
 $(document).ready(modeMultiply);
 
 // Hide in game score
-$("#score").hide()
+$("#score").hide();
 // Hide game canvas and controls.
-$("#game-canvas-controls").hide()
+$("#game-canvas-controls").hide();
 
 // Show game loader until 1000ms after window has completed loading.
 // Display balloon animation frame 1 in each canvas element
@@ -34,7 +34,7 @@ $(window).on("load", function() {
         $("#game-canvas-controls").removeClass("d-none");
         $("#game-canvas-controls").fadeIn(1000);
     }, 1000);     
-})
+});
 
 // Options Event Handlers //
 
@@ -71,7 +71,7 @@ $(".btn-mul-div-toggle").click(function(){
     if ($(this).hasClass("active")) {
         $(this).button('toggle');
     }
-})
+});
 
 // On click event handler added to all multiplication and division options buttons with the .btn-mul-div-sticky class //
 // Makes the first two multiply and divide option buttons not active //
@@ -79,7 +79,7 @@ $(".btn-mul-div-toggle").click(function(){
 // are selected before releasing button selection, to ensure that one option is always selected //
 $(".btn-mul-div-sticky").click(function(){
     // Initialise button ID array
-    let btnIdArray = ["#btn-mul-div-1", "#btn-mul-div-2"]
+    let btnIdArray = ["#btn-mul-div-1", "#btn-mul-div-2"];
     // Make all buttons in button ID array not active
     makeNotActive(btnIdArray);
     // Get button ID
@@ -88,7 +88,7 @@ $(".btn-mul-div-sticky").click(function(){
     if (($(this).hasClass("active")) && ((checkOtherStickyButtons(btnId)) == false)) {
         $(this).button('toggle');
     }
-})
+});
 
 // On click event handler added to addition and subtraction options buttons with the .btn-add-sub-toggle class in addition and subtraction modes //
 // Removes active class on all other buttons to give toggle behaviour to addition and subtraction options buttons with the .btn-add-sub-toggle class //
@@ -108,7 +108,7 @@ $(".btn-add-sub-toggle").click(function(){
     if ($(this).hasClass("active")) {
         $(this).button('toggle');
     }
-})
+});
 
 // Game Event Handlers //
 

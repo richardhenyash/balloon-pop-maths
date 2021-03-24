@@ -13,7 +13,7 @@
 * @return {[array]}                     [Question and answer array - an array of 2 item arrays giving question and answer]
 */
 function returnQuestionArray (gameMode, optionArray, qno) {
-    let questionArray = []
+    let questionArray = [];
     // Check game mode and run correct question array function
     if (gameMode == "multiply") {
         questionArray = returnMultiplicationQuestionArray(optionArray, qno);
@@ -36,16 +36,17 @@ function returnQuestionArray (gameMode, optionArray, qno) {
 function returnMultiplicationQuestionArray (optionArray, qno) {
     // Initialise multiplication question array
     let mqArray = [];
+    let i;
+    let ttq;
     // For 2, 5 and 10 times tables
     if (optionArray[0] == "2x, 5x, 10x") {
-        let remq = (qno % 3)
+        let remq = (qno % 3);
         // Set number of 2 times table questions
         let no2xQ = Math.floor(qno / 3) + remq;
         // Set number of 5 times table questions
         let no5xQ = Math.floor(qno / 3);
         // Set number of 10 times table questions
         let no10xQ = Math.floor(qno / 3);
-        let ttq;
         // Generate random multiplication questions and add to array
         for (i = 0; i < no2xQ; i++) {
             ttq = returnMultiplicationQuestion(2);
@@ -61,8 +62,8 @@ function returnMultiplicationQuestionArray (optionArray, qno) {
         }
     } else if (optionArray[0] == "Mixed 1 to 12") {
         // For mixed 1 to 12
-        let ttno
-        let ttq
+        let ttno;
+        let ttq;
         // Generate random multiplication questions and add to array
         for (i = 0; i < qno; i++) {
             ttno = Math.floor((Math.random() * 12) + 1);
@@ -98,9 +99,11 @@ function returnMultiplicationQuestionArray (optionArray, qno) {
 function returnDivisionQuestionArray (optionArray, qno) {
     // Initialise division question array
     let dqArray = [];
+    let dq;
+    let i;
     // For 2, 5 and 10 division questions
     if ((optionArray[0].substring(1, 2) == "2") && (optionArray[0].substring(5, 6) == "5") && (optionArray[0].substring(9, 11) == "10")) {
-        let remq = (qno % 3)
+        let remq = (qno % 3);
         // Set number of 2 division questions
         let no2Q = Math.floor(qno / 3) + remq;
         // Set number of 5 division questions
@@ -123,8 +126,7 @@ function returnDivisionQuestionArray (optionArray, qno) {
         }
     } else if (optionArray[0] == "Mixed 1 to 12") {
         // For mixed 1 to 12
-        let dno
-        let dq
+        let dno;
         // Generate random division questions and add to array
         for (i = 0; i < qno; i++) {
             dno = Math.floor((Math.random() * 12) + 1);
@@ -162,6 +164,7 @@ function returnAdditionQuestionArray (optionArray, qno) {
     // Initialise addition question array
     let aqArray = [];
     let aq;
+    let i;
     // Return random addition questions and add to array
     for (i = 0; i < qno; i++) {
         if (optionArray[0] == "Mixed to 10") {
@@ -191,6 +194,7 @@ function returnSubtractionQuestionArray (optionArray, qno) {
     // Initialise subtraction question array
     let sqArray = [];
     let sq;
+    let i;
     // Return random subtractions questions and add to array
     for (i = 0; i < qno; i++) {
         if (optionArray[0] == "Mixed to 10") {
@@ -308,7 +312,7 @@ function answerArray(gameMode, qCurrent) {
         answerArray = wrongAnswersSubtraction(qCurrent);
     }
     // Add correct answer to answer array
-    answerArray.push(qCurrent[1])
+    answerArray.push(qCurrent[1]);
     // Shuffle answer array to randomise order
     answerArray = shuffleArray(answerArray);
     return(answerArray);
@@ -331,7 +335,7 @@ function wrongAnswersMultiplication(qCurrent) {
     // Set correct answer
     let cA = qCurrent[1];
     // Initialise wrong answer array
-    let wrongAnswerArray = []
+    let wrongAnswerArray = [];
     // Add wrong answers to array
     if (no1 > 1) {
         wrongAnswerArray.push((no1 - 1) * no2);
@@ -461,6 +465,7 @@ function wrongAnswerArrayComplete(wrongAnswerArray, cA, minInt, maxInt) {
         maxInt = minInt + 6;
     }
     // Get random integer between 2 integers given
+    let randomInt;
     randomInt = getRandomIntInclusive(minInt, maxInt);
     // Check if random integer is in wrong answer array, generate another random integer if it is
     while ((wrongAnswerArray.includes(randomInt)) || (randomInt == cA)) {

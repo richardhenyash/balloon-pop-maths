@@ -3,6 +3,7 @@
 * @author <a href="https://github.com/richardhenyash">Richard Ash</a>
 * @version 1.1.1
 */
+/*jshint esversion: 6 */
 
 // Buffer balloon sprite images //
 const imgBalloonBlue = new Image();
@@ -32,14 +33,14 @@ soundWellDone.volume = 0.5;
 
 // Initialise global variables //
 let bpmSoundEffectsMuted = false;
-let bpmGameMode
-let bpmQno
-let bpmDifficulty
-let bpmActiveButtons
-let bpmOptionArray
-let bpmQArray
-let bpmHealthArray
-let bpmCQ
-let bpmQCurrent
-let bpmAnswerArray
-let bpmScoreArray
+let bpmGameMode;
+let bpmQno;
+let bpmDifficulty;
+let bpmActiveButtons;
+let bpmOptionArray;
+let bpmQArray;
+let bpmHealthArray;
+let bpmCQ;
+let bpmQCurrent;
+let bpmAnswerArray;
+let bpmScoreArray;
