@@ -4,6 +4,7 @@
 - [Automated Testing](#automated-testing)
     - [HTML](#html)
     - [Custom CSS Styling](#custom-css-styling)
+    - [JavaScript Code Lbrary](#javascript-code-library)
 - [User Stories Testing](#user-stories-testing)
 - [Additional UX Testing](#additional-ux-testing)
 - [Manual Testing](#manual-testing)
@@ -41,6 +42,55 @@ See [HTML Validation Report 2](./assets/testing/validation/html-validation-repor
 No errors were generated. 12 "unknown vendor extension" warnings were generated. These warnings are related to the 12 global variables declared 
 at the top of the [Custom CSS](./assets/css/style.css). The warnings are generated because the [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) 
 does not currenty support CSS variable declaration are are not considered to be an issue. See [Github Link](https://github.com/w3c/css-validator/pull/173).
+
+### JavaScript Code Library ###
+Each [JavaScript Code Library](./assets/js) file was validated using the [JSHint](https://jshint.com/about/) static code analysis tool.
+Each library file was configured using [JSHint](https://jshint.com/about/) configuration variables added under the header section, including 
+any global variables and functions which are defined in other [JavaScript Code Library](./assets/js) files. The results were as follows:
+
+* The [JavaScript Animation Function Library](./assets/js/events.js) initially reported 8 unused variables. These unused variables are
+all related to function names which are defined in the [JavaScript Animation Function Library](./assets/js/animation.js) and called in other library files.
+The code was then re-validated with the Report options disabled for "Unused Variables", and now passes without errors or warnings. 
+See [JShint Animation Function Library Validation Report](./assets/testing/validation/javascript-validation-report-animation.txt).
+
+* The [JavaScript Audio Function Library](./assets/js/audio.js) initially reported 1 unused variable. The unused variable is
+related to the muteAudioToggle function which is defined in the [JavaScript Audio Function Library](./assets/js/events.js) and called in other library files.
+The code was then re-validated with the Report options disabled for "Unused Variables", and now passes without errors or warnings. 
+See [JShint Audio Function Library Validation Report](./assets/testing/validation/javascript-validation-report-audio.txt).
+
+* The [JavaScript Display Interaction Function Library](./assets/js/audio.js) initially reported 18 unused variables. These unused variables are
+all related to function names which are defined in the [JavaScript Display Interaction Function Library](./assets/js/display.js) and called in other library files.
+Seven warnings were generated for missing semicolons - these were added. 4 warnings were generated for undefined variables, these were defined with "let".
+The code was then re-validated with the Report options disabled for "Unused Variables", and now passes without errors or warnings. 
+See [JShint Display Interaction Library Validation Report](./assets/testing/validation/javascript-validation-report-display.txt).
+
+* The [JavaScript Event Handler Library](./assets/js/events.js) initially reported 7 warnings for missing semicolons. 
+These were added, the code was then re-validated, and now passes without errors or warnings. 
+See [JShint Display Event Handler Library Validation Report](./assets/testing/validation/javascript-validation-report-events.txt).
+
+* The [JavaScript Game Logic Function Library](./assets/js/game-logic.js) initially reported 3 unused variables. These unused variables are
+all related to function names which are defined in the [JavaScript Game Logic Function Library](./assets/js/game-logic.js) and called in other library files. 
+One warning was generated for a missing semicolon - this was added, the code was then re-validated with the Report options disabled 
+for "Unused Variables", and now passes without errors or warnings. 
+See [JShint Game Logic Validation Report](./assets/testing/validation/javascript-validation-report-game-logic.txt).
+
+* The [JavaScript Initialisation Library](./assets/js/initialisation.js) initially reported 12 warnings for unused variables. 
+These warnings are related to global varibales which are defined in the [JavaScript Initialisation Library](./assets/js/display.js) 
+and are called in other library files. 11 warnings were generated for missing semicolons. These were added, 
+the code was then re-validated with the Report options disabled for "Unused Variables", and now passes without 
+errors or warnings.
+See [JShint Initialisation Library Validation Report](./assets/testing/validation/javascript-validation-report-initialisation.txt).
+
+* The [JavaScript Mail Library](./assets/js/mail.js) initially reported 1 warning for an unused variable. 
+This warning is related to the function sendMail which is defined in the [JavaScript Mail Library](./assets/js/mail.js) 
+and called in [index.html](index.html). The code was then re-validated with the Report options disabled for
+"Unused Variables", and now passes without errors or warnings.
+See [JShint Mail Library Validation Report](./assets/testing/validation/javascript-validation-report-mail.txt).
+
+* The [JavaScript Maths Function Library](./assets/js/maths.js) initially reported 9 warnings for missing semicolons, 
+and 4 warnings for undefined varibales. The missing semicolons were added and the undefined variables were defined with "let".
+The code was then re-validated and now passes without errors or warnings.
+See [JShint Maths Function Library Validation Report](./assets/testing/validation/javascript-validation-report-maths.txt).
 
 ## User Stories Testing ##
 * ***As a user, I am playing the game for fun and enjoyment.*** The game has been tested thouroughly by my 7 year old son and his classmates. 
