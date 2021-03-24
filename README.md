@@ -394,7 +394,7 @@ modal is shown. If the user has scored 4 or more but has not achieved a new high
 If the user has achieved a new high score, the [High Score](./assets/testing/features/modal-high-score.png) modal is shown, and the 
 [High Score](./assets/testing/features/high-score.png) panel on the [index](index.html) page is updated.
 
-See [Game Logic UML Diagram](./assets/wireframes/game-logic.png) for a visual represemntation of the **Game Logic**:  
+See [Game Logic UML Diagram](./assets/wireframes/game-logic.png) for a visual representation of the **Game Logic**:  
 
 <img src="./assets/wireframes/game-logic.png" width="100%" style="margin: 15px;"> 
 
