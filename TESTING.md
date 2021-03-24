@@ -22,7 +22,7 @@ All HTML code was validated using the [W3C Markup Validation Service](https://va
 * 29 errors were caused by the autocomplete="off" attribute being incorrectly set on button elements. 
 This attribute is not required and has removed in all cases.
 * 2 errors were caused by the aria-pressed="true" attribute being incorrectly set on label elements. These attributes were removed in both cases.
-* 2 errors were caused by images not having "alt" attributes. Alt attributes were added in both cases.
+* 2 errors were caused by images not having "alt" attributes. "Alt" attributes were added in both cases.
 * 2 errors were caused by the "href" attribute being incorrectly used on button elements. The attribute was replaced with the correct "data-target" attribute in both cases.
 * 1 error was caused by the "type" attribute being incorrectly set on the textarea form element. The attribute was removed.
 * 1 error was caused by the "aria-describedby" attribute being incorrectly set on the form name input. The attribute was removed.
@@ -39,16 +39,17 @@ See [HTML Validation Report 2](./assets/testing/validation/html-validation-repor
 
 ### Custom CSS Styling ###
 [Custom CSS styling](./assets/css/style.css) was validated using the [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/).  
-No errors were generated. 12 "unknown vendor extension" warnings were generated. These warnings are related to the 12 global variables declared 
+No errors were generated. 12 "unknown vendor extension" warnings were generated. The warnings are related to the 12 global variables declared 
 at the top of the [Custom CSS](./assets/css/style.css). The warnings are generated because the [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) 
 does not currenty support CSS variable declaration are are not considered to be an issue. See [Github Link](https://github.com/w3c/css-validator/pull/173).
 
 ### JavaScript Code Library ###
 Each [JavaScript Code Library](./assets/js) file was validated using the [JSHint](https://jshint.com/about/) static code analysis tool.
-Each library file was configured using [JSHint](https://jshint.com/about/) configuration variables added under the header section, including 
-any global variables and functions which are defined in other [JavaScript Code Library](./assets/js) files. The results were as follows:
+Each library file was configured using [JSHint](https://jshint.com/docs/) configuration variables added under the header section, including 
+any global variables and functions which are defined in externally in other **Balloon Pop Maths** [JavaScript Code Library](./assets/js) files. 
+The results were as follows:
 
-* The [JavaScript Animation Function Library](./assets/js/events.js) initially reported 8 unused variables. These unused variables are
+* The [JavaScript Animation Function Library](./assets/js/animation.js) initially reported 8 unused variables. The unused variables are
 all related to function names which are defined in the [JavaScript Animation Function Library](./assets/js/animation.js) and are called in other library files.
 The code was then re-validated with the Report options disabled for "Unused Variables", and now passes without errors or warnings. 
 See [JShint Animation Function Library Validation Report](./assets/testing/validation/javascript-validation-report-animation.txt).
@@ -58,24 +59,24 @@ related to the muteAudioToggle function which is defined in the [JavaScript Audi
 The code was then re-validated with the Report options disabled for "Unused Variables", and now passes without errors or warnings. 
 See [JShint Audio Function Library Validation Report](./assets/testing/validation/javascript-validation-report-audio.txt).
 
-* The [JavaScript Display Interaction Function Library](./assets/js/audio.js) initially reported 18 unused variables. These unused variables are
+* The [JavaScript Display Interaction Function Library](./assets/js/audio.js) initially reported 18 unused variables. The unused variables are
 all related to function names which are defined in the [JavaScript Display Interaction Function Library](./assets/js/display.js) and are called in other library files.
 Seven warnings were generated for missing semicolons - these were added. 4 warnings were generated for undefined variables, these were defined with "let".
 The code was then re-validated with the Report options disabled for "Unused Variables", and now passes without errors or warnings. 
 See [JShint Display Interaction Library Validation Report](./assets/testing/validation/javascript-validation-report-display.txt).
 
 * The [JavaScript Event Handler Library](./assets/js/events.js) initially reported 7 warnings for missing semicolons. 
-These were added, the code was then re-validated, and now passes without errors or warnings. 
-See [JShint Display Event Handler Library Validation Report](./assets/testing/validation/javascript-validation-report-events.txt).
+The semicolons were added, the code was then re-validated, and now passes without errors or warnings. 
+See [JShint Event Handler Library Validation Report](./assets/testing/validation/javascript-validation-report-events.txt).
 
 * The [JavaScript Game Logic Function Library](./assets/js/game-logic.js) initially reported 3 unused variables. These unused variables are
 all related to function names which are defined in the [JavaScript Game Logic Function Library](./assets/js/game-logic.js) and are called in other library files. 
 One warning was generated for a missing semicolon - this was added, the code was then re-validated with the Report options disabled 
 for "Unused Variables", and now passes without errors or warnings. 
-See [JShint Game Logic Validation Report](./assets/testing/validation/javascript-validation-report-game-logic.txt).
+See [JShint Game Logic Function Library Validation Report](./assets/testing/validation/javascript-validation-report-game-logic.txt).
 
 * The [JavaScript Initialisation Library](./assets/js/initialisation.js) initially reported 12 warnings for unused variables. 
-These warnings are related to global varibales which are defined in the [JavaScript Initialisation Library](./assets/js/display.js) 
+These warnings are related to global variables which are defined in the [JavaScript Initialisation Library](./assets/js/display.js) 
 and are called in other library files. 11 warnings were generated for missing semicolons. These were added, 
 the code was then re-validated with the Report options disabled for "Unused Variables", and now passes without 
 errors or warnings.
@@ -261,9 +262,30 @@ tested and de-bugged in the Console window during the **Phase 1 Development**, t
 See [Bugs Fixed During Testing](#bugs-fixed-during-testing) for additional JavaScript bugs fixed during the testing process.
 
 ## Bugs Fixed During Testing ##
-High Score should not be set if new score is 0.
-Balloons fading out - javascript updated to fade back in on new game.
-Responsive design.
+* See [Custom CSS Styling](#custom-css-styling), [HTML](#html) and [JavaScript Code Library](#javascript-code-library) sections 
+for bugs fixed during the automated testing process. 
+* It was noted in feedback during initial user testing that the **Game** section was not fully scaling to fill the entire vertical 
+screen area available, resulting in users of very small devices (e.g. iPhone 5) having to scroll up and down during the game 
+to see all of the **Game** elements. This was rectified by adding three 
+[CSS custom properties (variables)](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) at the top of the 
+[Custom CSS](/assets/css/style.css): --canvassize, --balloontextsize and --balloontextlineheight. The available area and 
+corresponding maximum size for the "Balloon" canvas element, and the corresponding maximum "Balloon" text size and 
+line height are now calculated to ensure that the balloons are as large as is possible to fit the vertical screen 
+space available on smaller devices. "Balloon" canvas size and text height is fixed on devices over 768 pixels wide. 
+See below screen prints: 
+
+<img src="./assets/testing/responsive/game-iphone11.png" align="left" width="250px" style="margin: 15px;">  
+<img src="./assets/testing/responsive/game-iphone5.png" width="250px" style="margin: 15px;">  
+
+* It was noted during initial early manual testing that the answer "Balloons" and text were fading out when 
+the wrong answer was selected as expected, but the fade out was persisting and the "Balloons" and text were 
+not showing when a new game was started. This bug was fixed by showing all answer text and "Balloon" elements 
+in the playGame function, contained in the [JavaScript Game Logic Function Library](./assets/js/game-logic.js)
+using the [jQuery show](https://api.jquery.com/show/) method.
+
+* It was noted during manual testing that when specific question groups are selected e.g. 2x tables, 
+the questions presented are not always unique. This is becuase a random question between 1 and 12 is 
+being generated, and there is a chance of the same question being generated twice.
 
 ## Bugs Remaining ##
 There are no known bugs remaining.
