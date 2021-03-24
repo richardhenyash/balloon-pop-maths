@@ -225,12 +225,11 @@ The final colour palette selected is shown below:
 
 ### Browser Support ###
 The following browsers are all supported by **Balloon Pop Maths**.
-* [Google Chrome](https://www.google.com/intl/en_uk/chrome/).
-* [Microsoft Edge](https://www.microsoft.com/en-us/edge).
-* [Safari](https://www.apple.com/uk/safari/).
-* [Firefox](https://www.mozilla.org/en-GB/firefox/new/).
-* [Yandex](https://browser.yandex.com/).
-* [Opera](https://www.opera.com/).
+* [Google Chrome](https://www.google.com/intl/en_uk/chrome/)
+* [Microsoft Edge](https://www.microsoft.com/en-us/edge)
+* [Safari](https://www.apple.com/uk/safari/)
+* [Firefox](https://www.mozilla.org/en-GB/firefox/new/)
+* [Opera](https://www.opera.com/)
 
 Please note that **Balloon Pop Maths** does not function correctly in 
 [Microsoft Internet Explorer](https://support.microsoft.com/en-us/topic/internet-explorer-downloads-d49e1f0d-571c-9a7b-d97e-be248806ca70#ID0EBBD=Windows_10).
@@ -246,7 +245,7 @@ The game is comprised of a single web page, [index.html](./index.html), divided 
 * The **Game** section, containing the [**In Game Elements**](./assets/testing/responsive/game-ipad.png). The **Heading**, **Options** and **Information** sections
 are hidden when in **Game** mode. The **Game** section is hidden when not in **Game** mode.
 * The **Footer** section, containing the **[Contact Developer](./assets/testing/features/contact-developer-link.png)** 
-and **[GitHub](./assets/testing/features/github-link.png)** links. The footer visible at all times.
+and **[GitHub](./assets/testing/features/github-link.png)** links. The footer is visible at all times.
 
 ### Features Implemented ###
 #### Features Implemented in Phase 1 ####
@@ -394,6 +393,10 @@ varies depending on how well the user has played the game. If the user has score
 modal is shown. If the user has scored 4 or more but has not achieved a new high score, the [Well Done](./assets/testing/features/modal-well-done.png) modal is shown.
 If the user has achieved a new high score, the [High Score](./assets/testing/features/modal-high-score.png) modal is shown, and the 
 [High Score](./assets/testing/features/high-score.png) panel on the [index](index.html) page is updated.
+
+See [Game Logic UML Diagram](./assets/wireframes/game-logic.png):  
+
+<img src="./assets/wireframes/game-logic.png" width="100%" style="margin: 15px;"> 
 
 ## Testing ##
 
