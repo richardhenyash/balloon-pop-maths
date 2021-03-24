@@ -355,7 +355,7 @@ The [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) code h
 functions where possible and is contained within several [JavaScript Code Library](./assets/js) files:
 * [JavaScript Animation Function Library](./assets/js/events.js)
 * [JavaScript Audio Function Library](./assets/js/audio.js)
-* [JavaScript Display Interaction Function Library](./assets/js/audio.js)
+* [JavaScript Display Interaction Function Library](./assets/js/display.js)
 * [JavaScript Event Handler Library](./assets/js/events.js)
 * [JavaScript Game Logic Function Library](./assets/js/game-logic.js)
 * [JavaScript Initialisation Library](./assets/js/initialisation.js)
