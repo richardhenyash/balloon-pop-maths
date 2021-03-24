@@ -1,0 +1,9 @@
+Metrics
+
+There are 3 functions in this file.
+
+Function with the largest signature take 0 arguments, while the median is 0.
+
+Largest function has 10 statements in it, while the median is 10.
+
+The most complex function has a cyclomatic complexity value of 2 while the median is 1.
