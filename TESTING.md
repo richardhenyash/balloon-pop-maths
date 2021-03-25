@@ -140,11 +140,11 @@ Hover styling is working as intended.
 * **Options Panel** has been tested and works as intended. Options buttons are succesfully updated  
 depending on selected game mode.  
 In multiplication and division modes, the first two options buttons ("2, 5, 10" and "Mixed 1 to 12")
-act as intended (as toggle buttons) and de-select all other buttons if selected. All other buttons act as intended - 
-multiple buttons may be selected and de-selected. If no other buttons are active, buttons cannot be de-selected.  
+act as intended (as toggle buttons) and de-select all other options buttons if selected. All other options buttons act as intended - 
+multiple buttons may be selected and de-selected. If no other options buttons are active, options buttons cannot be de-selected.  
 <img src="./assets/testing/features/options-multiply.png" style="margin: 15px; width:300px;">
 In addition and subtraction modes, all four options buttons act as intended (as toggle buttons) and de-select all 
-other buttons if selected.
+other options buttons if selected.  
 <img src="./assets/testing/features/options-add.png" style="margin: 15px; width:300px;">
 Hover styling for each individual option button is working as intended.  
 
@@ -293,13 +293,13 @@ not showing when a new game was started. This bug was fixed by showing all answe
 in the playGame function, contained in the [JavaScript Game Logic Function Library](./assets/js/game-logic.js)
 using the [jQuery show](https://api.jquery.com/show/) method.
 
-* It was noted during manual testing that when selecting specific times table or division table options from the 
-options panel, it was possible to de-select all buttons. An additional class, "btn-mul-div-sticky" was added to 
+* It was noted during manual testing that when selecting specific times table or division table options buttons from the 
+options panel, it was possible to de-select all options buttons. An additional class, "btn-mul-div-sticky" was added to 
 the relevant specific times table and division table options buttons, an additional function "checkOtherStickyButtons" was 
-added to the [JavaScript Display Interaction Function Library](./assets/js/display.js), and the button on-click event 
+added to the [JavaScript Display Interaction Function Library](./assets/js/display.js), and the options button on-click event 
 handler in the [JavaScript Event Handler Library](./assets/js/events.js) was updated. The "checkOtherStickyButtons" 
-function checks to see if other buttons are active. If there are no other buttons active, 
-the selected button is toggled back on, meaning it cannot be de-selected.
+function checks to see if other options buttons are active. If there are no other options buttons active, 
+the selected options button is toggled back on, meaning it cannot be de-selected.
 
 * It was noted during manual testing that when specific question groups are selected e.g. 2x tables, 
 the questions presented are not always unique. This is becuase a random question between 1 and 12 is 
