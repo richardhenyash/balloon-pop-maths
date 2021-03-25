@@ -140,12 +140,12 @@ Hover styling is working as intended.
 * **Options Panel** has been tested and works as intended. Options buttons are succesfully updated  
 depending on selected game mode. Hover styling for each individual option button is working as intended.  
 
-* **Multiplication and Division Options Panel** - in multiplication and division modes, the first two options buttons ("2, 5, 10" and "Mixed 1 to 12")
+* **Multiplication and Division Options Panel** has been tested and works as intended. In multiplication and division modes, the first two options buttons ("2, 5, 10" and "Mixed 1 to 12")
 act as intended (as toggle buttons) and de-select all other options buttons if selected. All other options buttons act as intended - 
 multiple buttons may be selected and de-selected. If no other options buttons are active, options buttons cannot be de-selected.  
 <img src="./assets/testing/features/options-multiply.png" style="margin: 15px; width:300px;">
 
-* **Addition and Subtraction Options Panel** - in addition and subtraction modes, all four options buttons act as intended (as toggle buttons) and de-select all 
+* **Addition and Subtraction Options Panel** has been tested and works as intended. In addition and subtraction modes, all four options buttons act as intended (as toggle buttons) and de-select all 
 other options buttons if selected.  
 <img src="./assets/testing/features/options-add.png" style="margin: 15px; width:300px;"> 
 
@@ -304,7 +304,14 @@ the selected options button is toggled back on, meaning it cannot be de-selected
 
 * It was noted during manual testing that when specific question groups are selected e.g. 2x tables, 
 the questions presented are not always unique. This is becuase a random question between 1 and 12 is 
-being generated, and there is therefore a chance of the same question being generated twice.
+being generated, and there is therefore a chance of the same question being generated twice. This issue was rectified by adding the 
+function "checkQuestionArray" to the [JavaScript Maths Function Library](./assets/js/maths.js). 
+This function enables the question array to be checked prior to a new random question being added. 
+The logic of the "returnMultiplicationQuestionArray", "returnDivisionQuestionArray", 
+"returnAdditionQuestionArray" and "returnSubtractionQuestionArray" functions was updated to include 
+checking using the "checkQuestionArray" function. Note that it is still possible for duplicate questions 
+to be generated if the number of questions is set to 20 and only one specific multiplication or division 
+option button has been selected, as there are only 12 possible questions for each specific times table.
 
 ## Bugs Remaining ##
 There are no known bugs remaining.
