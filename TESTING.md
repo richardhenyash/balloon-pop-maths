@@ -279,19 +279,19 @@ for bugs fixed during the automated testing process.
 screen area available, resulting in users of very small devices (e.g. iPhone 5) having to scroll up and down during the game 
 to see all of the **Game** elements. This was rectified by adding three 
 [CSS custom properties (variables)](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) at the top of the 
-[Custom CSS](/assets/css/style.css): --canvassize, --balloontextsize and --balloontextlineheight. The available area and 
-corresponding maximum size for the "Balloon" canvas element, and the corresponding maximum "Balloon" text size and 
+[Custom CSS](/assets/css/style.css): **--canvassize**, **--balloontextsize** and **--balloontextlineheight**. The available area and 
+corresponding maximum size for the **Balloon** canvas element, and the corresponding maximum "Balloon" text size and 
 line height are now calculated to ensure that the balloons are as large as is possible to fit the vertical screen 
-space available on smaller devices. "Balloon" canvas size and text height is fixed on devices over 768 pixels wide. 
+space available on smaller devices. **Balloon** canvas size and text height is fixed on devices over 768 pixels wide. 
 See below screen prints: 
 
 <img src="./assets/testing/responsive/game-iphone11.png" align="left" width="250px" style="margin: 15px;">  
 <img src="./assets/testing/responsive/game-iphone5.png" width="250px" style="margin: 15px;">  
 
-* It was noted during manual testing that the answer "Balloons" and text were fading out when 
-the wrong answer was selected as expected, but the fade out was persisting and the "Balloons" and text were 
-not showing when a new game was started. This bug was fixed by showing all answer text and "Balloon" elements 
-in the playGame function, contained in the [JavaScript Game Logic Function Library](./assets/js/game-logic.js)
+* It was noted during manual testing that the answer **Balloons** and text were fading out when 
+the wrong answer was selected as expected, but the fade out was persisting and the **Balloons** and text were 
+not showing when a new game was started. This bug was fixed by showing all answer text and **Balloon** elements 
+in the **playGame** function, contained in the [JavaScript Game Logic Function Library](./assets/js/game-logic.js)
 using the [jQuery show](https://api.jquery.com/show/) method.
 
 * It was noted during manual testing that when selecting specific times table or division table options buttons from the 
