@@ -59,7 +59,7 @@ related to the muteAudioToggle function which is defined in the [JavaScript Audi
 The code was then re-validated with the Report options disabled for "Unused Variables", and now passes without errors or warnings. 
 See [JShint Audio Function Library Validation Report](./assets/testing/validation/javascript-validation-report-audio.txt).
 
-* The [JavaScript Display Interaction Function Library](./assets/js/audio.js) initially reported 18 unused variables. The unused variables are
+* The [JavaScript Display Interaction Function Library](./assets/js/display.js) initially reported 18 unused variables. The unused variables are
 all related to function names which are defined in the [JavaScript Display Interaction Function Library](./assets/js/display.js) and are called in other library files.
 Seven warnings were generated for missing semicolons - these were added. 4 warnings were generated for undefined variables, these were defined with "let".
 The code was then re-validated with the Report options disabled for "Unused Variables", and now passes without errors or warnings. 
@@ -136,6 +136,17 @@ Hover styling is working as intended.
 * **Options Button** has been tested and works as intended, opening collapsing **Options** panel. 
 Hover styling is working as intended.  
 <img src="./assets/testing/features/options.png" style="margin: 15px; width:300px;"> 
+
+* **Options Panel** has been tested and works as intended. Options buttons are succesfully updated  
+depending on selected game mode.  
+In multiplication and division modes, the first two options buttons ("2, 5, 10" and "Mixed 1 to 12")
+act as intended (as toggle buttons) and de-select all other buttons if selected. All other buttons act as intended - 
+multiple buttons may be selected and de-selected. If no other buttons are active, buttons cannot be de-selected.  
+<img src="./assets/testing/features/options-multiply.png" style="margin: 15px; width:300px;">
+In addition and subtraction modes, all four options buttons act as intended (as toggle buttons) and de-select all 
+other buttons if selected.
+<img src="./assets/testing/features/options-add.png" style="margin: 15px; width:300px;">
+Hover styling for each individual option button is working as intended.  
 
 * **How To Play Button** has been tested and works as intended, opening collapsing information panel.
 Hover styling is working as intended.  
@@ -276,15 +287,23 @@ See below screen prints:
 <img src="./assets/testing/responsive/game-iphone11.png" align="left" width="250px" style="margin: 15px;">  
 <img src="./assets/testing/responsive/game-iphone5.png" width="250px" style="margin: 15px;">  
 
-* It was noted during initial early manual testing that the answer "Balloons" and text were fading out when 
+* It was noted during manual testing that the answer "Balloons" and text were fading out when 
 the wrong answer was selected as expected, but the fade out was persisting and the "Balloons" and text were 
 not showing when a new game was started. This bug was fixed by showing all answer text and "Balloon" elements 
 in the playGame function, contained in the [JavaScript Game Logic Function Library](./assets/js/game-logic.js)
 using the [jQuery show](https://api.jquery.com/show/) method.
 
+* It was noted during manual testing that when selecting specific times table or division table options from the 
+options panel, it was possible to de-select all buttons. An additional class, "btn-mul-div-sticky" was added to 
+the relevant specific times table and division table options buttons, an additional function "checkOtherStickyButtons" was 
+added to the [JavaScript Display Interaction Function Library](./assets/js/display.js), and the button on-click event 
+handler in the [JavaScript Event Handler Library](./assets/js/events.js) was updated. The "checkOtherStickyButtons" 
+function checks to see if other buttons are active. If there are no other buttons active, 
+the selected button is toggled back on, meaning it cannot be de-selected.
+
 * It was noted during manual testing that when specific question groups are selected e.g. 2x tables, 
 the questions presented are not always unique. This is becuase a random question between 1 and 12 is 
-being generated, and there is a chance of the same question being generated twice.
+being generated, and there is therefore a chance of the same question being generated twice.
 
 ## Bugs Remaining ##
 There are no known bugs remaining.
