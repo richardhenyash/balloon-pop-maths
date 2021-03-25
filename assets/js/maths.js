@@ -293,6 +293,23 @@ function returnSubtractionQuestion(maxsum) {
 }
 
 /**
+* [Function to check if a new question is already contained in the question array]
+* @param  {[array]}     nq              [New question, 2 item array of question and answer]
+* @return {[array]}     qArray          [Question array, array of 2 item arrays to check]
+*/
+function checkQuestionArray(nq, qArray) {
+    let i = 0;
+    let qCheck = false;
+    while ((qCheck == false) && (i < qArray.length)) {
+        if (qArray[i][0] == nq[0]) {
+            qCheck = true;
+        }
+        i++;
+    }
+    return(qCheck);
+}
+
+/**
 * [Function to generate array of 5 wrong answers and the correct answer, given game mode and current question]
 * @param  {[string]}    gameMode        [Game mode]
 * @param  {[array]}     qCurrent        [Current question array, array of 2 items giving question and answer]
@@ -371,8 +388,6 @@ function wrongAnswersDivision(qCurrent) {
     let qStrArray = qStr.split(" ");
     // Set first integer
     let no1 = parseInt(qStrArray[0]);
-    // Set second integer
-    let no2 = parseInt(qStrArray[2]);
     // Set correct answer
     let cA = qCurrent[1];
     // Set minimum integer
