@@ -255,7 +255,7 @@ and **[GitHub](./assets/testing/features/github-link.png)** links. The footer is
 * **Game Mode Selector** (including hover styling), facilitates switching between multiplication, division, subtraction and addition games:  
 <img src="./assets/testing/features/game-mode.png" style="margin: 15px; width:300px;"> 
 
-* **High Score Panel**, shows current high score. Updated if the user gets a new high score.
+* **High Score Panel**, shows current high score. Updated if the user gets a new high score:
 <img src="./assets/testing/features/high-score.png" style="margin: 15px; width:300px;"> 
 
 * **Play Button** (including hover styling), launches game:  
@@ -270,13 +270,13 @@ and **[GitHub](./assets/testing/features/github-link.png)** links. The footer is
 * **How To Play Button** (including hover styling), opens collapsing information panel:  
 <img src="./assets/testing/features/how-to-play.png" style="margin: 15px; width:300px;"> 
 
-* **Footer Contact Developer Link** (including hover styling), opens contact modal:  
+* **Footer Contact Developer Link** (including hover styling), opens **Contact Modal**:  
 <img src="./assets/testing/features/contact-developer-link.png" style="margin: 15px; width:150px;"> 
 
-* **Footer GitHub Link** (including hover styling), links to developer page on github:  
+* **Footer GitHub Link** (including hover styling), links to [Developer Page](https://github.com/richardhenyash) on [GitHub](https://github.com):  
 <img src="./assets/testing/features/github-link.png" style="margin: 15px; width:50px;"> 
 
-* **In Game Home Button** (including hover styling), returns to Home panel from game:  
+* **In Game Home Button** (including hover styling), returns to **Home** panel from game:  
 <img src="./assets/testing/features/game-home.png" style="margin: 15px; width:100px;">
 
 * **Game Loader**, displayed while game window is loading. Note that the **Game Loader** 
