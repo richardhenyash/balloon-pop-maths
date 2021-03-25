@@ -280,7 +280,7 @@ screen area available, resulting in users of very small devices (e.g. iPhone 5) 
 to see all of the **Game** elements. This was rectified by adding three 
 [CSS custom properties (variables)](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) at the top of the 
 [Custom CSS](/assets/css/style.css): **--canvassize**, **--balloontextsize** and **--balloontextlineheight**. The available area and 
-corresponding maximum size for the **Balloon** canvas element, and the corresponding maximum "Balloon" text size and 
+corresponding maximum size for the **Balloon** canvas element, and the corresponding maximum **Balloon** text size and 
 line height are now calculated to ensure that the balloons are as large as is possible to fit the vertical screen 
 space available on smaller devices. **Balloon** canvas size and text height is fixed on devices over 768 pixels wide. 
 See below screen prints: 
@@ -296,11 +296,11 @@ using the [jQuery show](https://api.jquery.com/show/) method.
 
 * It was noted during manual testing that when selecting specific times table or division table options buttons from the 
 options panel, it was possible to de-select all options buttons. An additional class, **btn-mul-div-sticky** was added to 
-the relevant specific times table and division table options buttons, an additional function "checkOtherStickyButtons" was 
+the relevant specific times table and division table options buttons, an additional function **checkOtherStickyButtons** was 
 added to the [JavaScript Display Interaction Function Library](./assets/js/display.js), and the options button on-click event 
 handler in the [JavaScript Event Handler Library](./assets/js/events.js) was updated. The **checkOtherStickyButtons** 
 function checks to see if other options buttons are active. If there are no other options buttons active, 
-the selected options button is toggled back on, meaning it cannot be de-selected.
+the selected options button is toggled back on, meaning the button cannot be de-selected.
 
 * It was noted during manual testing that when specific question groups are selected e.g. 2x tables only, 
 the questions presented are not always unique. This is becuase a random question between 1 and 12 is generated, 
