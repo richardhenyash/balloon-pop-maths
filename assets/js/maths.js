@@ -38,6 +38,7 @@ function returnMultiplicationQuestionArray (optionArray, qno) {
     let mqArray = [];
     let i;
     let ttq;
+    let tk;
     // For 2, 5 and 10 times tables
     if (optionArray[0] == "2x, 5x, 10x") {
         let remq = (qno % 3);
@@ -49,15 +50,39 @@ function returnMultiplicationQuestionArray (optionArray, qno) {
         let no10xQ = Math.floor(qno / 3);
         // Generate random multiplication questions and add to array
         for (i = 0; i < no2xQ; i++) {
+            // Generate random question
             ttq = returnMultiplicationQuestion(2);
+            // Check random question is not already in question array
+            tk = 0;
+            while ((tk < 11) && (checkQuestionArray(ttq, mqArray))) {
+                ttq = returnMultiplicationQuestion(2);
+                tk++;
+            }
+            // Add random question to question array
             mqArray.push(ttq);
         }
         for (i = 0; i < no5xQ; i++) {
+            // Generate random question
             ttq = returnMultiplicationQuestion(5);
+            // Check random question is not already in question array
+            tk = 0;
+            while ((tk < 11) && (checkQuestionArray(ttq, mqArray))) {
+                ttq = returnMultiplicationQuestion(5);
+                tk++;
+            }
+            // Add random question to question array
             mqArray.push(ttq);
         }
         for (i = 0; i < no10xQ; i++) {
+            // Generate random question
             ttq = returnMultiplicationQuestion(10);
+            // Check random question is not already in question array
+            tk = 0;
+            while ((tk < 11) && (checkQuestionArray(ttq, mqArray))) {
+                ttq = returnMultiplicationQuestion(10);
+                tk++;
+            }
+            // Add random question to question array
             mqArray.push(ttq);
         }
     } else if (optionArray[0] == "Mixed 1 to 12") {
@@ -67,7 +92,15 @@ function returnMultiplicationQuestionArray (optionArray, qno) {
         // Generate random multiplication questions and add to array
         for (i = 0; i < qno; i++) {
             ttno = Math.floor((Math.random() * 12) + 1);
+            // Generate random question
             ttq = returnMultiplicationQuestion(ttno);
+            // Check random question is not already in question array
+            tk = 0;
+            while ((tk < 11) && (checkQuestionArray(ttq, mqArray))) {
+                ttq = returnMultiplicationQuestion(ttno);
+                tk++;
+            }
+            // Add random question to question array
             mqArray.push(ttq);
         }
     } else {
@@ -78,7 +111,15 @@ function returnMultiplicationQuestionArray (optionArray, qno) {
         for (i = 0; i < qno; i++) {
             ttqstr = (optionArray[ttk]);
             ttqstrnew = ttqstr.substring(0, ttqstr.length - 1);
+            // Generate random question
             ttq = returnMultiplicationQuestion(ttqstrnew);
+            // Check random question is not already in question array
+            tk = 0;
+            while ((tk < 11) && (checkQuestionArray(ttq, mqArray))) {
+                ttq = returnMultiplicationQuestion(ttqstrnew);
+                tk++;
+            }
+            // Add random question to question array
             mqArray.push(ttq);
             if (ttk < (optionArray.length - 1)) {
                 ttk = (ttk + 1);
@@ -101,6 +142,7 @@ function returnDivisionQuestionArray (optionArray, qno) {
     let dqArray = [];
     let dq;
     let i;
+    let dk;
     // For 2, 5 and 10 division questions
     if ((optionArray[0].substring(1, 2) == "2") && (optionArray[0].substring(5, 6) == "5") && (optionArray[0].substring(9, 11) == "10")) {
         let remq = (qno % 3);
@@ -113,15 +155,38 @@ function returnDivisionQuestionArray (optionArray, qno) {
         let dq;
         // Generate random division questions and add to array
         for (i = 0; i < no2Q; i++) {
+            // Generate random question
             dq = returnDivisionQuestion(2);
+            // Check random question is not already in question array
+            dk = 0;
+            while ((dk < 11) && (checkQuestionArray(dq, dqArray))) {
+                dq = returnDivisionQuestion(2);
+                dk++;
+            }
+            // Add random question to question array
             dqArray.push(dq);
         }
         for (i = 0; i < no5Q; i++) {
+            // Generate random question
             dq = returnDivisionQuestion(5);
+            dk = 0;
+            while ((dk < 11) && (checkQuestionArray(dq, dqArray))) {
+                dq = returnDivisionQuestion(5);
+                dk++;
+            }
+            // Add random question to question array
             dqArray.push(dq);
         }
         for (i = 0; i < no10Q; i++) {
+            // Generate random question
             dq = returnDivisionQuestion(10);
+            // Check random question is not already in question array
+            dk = 0;
+            while ((dk < 11) && (checkQuestionArray(dq, dqArray))) {
+                dq = returnDivisionQuestion(10);
+                dk++;
+            }
+            // Add random question to question array
             dqArray.push(dq);
         }
     } else if (optionArray[0] == "Mixed 1 to 12") {
@@ -130,24 +195,41 @@ function returnDivisionQuestionArray (optionArray, qno) {
         // Generate random division questions and add to array
         for (i = 0; i < qno; i++) {
             dno = Math.floor((Math.random() * 12) + 1);
+            // Generate random question
             dq = returnDivisionQuestion(dno);
+            // Check random question is not already in question array
+            dk = 0;
+            while ((dk < 11) && (checkQuestionArray(dq, dqArray))) {
+                dq = returnDivisionQuestion(dno);
+                dk++;
+            }
+            // Add random question to question array
             dqArray.push(dq);
         }
     } else {
-        // For specific divisoin questions
-        let dk = 0;
+        // For specific division questions
+        let ddk = 0;
         let dqstr;
         let dqstrnew;
         // Generate random division questions and add to array
         for (i = 0; i < qno; i++) {
-            dqstr = (optionArray[dk]);
+            dqstr = (optionArray[ddk]);
             dqstrnew = dqstr.substring(1, dqstr.length);
+            // Generate random question
             dq = returnDivisionQuestion(dqstrnew);
+            // Check random question is not already in question array
+            dk = 0;
+            while ((dk < 11) && (checkQuestionArray(dq, dqArray))) {
+                dq = returnDivisionQuestion(dqstrnew);
+                dk++;
+            }
+            // Add random question to question array
             dqArray.push(dq);
-            if (dk < (optionArray.length - 1)) {
-                dk = (dk + 1);
+            // Increment division option counter
+            if (ddk < (optionArray.length - 1)) {
+                ddk = (ddk + 1);
             } else {
-                dk = 0;
+                ddk = 0;
             }
         }
     }
@@ -163,23 +245,32 @@ function returnDivisionQuestionArray (optionArray, qno) {
 function returnAdditionQuestionArray (optionArray, qno) {
     // Initialise addition question array
     let aqArray = [];
+    let qt;
     let aq;
     let i;
+    let ak;
+    // Set question type
+    if (optionArray[0] == "Mixed to 10") {
+        qt = 10;
+    } else if (optionArray[0] == "Mixed to 20") {
+        qt = 20;
+    } else if (optionArray[0] == "Mixed to 50") {
+        qt = 50;
+    } else if (optionArray[0] == "Mixed to 100") {
+        qt = 100;
+    }
     // Return random addition questions and add to array
     for (i = 0; i < qno; i++) {
-        if (optionArray[0] == "Mixed to 10") {
-            aq =  returnAdditionQuestion(10);
-            aqArray.push(aq);
-        } else if (optionArray[0] == "Mixed to 20") {
-            aq =  returnAdditionQuestion(20);
-            aqArray.push(aq);
-        } else if (optionArray[0] == "Mixed to 50") {
-            aq =  returnAdditionQuestion(50);
-            aqArray.push(aq);
-        } else if (optionArray[0] == "Mixed to 100") {
-            aq =  returnAdditionQuestion(100);
-            aqArray.push(aq);
+        // Generate random question
+        aq =  returnAdditionQuestion(qt);
+        // Check random question is not already in question array
+        ak = 0;
+        while ((ak < qno) && (checkQuestionArray(aq, aqArray))) {
+           aq =  returnAdditionQuestion(qt);
+           ak++;
         }
+        // Add random question to question array
+        aqArray.push(aq);
     }
     return(aqArray);
 }
@@ -193,24 +284,34 @@ function returnAdditionQuestionArray (optionArray, qno) {
 function returnSubtractionQuestionArray (optionArray, qno) {
     // Initialise subtraction question array
     let sqArray = [];
+    let qt;
     let sq;
     let i;
-    // Return random subtractions questions and add to array
-    for (i = 0; i < qno; i++) {
-        if (optionArray[0] == "Mixed to 10") {
-            sq =  returnSubtractionQuestion(10);
-            sqArray.push(sq);
-        } else if (optionArray[0] == "Mixed to 20") {
-            sq =  returnSubtractionQuestion(20);
-            sqArray.push(sq);
-        } else if (optionArray[0] == "Mixed to 50") {
-            sq =  returnSubtractionQuestion(50);
-            sqArray.push(sq);
-        } else if (optionArray[0] == "Mixed to 100") {
-            sq =  returnSubtractionQuestion(100);
-            sqArray.push(sq);
-        }
+    let sk;
+    // Set question type
+    if (optionArray[0] == "Mixed to 10") {
+        qt = 10;
+    } else if (optionArray[0] == "Mixed to 20") {
+        qt = 20;
+    } else if (optionArray[0] == "Mixed to 50") {
+        qt = 50;
+    } else if (optionArray[0] == "Mixed to 100") {
+        qt = 100;
     }
+    // Return random subtraction questions and add to array
+    for (i = 0; i < qno; i++) {
+        // Generate random question
+        sq = returnSubtractionQuestion(qt);
+        // Check random question is not already in question array
+        sk = 0;
+        while ((sk < qno) && (checkQuestionArray(sq, sqArray))) {
+           sq = returnSubtractionQuestion(qt);
+           sk++;
+        }
+        // Add random question to question array
+        sqArray.push(sq);
+        
+    }    
     return(sqArray);
 }
 
