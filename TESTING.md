@@ -295,21 +295,21 @@ in the playGame function, contained in the [JavaScript Game Logic Function Libra
 using the [jQuery show](https://api.jquery.com/show/) method.
 
 * It was noted during manual testing that when selecting specific times table or division table options buttons from the 
-options panel, it was possible to de-select all options buttons. An additional class, "btn-mul-div-sticky" was added to 
+options panel, it was possible to de-select all options buttons. An additional class, **btn-mul-div-sticky** was added to 
 the relevant specific times table and division table options buttons, an additional function "checkOtherStickyButtons" was 
 added to the [JavaScript Display Interaction Function Library](./assets/js/display.js), and the options button on-click event 
-handler in the [JavaScript Event Handler Library](./assets/js/events.js) was updated. The "checkOtherStickyButtons" 
+handler in the [JavaScript Event Handler Library](./assets/js/events.js) was updated. The **checkOtherStickyButtons** 
 function checks to see if other options buttons are active. If there are no other options buttons active, 
 the selected options button is toggled back on, meaning it cannot be de-selected.
 
-* It was noted during manual testing that when specific question groups are selected e.g. 2x tables, 
-the questions presented are not always unique. This is becuase a random question between 1 and 12 is 
-being generated, and there is therefore a chance of the same question being generated twice. This issue was rectified by adding the 
-function "checkQuestionArray" to the [JavaScript Maths Function Library](./assets/js/maths.js). 
+* It was noted during manual testing that when specific question groups are selected e.g. 2x tables only, 
+the questions presented are not always unique. This is becuase a random question between 1 and 12 is generated, 
+and there is therefore a chance of the same question being generated twice. This issue was rectified by adding the 
+function **checkQuestionArray** to the [JavaScript Maths Function Library](./assets/js/maths.js). 
 This function enables the question array to be checked prior to a new random question being added. 
-The logic of the "returnMultiplicationQuestionArray", "returnDivisionQuestionArray", 
-"returnAdditionQuestionArray" and "returnSubtractionQuestionArray" functions was updated to include 
-checking using the "checkQuestionArray" function. Note that it is still possible for duplicate questions 
+The logic of the **returnMultiplicationQuestionArray**, **returnDivisionQuestionArray**, 
+**returnAdditionQuestionArray** and **returnSubtractionQuestionArray** functions was updated to include 
+checking using the **checkQuestionArray** function. Note that it is still possible for duplicate questions 
 to be generated if the number of questions is set to 20 and only one specific multiplication or division 
 option button has been selected, as there are only 12 possible questions for each specific times table.
 
