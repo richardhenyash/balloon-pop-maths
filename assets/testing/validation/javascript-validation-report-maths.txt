@@ -1,9 +1,9 @@
 Metrics
 
-There are 17 functions in this file.
+There are 18 functions in this file.
 
-Function with the largest signature take 4 arguments, while the median is 1.
+Function with the largest signature take 4 arguments, while the median is 1.5.
 
-Largest function has 35 statements in it, while the median is 10.
+Largest function has 56 statements in it, while the median is 9.5.
 
-The most complex function has a cyclomatic complexity value of 11 while the median is 3.
+The most complex function has a cyclomatic complexity value of 21 while the median is 3.5.
