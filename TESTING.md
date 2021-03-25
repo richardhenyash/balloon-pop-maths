@@ -138,15 +138,17 @@ Hover styling is working as intended.
 <img src="./assets/testing/features/options.png" style="margin: 15px; width:300px;"> 
 
 * **Options Panel** has been tested and works as intended. Options buttons are succesfully updated  
-depending on selected game mode.  
-In multiplication and division modes, the first two options buttons ("2, 5, 10" and "Mixed 1 to 12")
+depending on selected game mode. Hover styling for each individual option button is working as intended.  
+
+* **Multiplication and Division Options Panel** - In multiplication and division modes, the first two options buttons ("2, 5, 10" and "Mixed 1 to 12")
 act as intended (as toggle buttons) and de-select all other options buttons if selected. All other options buttons act as intended - 
 multiple buttons may be selected and de-selected. If no other options buttons are active, options buttons cannot be de-selected.  
 <img src="./assets/testing/features/options-multiply.png" style="margin: 15px; width:300px;">
+
+* **Addition and Subtraction Options Panel**
 In addition and subtraction modes, all four options buttons act as intended (as toggle buttons) and de-select all 
 other options buttons if selected.  
-<img src="./assets/testing/features/options-add.png" style="margin: 15px; width:300px;">
-Hover styling for each individual option button is working as intended.  
+<img src="./assets/testing/features/options-add.png" style="margin: 15px; width:300px;"> 
 
 * **How To Play Button** has been tested and works as intended, opening collapsing information panel.
 Hover styling is working as intended.  
