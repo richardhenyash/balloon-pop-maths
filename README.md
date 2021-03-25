@@ -270,7 +270,7 @@ and **[GitHub](./assets/testing/features/github-link.png)** links. The footer is
 * **How To Play Button** (including hover styling), opens collapsing information panel:  
 <img src="./assets/testing/features/how-to-play.png" style="margin: 15px; width:300px;"> 
 
-* **Footer Contact Developer Link** (including hover styling), opens **Contact Modal**:  
+* **Footer Contact Developer Link** (including hover styling), opens [Contact Modal](./assets/testing/features/contact-modal.png):  
 <img src="./assets/testing/features/contact-developer-link.png" style="margin: 15px; width:150px;"> 
 
 * **Footer GitHub Link** (including hover styling), links to [Developer Page](https://github.com/richardhenyash) on [GitHub](https://github.com):  
@@ -310,7 +310,7 @@ If game is played on "Hard" difficulty level (selected in options), health is se
 <img src="./assets/testing/features/game-question.png" style="margin: 15px; width:200px;">
 
 * **Contact Modal**, implemented using [Email JS](https://www.emailjs.com/) and [JavaScript Mail Library](./assets/js/mail.js). 
-If the contact form is succesfully submitted, a "Success" modal is displayed. 
+If the contact form is succesfully submitted, a [Success Modal](./assets/testing/features/contact-modal-success.png) is displayed. 
 <img src="./assets/testing/features/contact-modal.png" style="margin: 15px; width:300px;">
 <img src="./assets/testing/features/contact-modal-success.png" style="margin: 15px; width:300px;">
 
