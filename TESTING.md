@@ -35,11 +35,13 @@ resources, where the [Email JS](https://www.emailjs.com/) [JavaScript](https://d
  [Email JS](https://www.emailjs.com/) [documentation](https://www.emailjs.com/docs/sdk/installation/). The attribute was removed.
 
 The HTML code was then re-validated and now passes validation with no error or warnings. 
-See [HTML Validation Report 2](./assets/testing/validation/html-validation-report-2.pdf).
+See [HTML Validation Report 2](./assets/testing/validation/html-validation-report-2.pdf) and 
+[HTML Validation Report 3](./assets/testing/validation/html-validation-report-3.pdf).
 
 ### Custom CSS Styling ###
 [Custom CSS styling](./assets/css/style.css) was validated using the [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/).  
-No errors were generated. 12 "unknown vendor extension" warnings were generated. The warnings are related to the 12 global variables declared 
+No errors were generated. 12 "unknown vendor extension" warnings were generated. See [CSS Validation Report](./assets/testing/validation/css-validation-report-1.pdf).  
+The warnings are related to the 12 global variables declared 
 at the top of the [Custom CSS](./assets/css/style.css). The warnings are generated because the [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) 
 does not currenty support CSS variable declaration are are not considered to be an issue. See [Github Link](https://github.com/w3c/css-validator/pull/173).
 
@@ -312,6 +314,9 @@ The logic of the **returnMultiplicationQuestionArray**, **returnDivisionQuestion
 checking using the **checkQuestionArray** function. Note that it is still possible for duplicate questions 
 to be generated if the number of questions is set to 20 and only one specific multiplication or division 
 option button has been selected, as there are only 12 possible questions for each specific times table.
+
+* A [404 error page](404.html) was added during manual testing to redirect the user back to the [index page](index.html) 
+should they try to access a non-existent page on the **Balloon Pop Maths** site.
 
 ## Bugs Remaining ##
 There are no known bugs remaining.
