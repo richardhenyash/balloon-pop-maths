@@ -1,5 +1,6 @@
 # Balloon Pop Maths #
-[Balloon Pop Maths Live Site](https://richardhenyash.github.io/balloon-pop-maths/)
+[Balloon Pop Maths Live Site](https://richardhenyash.github.io/balloon-pop-maths/)  
+
 <img src="./assets/testing/responsive/balloon-pop-maths-responsive.png" width="100%" style="margin: 15px;">
 
 ## Contents ##
