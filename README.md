@@ -476,5 +476,4 @@ Many thanks to the following for help and inspiration during this project:
 review and comments on the game.
 * [Ben Kavanagh](https://github.com/BAK2K3) for the [Game loader](./assets/testing/features/game-loader.png) inspiration and helpful comments 
 on the game.
-* The [Code Institute](https://codeinstitute.net/) [slack](https://slack.com/intl/en-gb/) community, for your encouragement and comments 
-on the game.
+* The [Code Institute](https://codeinstitute.net/) [slack](https://slack.com/intl/en-gb/) community, for all your encouragement and positive feedback.
