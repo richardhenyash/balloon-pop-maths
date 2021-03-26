@@ -82,6 +82,10 @@ body {
     padding-bottom: 0.5rem;
 }
 
+.container-404 {
+    padding-top: 20rem;
+}
+
 /*-- Headings --*/
 .heading-main {
     font-family: var(--titlefont);
@@ -157,6 +161,19 @@ body {
     color: var(--purpledark);
     border: 2px solid var(--purplelight);
     border-radius: 0.5rem;
+}
+
+/*-- 404 Error Heading Styling --*/
+.text-404 h4 {
+    font-size: 2.2rem;
+    color: var(--purplemed);
+    font-weight: 700;
+}
+
+/*-- 404 Error Signpost Icon Styling --*/
+.container-404 i {
+    padding-top: 0.5rem;
+    color: var(--purplemed);
 }
 
 /*-- Game Elements --*/
@@ -375,6 +392,7 @@ body {
     text-decoration: none;
 }
 
+.container-404 i:visited,
 .text-information a:visited,
 .container-footer a:visited,
 .container-footer i:visited {
@@ -382,6 +400,7 @@ body {
     text-decoration: none;
 }
 
+.container-404 i:hover,
 .text-information a:hover,
 .container-footer a:hover,
 .container-footer i:hover {
@@ -389,6 +408,7 @@ body {
     text-decoration: none;
 }
 
+.container-404 i:active,
 .text-information a:active,
 .container-footer a:active,
 .container-footer i:active {
