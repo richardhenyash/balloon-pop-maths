@@ -571,7 +571,7 @@ function wrongAnswersSubtraction(qCurrent) {
   Generates random integers until a random integer not already in the array and not equal to the correct answer is found.
   Returns completed wrong answer array]
 * @param  {[array]}     wrongAnswerArray    [Array of 2 item arrays]
-* @param  {[number]}    cA                  [Current answer]
+* @param  {[number]}    cA                  [Correct answer]
 * @param  {[number]}    minInt              [Minimum integer]
 * @param  {[number]}    maxInt              [Maximum integer]
 * @return {[array]}                         [Array of 2 item arrays]
