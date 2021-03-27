@@ -114,43 +114,100 @@ describe("JavaScript Maths Function Library Testing Utilities", function () {
         expect(qaC).toBe(false);
     });
 
-    // Test answerArray function for all possible questions in multiplication game mode
+    // answerArray Test function
+    it("answerArray", function () {
+        let qArray = maths.answerArray("multiply", ["2 x 10", 20]);
+        expect(qArray).toBeInstanceOf(Array);
+        expect(qArray).toHaveSize(6);
+    });
+
+    // Test wrongAnswersMultiplication function for all possible questions in multiplication game mode
     // Loop through all times tables
     for (let ttk1 = 1; ttk1 < 13; ttk1++) {
         for (let ttk2 = 1; ttk2 < 13; ttk2++) {
-            let gameMode = "multiply"
             let qstr = ttk1 + " x " + ttk2;
             let qa = (ttk1 * ttk2);
             let qCurrent = [qstr, qa];
             // Set test function string
-            let teststr = "answerArray " + gameMode + " " +  qCurrent;
-            // answerArray Test function
+            let teststr = "wrongAnswersMultiplication " + qCurrent;
+            // wrongAnswersMultiplication Test function
             it(teststr, function () {
-                let qArray = maths.answerArray(gameMode, qCurrent);
+                let qArray = maths.wrongAnswersMultiplication(qCurrent);
                 expect(qArray).toBeInstanceOf(Array);
-                expect(qArray).toHaveSize(6);
+                expect(qArray).toHaveSize(5);
             });
         }
     }
 
-    // Test answerArray function for all possible questions in division game mode
+    // Test wrongAnswersDivision function for all possible questions in division game mode
     // Loop through all division tables
     for (let ttk1 = 1; ttk1 < 13; ttk1++) {
         for (let ttk2 = 1; ttk2 < 13; ttk2++) {
-            let gameMode = "divide";
             let sum = (ttk1 * ttk2);
             let qstr = sum + " &divide " + ttk2;
             let qa = (sum / ttk2);
             let qCurrent = [qstr, qa];
             // Set test function string
-            let teststr = "answerArray " + gameMode + " " +  qCurrent;
-            // answerArray Test function
+            let teststr = "wrongAnswersDivision " + qCurrent;
+            // wrongAnswersDivision Test function
             it(teststr, function () {
-                let qArray = maths.answerArray(gameMode, qCurrent);
+                let qArray = maths.wrongAnswersDivision(qCurrent);
                 expect(qArray).toBeInstanceOf(Array);
-                expect(qArray).toHaveSize(6);
+                expect(qArray).toHaveSize(5);
             });
         }
     }
+
+    // Test wrongAnswersAddition function for all possible questions in addition game mode
+    for (let ttk1 = 1; ttk1 < 51; ttk1++) {
+        for (let ttk2 = 1; ttk2 < 51; ttk2++) {
+            let qstr = ttk1 + " + " + ttk2;
+            let qa = (ttk1 + ttk2);
+            it("wrongAnswersAddition", function () {
+                let qCurrent = [qstr, qa];
+                let qArray = maths.wrongAnswersAddition(qCurrent);
+                expect(qArray).toBeInstanceOf(Array);
+                expect(qArray).toHaveSize(5);
+            });
+        }
+    }    
+    
+    // Test wrongAnswersSubtraction function for all possible questions in subtraction game mode
+    for (let ttk1 = 1; ttk1 < 100; ttk1++) {
+        for (let ttk2 = 1; ttk2 < 100; ttk2++) {
+            let minno = Math.min(ttk1, ttk2);
+            let maxno = Math.max(ttk1, ttk2);
+            let qstr = maxno + " - " + minno;
+            let qa = (maxno - minno);
+            it("wrongAnswersSubtraction", function () {
+                let qCurrent = [qstr, qa];
+                let qArray = maths.wrongAnswersSubtraction(qCurrent);
+                expect(qArray).toBeInstanceOf(Array);
+                expect(qArray).toHaveSize(5);
+            });
+        }
+    }
+
+    // Test wrongAnswerArrayComplete function
+    it("wrongAnswerArrayComplete", function () {
+        let qArray = maths. wrongAnswerArrayComplete([6, 8, 9], 10, 4, 12);
+        expect(qArray).toBeInstanceOf(Array);
+        expect(qArray).toHaveSize(5);
+    });
+
+    // Test getRandomIntInclusive function
+    it("getRandomIntInclusive", function () {
+        let rInt = maths.getRandomIntInclusive(1, 20);
+        expect(rInt).toBeInstanceOf(Number);
+        expect(rInt).toBeGreaterThan(1);
+        expect(rInt).toBeLessThan(21);
+    });
+
+    // Test shuffleArray function
+    it("shuffleArray", function () {
+        let qArray = maths. shuffleArray([6, 8, 9, 10, 12, 14]);
+        expect(qArray).toBeInstanceOf(Array);
+        expect(qArray).toHaveSize(6);
+    });
 
 });
