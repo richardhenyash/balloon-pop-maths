@@ -1,8 +1,5 @@
 describe("JavaScript Maths Function Library Testing Utilities", function () {
 
-    // Import maths function library
-    let maths = require('../lib/js/maths');
-
     // Set an array of all possible "number of questions" options
     let qNoArray = [10, 20];
     // Set an array of all possible "game mode" options
@@ -31,7 +28,7 @@ describe("JavaScript Maths Function Library Testing Utilities", function () {
                 let teststr = "returnQuestionArray " + gameMode + " " + optionArray + " " + qNo + " Questions";
                 // returnQuestionArray Test function
                 it(teststr, function () {
-                    let qArray = maths.returnQuestionArray(gameMode, optionArray, qNo);
+                    let qArray = returnQuestionArray(gameMode, optionArray, qNo);
                     expect(qArray).toBeInstanceOf(Array);
                     expect(qArray).toHaveSize(qNo);
                 });
@@ -45,7 +42,7 @@ describe("JavaScript Maths Function Library Testing Utilities", function () {
         let teststr = "returnMultiplicationQuestion " + tno;
         // returnMultiplicationQuestion Test function
         it(teststr, function () {
-            let mQ = maths.returnMultiplicationQuestion(tno);
+            let mQ = returnMultiplicationQuestion(tno);
             expect(mQ).toBeInstanceOf(Array);
             expect(mQ).toHaveSize(2);
             expect(mQ[0]).toBeInstanceOf(String);
@@ -59,7 +56,7 @@ describe("JavaScript Maths Function Library Testing Utilities", function () {
         let teststr = "returnDivisionQuestion " + dno;
         // returnDivisionQuestion Test function
         it(teststr, function () {
-            let dQ = maths.returnDivisionQuestion(dno);
+            let dQ = returnDivisionQuestion(dno);
             expect(dQ).toBeInstanceOf(Array);
             expect(dQ).toHaveSize(2);
             expect(dQ[0]).toBeInstanceOf(String);
@@ -77,7 +74,7 @@ describe("JavaScript Maths Function Library Testing Utilities", function () {
         let teststr = "returnAdditionQuestion " + maxsum;
         // returnAdditionQuestion Test function
         it(teststr, function () {
-            let aQ = maths.returnAdditionQuestion(maxsum);
+            let aQ = returnAdditionQuestion(maxsum);
             expect(aQ).toBeInstanceOf(Array);
             expect(aQ).toHaveSize(2);
             expect(aQ[0]).toBeInstanceOf(String);
@@ -95,7 +92,7 @@ describe("JavaScript Maths Function Library Testing Utilities", function () {
         let teststr = "returnSubtractionQuestion " + maxsum;
         // returnSubtractionQuestion Test function
         it(teststr, function () {
-            let sQ = maths.returnSubtractionQuestion(maxsum);
+            let sQ = returnSubtractionQuestion(maxsum);
             expect(sQ).toBeInstanceOf(Array);
             expect(sQ).toHaveSize(2);
             expect(sQ[0]).toBeInstanceOf(String);
@@ -107,16 +104,16 @@ describe("JavaScript Maths Function Library Testing Utilities", function () {
     it("checkQuestionArray", function () {
         let qArray = [["5 x 9", 45], ["2 x 1", 2], ["2 x 12", 24]];
         // Should return true
-        let qaC = maths.checkQuestionArray(["2 x 1", 2], qArray);
+        let qaC = checkQuestionArray(["2 x 1", 2], qArray);
         expect(qaC).toBe(true);
         // Should return false;
-        qaC = maths.checkQuestionArray(["2 x 2", 4], qArray);
+        qaC = checkQuestionArray(["2 x 2", 4], qArray);
         expect(qaC).toBe(false);
     });
 
     // answerArray Test function
     it("answerArray", function () {
-        let qArray = maths.answerArray("multiply", ["2 x 10", 20]);
+        let qArray = answerArray("multiply", ["2 x 10", 20]);
         expect(qArray).toBeInstanceOf(Array);
         expect(qArray).toHaveSize(6);
     });
@@ -132,7 +129,7 @@ describe("JavaScript Maths Function Library Testing Utilities", function () {
             let teststr = "wrongAnswersMultiplication " + qCurrent;
             // wrongAnswersMultiplication Test function
             it(teststr, function () {
-                let qArray = maths.wrongAnswersMultiplication(qCurrent);
+                let qArray = wrongAnswersMultiplication(qCurrent);
                 expect(qArray).toBeInstanceOf(Array);
                 expect(qArray).toHaveSize(5);
             });
@@ -151,7 +148,7 @@ describe("JavaScript Maths Function Library Testing Utilities", function () {
             let teststr = "wrongAnswersDivision " + qCurrent;
             // wrongAnswersDivision Test function
             it(teststr, function () {
-                let qArray = maths.wrongAnswersDivision(qCurrent);
+                let qArray = wrongAnswersDivision(qCurrent);
                 expect(qArray).toBeInstanceOf(Array);
                 expect(qArray).toHaveSize(5);
             });
@@ -165,7 +162,7 @@ describe("JavaScript Maths Function Library Testing Utilities", function () {
             let qa = (ttk1 + ttk2);
             it("wrongAnswersAddition", function () {
                 let qCurrent = [qstr, qa];
-                let qArray = maths.wrongAnswersAddition(qCurrent);
+                let qArray = wrongAnswersAddition(qCurrent);
                 expect(qArray).toBeInstanceOf(Array);
                 expect(qArray).toHaveSize(5);
             });
@@ -181,7 +178,7 @@ describe("JavaScript Maths Function Library Testing Utilities", function () {
             let qa = (maxno - minno);
             it("wrongAnswersSubtraction", function () {
                 let qCurrent = [qstr, qa];
-                let qArray = maths.wrongAnswersSubtraction(qCurrent);
+                let qArray = wrongAnswersSubtraction(qCurrent);
                 expect(qArray).toBeInstanceOf(Array);
                 expect(qArray).toHaveSize(5);
             });
@@ -190,14 +187,14 @@ describe("JavaScript Maths Function Library Testing Utilities", function () {
 
     // Test wrongAnswerArrayComplete function
     it("wrongAnswerArrayComplete", function () {
-        let qArray = maths. wrongAnswerArrayComplete([6, 8, 9], 10, 4, 12);
+        let qArray =  wrongAnswerArrayComplete([6, 8, 9], 10, 4, 12);
         expect(qArray).toBeInstanceOf(Array);
         expect(qArray).toHaveSize(5);
     });
 
     // Test getRandomIntInclusive function
     it("getRandomIntInclusive", function () {
-        let rInt = maths.getRandomIntInclusive(1, 20);
+        let rInt = getRandomIntInclusive(1, 20);
         expect(rInt).toBeInstanceOf(Number);
         expect(rInt).toBeGreaterThan(1);
         expect(rInt).toBeLessThan(21);
@@ -205,7 +202,7 @@ describe("JavaScript Maths Function Library Testing Utilities", function () {
 
     // Test shuffleArray function
     it("shuffleArray", function () {
-        let qArray = maths. shuffleArray([6, 8, 9, 10, 12, 14]);
+        let qArray =  shuffleArray([6, 8, 9, 10, 12, 14]);
         expect(qArray).toBeInstanceOf(Array);
         expect(qArray).toHaveSize(6);
     });
