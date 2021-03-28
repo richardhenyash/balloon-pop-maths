@@ -332,16 +332,15 @@ function setHealthBar(healthArray) {
 * @return {[boolean]}                   [Boolean]
 */
 function checkHighScore(highScore, scoreArray) {
-    let res;
+    let res = false;
     // Check if current score is greater than high score. Check uses a ratio of score divided by number of questions.
-    if (
+    if (scoreArray[0] > 0) {
+        if (
             ((scoreArray[0] / scoreArray[1]) > (highScore[0] / highScore[1])) || 
             ((scoreArray[0] / scoreArray[1]) == ((highScore[0] / highScore[1])) && (scoreArray[1] > highScore[1]))
-            
-        ) {
+            ) {
         res = true;
-    } else {
-        res = false;
+        } 
     }
     return res;
 }
