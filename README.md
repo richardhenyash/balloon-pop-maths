@@ -153,7 +153,7 @@ An initial [Site Map](/assets/wireframes/site-map.png) was produced, and is show
 
 [Initial Wireframes](/assets/wireframes/rev1) were then produced showing the [Home](/assets/wireframes/rev1/home-multiplication.png)
 page layout for each game mode: [Multiplication](/assets/wireframes/rev1/home-multiplication.png), 
-[Division](/assets/wireframes/rev1/home-division.png), [Addition]("/assets/wireframes/rev1/home-addition.png) 
+[Division](/assets/wireframes/rev1/home-division.png), [Addition](/assets/wireframes/rev1/home-addition.png) 
 and [Subtraction](/assets/wireframes/rev1/home-subtraction.png).  The  home page [Multiplication](/assets/wireframes/rev1/home-multiplication.png)
 layout is also shown below:  
 
