@@ -485,23 +485,6 @@ body {
     }
  }
 
-/*-- Media query to re-size balloon canvas and text elements for medium devices over 768px wide --*/
- @media (min-width: 768px) {
-    .canvas-balloon {
-        min-height: 20rem;
-    }
-    .canvas-balloon canvas {
-        width: 20rem;
-        height: 20rem;
-    }
-    .balloon-answer-text {
-        font-size: 5rem;
-        line-height: 18rem;
-        width: 20rem;
-        height: 20rem;
-    }
-}
-
 /*-- Media query to re-size balloon canvas and text elements for large devices over 992px wide --*/
  @media (min-width: 992px) {
     .canvas-balloon {
