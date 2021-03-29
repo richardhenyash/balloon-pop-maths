@@ -152,7 +152,7 @@ An initial [Site Map](/assets/wireframes/site-map.png) was produced, and is show
 <img src="./assets/wireframes/rev0/game-sketch.jpg" width="600px" style="margin: 15px;">
 
 [Initial Wireframes](/assets/wireframes/rev1) were then produced showing the [Home]("/assets/wireframes/rev1/home-multiplication.png)
-page layout for each game mode: ([Multiplication]("/assets/wireframes/rev1/home-multiplication.png), 
+page layout for each game mode: [Multiplication]("/assets/wireframes/rev1/home-multiplication.png), 
 [Division]("/assets/wireframes/rev1/home-division.png), [Addition]("/assets/wireframes/rev1/home-addition.png) 
 and [Subtraction]("/assets/wireframes/rev1/home-subtraction.png).  The  home page [Multiplication]("/assets/wireframes/rev1/home-multiplication.png)
 layout is also shown below:  
@@ -160,7 +160,7 @@ layout is also shown below:
 <img src="./assets/wireframes/rev1/home-multiplication.png" width="600px" style="margin: 15px;"> 
 
 [Initial Wireframes](/assets/wireframes/rev1) were also produced showing the [Game]("/assets/wireframes/rev1/game-multiplication.png) 
-page layout for each game mode: ([Multiplication]("/assets/wireframes/rev1/game-multiplication.png), 
+page layout for each game mode: [Multiplication]("/assets/wireframes/rev1/game-multiplication.png), 
 [Division]("/assets/wireframes/rev1/game-division.png), [Addition]("/assets/wireframes/rev1/game-addition.png) 
 and [Subtraction]("/assets/wireframes/rev1/game-subtraction.png).  The game page [Multiplication]("/assets/wireframes/rev1/game-multiplication.png)
 layout is also shown below:  
@@ -327,7 +327,7 @@ If the contact form is succesfully submitted, a [Success Modal](./assets/testing
 if the developer decides to develop further similar games.
 
 #### Design Changes During The Phase 1 Development ####
-After initial early user testing and feedback, the following minor changes were made:
+After initial early user testing and feedback, the following minor design changes were made:
 
 * [In-game score](./assets/testing/features/game-score.png) was moved from underneath the game question to the top right corner.
 * [Options audio controls](./assets/testing/features/options-audio.png) were added to allow audio to be toggled on and off from the options area.
@@ -348,7 +348,7 @@ The event handler is located in the [JavaScript Event Handler Library](./assets/
 * The [**Game**](./assets/testing/responsive/game-medium-screen.png) section is responsively styled, showing 2 
 panels of 3 balloons stacked vertically on smaller devices, and side by side on large devices over 992 pixels wide.
 * The [**Game**](./assets/testing/responsive/game-iphone11.png) section is dynamically sized for devices up to 992 pixels wide, 
-so that it takes up the full screen height.  
+so that it takes up the full screen height. A fixed size is implemented on large devices over 992 pixels wide.
 
 See **Responsive Design** section in [TESTING.md](TESTING.md) for further information and [Responsive Testing](./assets/testing/responsive) screen prints.
 
