@@ -105,10 +105,12 @@ Unit test spec files were written for the [JavaScript Maths Function Library](./
 [JavaScript Display Interaction Function Library](./assets/js/spec/displaySpec.js).  
 For the [JavaScript Display Interaction Function Library](./assets/js/spec/displaySpec.js), 
 testing was carried out by running the functions in the library and checking both the return value of the functions and the updated HTML of the page, where applicable.
-18 [Testing Spec Functions](./assets/js/spec/displaySpec.js) were written and run on the display library.  
+18 [Testing Spec Functions](./assets/js/spec/displaySpec.js) were written and run on the 
+[JavaScript Display Interaction Function Library](./assets/js/spec/displaySpec.js).  
 For the [JavaScript Maths Function Library](./assets/js/spec/mathsSpec.js), testing was carried out by running the functions in the library and checking the return value of the functions.
-14 [Testing Spec Functions](./assets/js/spec/displaySpec.js) were written and run on the maths library.  The following functions were also tested further by 
-creating additional testing spec functions "on the fly" within for loops, which simulated the functions with all the possible inputs: 
+14 [Testing Spec Functions](./assets/js/spec/displaySpec.js) were written and run on the [JavaScript Maths Function Library](./assets/js/spec/mathsSpec.js).  
+The following functions were also tested further by creating additional testing spec functions "on the fly" within for loops, 
+which simulated the functions with all the possible inputs: 
 **returnQuestionArray**, **returnMultiplicationQuestion**, **returnDivisionQuestion**, **returnAdditionQuestion**, 
 **returnSubtractionQuestion**, **wrongAnswersMultiplication**, **wrongAnswersDivision**, 
 **wrongAnswersAddition** and **wrongAnswersSubtraction**.  
