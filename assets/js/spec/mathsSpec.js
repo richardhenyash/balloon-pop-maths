@@ -226,7 +226,7 @@ describe("JavaScript Maths Function Library Testing Utilities", function () {
     it("getRandomIntInclusive", function () {
         let rInt = getRandomIntInclusive(1, 20);
         expect(rInt).toBeInstanceOf(Number);
-        expect(rInt).toBeGreaterThan(1);
+        expect(rInt).toBeGreaterThan(0);
         expect(rInt).toBeLessThan(21);
     });
 
