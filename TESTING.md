@@ -135,20 +135,23 @@ Initial [Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmd
 * **Performance** 75%
 * **Accessibility** 95%
 * **Best Practices** 80%
-* **SEO** 92%
-See [Initial Lighthouse Report]().
+* **SEO** 92%  
 
-To improve **Performance**, balloon images were re-sized and compressed using [GIMP](https://www.gimp.org/) and [RIOT](https://riot-optimizer.com/).  
-To improve **Accesibility**, an additional "aria-label" attribute was added to the [GitHub](https://github.com/richardhenyash) link in the **footer**.
+See [Initial Lighthouse Report](./assets/testing/validation/lighthouse-report-1.pdf).
+
+To improve **Performance**, the title balloon image was re-sized and compressed using the [GIMP](https://www.gimp.org/) and [RIOT](https://riot-optimizer.com/) 
+image manipulation and optimisation tools .  
+To improve **Accesibility**, an additional "aria-label" attribute was added to the [GitHub](https://github.com/richardhenyash) link in the **footer**.  
 To improve **Best Practices**, an additional rel="noreferrer noopener" attrribute was added to the [GitHub](https://github.com/richardhenyash) link in the **footer**. 
-To improve **SEO**, additional meta name="description", meta name="keywords" and meta name="author" tags were added.
+To improve **SEO**, additional meta name="description", meta name="keywords" and meta name="author" tags were added to the head section of [index.html](index.html).
 
 Final [Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=en) scores were:
-* **Performance** 83%
+* **Performance** 92%
 * **Accessibility** 97%
 * **Best Practices** 93%
-* **SEO** 100%
-See [Final Lighthouse Report]().
+* **SEO** 100%  
+
+See [Final Lighthouse Report](./assets/testing/validation/lighthouse-report-2.pdf).
 
 ## User Stories Testing ##
 * ***As a user, I am playing the game for fun and enjoyment.*** The game has been tested thouroughly by my 7 year old son and his classmates. 
