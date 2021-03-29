@@ -4,7 +4,7 @@
 - [Automated Testing](#automated-testing)
     - [HTML](#html)
     - [Custom CSS Styling](#custom-css-styling)
-    - [JavaScript Code Lbrary](#javascript-code-library)
+    - [JavaScript Code Library](#javascript-code-library)
     - [Automated Unit Testing](#automated-unit-testing)
     - [Automated Performance And Quality Testing](#automated-performance-and-quality-testing)
 - [User Stories Testing](#user-stories-testing)
@@ -12,7 +12,7 @@
 - [Manual Testing](#manual-testing)
     - [Responsive Design](#responsive-design)
     - [Browser Compatibility Testing](#browser-compatibility-testing)
-- [Javascript Code Library Testing](#javascript-code-library-testing)
+    - [Javascript Code Library Testing](#javascript-code-library-testing)
 - [Bugs Fixed During Testing](#bugs-fixed-during-testing)
 - [Bugs Remaining](#bugs-remaining)
 
@@ -329,7 +329,7 @@ See [Can I Use link](https://caniuse.com/css-variables). This is not envisaged t
 is now very low. A statement has been added into the **Browser Support** section in the [README.md](README.md) to make it clear that **Balloon Pop Maths** 
 does not support [Microsoft Internet Explorer](https://support.microsoft.com/en-us/topic/internet-explorer-downloads-d49e1f0d-571c-9a7b-d97e-be248806ca70#ID0EBBD=Windows_10).
 
-## Javascript Code Library Testing ##
+### Javascript Code Library Testing ###
 Each individual function and event handler contained in the [JavaScript Code Library](./assets/js) was thoroughly 
 tested and de-bugged in the Console window during the **Phase 1 Development**, to confirm correct operation. 
 See [Bugs Fixed During Testing](#bugs-fixed-during-testing) for additional JavaScript bugs fixed during the testing process.
@@ -344,7 +344,7 @@ to see all of the **Game** elements. This was rectified by adding three
 [Custom CSS](/assets/css/style.css): **--canvassize**, **--balloontextsize** and **--balloontextlineheight**. The available area and 
 corresponding maximum size for the **Balloon** canvas element, and the corresponding maximum **Balloon** text size and 
 line height are now calculated to ensure that the balloons are as large as is possible to fit the vertical screen 
-space available on smaller devices. **Balloon** canvas size and text height is fixed on devices over 768 pixels wide. 
+space available on smaller devices. **Balloon** canvas size and text height is fixed on devices over 992 pixels wide. 
 See below screen prints: 
 
 <img src="./assets/testing/responsive/game-iphone11.png" align="left" width="250px" style="margin: 15px;">  
