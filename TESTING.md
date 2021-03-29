@@ -115,8 +115,10 @@ which simulated the functions with all the possible inputs:
 **returnSubtractionQuestion**, **wrongAnswersMultiplication**, **wrongAnswersDivision**, 
 **wrongAnswersAddition** and **wrongAnswersSubtraction**.  
 [Jasmine](https://jasmine.github.io/) automated testing results in a total of 12,724 testing specs running, with 0 failures. 
-See [Jasmine Validation Report](./assets/testing/validation/jasmine-validation-html.png).  
+See [Jasmine Validation Report](./assets/testing/validation/jasmine-validation-html.png). 
+
 To run the tests, click the following [Testing Link](https://richardhenyash.github.io/balloon-pop-maths/testing?random=false).  
+
 Please note that due to the large number of automated tests being generated and run on the 
 [testing.html](testing.html) page, the [Jasmine](https://jasmine.github.io/) automated testing process takes 
 around 60 seconds to run.
