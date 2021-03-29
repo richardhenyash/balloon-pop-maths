@@ -131,6 +131,25 @@ around 60 to 90 seconds to run.
 Performance and Quality was tested with the [Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=en) 
 extension for [Google Chrome](https://www.google.com/intl/en_uk/chrome/). 
 
+Initial [Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=en) scores were:
+* **Performance** 75%
+* **Accessibility** 95%
+* **Best Practices** 80%
+* **SEO** 92%
+See [Initial Lighthouse Report]().
+
+To improve **Performance**, balloon images were re-sized and compressed using [GIMP](https://www.gimp.org/) and [RIOT](https://riot-optimizer.com/).  
+To improve **Accesibility**, an additional "aria-label" attribute was added to the [GitHub](https://github.com/richardhenyash) link in the **footer**.
+To improve **Best Practices**, an additional rel="noreferrer noopener" attrribute was added to the [GitHub](https://github.com/richardhenyash) link in the **footer**. 
+To improve **SEO**, additional meta name="description", meta name="keywords" and meta name="author" tags were added.
+
+Final [Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=en) scores were:
+* **Performance** 83%
+* **Accessibility** 97%
+* **Best Practices** 93%
+* **SEO** 100%
+See [Final Lighthouse Report]().
+
 ## User Stories Testing ##
 * ***As a user, I am playing the game for fun and enjoyment.*** The game has been tested thouroughly by my 7 year old son and his classmates. 
 I have received very positive feedback from users so far, who appear to enjoy playing the game.
