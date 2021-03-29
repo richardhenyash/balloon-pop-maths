@@ -224,6 +224,7 @@ The final colour palette selected is shown below:
 * [Font Awesome](https://fontawesome.com/)
 * [Google Fonts](https://fonts.google.com/)
 * [Email JS](https://www.emailjs.com/)
+* [Jasmine](https://jasmine.github.io/)
 
 ### Browser Support ###
 The following browsers are all supported by **Balloon Pop Maths**.
