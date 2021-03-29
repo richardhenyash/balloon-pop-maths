@@ -104,20 +104,19 @@ A copy of the main [index.html](index.html) page was created called [testing.htm
 written for the [JavaScript Maths Function Library](./assets/js/spec/mathsSpec.js) and the 
 [JavaScript Display Interaction Function Library](./assets/js/spec/displaySpec.js).  
 For the [JavaScript Display Interaction Function Library](./assets/js/spec/displaySpec.js), 
-testing was carried out by running the functions in the library and checking both the return value of the function and the updated HTML of the page, where applicable.
+testing was carried out by running the functions in the library and checking both the return value of the functions and the updated HTML of the page, where applicable.
 18 [Testing Spec Functions](./assets/js/spec/displaySpec.js) were written and run on the display library.  
-For the [JavaScript Maths Function Library](./assets/js/spec/mathsSpec.js), testing was carried out by running the functions in the library and checking the return value of the function.
+For the [JavaScript Maths Function Library](./assets/js/spec/mathsSpec.js), testing was carried out by running the functions in the library and checking the return value of the functions.
 14 [Testing Spec Functions](./assets/js/spec/displaySpec.js) were written and run on the maths library.  The following functions are also tested further by 
 creating additional testing spec functions "on the fly" within for loops, which simulated running each of the following functions with all possible inputs: 
 **returnQuestionArray**, **returnMultiplicationQuestion**, **returnDivisionQuestion**, **returnAdditionQuestion**, 
 **returnSubtractionQuestion**, **wrongAnswersMultiplication**, **wrongAnswersDivision**, 
 **wrongAnswersAddition**, **wrongAnswersSubtraction**.  
 [Jasmine](https://jasmine.github.io/) automated testing results in a total of 12,724 testing specs running, with 0 failures. 
-See [Jasmine Validation Report 1]((./assets/testing/validation/jamine-validation-html-1.png)) and 
-See [Jasmine Validation Report 2]((./assets/testing/validation/jamine-validation-html-2.png)).  
+See [Jasmine Validation Report]((./assets/testing/validation/jamine-validation-html.png)).
 Please note that due to the large number of automated tests being generated and run on the 
 [testing.html](testing.html) page, the [Jasmine](https://jasmine.github.io/) automated testing takes 
-around 90 seconds to run.
+around 60 seconds to run.
 
 ## User Stories Testing ##
 * ***As a user, I am playing the game for fun and enjoyment.*** The game has been tested thouroughly by my 7 year old son and his classmates. 
