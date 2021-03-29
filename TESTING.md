@@ -6,6 +6,7 @@
     - [Custom CSS Styling](#custom-css-styling)
     - [JavaScript Code Lbrary](#javascript-code-library)
     - [Automated Unit Testing](#automated-unit-testing)
+    - [Automated Performance And Quality Testing](#automated-performance-and-quality-testing)
 - [User Stories Testing](#user-stories-testing)
 - [Additional UX Testing](#additional-ux-testing)
 - [Manual Testing](#manual-testing)
@@ -115,7 +116,7 @@ The following functions were also tested further by creating additional testing 
 which simulated the functions with all the possible inputs: 
 **returnQuestionArray**, **returnMultiplicationQuestion**, **returnDivisionQuestion**, **returnAdditionQuestion**, 
 **returnSubtractionQuestion**, **wrongAnswersMultiplication**, **wrongAnswersDivision**, 
-**wrongAnswersAddition** and **wrongAnswersSubtraction**.  
+**wrongAnswersAddition** and **wrongAnswersSubtraction**. 
 
 [Jasmine](https://jasmine.github.io/) automated testing results in a total of 12,724 testing specs running, with 0 failures. 
 See [Jasmine Validation Report](./assets/testing/validation/jasmine-validation-html.png). 
@@ -124,7 +125,11 @@ To run the tests, click the following [Testing Link](https://richardhenyash.gith
 
 Please note that due to the large number of automated tests being generated and run on the 
 [testing.html](testing.html) page, the [Jasmine](https://jasmine.github.io/) automated testing process takes 
-around 60 seconds to run.
+around 60 to 90 seconds to run.
+
+### Automated Performance And Quality Testing ###
+Performance and Quality was tested with the [Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=en) 
+extension for [Google Chrome](https://www.google.com/intl/en_uk/chrome/). 
 
 ## User Stories Testing ##
 * ***As a user, I am playing the game for fun and enjoyment.*** The game has been tested thouroughly by my 7 year old son and his classmates. 
