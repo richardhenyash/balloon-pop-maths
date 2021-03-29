@@ -5,8 +5,8 @@
 
 ## Contents ##
 - [Background](#background)
-- [Site Owner Goals](#site-owner-goals)
 - [Project Goals](#project-goals)
+- [Site Owner Goals](#site-owner-goals)
 - [User Goals](#user-goals)
 - [UX](#ux)
     - [Project Strategy](#project-strategy)
@@ -49,14 +49,14 @@ themselves juggling full time jobs and home education responsibilities. School w
 high degree of facilitation and help from busy parents. Interative web based maths games can give children an engaging way of 
 learning new maths skills and reinforcing existing maths knowledge independently.
 
+## Project Goals ##
+To provide a simple and engaging maths game that young children are able to play independently to learn new maths skills and to
+reinforce existing maths knowledge.
+
 ## Site Owner Goals ##
 Developing the site will serve as a learning experience for the developer. The finished website will act as a showcase for the
 developer's new skills and will also help to raise the developer's profile. The developer also hopes that his 7 year old
 son will become a keen user of the site!
-
-## Project Goals ##
-To provide a simple and engaging maths game that young children are able to play independently to learn new maths skills and to
-reinforce existing maths knowledge.
 
 ## User Goals ##
 To play the maths game for fun, to learn new maths skills and to reinforce existing maths knowledge.
@@ -75,7 +75,7 @@ Balloon Pop Division game|3|4
 Balloon Pop Addition game|3|4
 Balloon Pop Subtraction game|3|4
 Contact Form to contact developer|3|5
-Link to developer [GitHub] page (https://github.com/richardhenyash)|4|5
+Link to developer [GitHub](https://github.com/richardhenyash) page|4|5
 Subscribe Option|1|2
 
 <img src="/assets/wireframes/initial-strategy.png" style="margin: 15px; width: 400px;">
@@ -86,7 +86,7 @@ Item|Development Phase
 ----|-----------------
 Balloon Pop Multiplication game|1
 Contact Form to contact developer|1
-Link to developer [GitHub] page (https://github.com/richardhenyash)|1
+Link to developer [GitHub](https://github.com/richardhenyash) page|1
 Balloon Pop Division game|1
 Balloon Pop Addition game|1
 Balloon Pop Subtraction game|1
@@ -98,9 +98,9 @@ Subscribe Option|2
 * A simple, bright, colorful and engaging design would fit this demographic.
 
 #### User Requirements ####
-* Visually engaging
-* Easy to navigate
-* Easy to update game settings
+* Visually engaging.
+* Easy to navigate.
+* Easy to update game settings.
 * Responsive design is required as users may be viewing the site on Mobile, Tablet or Desktop.
 
 #### User Stories ####
