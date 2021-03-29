@@ -476,5 +476,5 @@ Many thanks to the following for help and inspiration during this project:
 * My mentor [Reuben Ferrante](https://github.com/arex18) for helping to get me started off on the right footing and for the insightful
 review and comments on the game.
 * [Ben Kavanagh](https://github.com/BAK2K3) for the [Game loader](./assets/testing/features/game-loader.png) inspiration and helpful comments 
-on the game.
+on the game and testing process.
 * The [Code Institute](https://codeinstitute.net/) [slack](https://slack.com/intl/en-gb/) community, for all your encouragement and positive feedback.
