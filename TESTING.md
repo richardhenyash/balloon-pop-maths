@@ -96,7 +96,7 @@ and 4 warnings for undefined varibales. The missing semicolons were added and th
 The code was then re-validated and now passes without errors or warnings.
 See [JShint Maths Function Library Validation Report](./assets/testing/validation/javascript-validation-report-maths.txt).
 
-### Automted Unit Testing ###
+### Automated Unit Testing ###
 The [JavaScript Maths Function Library](./assets/js/maths.js) and the [JavaScript Display Interaction Function Library](./assets/js/display.js), 
 which form the core of the **Game Logic**, were also tested thoroughly using the [Jasmine](https://jasmine.github.io/) automated testing framework. 
 A copy of the main [index.html](index.html) page was created, called [testing.html](testing.html). The browser version of 
