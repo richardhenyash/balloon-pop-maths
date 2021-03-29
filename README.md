@@ -347,7 +347,7 @@ The event handler is located in the [JavaScript Event Handler Library](./assets/
 * The [**Play Button**](./assets/testing/features/play.png) is responsively styled, and is re-sized for screen sizes under 680 pixels high.
 * The [**Game**](./assets/testing/responsive/game-medium-screen.png) section is responsively styled, showing 2 
 panels of 3 balloons stacked vertically on smaller devices, and side by side on large devices over 992 pixels wide.
-* The [**Game**](./assets/testing/responsive/game-iphone11.png) section is dynamically sized for devices up to 768 pixels wide, 
+* The [**Game**](./assets/testing/responsive/game-iphone11.png) section is dynamically sized for devices up to 992 pixels wide, 
 so that it takes up the full screen height.  
 
 See **Responsive Design** section in [TESTING.md](TESTING.md) for further information and [Responsive Testing](./assets/testing/responsive) screen prints.
