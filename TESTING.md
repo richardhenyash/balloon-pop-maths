@@ -308,8 +308,8 @@ Medium Desktop PC and Large Desktop PC. See
 * The **Balloon Pop Maths** title dynamically re-sizes and re-positions as intended on screen sizes under 680 pixels high.
 * The **Game** view behaves as expected, showing 2 panels of 3 balloons stacked vertically on small and medium 
 devices under 992 pixels wide, and shown side by side on large devices over 992 pixels wide.
-* The **Game** view dynamically sizes as expected on devices up to 768 pixels wide. Two further sizes are 
-implemented and behave as expected, on medium devices over 768 pixels wide and large devices over 992 pixels wide. 
+* The **Game** view dynamically sizes as expected on devices up to 992px pixels wide. One further size is 
+implemented and behaves as expected, on large devices over 992 pixels wide. 
 
 ### Browser Compatibility Testing ###
 The website was tested on the following browsers and operating systems, 
