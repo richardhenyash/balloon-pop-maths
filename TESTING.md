@@ -50,7 +50,7 @@ does not currenty support CSS variable declaration are are not considered to be 
 ### JavaScript Code Library ###
 Each [JavaScript Code Library](./assets/js) file was validated using the [JSHint](https://jshint.com/about/) static code analysis tool.
 Each library file was configured using [JSHint](https://jshint.com/docs/) configuration variables added under the header section, including 
-any global variables and functions which are defined in externally in other **Balloon Pop Maths** [JavaScript Code Library](./assets/js) files. 
+any global variables and functions which are defined externally in other **Balloon Pop Maths** [JavaScript Code Library](./assets/js) files. 
 The results were as follows:
 
 * The [JavaScript Animation Function Library](./assets/js/animation.js) initially reported 8 unused variables. The unused variables are
@@ -59,7 +59,7 @@ The code was then re-validated with the Report options disabled for "Unused Vari
 See [JShint Animation Function Library Validation Report](./assets/testing/validation/javascript-validation-report-animation.txt).
 
 * The [JavaScript Audio Function Library](./assets/js/audio.js) initially reported 1 unused variable. The unused variable is
-related to the muteAudioToggle function which is defined in the [JavaScript Audio Function Library](./assets/js/events.js) and is called in other library files.
+related to the **muteAudioToggle** function which is defined in the [JavaScript Audio Function Library](./assets/js/events.js) and is called in other library files.
 The code was then re-validated with the Report options disabled for "Unused Variables", and now passes without errors or warnings. 
 See [JShint Audio Function Library Validation Report](./assets/testing/validation/javascript-validation-report-audio.txt).
 
@@ -87,7 +87,7 @@ errors or warnings.
 See [JShint Initialisation Library Validation Report](./assets/testing/validation/javascript-validation-report-initialisation.txt).
 
 * The [JavaScript Mail Library](./assets/js/mail.js) initially reported 1 warning for an unused variable. 
-This warning is related to the function sendMail which is defined in the [JavaScript Mail Library](./assets/js/mail.js) 
+This warning is related to the function **sendMail** which is defined in the [JavaScript Mail Library](./assets/js/mail.js) 
 and is called in [index.html](index.html). The code was then re-validated with the Report options disabled for
 "Unused Variables", and now passes without errors or warnings.
 See [JShint Mail Library Validation Report](./assets/testing/validation/javascript-validation-report-mail.txt).
@@ -121,7 +121,7 @@ which simulated the functions with all the possible inputs:
 [Jasmine](https://jasmine.github.io/) automated testing results in a total of 12,724 testing specs running, with 0 failures. 
 See [Jasmine Validation Report](./assets/testing/validation/jasmine-validation-html.png). 
 
-To run the tests, click the following [Testing Link](https://richardhenyash.github.io/balloon-pop-maths/testing?random=false).  
+To run the tests, please click the following [Testing Link](https://richardhenyash.github.io/balloon-pop-maths/testing?random=false).  
 
 Please note that due to the large number of automated tests being generated and run on the 
 [testing.html](testing.html) page, the [Jasmine](https://jasmine.github.io/) automated testing process takes 
@@ -140,9 +140,9 @@ Initial [Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmd
 See [Initial Lighthouse Report](./assets/testing/validation/lighthouse-report-1.pdf).
 
 To improve **Performance**, the title balloon image was re-sized and compressed using the [GIMP](https://www.gimp.org/) and [RIOT](https://riot-optimizer.com/) 
-image manipulation and optimisation tools .  
+image manipulation and optimisation tools.  
 To improve **Accesibility**, an additional "aria-label" attribute was added to the [GitHub](https://github.com/richardhenyash) link in the **footer**.  
-To improve **Best Practices**, an additional rel="noreferrer noopener" attrribute was added to the [GitHub](https://github.com/richardhenyash) link in the **footer**. 
+To improve **Best Practices**, an additional rel="noreferrer noopener" attrribute was added to the [GitHub](https://github.com/richardhenyash) link in the **footer**.  
 To improve **SEO**, additional meta name="description", meta name="keywords" and meta name="author" tags were added to the head section of [index.html](index.html).
 
 Final [Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=en) scores were:
@@ -304,12 +304,14 @@ Medium Desktop PC and Large Desktop PC. See
 <img src="./assets/testing/responsive/responsive-viewer-home-4.png" width="250px" align="left" style="margin: 15px;">  
 <img src="./assets/testing/responsive/responsive-viewer-game-4.png" width="250px" style="margin: 15px;">   
 
+* Responsive design has been tested with [Google Chrome](https://www.google.com/intl/en_uk/chrome/) font size set to **Medium** and **Large** in **Chrome Settings** > **Appearence**.
+
 * The **Balloon Pop Maths** title behaves as expected, stacking as intended on screens under 768 pixels wide.
 * The **Balloon Pop Maths** title dynamically re-sizes and re-positions as intended on screen sizes under 680 pixels high.
 * The **Game** view behaves as expected, showing 2 panels of 3 balloons stacked vertically on small and medium 
 devices under 992 pixels wide, and shown side by side on large devices over 992 pixels wide.
-* The **Game** view dynamically sizes as expected on devices up to 992px pixels wide. One further size is 
-implemented and behaves as expected, on large devices over 992 pixels wide. 
+* The **Game** view dynamically sizes as expected on devices up to 992px pixels wide. A fixed size is 
+implemented on large devices over 992 pixels wide and behaves as expected. 
 
 ### Browser Compatibility Testing ###
 The website was tested on the following browsers and operating systems, 
