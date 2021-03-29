@@ -45,7 +45,7 @@ See [HTML Validation Report 2](./assets/testing/validation/html-validation-repor
 No errors were generated. 12 "unknown vendor extension" warnings were generated. See [CSS Validation Report](./assets/testing/validation/css-validation-report-1.pdf).  
 The warnings are related to the 12 global variables declared 
 at the top of the [Custom CSS](./assets/css/style.css). The warnings are generated because the [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) 
-does not currenty support CSS variable declaration are are not considered to be an issue. See [Github Link](https://github.com/w3c/css-validator/pull/173).
+does not currently support CSS variable declaration are are not considered to be an issue. See [Github Link](https://github.com/w3c/css-validator/pull/173).
 
 ### JavaScript Code Library ###
 Each [JavaScript Code Library](./assets/js) file was validated using the [JSHint](https://jshint.com/about/) static code analysis tool.
@@ -65,7 +65,7 @@ See [JShint Audio Function Library Validation Report](./assets/testing/validatio
 
 * The [JavaScript Display Interaction Function Library](./assets/js/display.js) initially reported 18 unused variables. The unused variables are
 all related to function names which are defined in the [JavaScript Display Interaction Function Library](./assets/js/display.js) and are called in other library files.
-Seven warnings were generated for missing semicolons - these were added. 4 warnings were generated for undefined variables, these were defined with "let".
+Seven warnings were generated for missing semicolons - these were added. 4 warnings were generated for undefined variables, these were defined with **let**.
 The code was then re-validated with the Report options disabled for "Unused Variables", and now passes without errors or warnings. 
 See [JShint Display Interaction Library Validation Report](./assets/testing/validation/javascript-validation-report-display.txt).
 
@@ -102,7 +102,7 @@ The [JavaScript Maths Function Library](./assets/js/maths.js) and the [JavaScrip
 which form the core of the **Game Logic**, were also tested thoroughly using the [Jasmine](https://jasmine.github.io/) automated testing framework. 
 A copy of the main [index.html](index.html) page was created, called [testing.html](testing.html). The browser version of 
 [Jasmine 3.7.1](https://github.com/jasmine/jasmine/releases) was implemented in the [testing.html](testing.html) page.
-Unit test spec files were written for the [JavaScript Maths Function Library](./assets/js/spec/mathsSpec.js) and the 
+Unit test [spec files](./assets/js/spec/) were written for the [JavaScript Maths Function Library](./assets/js/spec/mathsSpec.js) and the 
 [JavaScript Display Interaction Function Library](./assets/js/spec/displaySpec.js).  
 
 For the [JavaScript Display Interaction Function Library](./assets/js/spec/displaySpec.js), 
