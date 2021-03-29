@@ -151,25 +151,25 @@ An initial [Site Map](/assets/wireframes/site-map.png) was produced, and is show
 <img src="./assets/wireframes/rev0/home-sketch.jpg" width="600px" style="margin: 15px;">
 <img src="./assets/wireframes/rev0/game-sketch.jpg" width="600px" style="margin: 15px;">
 
-[Initial Wireframes](/assets/wireframes/rev1) were then produced showing the [Home]("/assets/wireframes/rev1/home-multiplication.png)
-page layout for each game mode: [Multiplication]("/assets/wireframes/rev1/home-multiplication.png), 
-[Division]("/assets/wireframes/rev1/home-division.png), [Addition]("/assets/wireframes/rev1/home-addition.png) 
-and [Subtraction]("/assets/wireframes/rev1/home-subtraction.png).  The  home page [Multiplication]("/assets/wireframes/rev1/home-multiplication.png)
+[Initial Wireframes](/assets/wireframes/rev1) were then produced showing the [Home](/assets/wireframes/rev1/home-multiplication.png)
+page layout for each game mode: [Multiplication](/assets/wireframes/rev1/home-multiplication.png), 
+[Division](/assets/wireframes/rev1/home-division.png), [Addition]("/assets/wireframes/rev1/home-addition.png) 
+and [Subtraction](/assets/wireframes/rev1/home-subtraction.png).  The  home page [Multiplication](/assets/wireframes/rev1/home-multiplication.png)
 layout is also shown below:  
 
 <img src="./assets/wireframes/rev1/home-multiplication.png" width="600px" style="margin: 15px;"> 
 
-[Initial Wireframes](/assets/wireframes/rev1) were also produced showing the [Game]("/assets/wireframes/rev1/game-multiplication.png) 
-page layout for each game mode: [Multiplication]("/assets/wireframes/rev1/game-multiplication.png), 
-[Division]("/assets/wireframes/rev1/game-division.png), [Addition]("/assets/wireframes/rev1/game-addition.png) 
-and [Subtraction]("/assets/wireframes/rev1/game-subtraction.png).  The game page [Multiplication]("/assets/wireframes/rev1/game-multiplication.png)
+[Initial Wireframes](/assets/wireframes/rev1) were also produced showing the [Game](/assets/wireframes/rev1/game-multiplication.png) 
+page layout for each game mode: [Multiplication](/assets/wireframes/rev1/game-multiplication.png), 
+[Division](/assets/wireframes/rev1/game-division.png), [Addition](/assets/wireframes/rev1/game-addition.png) 
+and [Subtraction](/assets/wireframes/rev1/game-subtraction.png).  The game page [Multiplication](/assets/wireframes/rev1/game-multiplication.png)
 layout is also shown below:  
 
 <img src="./assets/wireframes/rev1/game-multiplication.png" width="600px" style="margin: 15px;"> 
 
-[Responsive design wireframes](/assets/wireframes/rev2) were then produced showing the [Home]("/assets/wireframes/rev1/home-multiplication.png)
-and [Game]("./assets/wireframes/rev1/game-multiplication.png) page layouts on [Tablet]("/assets/wireframes/rev2/home-multiplication-tablet.png) and
-[Phone]("./assets/wireframes/rev2/home-multiplication-phone.png). The [Responsive design wireframes](/assets/wireframes/rev2) are also shown below:  
+[Responsive design wireframes](/assets/wireframes/rev2) were then produced showing the [Home](/assets/wireframes/rev1/home-multiplication.png)
+and [Game](/assets/wireframes/rev1/game-multiplication.png) page layouts on [Tablet](/assets/wireframes/rev2/home-multiplication-tablet.png) and
+[Phone](/assets/wireframes/rev2/home-multiplication-phone.png). The [Responsive design wireframes](/assets/wireframes/rev2) are also shown below:  
 
 <img src="./assets/wireframes/rev2/home-multiplication-tablet.png" width="300px" align="left" style="margin: 15px;">
 <img src="./assets/wireframes/rev2/game-multiplication-tablet.png" width="300px" style="margin: 15px;">
