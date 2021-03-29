@@ -43,10 +43,16 @@ describe("JavaScript Maths Function Library Testing Utilities", function () {
         // returnMultiplicationQuestion Test function
         it(teststr, function () {
             let mQ = returnMultiplicationQuestion(tno);
+            let mQstr = mQ[0];
+            let mQno = mQ[1];
+            let mQArray = mQstr.split(" ");
+            let mQtno1 = Number(mQArray[0]);
+            let mQtno2 = Number(mQArray[2]);
             expect(mQ).toBeInstanceOf(Array);
             expect(mQ).toHaveSize(2);
-            expect(mQ[0]).toBeInstanceOf(String);
-            expect(mQ[1]).toBeInstanceOf(Number);
+            expect(mQstr).toBeInstanceOf(String);
+            expect(mQno).toBeInstanceOf(Number);
+            expect(mQno).toBe(mQtno1 * mQtno2);
         });
     }
 
@@ -57,10 +63,16 @@ describe("JavaScript Maths Function Library Testing Utilities", function () {
         // returnDivisionQuestion Test function
         it(teststr, function () {
             let dQ = returnDivisionQuestion(dno);
+            let dQstr = dQ[0];
+            let dQno = dQ[1];
+            let dQArray = dQstr.split(" ");
+            let dQtno1 = Number(dQArray[0]);
+            let dQtno2 = Number(dQArray[2]);
             expect(dQ).toBeInstanceOf(Array);
             expect(dQ).toHaveSize(2);
-            expect(dQ[0]).toBeInstanceOf(String);
-            expect(dQ[1]).toBeInstanceOf(Number);
+            expect(dQstr).toBeInstanceOf(String);
+            expect(dQno).toBeInstanceOf(Number);
+            expect(dQno).toBe(dQtno1 / dQtno2);
         });
     }
 
@@ -75,10 +87,16 @@ describe("JavaScript Maths Function Library Testing Utilities", function () {
         // returnAdditionQuestion Test function
         it(teststr, function () {
             let aQ = returnAdditionQuestion(maxsum);
+            let aQstr = aQ[0];
+            let aQno = aQ[1];
+            let aQArray = aQstr.split(" ");
+            let aQtno1 = Number(aQArray[0]);
+            let aQtno2 = Number(aQArray[2]);
             expect(aQ).toBeInstanceOf(Array);
             expect(aQ).toHaveSize(2);
-            expect(aQ[0]).toBeInstanceOf(String);
-            expect(aQ[1]).toBeInstanceOf(Number);
+            expect(aQstr).toBeInstanceOf(String);
+            expect(aQno).toBeInstanceOf(Number);
+            expect(aQno).toBe(aQtno1 + aQtno2);
         });
     }
 
@@ -93,10 +111,16 @@ describe("JavaScript Maths Function Library Testing Utilities", function () {
         // returnSubtractionQuestion Test function
         it(teststr, function () {
             let sQ = returnSubtractionQuestion(maxsum);
+            let sQstr = sQ[0];
+            let sQno = sQ[1];
+            let sQArray = sQstr.split(" ");
+            let sQtno1 = Number(sQArray[0]);
+            let sQtno2 = Number(sQArray[2]);
             expect(sQ).toBeInstanceOf(Array);
             expect(sQ).toHaveSize(2);
-            expect(sQ[0]).toBeInstanceOf(String);
-            expect(sQ[1]).toBeInstanceOf(Number);
+            expect(sQstr).toBeInstanceOf(String);
+            expect(sQno).toBeInstanceOf(Number);
+            expect(sQno).toBe(sQtno1 - sQtno2);
         });
     }
 
@@ -160,8 +184,11 @@ describe("JavaScript Maths Function Library Testing Utilities", function () {
         for (let ttk2 = 1; ttk2 < 51; ttk2++) {
             let qstr = ttk1 + " + " + ttk2;
             let qa = (ttk1 + ttk2);
-            it("wrongAnswersAddition", function () {
-                let qCurrent = [qstr, qa];
+            let qCurrent = [qstr, qa];
+            // Set test function string
+            let teststr = "wrongAnswersAddition " + qCurrent;
+            // wrongAnswersAddition Test function
+            it(teststr, function () {
                 let qArray = wrongAnswersAddition(qCurrent);
                 expect(qArray).toBeInstanceOf(Array);
                 expect(qArray).toHaveSize(5);
@@ -176,8 +203,11 @@ describe("JavaScript Maths Function Library Testing Utilities", function () {
             let maxno = Math.max(ttk1, ttk2);
             let qstr = maxno + " - " + minno;
             let qa = (maxno - minno);
-            it("wrongAnswersSubtraction", function () {
-                let qCurrent = [qstr, qa];
+            let qCurrent = [qstr, qa];
+            // Set test function string
+            let teststr = "wrongAnswersSubtraction " + qCurrent;
+            // wrongAnswersSubtraction Test function
+            it(teststr, function () {
                 let qArray = wrongAnswersSubtraction(qCurrent);
                 expect(qArray).toBeInstanceOf(Array);
                 expect(qArray).toHaveSize(5);
