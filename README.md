@@ -333,7 +333,7 @@ After initial early user testing and feedback, the following minor design change
 * [Options audio controls](./assets/testing/features/options-audio.png) were added to allow audio to be toggled on and off from the options area.
 * [In-game audio controls](./assets/testing/features/game-audio.png) were added to allow audio to be toggled on and off in-game.
 * Collapsing [How To Play](./assets/testing/features/how-to-play.png) section was added underneath 
-[Options](./assets/testing/features/game-options.png) to explain how to play and to give some further information about the game. 
+[Options](./assets/testing/features/options.png) to explain how to play and to give some further information about the game. 
 * [Game loader](./assets/testing/features/game-loader.png) was added and is now shown until the game window is completeley loaded.
 Note that the [game loader](./assets/testing/features/game-loader.png) will only be visible the first time the game is played, depending 
 on how quickly the game is initiated, as it is shown only until the 
@@ -464,9 +464,9 @@ and [Spicy Yoghurt](https://spicyyoghurt.com/tutorials/html5-javascript-game-dev
 for additional help on sprite animations.  
 * [loading.io](https://loading.io/css/) for the attractive [Game loader](./assets/testing/features/game-loader.png).
 * [Laurens Holst](https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array) for the
- JavaScript [shuffleArray function]("./assets/js/maths.js") to randomize an array in place using the Durstenfeld shuffle algorithm.
+ JavaScript [shuffleArray function](./assets/js/maths.js) to randomize an array in place using the Durstenfeld shuffle algorithm.
 * [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random) 
-for the JavaScript [getRandomIntInclusive function]("./assets/js/maths.js") to 
+for the JavaScript [getRandomIntInclusive function](./assets/js/maths.js) to 
 return a random integer between the two integers given.
 
 ## Acknowledgements ##
