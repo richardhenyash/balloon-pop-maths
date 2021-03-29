@@ -97,6 +97,8 @@ body {
 /*-- Heading Image --*/
 .container-heading-main img,
 .container-heading-main-large img {
+    width: 8rem;
+    height: 8rem;
     position: absolute;
     z-index: -1;
     left: 50%;
