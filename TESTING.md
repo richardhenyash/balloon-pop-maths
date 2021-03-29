@@ -5,6 +5,7 @@
     - [HTML](#html)
     - [Custom CSS Styling](#custom-css-styling)
     - [JavaScript Code Lbrary](#javascript-code-library)
+    - [Automated Unit Testing](#automated-unit-testing)
 - [User Stories Testing](#user-stories-testing)
 - [Additional UX Testing](#additional-ux-testing)
 - [Manual Testing](#manual-testing)
@@ -94,6 +95,29 @@ See [JShint Mail Library Validation Report](./assets/testing/validation/javascri
 and 4 warnings for undefined varibales. The missing semicolons were added and the undefined variables were defined with "let".
 The code was then re-validated and now passes without errors or warnings.
 See [JShint Maths Function Library Validation Report](./assets/testing/validation/javascript-validation-report-maths.txt).
+
+### Automted Unit Testing ###
+The [JavaScript Maths Function Library](./assets/js/maths.js) and the [JavaScript Display Interaction Function Library](./assets/js/display.js), 
+which form the core of the **Game Logic**, were also tested thoroughly using the [Jasmine](https://jasmine.github.io/) automated testing framework. 
+A copy of the main [index.html](index.html) page was created called [testing.html](testing.html). The browser version of 
+[Jasmine 3.7.1](https://github.com/jasmine/jasmine/releases) was implemented in the [testing.html](testing.html) page. Unit test spec files were
+written for the [JavaScript Maths Function Library](./assets/js/spec/mathsSpec.js) and the 
+[JavaScript Display Interaction Function Library](./assets/js/spec/displaySpec.js).  
+For the [JavaScript Display Interaction Function Library](./assets/js/spec/displaySpec.js), 
+testing was carried out by running the functions in the library and checking both the return value of the function and the updated HTML of the page, where applicable.
+18 [Testing Spec Functions](./assets/js/spec/displaySpec.js) were written and run on the display library.  
+For the [JavaScript Maths Function Library](./assets/js/spec/mathsSpec.js), testing was carried out by running the functions in the library and checking the return value of the function.
+14 [Testing Spec Functions](./assets/js/spec/displaySpec.js) were written and run on the maths library.  The following functions are also tested further by 
+creating additional testing spec functions "on the fly" within for loops, which simulated running each of the following functions with all possible inputs: 
+**returnQuestionArray**, **returnMultiplicationQuestion**, **returnDivisionQuestion**, **returnAdditionQuestion**, 
+**returnSubtractionQuestion**, **wrongAnswersMultiplication**, **wrongAnswersDivision**, 
+**wrongAnswersAddition**, **wrongAnswersSubtraction**.  
+[Jasmine](https://jasmine.github.io/) automated testing results in a total of 12,724 testing specs running, with 0 failures. 
+See [Jasmine Validation Report 1]((./assets/testing/validation/jamine-validation-html-1.png)) and 
+See [Jasmine Validation Report 2]((./assets/testing/validation/jamine-validation-html-2.png)).  
+Please note that due to the large number of automated tests being generated and run on the 
+[testing.html](testing.html) page, the [Jasmine](https://jasmine.github.io/) automated testing takes 
+around 90 seconds to run.
 
 ## User Stories Testing ##
 * ***As a user, I am playing the game for fun and enjoyment.*** The game has been tested thouroughly by my 7 year old son and his classmates. 
